@@ -116,12 +116,12 @@ function call:
 # raspberry pi 2 use ttyAMA0
 	port = serial.Serial("/dev/ttyAMA0",baudrate = 921600, timeout = 0.5)
 
-get tlv data tlv:table-length-value
-
 # define 
 ham = highAccuracy.HighAccuracy(port)
 
 # get tlv Data
+	get tlv data tlv:table-length-value
+	
 	(dck , hd, rangeBuf) = ham.tlvRead(False)
 
 More detailed information please reference:
