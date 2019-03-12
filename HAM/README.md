@@ -117,10 +117,10 @@ function call:
 	port = serial.Serial("/dev/ttyAMA0",baudrate = 921600, timeout = 0.5)
 
 # define 
-ham = highAccuracy.HighAccuracy(port)
+	ham = highAccuracy.HighAccuracy(port)
 
 # get tlv Data
-	get tlv data tlv:table-length-value
+get tlv data tlv:table-length-value
 	
 	(dck , hd, rangeBuf) = ham.tlvRead(False)
 
