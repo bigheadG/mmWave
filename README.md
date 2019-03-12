@@ -5,4 +5,12 @@ Run this repository example needs install mmWave lib.
 Those examples are VSD,HAM,PMB examples: 
 VSD stands for Vital Signs Detection, HAM stands for High Accuracy Measure and PMB stands for People Moving Behavior.
 
-https://youtu.be/IF4_kWKyjCU
+
+Vitals Sign Detection: 
+https://youtu.be/8odJnMVRJIE
+
+High Accuracy Measurement:
+https://youtu.be/Hb4-9bAc2QA
+
+People Moving Behavior:
+https://youtu.be/KuTrT1_m29k
