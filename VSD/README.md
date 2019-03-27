@@ -5,7 +5,6 @@ This mmWave-VSD Python Program will work with Vital Signs Detection (VSD) based 
 This App works with Raspberry Pi 3 / Pi 2
 The Vital Signs Detection (VSD) based Batman Kit is for a contactless and wearableless and 30cm ~ 90cm (about 1~3 feet) distance detection of Vital Signs (Heartbeat Rate & Respiration Rate) of a person, a pet, or an animal. 
 
-https://
 
 # Installing
 
@@ -121,3 +120,6 @@ Examples:
 
 ## get tlv Data
     (dck , vd, rangeBuf) = vts.tlvRead(False)
+
+## Reference:
+http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FVital%20Signs%20Demo%2FDeveloper's%20Guide
