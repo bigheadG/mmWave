@@ -7,8 +7,6 @@ The High Accuracy Measurement (HAM) based Batman Kit is for measuring object dis
 from the mmWave Sensor Module with the range of 30cm ~ 3meters(about 1~10 feet) 
 with millimeter resolution.
 
-https://
-
 ## Installing
 
 Library install for python
@@ -124,5 +122,6 @@ get tlv data tlv:table-length-value
 	
 	(dck , hd, rangeBuf) = ham.tlvRead(False)
 
-More detailed information please reference:
-http://
+# reference:
+
+http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FHigh%20Accuracy%20Range%20Measurement%2F14xx%20-%20High%20Accuracy%20Range%20Measurement%2FUser's%20Guide
