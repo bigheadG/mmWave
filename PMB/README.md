@@ -121,3 +121,7 @@ Examples:
 
 # get tlv Data
     (dck,v6,v7,v8) = pm.tlvRead(False)
+
+## Reference:
+
+http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FHigh%20Accuracy%20Range%20Measurement%2F16xx%20-%20High%20Accuracy%20Range%20Measurement%2FUser's%20Guide
