@@ -5,7 +5,6 @@ This mmWave-PMB Python Program will work with People Movement Behavior (PMB) bas
 This App works with Raspberry Pi 3 / Pi 2
 The People Movement Behavior (PMB) based Batman Kit is for detecting People movement in a 4 x 4 meter or 16 meter square area (or about 172 square feet). 
 
-https://
 
 # Installing
 
@@ -124,4 +123,4 @@ Examples:
 
 ## Reference:
 
-http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FHigh%20Accuracy%20Range%20Measurement%2F16xx%20-%20High%20Accuracy%20Range%20Measurement%2FUser's%20Guide
+http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FPeople%20Counting%20Demo%2F16xx%20-%20People%20Counting%20Demo%2FUser's%20Guide
