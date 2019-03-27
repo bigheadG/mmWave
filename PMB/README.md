@@ -124,3 +124,5 @@ Examples:
 ## Reference:
 
 http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FPeople%20Counting%20Demo%2F16xx%20-%20People%20Counting%20Demo%2FUser's%20Guide
+
+http://www.ti.com/lit/ug/tidued6/tidued6.pdf
