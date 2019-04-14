@@ -7,16 +7,19 @@ VSD stands for Vital Signs Detection, HAM stands for High Accuracy Measurement a
 
 # Install Library:
       mmWave Library
-      $pip3 install mmWave
+      $sudo pip3 install mmWave
       
       tkinter Library
-      $pip3 install tkinter
+      $sudo pip3 install tkinter
       
       numpy Library
-      $pip3 install numpy
+      $sudo pip3 install numpy
+      
+      pySerial Library
+      $sudo pip3 install pySerial
       
       RPi.GPIO library please reference:
-	    https://www.raspberrypi-spy.co.uk/2012/05/install-rpi-gpio-python-library/
+      https://www.raspberrypi-spy.co.uk/2012/05/install-rpi-gpio-python-library/
 
 
 # Video Demo(Press ICON to watch the Video)
