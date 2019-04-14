@@ -5,6 +5,20 @@ Run this repository example needs install mmWave lib.
 Those examples are VSD,HAM,PMB examples: 
 VSD stands for Vital Signs Detection, HAM stands for High Accuracy Measurement and PMB stands for People Moving Behavior.
 
+# Install Library:
+      mmWave Library
+      $pip3 install mmWave
+      
+      tkinter Library
+      $pip3 install tkinter
+      
+      numpy Library
+      $pip3 install numpy
+      
+      RPi.GPIO library please reference:
+	    https://www.raspberrypi-spy.co.uk/2012/05/install-rpi-gpio-python-library/
+
+
 # Video Demo(Press ICON to watch the Video)
 ## Vital Signs Detection:
 [![Watch the Video](https://github.com/bigheadG/mmWave/blob/master/heart160.png)](https://youtu.be/4MSrxUmm69M "Watch the Video")
