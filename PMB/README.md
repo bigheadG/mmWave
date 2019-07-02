@@ -115,6 +115,13 @@ Examples:
 #### raspberry pi 2 use ttyAMA0
     port = serial.Serial("/dev/ttyAMA0",baudrate = 921600, timeout = 0.5)
 
+#### Jetson Nano use ttyTHS1
+	port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
+	and please modify: 
+	
+	#import RPi.GPIO as GPIO
+	import Jetson.GPIO as GPIO
+
 # define 
     pm = peopleMB.PeopleMB(port)
 
