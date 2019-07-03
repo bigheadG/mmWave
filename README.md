@@ -11,9 +11,13 @@ VSD stands for Vital Signs Detection, HAM stands for High Accuracy Measurement a
       
       tkinter Library
       $sudo pip3 install tkinter
+      or
+      $sudo apt-get install python3-tk python-tk
       
       numpy Library
       $sudo pip3 install numpy
+      or
+      $sudo apt-get install python3-numpy python-numpy
       
       pySerial Library
       $sudo pip3 install pySerial
