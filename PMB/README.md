@@ -24,6 +24,16 @@ Examples:
     PMB_ex1_Thread.py is an example of using thread to read data from Batman EVK
     PMB_ex2_intr18.py is an example of using GPIO Pin18 rise-edge to trigger function to read data from Batman EVK
 
+If Run demo program can not find any Raw data output:
+      Please set UART to R/W mode: 
+      
+      pi 3
+      $ls -l /dev/ttyS0
+      $sudo chmod 666 /dev/ttyS0
+      pi 2 
+      $ls -l /dev/ttyS0
+      $sudo chmod 666 /dev/ttyAMA0
+
 **** If the following Error is found ******
 
     Traceback (most recent call last):
