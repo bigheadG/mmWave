@@ -28,7 +28,7 @@ VSD stands for Vital Signs Detection, HAM stands for High Accuracy Measurement a
 # How to Enable RPi UART port:
 Enable UART:
 
-      1:[MainMenu] -> [Preferences] -> [Raspberry Pi Configration]
+      1:[MainMenu] -> [Preferences] -> [Raspberry Pi Configuration]
          
 ![MainMenu 0](https://github.com/bigheadG/mmWave/blob/master/UART0.png)
 
