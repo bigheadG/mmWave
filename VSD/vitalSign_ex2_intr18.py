@@ -18,8 +18,6 @@ import serial
 import time
 import struct
 from collections import deque
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 import numpy as np
 from threading import Thread
 import RPi.GPIO as GPIO
