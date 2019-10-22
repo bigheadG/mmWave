@@ -21,7 +21,6 @@ from collections import deque
 import numpy as np
 from threading import Thread
 import RPi.GPIO as GPIO
-from matplotlib.figure import Figure
 import numpy as np
 from mmWave import vitalsign
 import datetime
