@@ -25,6 +25,27 @@ VSD stands for Vital Signs Detection, HAM stands for High Accuracy Measurement a
       RPi.GPIO library please reference:
       https://www.raspberrypi-spy.co.uk/2012/05/install-rpi-gpio-python-library/
 
+# How to Enable RPi UART port:
+Enable UART:
+
+      1:[MainMenu] -> [Preferences] -> [Raspberry Pi Configration]
+         
+![MainMenu 0](https://github.com/bigheadG/mmWave/blob/master/UART0.png)
+
+      2:Select [Interface Tab] in Raspberry Pi Configuration
+      3:Enable Serial Port: Check radio RadioButton
+      
+![MainMenu 1](https://github.com/bigheadG/mmWave/blob/master/UART1.png)
+
+      4:List tty Device
+      $ls /dev/tty*
+      $sudo chmod +666 /dev/ttyS0
+      or 
+      $sudo chmod +666 /dev/ttyAMA0
+      
+      Reboot
+![MainMenu 1](https://github.com/bigheadG/mmWave/blob/master/UART3.png)     
+
 
 # Video Demo(Press ICON to watch the Video)
 ## Vital Signs Detection:
