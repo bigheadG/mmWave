@@ -33,11 +33,13 @@ Enable UART:
 ![MainMenu 0](https://github.com/bigheadG/mmWave/blob/master/UART0.png)
 
       2:Select [Interface Tab] in Raspberry Pi Configuration
+      
       3:Enable Serial Port: Check radio RadioButton
       
 ![MainMenu 1](https://github.com/bigheadG/mmWave/blob/master/UART1.png)
 
       4:List tty Device
+      
       $ls /dev/tty*
       $sudo chmod +666 /dev/ttyS0
       or 
