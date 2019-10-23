@@ -9,13 +9,14 @@ PMB stands for People Moving Behavior,
 SRR stands for Short Range Radar,
 PC3D stands for People Overhead Counting 3D
 
-Hardware requirements:
-VSD: Batman kit 101: IWR1642-VSD
-HAM: Batman kit 101: IWR1642-HAM
-PMB: Batman kit 101: IWR1642-PMB
-SRR: Batman kit 101: IWR1642-SRR
+# Hardware requirements:
+      
+       VSD: Batman kit 101: IWR1642-VSD
+       HAM: Batman kit 101: IWR1642-HAM
+       PMB: Batman kit 101: IWR1642-PMB
+       SRR: Batman kit 101: IWR1642-SRR
 
-PC3D: Batman kit 301: IWR6843-PC3D
+       PC3D: Batman kit 301: IWR6843-PC3D
 
 
 # Install Library:
