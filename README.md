@@ -1,9 +1,22 @@
 # mmWave
 mmWave SDK examples based on Batman Kit mmWave Sensor module
-This App works with Raspberry Pi 3, Pi 2 and Jetson Nano
+This App works with Raspberry Pi 3, Pi 2 , Pi 4 and Jetson Nano
 Run this repository example needs install mmWave lib.
-Those examples are VSD,HAM,PMB examples: 
-VSD stands for Vital Signs Detection, HAM stands for High Accuracy Measurement and PMB stands for People Moving Behavior.
+Those examples are VSD,HAM,PMB,SRR,PC3D examples: 
+VSD stands for Vital Signs Detection, 
+HAM stands for High Accuracy Measurement,
+PMB stands for People Moving Behavior,
+SRR stands for Short Range Radar,
+PC3D stands for People Overhead Counting 3D
+
+Hardware requirements:
+VSD: Batman kit 101: IWR1642-VSD
+HAM: Batman kit 101: IWR1642-HAM
+PMB: Batman kit 101: IWR1642-PMB
+SRR: Batman kit 101: IWR1642-SRR
+
+PC3D: Batman kit 301: IWR6843-PC3D
+
 
 # Install Library:
       mmWave Library
@@ -55,4 +68,8 @@ Enable UART:
 ## High Accuracy Measurement:
 [![Watch the video](https://github.com/bigheadG/mmWave/blob/master/measure160.png)](https://youtu.be/IEmM7JIqtTc "Watch the Video")
 ## People Moving Behavior:
+[![Watch the video](https://github.com/bigheadG/mmWave/blob/master/people160.png)](https://youtu.be/KuTrT1_m29k "Watch the Video")
+## Short Range Radar:
+[![Watch the video](https://github.com/bigheadG/mmWave/blob/master/people160.png)](https://youtu.be/KuTrT1_m29k "Watch the Video")
+## People Overhead Counting 3D:
 [![Watch the video](https://github.com/bigheadG/mmWave/blob/master/people160.png)](https://youtu.be/KuTrT1_m29k "Watch the Video")
