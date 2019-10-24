@@ -1,4 +1,5 @@
 # mmWave-PC3D (People Overhead Counting 3D)
+# Notes: Library only supports: python Version 3.6
 This repository contains the Batman Kit- 301(ODS) Overhead Detection Sensing mmWave Sensor SDK. 
 The sample code below consists of instruction for using the mmWave lib.
 This mmWave-PC3D Python Program will work with People Overhead Counting(POC) based mmWave Batman BM301 Kit solution.
@@ -33,7 +34,7 @@ Examples:
     numObjs: number of Detected Object
     [op]: an Array of Detected Objects Point , the point includes position and object moving speed data
     op: objPoint class
-    <frameNum,numObjs,op=[(tid0,x0,y0,z0,vx0,vy0,vz0,ax0,ay0,az0),(tid1,x1,y1,z1,vx1,vy1,vz1,ax1,ay1,az1),(tid2,x2,y2,z2,vx2,vy2,vz2,ax2,ay2,az2)...]>
+    <frameNum,numObjs,op=[(tid0,x0,y0,z0,vx0,vy0,vz0,dimx0,dimy0,dimz0),(tid1,x1,y1,z1,vx1,vy1,vz1,dimx1,dimy1,dimz1),(tid2,x2,y2,z2,vx2,vy2,vz2,dimx2,dimy2,dimz2)...]>
     
     
 ## Header:
@@ -46,9 +47,9 @@ Examples:
         vx: float = 0.0
         vy: float = 0.0
         vz : float = 0.0
-        ax : float = 0.0
-        ay : float = 0.0
-        az : float = 0.0
+        dimX : float = 0.0
+        dimY : float = 0.0
+        dimZ : float = 0.0
         state : int = 0
     
     @dataclass
