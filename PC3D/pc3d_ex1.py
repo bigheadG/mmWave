@@ -1,6 +1,6 @@
 ''' 
 ODS People Overhead Counting 3D : 2019/10/15 15:47
-ex0:
+ex1:
 Hardware: Batman-301 OSD
 
 Scene Parameter: x:[-1.18,2.12] y:[1.00,2.0] z:[-0.05,2.0] 
@@ -10,7 +10,7 @@ Scene Parameter: x:[-1.18,2.12] y:[1.00,2.0] z:[-0.05,2.0]
 	X   Y
 
 (1)Download lib:
-version: over mmWave V.0.1.21
+version: over mmWave V.0.1.23
 install:
 ~#sudo pip intall mmWave
 update:
@@ -22,7 +22,7 @@ import datetime
 
 import numpy as np
 from mmWave import people3D
-import people3D as people3D
+#import people3D as people3D
 
 
 #UART initial
