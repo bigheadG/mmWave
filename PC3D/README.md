@@ -6,7 +6,7 @@ This mmWave-PC3D Python Program will work with People Overhead Counting(POC) bas
 This App works with Raspberry Pi 3 / Pi 2 /pi 4 and NVIDIA Jetson Nano
 Batman Kit-301-ODS-POC (or the Batman BM301 Kit) is an easy-to-use mmWave sensor evaluation kit with miniaturized short-range antenna, 
 and with wide horizontal and vertical Field of View (FoV), that connects directly to a Raspberry Pi or NVIDIA Jetson Nano computer via Kit's HAT Board, 
-for decting people movement behavior in a 3-Dimentional Area with ID tagged x,y,z, Ax,Ay,Az, Vx,Vy,Vz (Doppler) parameters. 
+for decting people movement behavior in a 3-Dimentional Area with ID tagged x,y,z,Vx,Vy,Vz (Doppler),dimX,dimY,dimZ parameters. 
 
 
 # Installing
@@ -88,4 +88,4 @@ Examples:
         print(pc3) #you will see the data
         
 ## Reference:
-http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FVital%20Signs%20Demo%2FDeveloper's%20Guide
+
