@@ -1,5 +1,5 @@
 # mmWave-PC3D (People Overhead Counting 3D)
-# Notes: Library only supports: python Version 3.6
+# Notes: Library only supports: python Version >= 3.6
 This repository contains the Batman Kit- 301(ODS) Overhead Detection Sensing mmWave Sensor SDK. 
 The sample code below consists of instruction for using the mmWave lib.
 This mmWave-PC3D Python Program will work with People Overhead Counting(POC) based mmWave Batman BM301 Kit solution.
