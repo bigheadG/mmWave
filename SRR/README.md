@@ -80,6 +80,7 @@ Examples:
 	 
 	getHeader()
 	tlvRead()
+	usage: (dck,v1,v2,v3,v4) = srr.tlvRead(False)
 		    
 
 # import lib
