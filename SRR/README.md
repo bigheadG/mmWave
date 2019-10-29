@@ -61,7 +61,7 @@ Examples:
 
 #V3 TRACK Data
     
-	V3: (tlvNDOCnt,xt,yt,xtSize,ytSize,vxt,vyt,tRange,tDoppler)
+	V3: (tlvNDOCnt,float(xt),float(yt),float(xtSize),float(ytSize),float(vxt),float(vyt),float(tRange),float(tDoppler))
 	tlvNDOCnt : Number of Detected Object Count
 	xt :  X coordinate 
 	yt :  Y coordinate 
