@@ -26,6 +26,7 @@ Examples:
     
     
 ## Header:
+
     class header:
 	version = "0.0"
 	totalPackLen =0
@@ -39,17 +40,18 @@ Examples:
 
 ## Data Structure
 
-
-    #V1 Detected Object: Contains range, angle, (X,Y) coordinate and Doppler information of objects seen by the mmWave device
+#V1 Detected Object: Contains range, angle, (X,Y) coordinate and Doppler information of objects seen by the mmWave device
+    
 	V1 : (tlvNDOCnt,float(x),float(y),float(doppler_v1),float(range_v1),float(peakValue))
-        tlvNDOCnt : Number of Detected Object Count
-        x : X coordinate 
+	tlvNDOCnt : Number of Detected Object Count
+	x : X coordinate 
 	y : Y coordinate	
 	doppler_v1 : v1 Doppler
 	range_v1 :   v1 Range
 	peakValue : 
 	
-    #V2 Cluster Object: 
+#V2 Cluster Object:
+    
 	V2: (tlvNDOCnt,float(xc),float(yc),float(xcSize),float(ycSize))
 	tlvNDOCnt : Number of Detected Object Count
 	xc : X coordinate 
@@ -57,8 +59,9 @@ Examples:
 	xcSize : X size
 	ycSize : Y size
 
-    #V3 TRACK Data
-	V3: ((tlvNDOCnt,xt,yt,xtSize,ytSize,vxt,vyt,tRange,tDoppler))
+#V3 TRACK Data
+    
+	V3: (tlvNDOCnt,xt,yt,xtSize,ytSize,vxt,vyt,tRange,tDoppler)
 	tlvNDOCnt : Number of Detected Object Count
 	xt :  X coordinate 
 	yt :  Y coordinate 
@@ -69,11 +72,11 @@ Examples:
 	tRange : Range  #sqrt(xt^2+yt^2)
 	tDoppler = Doppler
 		
-    #V4 Parking AssistBin Array
+#V4 Parking AssistBin Array
+    
 	[jb_val,...] : float 
-		
-	
-    function call:
+			
+# function call:
 	 
 	getHeader()
 	tlvRead()
@@ -90,22 +93,24 @@ Examples:
     port = serial.Serial("/dev/ttyAMA0",baudrate = 921600, timeout = 0.5)
     
   ### Jetson Nano use ttyTHS1
-	port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
+  	port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
 	and please modify: 
 	
 	#import RPi.GPIO as GPIO
 	import Jetson.GPIO as GPIO
 
-## define 
+## define
+
     srr = srradar.SRR(port)
 
 ## get tlv Data
+
     (dck,v1,v2,v3,v4) = srr.tlvRead(False)
     dck: data check 1: available 0: data not ready
 
     v1 :objectDet
     v2 :ClusterData
     v3 :TRACK Data
-    v4 :PARK Assist Data
+    v4 :PARKing Assist Data
 
 
