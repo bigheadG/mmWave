@@ -7,6 +7,7 @@ The Short Range Radar (SRR) based Batman Kit-101 is capable of detecting obstacl
 (via Doppler Data) from the Radar in 20 meter or even 50 meter range pending object's size in terms of Radar Cross Section (RCS); 
 programmer may then plot an obstacle-free zone to guide an Unmanned Ground Vehicle (UGV), a Blind Person, or a Drone to a safe zone.
 
+![MainMenu 1](https://github.com/bigheadG/mmWave/blob/master/srr_scrot.png)
 
 # Installing
 
