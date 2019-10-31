@@ -87,11 +87,9 @@ Examples:
 
     from mmWave import srradar
 
-  ### raspberry pi 3 use ttyS0
+  ### raspberry pi 4 use ttyS0
     port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
 
-  ### raspberry pi 2 use ttyAMA0
-    port = serial.Serial("/dev/ttyAMA0",baudrate = 921600, timeout = 0.5)
     
   ### Jetson Nano use ttyTHS1
   	port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
