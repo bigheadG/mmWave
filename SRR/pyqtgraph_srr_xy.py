@@ -33,6 +33,12 @@ $sudo pip3 install mmWave
 (3) upgarde mmWave lib
 $sudo pip3 install mmWave -U
 
+************************************************
+raspberry pi 4 UART setting issues reference:
+https://www.raspberrypi.org/documentation/configuration/uart.md
+
+************************************************
+
 """
 #https://github.com/pyqtgraph/pyqtgraph/tree/develop/examples
 #https://github.com/pyqtgraph/pyqtgraph/blob/develop/examples/scrollingPlots.py
@@ -43,7 +49,7 @@ from pyqtgraph.Qt import QtCore, QtGui
 
 import numpy as np
 import serial
-import Jetson.GPIO as GPIO
+#import Jetson.GPIO as GPIO
 from mmWave import srradar
 import time
 import struct
@@ -144,8 +150,10 @@ timer.start(143) #150  80: got(20 Times)   *50ms from uart:
 #port = serial.Serial("/dev/ttyUSB0",baudrate = 921600, timeout = 0.5)
 #
 #for Jetson nano UART port
-port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
+#port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
 
+#for pi 4 UART port
+port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
 #Short Range Radar initial 
 srr = srradar.SRR(port)
 
