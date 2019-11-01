@@ -33,11 +33,38 @@ PC3D stands for People Overhead Counting 3D
       or
       $sudo apt-get install python3-numpy python-numpy
       
+      NOOBS_V3 is installed already
       pySerial Library
       $sudo pip3 install pySerial
       
       RPi.GPIO library please reference:
       https://www.raspberrypi-spy.co.uk/2012/05/install-rpi-gpio-python-library/
+      
+ ## Some install problem the following information for reference:
+      (1)-------libf77blas.so.3-----------------------------------------
+      from scipy.linalg import _fblas
+      ImportError: libf77blas.so.3: cannot open shared object file: No such file or directory
+
+      problem solved:
+      First of all, for libf77blas.so.3, you have to install ATLAS, something like sudo apt-get install libatlas-base-dev
+
+      $sudo apt-get install libatlas-base-dev
+      (2)-----------------------------------------
+      Traceback (most recent call last):
+      File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 265, in open
+      self.fd = os.open(self.portstr, os.O_RDWR | os.O_NOCTTY | os.O_NONBLOCK)
+      FileNotFoundError: [Errno 2] No such file or directory: '/dev/ttyS0'
+
+      problem solved:
+
+      (1)menu->perference->Raspberry pi Configuration->Serial Port(Enable)
+      (2)reboot:
+      (3)$ls -l /dev/ttyS0
+            crw--w---- 1 root tty       4, 64 Nov  1 04:21 /dev/ttyS0
+      (4)$sudo chmod +666 /dev/ttyS0
+      (5)pi@raspberrypi:~ $ ls -l /dev/ttyS0
+	      crw-rw-rw- 1 root tty 4, 64 Nov  1 04:21 /dev/ttyS0
+
 
 # How to Enable RPi UART port:
 Enable UART:
