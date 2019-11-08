@@ -2,7 +2,7 @@
 This repository contains the Batman Kit- 101 SRR mmWave Sensor SDK. 
 The sample code below consists of instruction for using the mmWave lib.
 This mmWave-SRR Python Program will work with Short Range Radar(SRR) based mmWave Batman Kit solution.
-This App works with Raspberry Pi 3 / Pi 2 /pi 4 and Jetson Nano
+This App works with Raspberry pi 4 and Jetson Nano
 The Short Range Radar (SRR) based Batman Kit-101 is capable of detecting obstacles' location, distance, approaching or moving-away 
 (via Doppler Data) from the Radar in 20 meter or even 50 meter range pending object's size in terms of Radar Cross Section (RCS); 
 programmer may then plot an obstacle-free zone to guide an Unmanned Ground Vehicle (UGV), a Blind Person, or a Drone to a safe zone.
