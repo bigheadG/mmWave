@@ -86,22 +86,22 @@ Library update:
 
         return dck,v6,v7,v8 
 		
-    -----------------
-    |  obj o  |+z  board
-    |       \ |  
-    |      el\| 
-    | +x<-----o        
-    |   az     \
-    ----------- \ --
-                 \+y
+   	 -----------------
+    	|  obj o  |+z  board
+   	|       \ |  
+    	|      el\| 
+    	| +x<-----o        
+    	|   az     \
+    	----------- \ --
+                     \+y
     
     Based on IWR6843 3D(r,az,el) -> (x,y,z)
     el: elevation  <Theta bottom -> Obj  
     az: azimuth    <Theta Obj ->Y Axis 
     
-    z = r * cos(pi/2 - el)
-    x = r * sin(el) * cos(pi/2 - az)
-    y = r * sin(e1) * sin(pi/2 - az)
+    z = r * sin(el)
+    x = r * cos(el) * sin(az)
+    y = r * cos(e1) * cos(az)
  
  # Data Structure(Key/Value):
  
