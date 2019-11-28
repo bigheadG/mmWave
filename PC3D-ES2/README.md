@@ -5,12 +5,7 @@ Current PI's OS is supports python 3.7.0
 
 https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
 
-This repository contains the Batman Kit- 301(ODS) Overhead Detection Sensing mmWave Sensor SDK Device Version:ES2.0
-The sample code below consists of instruction for using the mmWave lib.
-This mmWave-PC3D Python Program will work with People Overhead Counting(POC) based mmWave Batman BM301 Kit solution.
-This App works with Raspberry pi 4 and NVIDIA Jetson Nano
-Batman Kit-301-ODS-POC (or the Batman BM301 Kit) is an easy-to-use mmWave sensor evaluation kit with miniaturized short-range antenna, and with wide horizontal and vertical Field of View (FoV), that connects directly to a Raspberry Pi or NVIDIA Jetson Nano computer via Kit's HAT Board, 
-for decting multiple objects in a 3-Dimentional Area with ID tagged, posX,posY,posZ,Vx,Vy,Vz,accX,accY,accZ parameters and  Point Clouds with elevation,azimuth,doppler,range,snr parameters.
+This repository contains the Batman Kit- 301(ODS) Overhead Detection Sensing_ mmWave Sensor SDK Device Version:ES2.0 .  The sample code below consists of instruction for using the mmWave lib. This mmWave-PC3D Python Program will work with People Overhead Counting(POC) and Fall Detection Sensing (FDS) based Batman BM301 mmWave Kit solution (BM301-POC or BM301-FDS). This Python Program works with a Raspberry Pi 4 and/or NVIDIA Jetson Nano computer with Batman BM301-POC or BM301-FDS Kit attached; and that  the BM301 Kit is an easy-to-use mmWave sensor evaluation kit with miniaturized short-range antenna, and with wide horizontal and vertical Field of View (FoV), that connects directly to a Raspberry Pi or NVIDIA Jetson Nano computer via Kit's HAT Board, for detecting multiple objects in a 3-Dimentional Area with ID tag, posX, posY, posZ, Vx, Vy, Vz, accX, accY, accZ parameters and Point Clouds with elevation, azimuth, doppler, range, and snr parameters.
 
 Hardware Sensor: 
 
@@ -115,7 +110,7 @@ Library update:
     numObjs: number of Detected Object
     [op]: an Array of Detected Objects Point , the point includes position and object moving speed data
     op: objPoint class
-    <frameNum,numObjs,op=[(tid0,x0,y0,z0,vx0,vy0,vz0,accx0,accy0,accz0),(tid1,x1,y1,z1,vx1,vy1,vz1,accx1,accy1,accz1),(tid2,x2,y2,z2,vx2,vy2,vz2,accx2,accy2,accz2)...]>
+    <frameNum,numObjs,op=[(tid0,x0,y0,z0,vx0,vy0,vz0,accx0,accy0,accz0,state0),(tid1,x1,y1,z1,vx1,vy1,vz1,accx1,accy1,accz1,state1),(tid2,x2,y2,z2,vx2,vy2,vz2,accx2,accy2,accz2,state2)...]>
     
     @dataclass
     class objPoint:
