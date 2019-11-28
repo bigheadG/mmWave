@@ -30,8 +30,6 @@ Examples:
 
     pc3d_ex1.py is a basic example for reading data from Batman EVK
     
-    
-
 # Data Structure:
 
     Detected Object Data Format: <frameNum,numObjs,[op]>
