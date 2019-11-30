@@ -126,6 +126,9 @@ Library update:
         accZ : float = 0.0
         state : int = 0
  
+    notes:
+        state: 1:stand 2:seat 3:lie down 5:falling
+        
     @dataclass
     class objSets:
         frameNum: int
