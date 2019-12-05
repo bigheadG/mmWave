@@ -115,6 +115,7 @@ Examples:
 ## Reference
 
 https://github.com/bigheadG/mmWaveDocs/blob/master/AutoSrr_usersguide.pdf
+(Alert: if DATA STARUCTURE could not be found in PDF please see above Data Structure of README.md instead)
 
 
 
