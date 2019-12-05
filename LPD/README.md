@@ -193,6 +193,8 @@ lpd = lpdISK.LpdISK(port)
     
     
 ## Reference:
+
+https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide.pdf
 	
     
 
