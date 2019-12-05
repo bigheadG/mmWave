@@ -140,3 +140,6 @@ If Run demo program can not find any Raw data output:
 
 ## Reference:
 http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FVital%20Signs%20Demo%2FDeveloper's%20Guide
+
+https://github.com/bigheadG/mmWaveDocs/blob/master/DriverVitalSigns_DevelopersGuide.pdf
+
