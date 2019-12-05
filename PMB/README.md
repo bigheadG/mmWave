@@ -141,5 +141,4 @@ If Run demo program can not find any Raw data output:
 ## Reference:
 
 https://github.com/bigheadG/mmWaveDocs/blob/master/pplcount_user_guide.pdf
-
-http://www.ti.com/lit/ug/tidued6/tidued6.pdf
+ 
