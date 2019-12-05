@@ -85,7 +85,7 @@ If Run demo program can not find any Raw data output:
     [V6s]:= [TL][P1][P2]...[Pn pts]
     [V7s]:= [TL][T1][T2]...[Tn tgs]
     [V8s]:= [TL][ID1][ID2]...[IDn pts] 
-    [TL]:= Table-Lenght
+    [TL]:= Table-Length
     [V6] = [P1]..
     [V7] = [T1]..
     [V8] = [ID1]..
