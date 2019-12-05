@@ -114,7 +114,7 @@ Examples:
 
 ## Reference
 
-https://github.com/bigheadG/mmWaveDocs/blob/master/ShortRangeRadar_Release_Notes.pdf
+https://github.com/bigheadG/mmWaveDocs/blob/master/AutoSrr_usersguide.pdf
 
 
 
