@@ -141,4 +141,4 @@ get tlv data tlv:table-length-value
 
 # reference:
 
-http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FHigh%20Accuracy%20Range%20Measurement%2F14xx%20-%20High%20Accuracy%20Range%20Measurement%2FUser's%20Guide
+https://github.com/bigheadG/mmWaveDocs/blob/master/high_accuracy_16xx_lab_user_guide.pdf
