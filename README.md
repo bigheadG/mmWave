@@ -7,6 +7,7 @@ VSD stands for Vital Signs Detection,
 HAM stands for High Accuracy Measurement,
 PMB stands for People Moving Behavior,
 SRR stands for Short Range Radar,
+LPD stands for Long range People Detect,
 PC3D stands for People Overhead Counting 3D
 
 # Hardware requirements:
