@@ -48,6 +48,7 @@ Library update:
         lpd_v09_raw_ex0.py is a example output V6(Point Cloud Spherical),V7(Target Object List),V8(Target Index), V9(Point Cloud Side Info) data
         
     key/value:
+        lpd_v09_kv_3dbar.py use key/value to draw object in 3DBar 
         
 
 # Data Structure(Raw Data):
@@ -168,7 +169,9 @@ lpd = lpdISK.LpdISK(port)
     
     from mmWave import lpdISK
     
-
+    key/Value:
+    from mmWave import lpdISK_kv
+    
   ### raspberry pi 3/pi 4 use ttyS0
     port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
     
@@ -187,6 +190,7 @@ lpd = lpdISK.LpdISK(port)
     
     key/value:
     
+    lpd = lpdISK_kv.LpdISK_kv(port)
      
 
 ## get LPD-ISK Sensor Data
@@ -197,7 +201,11 @@ lpd = lpdISK.LpdISK(port)
         if dck:
             print(v6) #you will see v6 data
         
-    
+    key/value:
+        
+        (dck,pc3x) = pc3d.lpdRead(False)
+        if dck:
+            print(pc3x) #you will see objPoint infomation
     
 ## Reference:
 
