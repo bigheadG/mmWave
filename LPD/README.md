@@ -18,20 +18,20 @@ Hardware Sensor:
 
     Batman BM201-LPD provid two types of data:
 
-        BM201-LPD provids raw data as:
+      BM201-LPD provids raw data as:
 
-        Point Cloud Spherical(V6): range,azimuth,elevation,doppler
-        Target Object (V7): tid,posX,posY,velX,velY,accX,accY,posZ,velZ,accZ
-        Target Index (V8): tid and status
-	Point Cloud Side Info (V9): snr,noise
+        	Point Cloud Spherical(V6): range,azimuth,elevation,doppler
+        	Target Object (V7): tid,posX,posY,velX,velY,accX,accY,posZ,velZ,accZ
+        	Target Index (V8): tid and status
+		Point Cloud Side Info (V9): snr,noise<br/>
 	
-	BM201-LPD key/value data as:
+      BM201-LPD key/value data as:
 	
-	outputdata = tid,posX,posY,posZ,velX,velY,velZ,accX,accY,accZ,state
-	tid: target ID 
-	pos: position  m
-	vel: velocity  m/s
-	acc: acceleration  m/s2
+		outputdata = tid,posX,posY,posZ,velX,velY,velZ,accX,accY,accZ,state
+		tid: target ID 
+		pos: position  m
+		vel: velocity  m/s
+		acc: acceleration  m/s2
         
 # Physical Setup
         Setup Requirements:
