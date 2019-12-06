@@ -15,7 +15,8 @@ PC3D stands for People Overhead Counting 3D
        HAM: Batman kit 101: IWR1642-HAM
        PMB: Batman kit 101: IWR1642-PMB
        SRR: Batman kit 101: IWR1642-SRR
-
+       
+       LPD: Batman kit 201: IWR6843-LPD
        PC3D: Batman kit 301: IWR6843-PC3D
 
 
