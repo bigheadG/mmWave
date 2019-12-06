@@ -1,4 +1,4 @@
-# mmWave-PC3D (People Overhead Counting 3D)-ES2.0 (Coming Soon...)
+# mmWave-PC3D (People Overhead Counting 3D)-ES2.0
 # Notes: mmWave Library supports: python Version >= 3.6
 
 Current PI's OS is supports python 3.7.0
