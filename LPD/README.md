@@ -23,12 +23,12 @@ Hardware Sensor:
         Point Cloud Spherical(V6): range,azimuth,elevation,doppler
         Target Object (V7): tid,posX,posY,velX,velY,accX,accY,posZ,velZ,accZ
         Target Index (V8): tid and status
-        Point Cloud Side Info (V9): snr,noise
+	Point Cloud Side Info (V9): snr,noise
 	
 	BM201-LPD key/value data as:
 	
 	outputdata = tid,posX,posY,posZ,velX,velY,velZ,accX,accY,accZ,state
-    	tid: target ID 
+	tid: target ID 
 	pos: position  m
 	vel: velocity  m/s
 	acc: acceleration  m/s2
