@@ -4,7 +4,7 @@
 ![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)
 
 
-# mmWave-LPD (Low range People Detect)-ES2.0 (Coming Soon...)
+# mmWave-LPD (Low range People Detect)-ES2.0
 # Notes: mmWave Library supports: python Version >= 3.6
 
 Current PI's OS is supports python 3.7.0
@@ -57,8 +57,8 @@ Library update:
 from mmWave import lpdISK
 lpd = lpdISK.LpdISK(port)
    
-    V6: Point Cloud Spherical
-    Each Point Cloud list consists of an array of points, Each point data structure is defined as following
+V6: Point Cloud Spherical<br/>
+Each Point Cloud list consists of an array of points, Each point data structure is defined as following
    
     point Struct:
         range:    float   #Range in meters
@@ -68,8 +68,8 @@ lpd = lpdISK.LpdISK(port)
     
         V6 =: [(range,azimuth,elevation,doppler),......]
         
-    V7: Target Object
-    Each Target List consists of an array of targets. Each target data structure defind as following:
+V7: Target Object<br/>
+Each Target List consists of an array of targets. Each target data structure defind as following:
     
     target Struct:
         tid: Int        #Track ID
@@ -85,8 +85,8 @@ lpd = lpdISK.LpdISK(port)
         
         V7 =: [(tid,posX,posY,velX,velY,accX,accY,posZ,velZ,accZ),....]
         
-    V8: Target Index
-    Each Target List consists of an array of target IDs, A targetID at index i is the target to which point i of the previous frame's point cloud was associated. Valid IDs range from 0-249
+V8: Target Index<br/>
+Each Target List consists of an array of target IDs, A targetID at index i is the target to which point i of the previous frame's point cloud was associated. Valid IDs range from 0-249
         
     TargetIndex Struct:
         tragetID: Int #Track ID
@@ -99,7 +99,8 @@ lpd = lpdISK.LpdISK(port)
    
         V8 =: [id1,id2....]
     
-    V9:Point Cloud Side Info
+V9:Point Cloud Side Info<br/>
+
         v9 structure: [(snr,noise'),....]    
         
     Function call: 
