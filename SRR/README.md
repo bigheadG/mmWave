@@ -23,6 +23,21 @@ Examples:
 
     pyqtgraph_srr_xy.py # show detected object, doppler and Parking Bins
     
+If Run demo program can not find any Raw data output:
+      Please set UART to R/W mode: 
+      
+      pi 3
+      $ls -l /dev/ttyS0
+      $sudo chmod +777 /dev/ttyS0
+      
+      pi 2 
+      $ls -l /dev/ttyS0
+      $sudo chmod +777 /dev/ttyAMA0
+      
+      jetson
+      $ls -l /dev/ttyTHS1
+      $sudo chmod +777 /dev/ttyTHS1
+    
 ![MainMenu 1](https://github.com/bigheadG/mmWave/blob/master/srr_scrot.png)
     
 ## Header:
