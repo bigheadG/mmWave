@@ -48,7 +48,21 @@ Library update:
         pc3d_raw_v12_ex0.py is a example output V6(cloud point),V7(object target),V8(target id) data
         pc3d_raw_v12_pointCloud.py is a example use V6 to plot point cloud in 3D diagram (use matplotlib)
     key/value:
-        
+ 
+If Run demo program can not find any Raw data output:
+      Please set UART to R/W mode: 
+      
+      pi 3
+      $ls -l /dev/ttyS0
+      $sudo chmod +777 /dev/ttyS0
+      
+      pi 2 
+      $ls -l /dev/ttyS0
+      $sudo chmod +777 /dev/ttyAMA0
+      
+      jetson
+      $ls -l /dev/ttyTHS1
+      $sudo chmod +777 /dev/ttyTHS1
 
 # Data Structure(Raw Data):
 V6: Point Cloud<br/>
