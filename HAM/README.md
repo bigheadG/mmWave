@@ -115,8 +115,8 @@ function call:
 		Ex. point0 = sqrt(r0**2 + r0**2)
 	    	    point1 = sqrt(r1**2 + r1**2)
 		....
-	    len(rangeBuf) = 1024 points => r:512points + i:512 points
-	unit: meter
+	    	len(rangeBuf) = 1024 points => r:512points + i:512 points
+		unit: meter
 
 
 # import lib
