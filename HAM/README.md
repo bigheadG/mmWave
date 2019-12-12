@@ -99,21 +99,21 @@ function call:
 
 	(chk,hd,rangeBuf) = tlvRead(dbg)
 
-	dbg := True, enable debug message
-	       False, disable debug message
+		dbg := True, enable debug message
+	       		False, disable debug message
          
-	chk := True: Data valid
-		   False: Data invalid
+		chk := True: Data valid
+		   	False: Data invalid
 		   
-	hd := Detected Objects Data (dos type)
+		hd := Detected Objects Data (dos type)
 	
-	rangeBuf := Range Profile data. Contains the magnitude of Range FFTs
-	Size: 512 RangeBins * 2
-	RangesBins = (Real part for 4Bytes(float), Image part for 4 Bytes(float))
-	totalBins = 512 Bins
-	rangeBuf = [r0,i0,r1,i1,r2,i2.....r511,i511]
-	Ex. point0 = sqrt(r0**2 + r0**2)
-	    point1 = sqrt(r1**2 + r1**2)
+		rangeBuf := Range Profile data. Contains the magnitude of Range FFTs
+		Size: 512 RangeBins * 2
+		RangesBins = (Real part for 4Bytes(float), Image part for 4 Bytes(float))
+		totalBins = 512 Bins
+		rangeBuf = [r0,i0,r1,i1,r2,i2.....r511,i511]
+		Ex. point0 = sqrt(r0**2 + r0**2)
+	    	    point1 = sqrt(r1**2 + r1**2)
 		....
 	    len(rangeBuf) = 1024 points => r:512points + i:512 points
 	unit: meter
