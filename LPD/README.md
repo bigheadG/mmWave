@@ -56,7 +56,21 @@ Library update:
         
     key/value:
         lpd_v09_kv_3dbar.py use key/value to draw object in 3DBar 
-        
+
+If Run demo program can not find any Raw data output:
+      Please set UART to R/W mode: 
+      
+      pi 3
+      $ls -l /dev/ttyS0
+      $sudo chmod +777 /dev/ttyS0
+      
+      pi 2 
+      $ls -l /dev/ttyS0
+      $sudo chmod +777 /dev/ttyAMA0
+      
+      jetson
+      $ls -l /dev/ttyTHS1
+      $sudo chmod +777 /dev/ttyTHS1
 
 # Data Structure(Raw Data):
 ## Lib import(Raw Data):
