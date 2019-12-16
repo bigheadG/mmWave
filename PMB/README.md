@@ -140,5 +140,7 @@ If Run demo program can not find any Raw data output:
 
 ## Reference:
 
-https://github.com/bigheadG/mmWaveDocs/blob/master/pplcount_user_guide.pdf
+1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/pplcount_user_guide.pdf
+
+2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V3_peopleBLEProtocol_v03_05_pdf.pdf
  
