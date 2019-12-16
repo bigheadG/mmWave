@@ -146,6 +146,8 @@ get tlv data tlv:table-length-value
 
 # reference:
 
-https://github.com/bigheadG/mmWaveDocs/blob/master/high_accuracy_16xx_lab_user_guide.pdf
+1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/high_accuracy_16xx_lab_user_guide.pdf
 
-(Alert: if DATA STARUCTURE could not be found in PDF please see above Data Structure of README.md instead)
+          (Alert: if DATA STARUCTURE could not be found in PDF please see above Data Structure of README.md instead)
+
+2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V2_highAccuracyBLEProtocol_v02_02_pdf.pdf
