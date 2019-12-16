@@ -129,9 +129,9 @@ If Run demo program can not find any Raw data output:
 
 ## Reference
 
-https://github.com/bigheadG/mmWaveDocs/blob/master/AutoSrr_usersguide.pdf
+1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/AutoSrr_usersguide.pdf
 
-(Alert: if DATA STARUCTURE could not be found in PDF please see above Data Structure of README.md instead)
+             (Alert: if DATA STARUCTURE could not be found in PDF please see above Data Structure of README.md instead)
 
-
+2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V4_SrrKeyDataProtocol_v04_03_pdf.pdf
 
