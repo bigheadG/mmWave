@@ -232,7 +232,9 @@ V9:Point Cloud Side Info<br/>
     
 ## Reference:
 
-https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide.pdf
+1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide.pdf
+
+2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V9_Protocol%20for%20LONG_RANGE_PEOPLE_DETECTION_KEY_data%20Project%20V0901_pdf.pdf
 	
     
 
