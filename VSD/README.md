@@ -140,5 +140,6 @@ If Run demo program can not find any Raw data output:
 
 ## Reference:
 
-https://github.com/bigheadG/mmWaveDocs/blob/master/DriverVitalSigns_DevelopersGuide.pdf
+1. https://github.com/bigheadG/mmWaveDocs/blob/master/DriverVitalSigns_DevelopersGuide.pdf
+2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V1_vitalSignsBLEProtocol_v01_02_pdf.pdf
 
