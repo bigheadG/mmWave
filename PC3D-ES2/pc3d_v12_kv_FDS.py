@@ -1,5 +1,5 @@
 #================================================
-# File Name: pc3d_v12_kv_FDS.py  v0.0.1
+# File Name: pc3d_v12_kv_FDS.py  v0.0.2
 #
 # Requirement:
 # Hardware: BM301-ODS
@@ -75,7 +75,9 @@ def animate(i,bars):
 	if dflag == False:
 		return
 		
-	if pc3.numObjs != 0:
+	if pc3.numObjs >= 0:
+		
+		pc3b = pc3 # to avoid pc3 data unsync with display
 		bars = []
 		ax.cla() #clear plot
 		
@@ -86,25 +88,29 @@ def animate(i,bars):
 		ax.set_zlim3d(-2,2)
 		ax.set_zlabel('Z',fontsize = 16)
 		
-		spotsx  = [pc3.op[i].x for i in range(pc3.numObjs)]
-		spotsy  = [pc3.op[i].y for i in range(pc3.numObjs)]
-		spotsz  = [pc3.op[i].z for i in range(pc3.numObjs)]
+		try:
+			spotsx  = [pc3b.op[i].x for i in range(pc3b.numObjs)]
+			spotsy  = [pc3b.op[i].y for i in range(pc3b.numObjs)]
+			spotsz  = [pc3b.op[i].z for i in range(pc3b.numObjs)]
 		
-		dx = [ 0.3  for i in range(pc3.numObjs)]
-		dy = [ 0.3  for i in range(pc3.numObjs)]
-		dz = [ 0.3  for i in range(pc3.numObjs)]
-		stateA = [pc3.op[i].state for i in range(pc3.numObjs)]
+			dx = [ 0.3  for i in range(pc3b.numObjs)]
+			dy = [ 0.3  for i in range(pc3b.numObjs)]
+			dz = [ 0.3  for i in range(pc3b.numObjs)]
+			stateA = [pc3b.op[i].state for i in range(pc3b.numObjs)]
 		
-		for i in range(pc3.numObjs):
-			bars.append(ax.bar3d( spotsx[i],spotsy[i],spotsz[i], dx[i], dy[i],dz[i], color = color_values[stateA[i]]))
+			for i in range(pc3b.numObjs):
+				bars.append(ax.bar3d( spotsx[i],spotsy[i],spotsz[i], dx[i], dy[i],dz[i], color = color_values[stateA[i]]))
 			
-		plt.draw
+			plt.draw
+		except:
+			print("Except: animation")
+			
 	return bars
 
 thread1 = Thread(target = uartThread, args =("UART",))
 thread1.setDaemon(True)
 thread1.start()
  
-ani = animation.FuncAnimation(fig, animate,fargs=[bars], interval= 120)
+ani = animation.FuncAnimation(fig, animate,fargs=[bars], interval= 200)
 plt.show()
 
