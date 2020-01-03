@@ -112,22 +112,14 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 
         return dck,v6,v7,v8 
 		
-   	 -----------------
-	 |  obj o  |+z  board
-	 |       \ |
-	 |      el\|
-	 | +x<-----o
-	 |   az     \
-	 ----------- \ --
-	 	      \+y
-    
+		
     Based on IWR6843 3D(r,az,el) -> (x,y,z)
-    el: elevation  <Theta bottom -> Obj  
-    az: azimuth    <Theta Obj ->Y Axis 
+    el: elevation φ <Theta bottom -> Obj    
+    az: azimuth   θ <Theta Obj ->Y Axis 
     
-    z = r * sin(el)
-    x = r * cos(el) * sin(az)
-    y = r * cos(e1) * cos(az)
+    z = r * sin(φ)
+    x = r * cos(φ) * sin(θ)
+    y = r * cos(φ) * cos(θ)
  ![MainMenu 1](https://github.com/bigheadG/mmWave/blob/master/objGeoSmall.png)
  
  # Data Structure(Key/Value):
