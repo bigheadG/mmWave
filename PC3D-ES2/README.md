@@ -93,7 +93,7 @@ Each Target List consists of an array of targets. Each target data structure def
 V8: Target Index<br/> 
 Each Target List consists of an array of target IDs, A targetID at index i is the target to which point i of the previous frame's point cloud was associated. Valid IDs range from 0-249
         
-    TargetIndex Struct:
+    TargetIndex Struct(V8):
         tragetID: Int #Track ID
         {targetID0,targetID1,.....targetIDn}
         
