@@ -26,11 +26,6 @@ Hardware Sensor:
 	
         Target Object(V7) : id,posX,posY,posZ,velX,velY,velZ,accX,accY,accZ parameters.
         
-# Physical Setup
-        Setup Requirements:
-        Elevate EVM:1.5~2.5m
-        Down tilt:~10-15 degree
-![MainMenu 1](https://github.com/bigheadG/mmWave/blob/master/physical_setup.png)
 
         
 # Installing
