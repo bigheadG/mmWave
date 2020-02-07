@@ -91,6 +91,16 @@ Enable UART:
       Reboot
 ![MainMenu 1](https://github.com/bigheadG/mmWave/blob/master/UART3.png)     
 
+# UART Still can not work, Please check cmdline.txt
+	$cat /boot/cmdline.txt
+	
+	if you find the console=serial0,115200 in cmdline.txt. please use raspi-config to remove it.
+	
+	$sudo raspi-config 
+	then reboot
+	
+	Detailed information plrase reference:
+	https://www.raspberrypi.org/documentation/configuration/uart.md
 
 # Video Demo(Press ICON to watch the Video)
 ## Vital Signs Detection:
