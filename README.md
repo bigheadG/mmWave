@@ -100,6 +100,7 @@ Enable UART:
 	then reboot
 	
 	Detailed information plrase reference:
+	
 	https://www.raspberrypi.org/documentation/configuration/uart.md
 
 # Video Demo(Press ICON to watch the Video)
