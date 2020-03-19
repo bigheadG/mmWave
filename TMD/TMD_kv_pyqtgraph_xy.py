@@ -1,14 +1,14 @@
  # -*- coding: utf-8 -*-
 """
 ****************************************
-version: v1.0 2019/10/29 release
-Short Range Radar API
+version: v1.0 2020/3/19 release
+Traffic Monitor Detect API
 ****************************************
 Use: pyqtgraph to plot
 
 Hardware requirements:
- Batman Kit- 101 SRR mmWave Sensor SDK
- Jetson nano or pi 4
+ Batman Kit- 201 TMD mmWave Sensor SDK-ISK
+ Jetson nano , pi 4  
  
 **************
 Install Jetson nano: Please reference
@@ -149,7 +149,10 @@ timer.start(50) #150  80: got(20 Times)   *50ms from uart:
 #
 #for Jetson nano UART port
 #port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
-
+#
+#for Mac example: please check: $ls /dev/tty* to get uart name
+#port = serial.Serial(""/dev/tty.usbmodemGY0052534"",baudrate = 921600, timeout = 0.5)
+#
 #for windows UART port
 #please check windows UART port 
 port = serial.Serial("COM189",baudrate = 921600, timeout = 0.5)
