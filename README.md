@@ -108,8 +108,6 @@ Enable UART:
 
 # Video Demo(Press ICON to watch the Video)
 
-	 http://www.mjoybien.com
-	
 ## Vital Signs Detection:
 [![Watch the Video](https://github.com/bigheadG/mmWave/blob/master/heart160.png)](https://youtu.be/4MSrxUmm69M "Watch the Video")
 ## High Accuracy Measurement:
