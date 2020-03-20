@@ -14,6 +14,7 @@ from the mmWave Sensor Module with the range of 0.3 ~ 3.0 meters(about 1 ~ 10 fe
        
  
  (2) Firmware:
+ 
      - Download program codes (On Going)
       
       
