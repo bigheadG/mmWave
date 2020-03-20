@@ -90,7 +90,7 @@ If Run demo program can not find any Raw data output:
 
 ## get kv Data
     (dck,v0,v1)=pm.tmdRead(False)
-    dck: data check true: Data is avaliable
+    dck: data check true: Data is avaliable, false: Data invalid
     v0: subHeader
     v1: objPoint
     
