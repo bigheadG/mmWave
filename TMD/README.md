@@ -1,10 +1,10 @@
- # ALERT: wait for change; mmWave-VSD (Vital Signs Detection)
-This repository contains the Batman Kit- VSD mmWave Sensor SDK. 
+ # mmWave-TMD (Traffic Monitor Detection)
+This repository contains the Batman Kit- Traffic Monitor Detection mmWave Sensor SDK. 
 The sample code below consists of instruction for using the mmWave lib.
-This mmWave-VSD Python Program will work with Vital Signs Detection (VSD) based mmWave Batman Kit solution.
-This App works with Raspberry Pi 3 / Pi 2 and Jetson Nano
-The Vital Signs Detection (VSD) based Batman Kit is for a contactless and wearableless and 30cm ~ 90cm (about 1~3 feet) distance detection of Vital Signs (Heartbeat Rate & Respiration Rate) of a person, a pet, or an animal. 
-
+This mmWave-TMD Python Program will work with Traffic Monitor Detection (TMD) based mmWave Batman Kit solution.
+This App works with Raspberry Pi 3 , Jetson Nano, windows and Mac
+The Traffic Monitor Detection (TMD) based on BM201-TMD-ISK for a contactless detect object moving in specify zone.
+The detect vehicle range from 5m to 50m  
 
 # Installing
 
@@ -19,11 +19,9 @@ Library update:
     $sudo pip3 install mmWave -U
 
 Examples:
-
-    vitalSign_ex0.py is a basic example for reading data from Batman EVK
-    vitalSign_ex1_Thread.py is an example of using thread to read data from Batman EVK
-    vitalSign_ex2_intr18.py is an example of using GPIO Pin18 rise-edge to trigger function to read data from Batman EVK
-
+    TMD_kv_ex0.py is a basic example for reading data from BM201-TMD-ISK
+    TMD_kv_pyqtgraph_xy.py is example for reading data and plot data
+  
 If Run demo program can not find any Raw data output:
       Please set UART to R/W mode: 
       
@@ -47,77 +45,11 @@ If Run demo program can not find any Raw data output:
 
 # Data Structure:
 
-    VS Data Format: [Frame Header][VSOS][Range Profile]
+    
 
-## Header:
-    class header:
-	    version = ""
-	    totalPackLen =0
-	    tvlHeaderLen = 8
-	    platform = ""
-	    frameNumber = 0
-	    timeCpuCycles = 0
-	    numDetectedObj = 0
-	    numTLVs = 0
-	    rsv = 0
-	
-    function call: getHeader(self)
-		    return header type data
-		
-    Show header infomation:
-    function call: headerShow(self)
-		
+  # import lib
 
-## Vital Signs Output Stats:
-
-    class vsos:
-	    rangeBinIndexMax  = 0 
-	    rangeBinIndexPhase = 0 
-	    maxVal  = float(0.0)
-	    processingCyclesOut =  0 
-	    processingCyclesOut1 =  0 
-	    rangeBinStartIndex  =  0 
-	    rangeBinEndIndex    =  0  
-	    unwrapPhasePeak_mm  = float(0.0)
-	    outputFilterBreathOut = float(0.0)
-	    outputFilterHeartOut = float(0.0)
-	    heartRateEst_FFT     = float(0.0)
-	    heartRateEst_FFT_4Hz  = float(0.0)
-	    heartRateEst_xCorr   = float(0.0)
-	    heartRateEst_peakCount  = float(0.0)
-	    breathingRateEst_FFT   = float(0.0)
-	    breathingEst_xCorr     = float(0.0)
-	    breathingEst_peakCount  = float(0.0)
-	    confidenceMetricBreathOut  = float(0.0)
-	    confidenceMetricBreathOut_xCorr  = float(0.0)
-	    confidenceMetricHeartOut   = float(0.0)
-	    confidenceMetricHeartOut_4Hz  = float(0.0)
-	    confidenceMetricHeartOut_xCorr  = float(0.0)
-	    sumEnergyBreathWfm = float(0.0)
-	    sumEnergyHeartWfm  = float(0.0)
-	    motionDetectedFlag = float(0.0)
-	    rsv  = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
-
-
-# TLV Data: Type-Length-Value
-    function call: (chk,vd,rangeBuf) = tlvRead(dbg)
-	    dbg := True, enable debug message
-	         False, disable debug message
-	       
-	    chk := True: Data valid
-		         False: Data invalid
-		   
-	    vd := Vital Signs Output Stats
-	 
-	    rangeBuf := [Complex(r0,i0),Complex(r1,i1)...Complex(r18,i18)]
-	      Length of rangeBuf is 38 equal to 19 sets complex data
-        rangeBuf is range profile data
-
-
-
-# import lib
-
-    from mmWave import vitalsign
+    from mmWave import trafficMD
 
   ### raspberry pi 3 use ttyS0
     port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
@@ -127,19 +59,43 @@ If Run demo program can not find any Raw data output:
     
   ### Jetson Nano use ttyTHS1
 	port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
-	and please modify: 
-	
-	#import RPi.GPIO as GPIO
-	import Jetson.GPIO as GPIO
+	 
+  ### windows use COMxxx
+	port = serial.Serial("COMxxx",baudrate = 921600, timeout = 0.5)
+	COMxxx : please modify COM
 
+  ### MacOS use COMxxx
+	port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
+	please use $ls /dev/tty* to check file for example "/dev/tty.usbmodemGY0052534"
+  
+## data structure
+	TMD Data Format: [subHeader][objPoint],[objPoint]...]
+
+## Header:
+    class subHeader:
+	frame: int = 0 #unsign Long
+	target: int = 0 #unsign Int
+	pcNum : int = 0 #unsign Int Point Cloud Number
+## data:
+    class objPoint:
+	idx: int = 0
+	x: float = 0.0
+	y: float = 0.0
+	vx: float = 0.0
+	vy: float = 0.0
+	iten : int = 0 # intensity
+	tid : int = 0
 ## define 
-    vts = vitalsign.VitalSign(port)
+    pm = trafficMD.tmdISK_kv(port)
 
-## get tlv Data
-    (dck , vd, rangeBuf) = vts.tlvRead(False)
-
+## get kv Data
+    (dck,v0,v1)=pm.tmdRead(False)
+    dck: data check true: Data is avaliable
+    v0: subHeader
+    v1: objPoint
+    
 ## Reference:
 
 1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/DriverVitalSigns_DevelopersGuide.pdf
-2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V20_TMD_Protocol_v20_11_pdf.pdf
+2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V20_TMD_Protocol_v20_10_pdf.pdf
 
