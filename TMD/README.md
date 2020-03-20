@@ -1,4 +1,4 @@
- # mmWave-VSD (Vital Signs Detection)
+ # ALERT: wait for change; mmWave-VSD (Vital Signs Detection)
 This repository contains the Batman Kit- VSD mmWave Sensor SDK. 
 The sample code below consists of instruction for using the mmWave lib.
 This mmWave-VSD Python Program will work with Vital Signs Detection (VSD) based mmWave Batman Kit solution.
@@ -141,5 +141,5 @@ If Run demo program can not find any Raw data output:
 ## Reference:
 
 1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/DriverVitalSigns_DevelopersGuide.pdf
-2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V20_TMD_Protocol_v20_10_pdf.pdf
+2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V20_TMD_Protocol_v20_11_pdf.pdf
 
