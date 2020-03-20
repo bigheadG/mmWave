@@ -10,7 +10,8 @@ from the mmWave Sensor Module with the range of 30cm ~ 3meters(about 1~10 feet) 
 
 ## Installing
  (1) Hardware:
-       See Drawing for more detail
+ 
+     - See Drawing connection for more detail 
      
      - Connect mmWave Batman-BT101 to Arduino DUE
      
@@ -18,7 +19,7 @@ from the mmWave Sensor Module with the range of 30cm ~ 3meters(about 1~10 feet) 
        
  
  (2) Firmware:
-     - Download program codes (see Reference)
+     - Download program codes (On Going)
       
       
  # Notes: 
@@ -34,4 +35,3 @@ from the mmWave Sensor Module with the range of 30cm ~ 3meters(about 1~10 feet) 
 
 2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V2_highAccuracyBLEProtocol_v02_02_pdf.pdf
 
-3. Arduino Due Code: (On Going)  
