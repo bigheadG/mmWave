@@ -1,14 +1,16 @@
 # mmWave
 mmWave SDK examples based on Batman Kit mmWave Sensor module
 This App works with Raspberry Pi 3, Pi 2 , Pi 4 and Jetson Nano
+,Windows and MacOS.
 Run this repository example needs install mmWave lib.
-Those examples are VSD,HAM,PMB,SRR,PC3D examples: 
+Those examples are VSD,HAM,PMB,SRR,PC3D,TMD examples: 
 VSD stands for Vital Signs Detection, 
 HAM stands for High Accuracy Measurement,
 PMB stands for People Moving Behavior,
 SRR stands for Short Range Radar,
 LPD stands for Long range People Detect,
-PC3D stands for People Overhead Counting 3D
+PC3D stands for People Overhead Counting 3D,
+TMD stands for Traffic Monitor Detection
 
 # Hardware requirements:
       
@@ -19,6 +21,7 @@ PC3D stands for People Overhead Counting 3D
        
        LPD: Batman kit 201: IWR6843-LPD
        PC3D: Batman kit 301: IWR6843-PC3D
+       TMD: Batman kit 201: IWR6843-TMD
 
 
 # Install Library:
