@@ -3,7 +3,7 @@ This repository contains the Batman Kit- HAM mmWave Sensor SDK.
 The High Accuracy Measurement (HAM) based Batman Kit is for measuring object distance 
 from the mmWave Sensor Module with the range of 0.3 ~ 3.0 meters(about 1 ~ 10 feet) with millimeter accuracy.
 
-## Installing:
+# Installing:
  (1) Hardware:
  
      - See Drawing connection for more detail 
