@@ -18,7 +18,7 @@ from the mmWave Sensor Module with the range of 0.3 ~ 3.0 meters(about 1 ~ 10 fe
       
       
 # Notes: 
-   1. You should select jumper for KEY Data Mode with baud rate 115200/8/n/1 
+   1. The mmWave jumper should be selected for KEY Data Mode with baud rate 115200/8/n/1 
    
 
 # Reference:
