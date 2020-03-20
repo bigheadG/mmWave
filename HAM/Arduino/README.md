@@ -23,9 +23,8 @@ from the mmWave Sensor Module with the range of 30cm ~ 3meters(about 1~10 feet) 
       
       
  # Notes: 
-   1. connection MMWAVE TX1 => DUE RX1
-      on {MMWAVE GPIO_0 LOW} select KEY data(115200) else RAW data(921600)   
-
+   1. You should select jumper for KEY Data Mode with baud rate 115200/8/n/1 
+   
 
 # reference:
 
