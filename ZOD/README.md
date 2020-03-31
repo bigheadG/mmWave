@@ -1,7 +1,8 @@
 # mmWave (Under Construction...)
 mmWave SDK examples based on Batman Kit mmWave Sensor module
 
+ 
+## Reference:
 
-
-# Reference:
-https://github.com/bigheadG/mmWaveDocs/blob/master/V22_ZOD_Occupancy_VitalSigns_Detection_User_Guide.pdf
+1. LabGuide:  https://github.com/bigheadG/mmWaveDocs/blob/master/V22_ZOD_Occupancy_VitalSigns_Detection_User_Guide.pdf
+2. KeyDataProtocol: none
