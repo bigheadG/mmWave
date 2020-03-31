@@ -54,7 +54,7 @@ Examples:
 
 	The occupancy Detection Range Azimuth Heatmap is a 2D array of short int, currently defined as 64 range rows with 48 azimuth angles per row. the total range is defined at 3 meters, so the range resolution of each row is 3m/64 = 4.69mm. In terms of azimuth, zero degrees is perpendicular to the antennas, with 60 degrees of view on each side. With 48 total angles, there are 24 angles per 60 defress on each side, or 2.55 degress per angle.  
 
-#V9: Feature Vector
+# V9: Feature Vector
 
 	Size: 5 x sizeOf(float)
 	
@@ -68,11 +68,11 @@ Examples:
 	   crossCorr	#float	
 	}
 	
-#V10 Decision Vector:
+# V10 Decision Vector:
 
 	The Decision Vector is an array of bytes; one byte per zone. Each byte contains the value 1 if a positive (occupied) decision has been calculated. It is zero otherwise.
 	
-#V11: Vital Signs Vector
+# V11: Vital Signs Vector
 	
 	V11: Struct {
 		unwrapped_waveform[2],  #float unwrapped phase values(plotted)
