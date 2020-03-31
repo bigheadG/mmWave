@@ -25,6 +25,8 @@ Examples:
     zod_ex0.py
     zod_ex1_heatMap.py
  
+![MainMenu 1](https://github.com/bigheadG/imageRepo/blob/master/zodScreen.png)
+
 ## Header:
     class header:
 	    version = 0
@@ -87,8 +89,29 @@ Examples:
 		breathing_rate[2]  	#float Breathing Rate calculated value(displayed)
 	}
 	
-	
+
+# import Library
+	import serial
+	from mmWave import vehicleOD
  
+# UART setting:
+	#Jetson nano
+	port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
+	#raspberry pi 4
+	port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
+	
+	#windows
+  	port = serial.Serial("COMXXX",baudrate = 921600, timeout = 0.5) 
+		notes: COMXXX please check UART Port then change XXX
+	 
 
+  	# MacOS use tty.usbmodem....
+	port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
+	please use $ls /dev/tty* to check file for example "/dev/tty.usbmodemGY0052534"
+	
+	
+	
+## Reference:
 
-  
+1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/V22_ZOD_Occupancy_VitalSigns_Detection_User_Guide.pdf
+	
