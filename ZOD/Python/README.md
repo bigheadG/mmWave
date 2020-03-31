@@ -91,10 +91,12 @@ Examples:
 	
 
 # import Library
+
 	import serial
 	from mmWave import vehicleOD
  
 # UART setting:
+
 	#Jetson nano
 	port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
 	#raspberry pi 4
@@ -109,6 +111,10 @@ Examples:
 	port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
 	please use $ls /dev/tty* to check file for example "/dev/tty.usbmodemGY0052534"
 	
+# Get Sensor Data
+
+	pm = vehicleOD.VehicleOD(port)
+	(dck,v8,v9,v10,v11) = pm.tlvRead(False)
 	
 	
 ## Reference:
