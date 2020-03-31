@@ -19,7 +19,11 @@ Library update:
 
     $sudo pip install mmWave -U
     $sudo pip3 install mmWave -U
-    
+
+pySerial Library:
+
+    $sudo pip3 install pySerial
+ 
 Examples:
 
     zod_ex0.py
@@ -113,7 +117,7 @@ Examples:
 
   	# MacOS use tty.usbmodem....
 	port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
-	please use $ls /dev/tty* to check file for example "/dev/tty.usbmodemGY0052534"
+	please use $ls /dev/tty* to check device and use "/dev/tty.usbmodemGY0052534"
 	
 
 	
