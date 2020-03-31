@@ -10,7 +10,8 @@ PMB stands for People Moving Behavior,
 SRR stands for Short Range Radar,
 LPD stands for Long range People Detect,
 PC3D stands for People Overhead Counting 3D,
-TMD stands for Traffic Monitor Detection
+TMD stands for Traffic Monitor Detection,
+ZOD stand for Zone Occupancy Detection
 
 # Hardware requirements:
       
@@ -22,6 +23,7 @@ TMD stands for Traffic Monitor Detection
        LPD: Batman kit 201: IWR6843-LPD
        PC3D: Batman kit 301: IWR6843-PC3D
        TMD: Batman kit 201: IWR6843-TMD
+       ZOD: Batman kit 201(ISK) :IWR6843-ZOD
 
 
 # Install Library:
