@@ -28,6 +28,7 @@ Examples:
 ![MainMenu 1](https://github.com/bigheadG/imageRepo/blob/master/zodScreen.png)
 
 ## Header:
+
     class header:
 	    version = 0
 	    totalPackLen = 0
@@ -99,6 +100,7 @@ Examples:
 
 	#Jetson nano
 	port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
+	
 	#raspberry pi 4
 	port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
 	
