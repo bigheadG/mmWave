@@ -45,7 +45,6 @@ Examples:
       
  ## Get mmWave Sensor data:
 
-
     pm = vehicleOD.VehicleOD(port)	
     (dck,v8,v9,v10,v11) = pm.tlvRead(False)
     (pass_fail, v8, v9, v10,v11)
@@ -97,12 +96,12 @@ Examples:
 	}
 	
 
-# import Library
+## import Library
 
 	import serial
 	from mmWave import vehicleOD
  
-# UART setting:
+## UART setting:
 
 	#Jetson nano
 	port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
@@ -114,7 +113,6 @@ Examples:
   	port = serial.Serial("COMXXX",baudrate = 921600, timeout = 0.5) 
 		notes: COMXXX please check UART Port then change XXX
 	 
-
   	# MacOS use tty.usbmodem....
 	port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
 	please use $ls /dev/tty* to check device and use "/dev/tty.usbmodemGY0052534"
