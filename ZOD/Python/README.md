@@ -40,7 +40,9 @@ Examples:
 	    subFrameIndex = 0
       
  ## Get mmWave Sensor data:
- 
+
+
+    pm = vehicleOD.VehicleOD(port)	
     (dck,v8,v9,v10,v11) = pm.tlvRead(False)
     (pass_fail, v8, v9, v10,v11)
     pass_fail: True: Data available    False: Data not available
@@ -113,11 +115,7 @@ Examples:
 	port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
 	please use $ls /dev/tty* to check file for example "/dev/tty.usbmodemGY0052534"
 	
-# Get Sensor Data
 
-	pm = vehicleOD.VehicleOD(port)
-	(dck,v8,v9,v10,v11) = pm.tlvRead(False)
-	
 	
 ## Reference:
 
