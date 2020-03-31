@@ -1,0 +1,3 @@
+# mmWave
+
+This repository contains Batman mmWave-ZOD Zone Occupancy Detection mmWave Sensor SDK. The sample code below consists of instruction for using the mmWave lib. This mmWave-ZOD Python Program will work with Zone Occupancy Detection (ZOD) based Batman BM201-ZOD mmWave Kit solution. This App works with Raspberry pi 4 or Jetson Nano along with Batman BM201-ZOD Kit, and is capable of plotting a Range-Azimuth-Heatmap with a 64 x48 Grid Matrix covering: Range of 3meter/64row (approx. 0.047meter per row) x Azimuth of 120degree/48column (approx. 2.5degree/column).  Subsequently a programmer may write a program to group the Grid(s) into Zone(s) for detecting whether the particular Zone(s) is occupied by Target(s).
