@@ -1,10 +1,5 @@
 # mmWave-SVD (Surface Velocity Detection Radar)
-This repository contains the Batman Kit- 201 SVD mmWave Sensor SDK. 
-The sample code below consists of instruction for using the mmWave lib.
-This mmWave-SVD Python Program will work with Surface Velocity Detection (SVD) based mmWave Batman Kit solution.
-This App works with Raspberry pi 4 and Jetson Nano
-The Surface Velocity Dettion Radar (SVD) based Batman Kit-201(ISK)  is capable of detecting water surface report distance, approaching or moving-away 
-(via Doppler Data) from the Radar in 18.22 meters .
+This repository contains the Batman Kit- 201 SVD Surface Velocity Detection mmWave Sensor SDK. The sample code below consists of instruction for using the mmWave lib. This mmWave-SVD Python Program will work with Surface Velocity Detection (SVD) based Batman BM201-SVD mmWave EVM Kit solution. This App works with Raspberry Pi 4 or Jetson Nano along with Batman BM201-SVD EVM Kit, and will report SVD data that include Doppler-Range Data, Point Cloud Data, Range Profile, and mmWave CPU Loading info; for application such as Water Stream Velocity Detection with range of 18.22 meters, and capable to distinguish water flow direction based on Doppler Data.
 
 # Hardware:
     Batman kit-201 (ISK)
