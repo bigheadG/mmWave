@@ -57,7 +57,7 @@ If Run demo program can not find any Raw data output:
 
 ## Data Structure
 
-## V1 Point Cloud Detected Object: Contains (X,Y,Z) coordinate and Doppler information of objects seen by the mmWave device
+### V1 Point Cloud Detected Object: Contains (X,Y,Z) coordinate and Doppler information of objects seen by the mmWave device
     
     V1 : [((float(x),float(y),float(z),float(doppler)).....]
 	tlvNDOCnt : Number of Detected Object Count
@@ -67,13 +67,13 @@ If Run demo program can not find any Raw data output:
 	doppler : Doppler
 	
 	
-## V2 Range Profile: Array of profile points at 0th Doppler (stationary objects). the points represent the sum of log2 magnitudes of received antennas.
+### V2 Range Profile: Array of profile points at 0th Doppler (stationary objects). the points represent the sum of log2 magnitudes of received antennas.
     
 	V2: (Range FFT) * 128
 	size: 128 points  
 
 
-## V6 Stats Information:
+### V6 Stats Information:
 
 	V6: (interFrameProcessingTime ,   #interFrame processing time in usec
             transmitOutputTime ,        #Transmission time of output detection information in usec
@@ -83,7 +83,7 @@ If Run demo program can not find any Raw data output:
             interFrameCPULoad)          #CPU Load (%) during inter frame duration
 	
 		
-## V7 Point Cloud Side Infomation:
+### V7 Point Cloud Side Infomation:
     
      V7: [(snr,noise).....]
      
