@@ -59,12 +59,14 @@ If Run demo program can not find any Raw data output:
 
 ### V1 Point Cloud Detected Object: Contains (X,Y,Z) coordinate and Doppler information of objects seen by the mmWave device
     
-    V1 : [((float(x),float(y),float(z),float(doppler)).....]
+    V1 : [((float(x),float(y),float(z),float(Velocity)).....]
 	tlvNDOCnt : Number of Detected Object Count
-	x : X coordinate 
-	y : Y coordinate
-      Z : Z coordinate 	
-	doppler : Doppler
+	x : X coordinate in meters
+	y : Y coordinate in meters
+	Z : Z coordinate in meters
+	Velocity : Doppler velocity estimate in m/s. Positive velocity means target 
+		is moving away from the sensor and Negative velocity means target 
+		is moving towards the sensor.
 	
 	
 ### V2 Range Profile: Array of profile points at 0th Doppler (stationary objects). the points represent the sum of log2 magnitudes of received antennas.
