@@ -24,7 +24,7 @@ Library update:
 
 Examples:
 
-    pyqtgraph_srr_xy.py # show detected object, doppler and Parking Bins
+    pyqtgraph_svd.py # show detected object, doppler
     
 If Run demo program can not find any Raw data output:
       Please set UART to R/W mode: 
