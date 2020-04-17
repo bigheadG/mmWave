@@ -11,7 +11,8 @@ SRR stands for Short Range Radar,
 LPD stands for Long range People Detect,
 PC3D stands for People Overhead Counting 3D,
 TMD stands for Traffic Monitor Detection,
-ZOD stand for Zone Occupancy Detection
+ZOD stand for Zone Occupancy Detection,
+SVD stand for Surface Velocity Detection
 
 # Hardware requirements:
       
@@ -24,6 +25,7 @@ ZOD stand for Zone Occupancy Detection
        PC3D: Batman kit 301: IWR6843-PC3D
        TMD: Batman kit 201: IWR6843-TMD
        ZOD: Batman kit 201(ISK) :IWR6843-ZOD
+       SVD: Batman Kit 201(ISK) :IWR6843-SVD
 
 
 # Install Library:
