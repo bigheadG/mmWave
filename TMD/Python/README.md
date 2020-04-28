@@ -64,7 +64,7 @@ If Run demo program can not find any Raw data output:
 	port = serial.Serial("COMxxx",baudrate = 921600, timeout = 0.5)
 	COMxxx : please modify COM
 
-  ### MacOS use COMxxx
+  ### MacOS use tty.usbmodemxxx
 	port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
 	please use $ls /dev/tty* to check file for example "/dev/tty.usbmodemGY0052534"
   
