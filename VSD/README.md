@@ -23,7 +23,10 @@ Examples:
     vitalSign_ex0.py is a basic example for reading data from Batman EVK
     vitalSign_ex1_Thread.py is an example of using thread to read data from Batman EVK
     vitalSign_ex2_intr18.py is an example of using GPIO Pin18 rise-edge to trigger function to read data from Batman EVK
-
+    pyqtgraph_vsd_ex3.py is an example of use [chest displacement waveform] -> [filter] -> [windowing] -> fft to get 		Breathing & heart rate
+   
+    ![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/vitalSignFFT.png)
+    
 If Run demo program can not find any Raw data output:
       Please set UART to R/W mode: 
       
