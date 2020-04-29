@@ -204,7 +204,7 @@ curve_cd = p6.plot(cd6)
 # range profile: Points= 64 points
 #######################################
 p7 = win.addPlot(colspan=1)
-p7.setLabel('bottom', 'Range Profile(rp7)', 'y:RCS x:meter')
+p7.setLabel('bottom', 'Range Profile(rp7)', 'y:RCS x:cm')
 p7t = np.linspace(0.3,0.9,19)
 p7.setRange(xRange=[0.3,0.9])
 curve_rp = p7.plot(rp7)
