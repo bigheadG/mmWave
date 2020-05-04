@@ -196,7 +196,7 @@ V9:Point Cloud Side Info<br/>
     
 ## Reference:
 
-1. LabGuide: 
+1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/V20_TMD_18xx_68xx_traffic_monitoring_users_guide.pdf
 
 
 	
