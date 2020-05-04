@@ -185,7 +185,7 @@ V9:Point Cloud Side Info<br/>
     tmd = trafficMD.TrafficMD(port)
     
 
-## get TMD-ISK Sensor Data
+## Get TMD-ISK Sensor Data
 
     raw data:
 
