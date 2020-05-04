@@ -12,7 +12,7 @@ Current PI's OS is supports python 3.7.0
 https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
 
 This repository contains the Batman Kit- 201(ISK) Sensing mmWave Sensor SDK Device Version:ES2.0 . The sample code below consists of instruction for using the mmWave lib. This mmWave-TMD Python Program will work with Traffice Monitor Detector based Batman BM201 mmWave Kit solution (BM201-TMD). This Python Program works with a Raspberry Pi 4 and/or NVIDIA Jetson Nano computer with Batman BM201-TMD Kit attached via Kit’s HAT Board; and that the BM201 Kit is an easy-to-use mmWave sensor evaluation kit for tracking multiple object’s movements simultaneously from 1meter ~ 50meter range with a high degree of accuracy suitable for privacy conscious applications; and where the Python Program would detect multiple people movements in a 2-Dimentional Area with ID tag, posX, posY, posZ, velx, vely, velz, accX, accY, accZ parameters, along with Point Clouds with elevation, azimuth, doppler, range, and snr parameters.
-Note: this Python program uses matplotlib for people movement’s 3D plot, and that the current 3D plot update rate is lagging; and where a faster 3D plot library will be desired (while the parameter data are read in real-time as normal).
+Note: this Python program uses matplotlib for objects movement’s 3D plot, and that the current 3D plot update rate is lagging; and where a faster 3D plot library will be desired (while the parameter data are read in real-time as normal).
 
 Hardware Sensor: 
 
@@ -50,7 +50,7 @@ Library update:
 
 # Examples:
 
-        TMD_ex0.py is an example output V6(Point Cloud),V7(Target Object List),V8(Target Index), V9(Point Cloud Side Info) data
+        TMD_ex0.py is an example output V6(Point Cloud),V7(Target Objects),V8(Target Index), V9(Point Cloud Side Info) data
         pyqtgraph_TMD_ex1.py is an example show point cloud in real time graphic use pyqtgraph
         TMD_ex2_pointCloud.py is an example plot point cloud in 3D use matplotlib
     
@@ -66,7 +66,7 @@ If Run demo program can not find any Raw data output:
       $ls -l /dev/ttyS0
       $sudo chmod +777 /dev/ttyAMA0
       
-      jetson
+      Jetson nano
       $ls -l /dev/ttyTHS1
       $sudo chmod +777 /dev/ttyTHS1
 
@@ -137,7 +137,8 @@ V9:Point Cloud Side Info<br/>
 
         v9 structure: [(snr,noise),....]    
         
-    Function call: 
+## Function call:
+
         (dck,v6,v7,v8,v9) = tmd.tlvRead(False)
         dck : True  : data avaliable
               False : data invalid
