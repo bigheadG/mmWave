@@ -106,7 +106,7 @@ Enable UART:
 	$sudo raspi-config 
 	then reboot
 	
-	Detailed information plrase reference:
+	Detailed information please reference:
 	
 	https://www.raspberrypi.org/documentation/configuration/uart.md
 
