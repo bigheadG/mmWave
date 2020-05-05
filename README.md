@@ -79,14 +79,15 @@ SVD stand for Surface Velocity Detection
 Enable UART:
 
       1:[MainMenu] -> [Preferences] -> [Raspberry Pi Configuration]
-         
-![MainMenu 0](https://github.com/bigheadG/mmWave/blob/master/UART0.png)
+      
+![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/UART0.jpeg)         
+
 
       2:Select [Interface Tab] in Raspberry Pi Configuration
       
       3:Enable Serial Port: Check radio RadioButton
-      
-![MainMenu 1](https://github.com/bigheadG/mmWave/blob/master/UART1.png)
+
+![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/UART1.jpeg) 
 
       4:List tty Device
       
@@ -96,7 +97,8 @@ Enable UART:
       $sudo chmod +666 /dev/ttyAMA0
       
       Reboot
-![MainMenu 1](https://github.com/bigheadG/mmWave/blob/master/UART3.png)     
+      
+![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/UART3.jpeg)  
 
 # UART Still can not work, Please check cmdline.txt
 	$cat /boot/cmdline.txt
