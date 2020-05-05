@@ -38,7 +38,7 @@ If Run demo program can not find any Raw data output:
       $ls -l /dev/ttyTHS1
       $sudo chmod +777 /dev/ttyTHS1
     
-![MainMenu 1](https://github.com/bigheadG/mmWave/blob/master/srr_scrot.png)
+![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/srr_scrot.jpeg)    
     
 ## Header:
 
