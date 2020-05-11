@@ -58,7 +58,7 @@ import numpy as np
 import serial
 
 #import trafficMD as TrafficMD
-from mmWave import trafficMD
+from mmWave import trafficMD_kv
 
 import struct
 import sys
@@ -157,7 +157,7 @@ timer.start(50) #150  80: got(20 Times)   *50ms from uart:
 #please check windows UART port 
 port = serial.Serial("COM189",baudrate = 921600, timeout = 0.5)
 
-pm =trafficMD.tmdISK_kv(port)
+pm =trafficMD_kv.tmdISK_kv(port)
 
 v1len = 0
 v2len = 0
