@@ -49,7 +49,7 @@ If Run demo program can not find any Raw data output:
 
   # import lib
 
-    from mmWave import trafficMD
+    from mmWave import trafficMD_kv
 
   ### raspberry pi 3 use ttyS0
     port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
@@ -86,7 +86,7 @@ If Run demo program can not find any Raw data output:
 		iten : int = 0 # intensity
 		tid : int = 0
 ## define 
-    pm = trafficMD.tmdISK_kv(port)
+    pm = trafficMD_kv.tmdISK_kv(port)
 
 ## get kv Data
     (dck,v0,v1)=pm.tmdRead(False)
