@@ -13,11 +13,11 @@ update:
 
 import serial
 import numpy as np
-from mmWave import trafficMD
+from mmWave import trafficMD_kv
 #import trafficMD as TrafficMD
 
 port = serial.Serial("COM189",baudrate = 921600, timeout = 0.5)
-pm = trafficMD.tmdISK_kv(port)
+pm = trafficMD_kv.tmdISK_kv(port)
 
 def uartGetdata(name):
 	print("mmWave: {:} example:".format(name))
