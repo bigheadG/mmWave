@@ -4,7 +4,7 @@
 version: v1.0 2020/05/13 release
 Drone Radar Navigtion API
 ****************************************
-Use: pyqtgraph to plot
+Use: pyqtgraph to plot wavefrom
 
 Hardware requirements:
  Batman Kit- 201 DRN mmWave Sensor SDK
@@ -164,13 +164,13 @@ timer.start(143) #150  80: got(20 Times)   *50ms from uart:
 #------------------------------------------
 
 #use USB-UART
-#port = serial.Serial("/dev/ttyUSB0",baudrate = 921600, timeout = 0.5)
+#port = serial.Serial("/dev/ttyUSB0",baudrate = 921600*2, timeout = 0.5)
 #
 #for Jetson nano UART port
 port = serial.Serial("/dev/ttyTHS1",baudrate = 921600*2, timeout = 0.5) 
 
 #for pi 4 UART port
-#port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
+#port = serial.Serial("/dev/ttyS0",baudrate = 921600*2, timeout = 0.5)
 #Drone Object Detect Radar initial 
 drn = droneRN.DroneRN(port)
 
@@ -180,7 +180,7 @@ v3len = 0
 v6len = 0
 v7len = 0
 
-svd.sm = False 
+drn.sm = False 
  
 def drnExec():
 	global spots0,spots1,tr2,tr21,v1len,v2len,v3len,v6len,v7len
