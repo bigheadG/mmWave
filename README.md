@@ -13,6 +13,7 @@ PC3D stands for People Overhead Counting 3D,
 TMD stands for Traffic Monitor Detection,
 ZOD stand for Zone Occupancy Detection,
 SVD stand for Surface Velocity Detection
+DRN stand for Drone Radar Navigation
 
 # Hardware requirements:
       
@@ -26,6 +27,7 @@ SVD stand for Surface Velocity Detection
        TMD: Batman kit 201: IWR6843-TMD
        ZOD: Batman kit 201(ISK) :IWR6843-ZOD
        SVD: Batman Kit 201(ISK) :IWR6843-SVD
+       DRN: Batman Kit 201(ISK) :IWR6843-DRN
 
 
 # Install Library:
