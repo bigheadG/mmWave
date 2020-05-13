@@ -36,7 +36,7 @@ If Run demo program can not find any Raw data output:
       $ls -l /dev/ttyTHS1
       $sudo chmod +777 /dev/ttyTHS1
     
-![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/dronDR.png)
+![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/droneDR.png)
     
 ## Header:
 
@@ -94,7 +94,8 @@ If Run demo program can not find any Raw data output:
 # function call:
 	 
 	getHeader()
-      headerShow()
+	headerShow()
+	
 	tlvRead()
 	usage: (dck,v1,v2,v3,v6,v7) = drn.tlvRead(False)
 		    
