@@ -17,7 +17,8 @@ DRN stand for Drone Radar Navigation
 
 # Youtube Demo
 
-	(https://www.youtube.com/playlist?list=PL4QD4eKmMP2WvnZ4I8-AomJjiYkygw3G2)
+	[![Watch the video](https://github.com/bigheadG/mmWave/blob/master/people160.png)](https://www.youtube.com/playlist?list=PL4QD4eKmMP2WvnZ4I8-AomJjiYkygw3G2 "Watch the video)
+	
 	
 # Hardware requirements:
       
