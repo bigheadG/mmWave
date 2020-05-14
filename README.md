@@ -15,8 +15,7 @@ ZOD stand for Zone Occupancy Detection,
 SVD stand for Surface Velocity Detection
 DRN stand for Drone Radar Navigation
 
-# Youtube Demo
-## Short Range Radar:
+## Youtube Demo:
 [![Watch the video](https://github.com/bigheadG/mmWave/blob/master/people160.png)](https://youtu.be/KuTrT1_m29k "Watch the Video")
 	
 # Hardware requirements:
