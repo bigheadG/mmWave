@@ -131,5 +131,8 @@ If Run demo program can not find any Raw data output:
 
 ## Reference
 
+LabGuide: reference from TI, https://github.com/bigheadG/mmWaveDocs/blob/master/V29_DRN_mmWave_sdk_68xx_dsp_user_guide.pdf
+
+
 
 
