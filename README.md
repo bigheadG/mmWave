@@ -118,15 +118,4 @@ Enable UART:
 	
 	https://www.raspberrypi.org/documentation/configuration/uart.md
 
-# Video Demo(Press ICON to watch the Video)
 
-## Vital Signs Detection:
-[![Watch the Video](https://github.com/bigheadG/mmWave/blob/master/heart160.png)](https://youtu.be/4MSrxUmm69M "Watch the Video")
-## High Accuracy Measurement:
-[![Watch the video](https://github.com/bigheadG/mmWave/blob/master/measure160.png)](https://youtu.be/IEmM7JIqtTc "Watch the Video")
-## People Moving Behavior:
-[![Watch the video](https://github.com/bigheadG/mmWave/blob/master/people160.png)](https://youtu.be/KuTrT1_m29k "Watch the Video")
-## Short Range Radar:
-[![Watch the video](https://github.com/bigheadG/mmWave/blob/master/people160.png)](https://youtu.be/KuTrT1_m29k "Watch the Video")
-## People Overhead Counting 3D:
-[![Watch the video](https://github.com/bigheadG/mmWave/blob/master/people160.png)](https://youtu.be/KuTrT1_m29k "Watch the Video")
