@@ -18,7 +18,8 @@ Library update:
     $sudo pip3 install mmWave -U
 
 Examples:
-
+    
+    DRN_ex0.py #Show the Radar detected object(Point Cloud...)
     pyqtgraph_drn.py # show detected object, doppler and range profile
     
 If Run demo program can not find any Raw data output:
