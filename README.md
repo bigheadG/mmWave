@@ -15,6 +15,10 @@ ZOD stand for Zone Occupancy Detection,
 SVD stand for Surface Velocity Detection
 DRN stand for Drone Radar Navigation
 
+# Youtube Demo
+
+	(https://www.youtube.com/playlist?list=PL4QD4eKmMP2WvnZ4I8-AomJjiYkygw3G2)
+	
 # Hardware requirements:
       
        VSD: Batman kit 101: IWR1642-VSD
