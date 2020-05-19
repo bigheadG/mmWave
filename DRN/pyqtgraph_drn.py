@@ -58,9 +58,9 @@ import sys
 
 from threading import Thread
 import datetime
-from scipy.fftpack import fft
+#from scipy.fftpack import fft
 import numpy as np
-from scipy import signal
+#from scipy import signal
 
 
 #from PyQt5.QtCore import Qt
