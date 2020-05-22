@@ -185,7 +185,7 @@ V9:Point Cloud Side Info<br/>
   ### for macOS
       port = serial.Serial("/dev/tty.usbmodemGY00xxxx",baudrate = 921600, timeout = 0.5)
       
-  ### for ubuntu 
+  ### for Ubuntu 
       port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 	
 ## define
