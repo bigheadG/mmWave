@@ -1,3 +1,12 @@
+![Platform](https://img.shields.io/badge/Raspberry-Pi3-orange.svg)&nbsp;
+![Platform](https://img.shields.io/badge/Raspberry-Pi4-orange.svg)&nbsp;
+![Platform](https://img.shields.io/badge/ubuntu-NCU-orange.svg)&nbsp;
+![Platform](https://img.shields.io/badge/Win-OS-blue)&nbsp;
+![Platform](https://img.shields.io/badge/Mac-OS-lightgrey)&nbsp;
+![Platform](https://img.shields.io/badge/Jeson-Nano-green.svg)&nbsp;
+![Language](https://img.shields.io/badge/python-%3E3.6%20-green.svg)&nbsp;
+![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)
+
 # mmWave-DRN (Drone Radar Navigation SDK)
 This repository contains the Batman Kit-201 DRN Drone Radar Navigation SDK.  The sample code below consists of instruction for using the mmWave lib. This mmWave-DRN Python Program will work with Drone Radar Navigation (DRN) based Batman BM201-DRN mmWave EVM Kit solution. This App works with Raspberry Pi 4 or Jetson Nano along with Batman BM201-DRN EVM Kit, and will report DRN data that include Doppler-Range Data, Point Cloud Data, and Range Profile; for application such as drone navigation with range of approx. 20 meters.
 
@@ -21,6 +30,7 @@ Examples:
     
     DRN_ex0.py #Show the Radar detected object(Point Cloud...)
     pyqtgraph_drn.py # show detected object, doppler and range profile
+    pyqtgraph_3d_drn.py #show object detect in 3d
     
 If Run demo program can not find any Raw data output:
       Please set UART to R/W mode: 
@@ -38,6 +48,7 @@ If Run demo program can not find any Raw data output:
       $sudo chmod +777 /dev/ttyTHS1
     
 ![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/droneDR.png)
+![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/drn_3d.png)
     
 ## Header:
 
@@ -113,6 +124,14 @@ If Run demo program can not find any Raw data output:
   	port = serial.Serial("/dev/ttyTHS1",baudrate = 921600*2, timeout = 0.5)
 	and please modify: 
 	
+  ### use USB-UART
+	port = serial.Serial("/dev/ttyUSB0",baudrate = 921600*2, timeout = 0.5)
+ 
+  ### Mac OS use tty.usbmodemxxxx
+	port = serial.Serial("/dev/tty.usbmodemGY0052854",baudrate = 921600*2, timeout = 0.5)
+  
+  ### ubuntu NUC
+	port = serial.Serial("/dev/ttyACM1",baudrate = 921600*2, timeout = 0.5)
 
 ## define
 
