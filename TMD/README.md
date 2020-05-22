@@ -1,5 +1,9 @@
 ![Platform](https://img.shields.io/badge/Raspberry-Pi3-orange.svg)&nbsp;
 ![Platform](https://img.shields.io/badge/Raspberry-Pi4-orange.svg)&nbsp;
+![Platform](https://img.shields.io/badge/ubuntu-NCU-orange.svg)&nbsp;
+![Platform](https://img.shields.io/badge/Win-OS-blue)&nbsp;
+![Platform](https://img.shields.io/badge/Mac-OS-lightgrey)&nbsp;
+![Platform](https://img.shields.io/badge/Jeson-Nano-green.svg)&nbsp;
 ![Language](https://img.shields.io/badge/python-%3E3.6%20-green.svg)&nbsp;
 ![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)
 
@@ -53,6 +57,7 @@ Library update:
         TMD_ex0.py is an example output V6(Point Cloud),V7(Target Objects),V8(Target Index), V9(Point Cloud Side Info) data
         pyqtgraph_TMD_ex1.py is an example show point cloud in real time graphic use pyqtgraph
         TMD_ex2_pointCloud.py is an example plot point cloud in 3D use matplotlib
+	pyqtgraph_3d_tmd.py is an example plot point cloud in 3D use pyqtgraph. Plot speed is fast than matplotlib
     
 
 If Run demo program can not find any Raw data output:
@@ -179,6 +184,9 @@ V9:Point Cloud Side Info<br/>
     
   ### for macOS
       port = serial.Serial("/dev/tty.usbmodemGY00xxxx",baudrate = 921600, timeout = 0.5)
+      
+  ### for ubuntu 
+      port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 	
 ## define
      
