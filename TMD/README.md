@@ -57,7 +57,7 @@ Library update:
         TMD_ex0.py is an example output V6(Point Cloud),V7(Target Objects),V8(Target Index), V9(Point Cloud Side Info) data
         pyqtgraph_TMD_ex1.py is an example show point cloud in real time graphic use pyqtgraph
         TMD_ex2_pointCloud.py is an example plot point cloud in 3D use matplotlib
-	pyqtgraph_3d_tmd.py is an example plot point cloud in 3D use pyqtgraph. Plot speed is fast than matplotlib
+	pyqtgraph_3d_tmd.py is an example plot point cloud in 3D use pyqtgraph. The display speed is fast than matplotlib
     
 
 If Run demo program can not find any Raw data output:
