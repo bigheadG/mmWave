@@ -15,14 +15,14 @@ Current PI's OS is supports python 3.7.0
 
 https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
 
-This repository contains the Batman Kit- 201(ISK) Sensing mmWave Sensor SDK Device Version:ES2.0 . The sample code below consists of instruction for using the mmWave lib. This mmWave-TMD Python Program will work with Traffice Monitor Detector based Batman BM201 mmWave Kit solution (BM201-TMD). This Python Program works with a Raspberry Pi 4 and/or NVIDIA Jetson Nano computer with Batman BM201-TMD Kit attached via Kit’s HAT Board; and that the BM201 Kit is an easy-to-use mmWave sensor evaluation kit for tracking multiple object’s movements simultaneously from 1meter ~ 50meter range with a high degree of accuracy suitable for privacy conscious applications; and where the Python Program would detect multiple people movements in a 2-Dimentional Area with ID tag, posX, posY, posZ, velx, vely, velz, accX, accY, accZ parameters, along with Point Clouds with elevation, azimuth, doppler, range, and snr parameters.
+This repository contains the Batman mmWave-TMD Traffic Monitoring Detection mmWave Sensor SDK with Device Version:ES2.0 . The sample code below consists of instruction for using the mmWave lib. This mmWave-TMD Python Program works with Traffic Monitoring Detection (TMD) based Batman BM201-TMD  mmWave Kit solution. This Python Program works with a Raspberry Pi 4 and/or NVIDIA Jetson Nano computer with Batman BM201-TMD Kit attached via Kit’s HAT Board; and that the BM201-TMD Kit is an easy-to-use mmWave sensor evaluation kit for tracking multiple object's movements simultaneously from 1meter ~ 50meter range with a high degree of accuracy suitable for traffic monitoring applications; and where the Python Program would detect multiple object/vehicle movements in a 3-Dimentional Area with ID tag, posX, posY, posZ, velx, vely, velz, accX, accY, accZ parameters, along with Point Clouds with elevation, azimuth, doppler, and range parameters.
 Note: this Python program uses matplotlib for objects movement’s 3D plot, and that the current 3D plot update rate is lagging; and where a faster 3D plot library will be desired (while the parameter data are read in real-time as normal).
 
 Hardware Sensor: 
 
-    Batman BM201-TMD provid two types of data:
+    Batman BM201-TMD provides two types of data:
 
-      BM201-TMD provids raw data as:
+      BM201-TMD provides raw data as:
 
         	Point Cloud Spherical(V6): range,azimuth,elevation,doppler
         	Target Object (V7): tid,posX,posY,velX,velY,accX,accY,posZ,velZ,accZ
