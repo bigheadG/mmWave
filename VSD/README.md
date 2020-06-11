@@ -149,4 +149,5 @@ If Run demo program can not find any Raw data output:
 1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/DriverVitalSigns_DevelopersGuide.pdf
 2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V1_vitalSignsBLEProtocol_v01_02_pdf.pdf
 3. KeyDataProtocol_withStatus: https://github.com/bigheadG/mmWaveDocs/blob/master/V01_VSD_vitalSignsBLEProtocol_v01_03_pdf.pdf
+   
    ALERT: above Status feature is supported on version V01.54 or V30.02 or later
