@@ -16,7 +16,7 @@ from collections import deque
 #import matplotlib.animation as animation
 import numpy as np
 from threading import Thread
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 #from matplotlib.figure import Figure
 import numpy as np
 from mmWave import highAccuracy
@@ -57,12 +57,14 @@ class globalV:
 		
 		
 # UART initial
-try:    #pi 3
-	port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
-except: #pi 2
-	port = serial.Serial("/dev/ttyAMA0",baudrate = 921600, timeout = 0.5)
-	
+#pi 3
+#port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
+#pi 2
+#port = serial.Serial("/dev/ttyAMA0",baudrate = 921600, timeout = 0.5)
+#Mac
+#port = serial.Serial("/dev/tty.usbmodemGY0052524",baudrate = 921600, timeout = 0.5)	
 #
+port = serial.Serial("/dev/tty.SLAB_USBtoUART",baudrate = 921600, timeout = 0.5)	
 #Object initail
 #
 gv = globalV(0)
