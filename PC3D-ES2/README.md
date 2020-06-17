@@ -195,7 +195,7 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
     
 ## Reference:
 
-1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/3d_pplcount_user_guide.pdf
+1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/(V12_PC3_ODS)Overhead_People_Tracking_and_Stance_Detection_users_guide.pdf
 
 2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V12_Protocol%20for%203DPC_KEY_data%20Project%20V1201_pdf.pdf
 	
