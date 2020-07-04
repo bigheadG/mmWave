@@ -53,10 +53,12 @@ If Run demo program can not find any Raw data output:
       $ls -l /dev/ttyTHS1
       $sudo chmod +777 /dev/ttyTHS1
 
-pyqtgraph_3d_pc3_xyz.py screenshot
+## pyqtgraph_3d_pc3_xyz.py screenshot
+
 ![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/pc3_xyz.png)
 
-pyqtgraph_3d_pc3_occupation.py screenshot
+## pyqtgraph_3d_pc3_occupation.py screenshot
+
 ![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/position.png)
  
  # import lib
@@ -167,7 +169,8 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 
 ## Reference
 
-LabGuide: reference from TI IWR6843ISK ES2.0, 
+ 
+1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/3d_pplcount_user_guide.pdf
 
 
 
