@@ -35,7 +35,7 @@ Library update:
 Examples:
     
     pyqtgraph_3d_pc3_xyz.py # show detected point cloud in 3D
-    pyqtgraph_3d_pc3_occupation.py # show detected point cloud occupation
+    pyqtgraph_3d_pc3_occupation.py # show detected point cloud occupation (Waiting for upload)
     
 If Run demo program can not find any Raw data output:
       Please set UART to R/W mode: 
