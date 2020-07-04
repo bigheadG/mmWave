@@ -34,7 +34,6 @@ Library update:
 
 Examples:
     
-    pc3_ex0.py #Show the Radar detected object(Point Cloud...)
     pyqtgraph_3d_pc3_xyz.py # show detected point cloud in 3D
     pyqtgraph_3d_pc3_occupation.py # show detected point cloud occupation
     
