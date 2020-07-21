@@ -93,7 +93,7 @@ Examples:
 ## import Library
 
 	import serial
-	from mmWave import vehicleOD
+	from mmWave import vehicleODHeatMap
  
 ## UART setting:
 
