@@ -1,5 +1,5 @@
-# Zone Occupancy Detection
-mmWave SDK examples based on Batman Kit mmWave Sensor module
+# Zone Occupancy Detection and Vital Sign Detection
+
 Zone Occupancy Detection and Vital Sign Detection Based on BM201-ZOD
  
 ## Reference:
