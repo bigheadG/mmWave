@@ -3,18 +3,19 @@ mmWave SDK examples based on Batman Kit mmWave Sensor module
 This App works with Raspberry Pi 3, Pi 2 , Pi 4 and Jetson Nano
 ,Windows and MacOS.
 Run this repository example needs install mmWave lib.
-Those examples are VSD,HAM,PMB,SRR,LPD,PC3D,TMD,ZOD,SVD,DRN and VOD, examples:<br/> 
-VSD:  Vital Signs Detection,<br/> 
-HAM:  High Accuracy Measurement,<br/>
-PMB:  People Moving Behavior,<br/>
-SRR:  Short Range Radar,<br/>
-LPD:  Long range People Detect,<br/>
-PC3D: People Overhead Counting 3D,<br/>
-TMD:  Traffic Monitor Detection,<br/>
-ZOD:  Zone Occupancy Detection,<br/>
-SVD:  Surface Velocity Detection<br/>
-DRN:  Drone Radar Navigation<br/>
-VOD:  Vehicle Occupancy Detect<br/>
+Those examples are VSD,HAM,PMB,SRR,LPD,PC3D,TMD,ZOD,SVD,DRN,VOD and PC3 examples:<br/> 
+VSD:  Vital Signs Detection.<br/> 
+HAM:  High Accuracy Measurement.<br/>
+PMB:  People Moving Behavior.<br/>
+SRR:  Short Range Radar.<br/>
+LPD:  Long range People Detect.<br/>
+PC3D: People Overhead Counting 3D.<br/>
+TMD:  Traffic Monitor Detection.<br/>
+ZOD:  Zone Occupancy Detection.<br/>
+SVD:  Surface Velocity Detection.<br/>
+DRN:  Drone Radar Navigation.<br/>
+VOD:  Vehicle Occupancy Detection.<br/>
+PC3:  People Counting Detection.<br/>
 
 ## Youtube Demo:
 
@@ -34,6 +35,7 @@ VOD:  Vehicle Occupancy Detect<br/>
        SVD: Batman Kit 201(ISK) :IWR6843-SVD
        DRN: Batman Kit 201(ISK) :IWR6843-DRN
        VOD: Batman Kit 201(ISK) :IWR6843-VOD
+       PC3: Batman Kit 201(ISK) :IWR6843-PC3
 
 
 # Install Library:
