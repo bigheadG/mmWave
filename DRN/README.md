@@ -8,9 +8,10 @@
 ![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)
 
 # mmWave-DRN (Drone Radar Navigation SDK)
-This repository contains the Batman Kit-201 DRN Drone Radar Navigation SDK.  The sample code below consists of instruction for using the mmWave lib. This mmWave-DRN Python Program will work with Drone Radar Navigation (DRN) based Batman BM201-DRN mmWave EVM Kit solution. This App works with Raspberry Pi 4 or Jetson Nano along with Batman BM201-DRN EVM Kit, and will report DRN data that include Doppler-Range Data, Point Cloud Data, and Range Profile; for application such as drone navigation with range of approx. 20 meters.
+This repository contains the Batman Kit-201 DRN Drone Radar Navigation SDK.  The sample code below consists of instruction for using the mmWave lib. This mmWave-DRN Python Program will work with Drone Radar Navigation (DRN) based Batman BM201-DRN mmWave EVM Kit solution. This App works with Raspberry Pi 4 or Jetson Nano along with Batman BM201-DRN EVM Kit, and will report DRN data that include Doppler-Range Data, Point Cloud Data, and Range Profile; for application such as drone navigation with range of approx. 20 meters.  
 
 # Hardware:
+    
     Batman kit-201 (ISK)
     Measure Range: 20 meters
     
