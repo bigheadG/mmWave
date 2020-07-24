@@ -37,7 +37,8 @@ Hardware Sensor:
         Setup Requirements:
         Elevate EVM:2.0~2.5m high
         Down tilt:~2-3 degree
-![MainMenu 1](https://github.com/bigheadG/mmWave/blob/master/physical_setup_lpd.png)
+![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/physical_setup_lpd.png)
+
 
         
 # Installing
