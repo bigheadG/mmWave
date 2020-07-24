@@ -3,17 +3,18 @@ mmWave SDK examples based on Batman Kit mmWave Sensor module
 This App works with Raspberry Pi 3, Pi 2 , Pi 4 and Jetson Nano
 ,Windows and MacOS.
 Run this repository example needs install mmWave lib.
-Those examples are VSD,HAM,PMB,SRR,PC3D,TMD examples: 
-VSD stands for Vital Signs Detection, 
-HAM stands for High Accuracy Measurement,
-PMB stands for People Moving Behavior,
-SRR stands for Short Range Radar,
-LPD stands for Long range People Detect,
-PC3D stands for People Overhead Counting 3D,
-TMD stands for Traffic Monitor Detection,
-ZOD stand for Zone Occupancy Detection,
-SVD stand for Surface Velocity Detection
-DRN stand for Drone Radar Navigation
+Those examples are VSD,HAM,PMB,SRR,LPD,PC3D,TMD,ZOD,SVD,DRN and VOD, examples:<br/> 
+VSD:  Vital Signs Detection,<br/> 
+HAM:  High Accuracy Measurement,<br/>
+PMB:  People Moving Behavior,<br/>
+SRR:  Short Range Radar,<br/>
+LPD:  Long range People Detect,<br/>
+PC3D: People Overhead Counting 3D,<br/>
+TMD:  Traffic Monitor Detection,<br/>
+ZOD:  Zone Occupancy Detection,<br/>
+SVD:  Surface Velocity Detection<br/>
+DRN:  Drone Radar Navigation<br/>
+VOD:  Vehicle Occupancy Detect<br/>
 
 ## Youtube Demo:
 
@@ -32,6 +33,7 @@ DRN stand for Drone Radar Navigation
        ZOD: Batman kit 201(ISK) :IWR6843-ZOD
        SVD: Batman Kit 201(ISK) :IWR6843-SVD
        DRN: Batman Kit 201(ISK) :IWR6843-DRN
+       VOD: Batman Kit 201(ISK) :IWR6843-VOD
 
 
 # Install Library:
