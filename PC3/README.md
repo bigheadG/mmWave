@@ -162,7 +162,7 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
     x = r * cos(φ) * sin(θ)
     y = r * cos(φ) * cos(θ)
     
- ![MainMenu 1](https://github.com/bigheadG/mmWave/blob/master/objGeoSmall.png)
+ ![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/objGeoSmall.png)
 			
 
 
