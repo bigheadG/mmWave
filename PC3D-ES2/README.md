@@ -25,8 +25,8 @@ Hardware Sensor:
         BM301-FDS provids key/value data as:
 	
         Target Object(V7) : id,posX,posY,posZ,velX,velY,velZ,accX,accY,accZ parameters.
-        
-![MainMenu 1](https://github.com/bigheadG/mmWave/blob/master/BM301-FDS-Mounted.png)
+         
+![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/BM301-FDS-Mounted.png)
         
 # Installing
 
