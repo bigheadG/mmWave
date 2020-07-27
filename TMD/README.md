@@ -39,7 +39,7 @@ Hardware Sensor:
         Elevate EVM: 
         Down tilt: 
         
-![MainMenu 1](https://github.com/bigheadG/mmWave/blob/master/physical_setup_lpd.png)
+![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/physical_setup_lpd.png)
 
         
 # Installing
