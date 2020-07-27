@@ -254,6 +254,9 @@ V9:Point Cloud Side Info<br/>
 
 1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide.pdf
 
+Beamforming 100m
+2. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide_bf_100m.pdf
+
 2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V9_Protocol%20for%20LONG_RANGE_PEOPLE_DETECTION_KEY_data%20Project%20V0901_pdf.pdf
 	
     
