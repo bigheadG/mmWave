@@ -74,6 +74,25 @@ If Run demo program can not find any Raw data output:
       $sudo chmod +777 /dev/ttyTHS1
 
 # Data Structure(Raw Data):
+	class header:
+		version = 0
+		platform = 0
+		totalPackLen = 0
+		timeStamp = 0
+		totalPacketLen = 0
+		frameNumber = 0
+		subFrameNumber = 0
+		chirpMargin = 0
+		frameMargin = 0 
+		trackProcessTime = 0
+		uartSendTime = 0
+		numTLVs = 0
+		checksum = 0
+		
+	function Call:
+		getHeader()
+		headerShow()
+		
 ## Lib import(Raw Data):
 
 from mmWave import lpdISK
