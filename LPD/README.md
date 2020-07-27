@@ -14,6 +14,8 @@ https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
 This repository contains the Batman Kit- 201(ISK) Sensing mmWave Sensor SDK Device Version:ES2.0 . The sample code below consists of instruction for using the mmWave lib. This mmWave-LPD Python Program will work with Long-Range People Detection based Batman BM201 mmWave Kit solution (BM201-LPD). This Python Program works with a Raspberry Pi 4 and/or NVIDIA Jetson Nano computer with Batman BM201-LPD Kit attached via Kit’s HAT Board; and that the BM201 Kit is an easy-to-use mmWave sensor evaluation kit for tracking multiple people’s movements simultaneously from 1meter ~ 50meter range with a high degree of accuracy suitable for privacy conscious applications; and where the Python Program would detect multiple people movements in a 3-Dimentional Area with ID tag, posX, posY, posZ, velx, vely, velz, accX, accY, accZ parameters, along with Point Clouds with elevation, azimuth, doppler, range, and snr parameters.
 Note: this Python program uses matplotlib for people movement’s 3D plot, and that the current 3D plot update rate is lagging; and where a faster 3D plot library will be desired (while the parameter data are read in real-time as normal).
 
+And Beamforming and BeamSteering has implemented on the device the example show radar detection range is up to 100m away.
+
 Hardware Sensor: 
 
     Batman BM201-LPD provid two types of data:
@@ -55,6 +57,11 @@ Library update:
     Raw data:
         lpd_v09_raw_ex0.py is a example output V6(Point Cloud Spherical),V7(Target Object List),V8(Target Index), V9(Point Cloud Side Info) data
         
+	Beamforming and BeamSteering has implemented on the device the example show radar detection range is 100m.
+
+    	pyqtgraph_lpd_xyz_3d_100m.py 
+	pyqtgraph_lpd_xy_2d_100m.py
+    
     key/value:
         lpd_v09_kv_3dbar.py use key/value to draw object in 3DBar 
 
@@ -254,10 +261,10 @@ V9:Point Cloud Side Info<br/>
 
 1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide.pdf
 
-Beamforming 100m
 2. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide_bf_100m.pdf
+	(Beamforming and BeamSteering has implemented on the device user guide) 
 
-2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V9_Protocol%20for%20LONG_RANGE_PEOPLE_DETECTION_KEY_data%20Project%20V0901_pdf.pdf
+3. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V9_Protocol%20for%20LONG_RANGE_PEOPLE_DETECTION_KEY_data%20Project%20V0901_pdf.pdf
 	
     
 
