@@ -118,11 +118,11 @@ Each Target List consists of an array of targets. Each target data structure def
         posY: float     #Target position in Y, m
         velX: float     #Target velocity in X, m/s
         velY: float     #Target velocity in Y, m/s
-        accX: float     #Target velocity in X, m/s
-        accY: float     #Target velocity in Y, m/s
+        accX: float     #Target velocity in X, m/s2
+        accY: float     #Target velocity in Y, m/s2
         posZ: float     #Target position in Z, m
         velZ: float     #Target velocity in Z, m/s
-        accZ: float     #Target velocity in Z, m/s
+        accZ: float     #Target velocity in Z, m/s2
         
         V7 =: [(tid,posX,posY,velX,velY,accX,accY,posZ,velZ,accZ),....]
         
