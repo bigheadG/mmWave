@@ -58,7 +58,7 @@ Library update:
 	lpd_v09_raw_ex0.py is a example output V6(Point Cloud Spherical),V7(Target Object List),V8(Target Index), V9(Point Cloud Side Info) data
 	LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide.pdf
         
-	Following example: Beamforming and BeamSteering has implemented on the device the example show radar detection range is 100m.
+	v24 is BM201 use Beamforming and BeamSteering to implemented on the device to detect people in 100m away.
 	lpd_v24_2d_pyqtgraph_xyz_100m.py 
 	lpd_v24_2d_pyqtgraph_xy_100m.py
 	LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide_bf_100m.pdf
