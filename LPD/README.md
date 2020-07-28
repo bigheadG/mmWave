@@ -55,12 +55,13 @@ Library update:
 
 # Examples:
     Raw data:
-        lpd_v09_raw_ex0.py is a example output V6(Point Cloud Spherical),V7(Target Object List),V8(Target Index), V9(Point Cloud Side Info) data
+	lpd_v09_raw_ex0.py is a example output V6(Point Cloud Spherical),V7(Target Object List),V8(Target Index), V9(Point Cloud Side Info) data
+	LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide.pdf
         
-	Beamforming and BeamSteering has implemented on the device the example show radar detection range is 100m.
-
-    	pyqtgraph_lpd_xyz_3d_100m.py 
-	pyqtgraph_lpd_xy_2d_100m.py
+	Following example: Beamforming and BeamSteering has implemented on the device the example show radar detection range is 100m.
+	lpd_v24_2d_pyqtgraph_xyz_100m.py 
+	lpd_v24_2d_pyqtgraph_xy_100m.py
+	LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide_bf_100m.pdf
     
     key/value:
         lpd_v09_kv_3dbar.py use key/value to draw object in 3DBar 
