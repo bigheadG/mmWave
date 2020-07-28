@@ -96,10 +96,9 @@ w0.addItem(curveS1)
 # plot data update 
 #
 def updatePlot():
-	global v6len,spots0,v7len
+	global v6len,spots0,spots1,v7len
 	if v6len !=0:
 		curveS0.setData(spots0)
-	if v7len != 0:
 		curveS1.setData(spots1)
 		
 # update all plots
@@ -137,6 +136,12 @@ v8len = 0
 v9len = 0
 
 radar.sm = False 
+'''
+	for i in range(len(pct)):
+		zt = pct[i][0] * np.sin(pct[i][2]) 
+		xt = pct[i][0] * np.cos(pct[i][2]) * np.sin(pct[i][1])
+		yt = pct[i][0] * np.cos(pct[i][2]) * np.cos(pct[i][1])
+'''
  
 def radarExec():
 	global spots0,spots1,v8len,v9len,v6len,v7len
@@ -153,19 +158,12 @@ def radarExec():
 		 
 		print("Sensor Data: [v6,v7,v8,v9]:[{:d},{:d},{:d},{:d}]".format(v6len,v7len,v8len,v9len))
 		
-		if v7len != 0:
+		#v6 struct = [(r,a,e,d),(r,a,e,d),(r,a,e,d)..]
+		if v6len != 0:
 			pc = v6
 			pct = v7
-			#v6 struct = [(r,a,e,d),(r,a,e,d),(r,a,e,d)..]
-			'''
-			for i in range(len(pct)):
-				zt = pct[i][0] * np.sin(pct[i][2]) 
-				xt = pct[i][0] * np.cos(pct[i][2]) * np.sin(pct[i][1])
-				yt = pct[i][0] * np.cos(pct[i][2]) * np.cos(pct[i][1])
-			'''
 			spots0  = [{'pos': [pc[i][0] * np.cos(pc[i][2]) * np.sin(pc[i][1]),pc[i][0] * np.cos(pc[i][2]) * np.cos(pc[i][1])],'data': 1, 'brush':pg.intColor(i, v6len), 'symbol': 'o', 'size': 3 } for i in range(v6len)]
-			spots1  = [{'pos': [pct[i][0],pct[i][1]],'data': 1, 'brush':pg.intColor(i, v7len), 'symbol': 's', 'size': 10 } for i in range(v7len)]
-			
+			spots1  = [{'pos': [pct[i][1],pct[i][2]],'data': 1, 'brush':pg.intColor(i, v7len), 'symbol': 's', 'size': 10 } for i in range(v7len)]
 			flag = True
 			
 	port.flushInput()
