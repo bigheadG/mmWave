@@ -163,7 +163,12 @@ def radarExec():
 			pc = v6
 			pct = v7
 			spots0  = [{'pos': [pc[i][0] * np.cos(pc[i][2]) * np.sin(pc[i][1]),pc[i][0] * np.cos(pc[i][2]) * np.cos(pc[i][1])],'data': 1, 'brush':pg.intColor(i, v6len), 'symbol': 'o', 'size': 3 } for i in range(v6len)]
+<<<<<<< HEAD
 			spots1  = [{'pos': [pct[i][1],pct[i][2]],'data': 1, 'brush':pg.intColor(i, v7len), 'symbol': 's', 'size': 10 } for i in range(v7len)]
+=======
+			spots1  = [{'pos': [pct[i][1],pct[i][0]],'data': 1, 'brush':pg.intColor(i, v7len), 'symbol': 's', 'size': 10 } for i in range(v7len)]
+			
+>>>>>>> origin/master
 			flag = True
 			
 	port.flushInput()

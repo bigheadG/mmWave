@@ -7,7 +7,7 @@ VSD:	Vital Signs Detection.<br/>
 HAM:	High Accuracy Measurement.<br/>
 PMB:	People Moving Behavior.<br/>
 SRR:	Short Range Radar.<br/>
-LPD:	Long range People Detect.<br/>
+LPD:	Long range People Detection.<br/>
 PC3D:	People Overhead Counting 3D.<br/>
 TMD:	Traffic Monitor Detection.<br/>
 ZOD:	Zone Occupancy Detection.<br/>
