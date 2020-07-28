@@ -9,7 +9,7 @@
 # config file:(V24_JB)people_detection_and_tracking_100m_2D_advanced.cfg
 # lib: lpdISK 
 # plot tools: pyqtgraph 2D
-# Plot point cloud(V6) in 2D figure 
+# Plot point cloud(V6) and Target(V7) in 2D figure
 # type: Raw data
 # Baud Rate:
 #=======================================================================
@@ -88,16 +88,19 @@ w0.setLabel('bottom', 'V6 Poin Cloud', 'Meter')
 w0.setLabel('left', 'range', 'meter')
 spots0 = []
 curveS0 = pg.ScatterPlotItem(size =20, pen=pg.mkPen('w'), pxMode=True) #pg.ScatterPlotItem(pxMode=True)   ## Set pxMode=False to allow spots to transform with the view
+curveS1 = pg.ScatterPlotItem(size =20, pen=pg.mkPen('w'), pxMode=True)
 w0.addItem(curveS0)
+w0.addItem(curveS1)
 
 # 
 # plot data update 
 #
 def updatePlot():
-	global v6len,spots0
+	global v6len,spots0,v7len
 	if v6len !=0:
 		curveS0.setData(spots0)
-		
+	if v7len != 0:
+		curveS1.setData(spots1)
 		
 # update all plots
 def update():
@@ -136,7 +139,7 @@ v9len = 0
 radar.sm = False 
  
 def radarExec():
-	global spots0,v8len,v9len,v6len,v7len
+	global spots0,spots1,v8len,v9len,v6len,v7len
 	
 	(dck,v6,v7,v8,v9) = radar.tlvRead(False)
 	#hdr = radar.getHeader()
@@ -150,8 +153,9 @@ def radarExec():
 		 
 		print("Sensor Data: [v6,v7,v8,v9]:[{:d},{:d},{:d},{:d}]".format(v6len,v7len,v8len,v9len))
 		
-		if v6len != 0:
-			pct = v6
+		if v7len != 0:
+			pc = v6
+			pct = v7
 			#v6 struct = [(r,a,e,d),(r,a,e,d),(r,a,e,d)..]
 			'''
 			for i in range(len(pct)):
@@ -159,7 +163,9 @@ def radarExec():
 				xt = pct[i][0] * np.cos(pct[i][2]) * np.sin(pct[i][1])
 				yt = pct[i][0] * np.cos(pct[i][2]) * np.cos(pct[i][1])
 			'''
-			spots0  = [{'pos': [pct[i][0] * np.cos(pct[i][2]) * np.sin(pct[i][1]),pct[i][0] * np.cos(pct[i][2]) * np.cos(pct[i][1])],'data': 1, 'brush':pg.intColor(i, v6len), 'symbol': 'o', 'size': 3 } for i in range(v6len)]
+			spots0  = [{'pos': [pc[i][0] * np.cos(pc[i][2]) * np.sin(pc[i][1]),pc[i][0] * np.cos(pc[i][2]) * np.cos(pc[i][1])],'data': 1, 'brush':pg.intColor(i, v6len), 'symbol': 'o', 'size': 3 } for i in range(v6len)]
+			spots1  = [{'pos': [pct[i][0],pct[i][1]],'data': 1, 'brush':pg.intColor(i, v7len), 'symbol': 's', 'size': 10 } for i in range(v7len)]
+			
 			flag = True
 			
 	port.flushInput()
