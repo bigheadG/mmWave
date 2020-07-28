@@ -1,7 +1,7 @@
  # -*- coding: utf-8 -*-
 """
 #=======================================================================
-# File Name: pyqtgraph_lpd_xy_100m.py
+# File Name: lpd_v24_2d_pyqtgraph_xy_100m.py
 #
 # Requirement:
 # Hardware: BM201-ISK (AWR6843)
