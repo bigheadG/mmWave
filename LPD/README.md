@@ -107,7 +107,7 @@ from mmWave import lpdISK
 lpd = lpdISK.LpdISK(port)
    
 V6: Point Cloud Spherical<br/>
-Each Point Cloud list consists of an array of points, Each point data structure is defined as following
+Each Point Cloud list consists of an array of points, Each point data structure is defined as following:
    
     point Struct:
         range:    float   #Range in meters
@@ -135,7 +135,7 @@ Each Target List consists of an array of targets. Each target data structure def
         V7 =: [(tid,posX,posY,velX,velY,accX,accY,posZ,velZ,accZ),....]
         
 V8: Target Index<br/>
-Each Target List consists of an array of target IDs, A targetID at index i is the target to which point i of the previous frame's point cloud was associated. Valid IDs range from 0-249
+Each Target List consists of an array of target IDs, A targetID at index i is the target to which point i of the previous frame's point cloud was associated. Valid IDs range from 0-249.
         
     TargetIndex Struct:
         tragetID: Int #Track ID
