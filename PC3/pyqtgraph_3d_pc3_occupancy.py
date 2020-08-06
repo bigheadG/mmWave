@@ -267,7 +267,7 @@ def radarExec():
 		if v6len != 0 and flag == True:
 			flag = False
 			pct = v6
-			#For x,y,z test
+			#For x,y,z axis test
 			#pos1[2] = (0,2,0) #y
 			#pos1[1] = (3,0,0) #x
 			#pos1[0] = (0,0,1) #z
