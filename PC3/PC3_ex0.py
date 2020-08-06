@@ -160,8 +160,6 @@ def radarExec(name):
 		 
 		port.flushInput()
 
-
-
 radarExec("PC3 Position Occupancy Detector")
 
 
