@@ -193,8 +193,8 @@ def tmdExec():
 			
 			spots1  = [{'pos': [v6[i][0],v6[i][3]], 'data': 1, 'brush':pg.intColor(i, v6len), 'symbol': 'o', 'size': 10 } for i in range(v6len)]
 			spots0  = [{'pos': [ v6[i][0]*np.cos(v6[i][1]),v6[i][0]*np.sin(v6[i][1])], 'data': 1, 'brush':pg.intColor(i, v6len), 'symbol': 'o', 'size': 10 } for i in range(v6len)]
-			spots2  = [{'pos': [ np.sqrt(v7[i][0]*v7[i][0] + v7[i][1] *  v7[i][1] ), v7[i][8]], 'data': 1, 'brush':pg.intColor(i, v7len), 'symbol': 'o', 'size': 10 } for i in range(v7len)]
-			spots3  = [{'pos': [ v7[i][1], v7[i][0]], 'data': 1, 'brush':pg.intColor(i, v7len), 'symbol': 'o', 'size': 10 } for i in range(v7len)]
+			spots2  = [{'pos': [ np.sqrt(v7[i][1]*v7[i][1] + v7[i][2] *  v7[i][2] ), v7[i][8]], 'data': 1, 'brush':pg.intColor(i, v7len), 'symbol': 'o', 'size': 10 } for i in range(v7len)]
+			spots3  = [{'pos': [ v7[i][1], v7[i][2]], 'data': 1, 'brush':pg.intColor(i, v7len), 'symbol': 'o', 'size': 10 } for i in range(v7len)]
 			
 		 
 	port.flushInput()
