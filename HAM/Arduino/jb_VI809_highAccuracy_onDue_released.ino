@@ -6,7 +6,7 @@
 //*                             LED strip of WS2812B (with power supply 5 volts INDEPENDENT), DATA pin is connected to DUE's pin11
 //* Notes:  (1) Calibration: 
 //*             you may fine tune as calibration by function of map() regarding on JBG_distanceF32 and JB_1M_PER_NUM_LED_61
-//*             you should measure how many LEDs in ONE meter due to different LED STRIP puchased my have different LEDs number  
+//*             you should measure how many LEDs in ONE meter due to different puchased LED STRIP may have different LEDs number  
 //*         (2) set maximun distance upto 2660 mm with upper limit here
 //*         (3) for watchDog, on {1 sec HangUp} reStart DUE board to avoid HANG UP in case
 //* Refer:  (1) for fastLedLib library, https://github.com/FastLED/FastLED
