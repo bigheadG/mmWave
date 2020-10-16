@@ -9,15 +9,18 @@ from the mmWave Sensor Module with the range of 0.3 ~ 3.0 meters(about 1 ~ 10 fe
  
      - See Drawing connection for more detail 
      
-     - Connect mmWave Batman-BT101 to Arduino DUE
+     - Connect mmWave Batman-BT101 to Arduino DUE Board
      
-     - Connect 6 MATRIX LEDs 
+     - Connect to WS2812B LED STRIP
        
  
  (2) Firmware:
  
-     - Download program codes (On Going)
-      
+     - Download program codes of "jb_VI809_highAccuracy_onDue_released.ino"
+     
+     - One library of "FastLED V3.3.2" should be installed 
+     
+     - based on Arduino IDE V1.8.10 (or later version)
       
 # Notes: 
    1. The mmWave jumper should be selected for KEY Data Mode with baud rate 115200/8/n/1 
