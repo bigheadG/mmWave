@@ -25,6 +25,12 @@ Examples:
     vitalSign_ex2_intr18.py is an example of using GPIO Pin18 rise-edge to trigger function to read data from Batman EVK
     pyqtgraph_vsd_ex3.py is an example of use [chest displacement waveform] -> [filter] -> 
     [windowing] -> fft to get Breathing & heart rate
+    //
+    // _kv means key/value the protocaol based on
+    // Reference: https://github.com/bigheadG/mmWaveDocs/blob/master/V01_VSD_vitalSignsBLEProtocol_v01_03_pdf.pdf
+    //
+    vitalSign_ex0_kv.py is a basic example for reading data from Batman EVK after set jumper in key/value mode. 
+    vitalSign_ex1_Thread_kv.py is an example of using thread to read data from Batman EVK after set jumper in key/value mode. 
    
     
 ![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/vitalSignFFT.png)
