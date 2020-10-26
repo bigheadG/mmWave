@@ -35,9 +35,9 @@ cl = Label(window, textvariable= statusString ,font=("Arial Bold", 35)).grid(col
 #UART initial
 '''
 try:    #pi 3
-	port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
+	port = serial.Serial("/dev/ttyS0",baudrate = 115200, timeout = 0.5)
 except: #pi 2
-	port = serial.Serial("/dev/ttyAMA0",baudrate = 921600, timeout = 0.5)
+	port = serial.Serial("/dev/ttyAMA0",baudrate = 115200, timeout = 0.5)
 '''
 #for MAC
 #port = serial.Serial("/dev/cu.usbmodemGY0043914",baudrate = 115200, timeout = 0.5)
