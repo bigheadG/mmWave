@@ -46,10 +46,10 @@ except: #pi 2
 #for Jetson Nano
 #port = serial.Serial("/dev/ttyTHS1",baudrate = 115200, timeout = 0.5)
 
-#for NUC
+#for Ubuntu
 #port = serial.Serial("/dev/ttyACM1",baudrate = 115200, timeout = 0.5)
 
-#for pc
+#for Windows10
 #port = serial.Serial("COM5",baudrate = 115200, timeout = 0.5)
 
 #
