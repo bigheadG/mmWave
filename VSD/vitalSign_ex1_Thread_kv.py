@@ -40,8 +40,17 @@ except: #pi 2
 	port = serial.Serial("/dev/ttyAMA0",baudrate = 921600, timeout = 0.5)
 '''
 #for MAC
-port = serial.Serial("/dev/cu.usbmodemGY0043914",baudrate = 115200, timeout = 0.5)
+#port = serial.Serial("/dev/cu.usbmodemGY0043914",baudrate = 115200, timeout = 0.5)
 #
+
+#for Jetson Nano
+#port = serial.Serial("/dev/ttyTHS1",baudrate = 115200, timeout = 0.5)
+
+#for NUC
+#port = serial.Serial("/dev/ttyACM1",baudrate = 115200, timeout = 0.5)
+
+#for pc
+#port = serial.Serial("COM5",baudrate = 115200, timeout = 0.5)
 
 #
 #Object initail
