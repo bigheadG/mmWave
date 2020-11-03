@@ -155,5 +155,6 @@ If Run demo program can not find any Raw data output:
 1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/DriverVitalSigns_DevelopersGuide.pdf
 2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V1_vitalSignsBLEProtocol_v01_02_pdf.pdf
 3. KeyDataProtocol_withStatus: https://github.com/bigheadG/mmWaveDocs/blob/master/V01_VSD_vitalSignsBLEProtocol_v01_03_pdf.pdf
+4. Perform VSD sensing with KeyDataProtocol using VSD EVM Kit and VSD Key Value Python Code(s) : https://github.com/bigheadG/mmWaveDocs/blob/81f64fa427e6d3a29502a64798b102fc61344ec3/BM201%20VSD%20Python%20Demo%20using%20Key%20Value%2020201027.pdf
    
    ALERT: above Status feature is supported on version V01.54 or V30.02 or later
