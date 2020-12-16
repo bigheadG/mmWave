@@ -4,7 +4,7 @@
 ![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)
 
 
-# mmWave-LPD (Low range People Detect)-ES2.0
+# mmWave-LPD (Long range People Detect)-ES2.0
 # Notes: mmWave Library supports: python Version >= 3.6
 
 Current PI's OS is supports python 3.7.0
