@@ -47,7 +47,7 @@ Examples:
     (pass_fail, v8, v9, v10)
     pass_fail: True: Data available    False: Data not available
 
-  	Output: V8,V9,V10 data:(RAW)")
+  	Output: V8,V9,V10 data:(RAW)
     	V8 :Range Azimuth Heatmap TLV 
     	V9 :Feature Vector TLV 
     	V10:Decision Vector TLV 
