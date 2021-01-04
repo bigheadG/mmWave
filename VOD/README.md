@@ -1,7 +1,7 @@
 # Under Construction......
 # Vehicle Occupancy Detection Based on BM201-VOD
 
-This repository contains Batman mmWave-VOD Vehicle Occupancy Detection and Child Presence Detection mmWave Sensor SDK. The sample code below consists of instruction for using the mmWave lib. This mmWave-VOD Python Program will work with Vehicle Occupancy Detection (VOD) based Batman BM201-VOD mmWave Kit solution. This App works with Raspberry pi 4 or Jetson Nano along with Batman BM201-ZOD Kit, and is capable of plotting a Range-Azimuth-Heatmap with a 64 x48 Grid Matrix covering: Range of 3meter/64row (approx. 0.047meter per row) x Azimuth of 120degree/48column (approx. 2.5degree/column).  Subsequently a programmer may write a program to group the Grid(s) into Zone(s) for detecting whether the particular Zone(s) is occupied by Target(s).
+This repository contains Batman mmWave-VOD Vehicle Occupancy Detection and Child Presence Detection mmWave Sensor SDK. The sample code below consists of instruction for using the mmWave lib. This mmWave-VOD Python Program will work with Vehicle Occupancy Detection (VOD) based Batman BM201-VOD mmWave Kit solution. This App works with Raspberry pi 4, Jetson Nano, Intel NUC PC, etc. along with the Batman BM201-VOD EVM Kit hardware; and it is capable of plotting a Range-Azimuth-Heatmap with a 64 x 48 Grid Matrix covering: Range of 3meter/64row (approx. 0.047meter per row) x Azimuth of 120degree/48column (approx. 2.5degree/column).  Subsequently a programmer may write a program to group the Grid(s) into Zone(s) for detecting whether the particular Zone(s) is occupied by Target(s) for Vehicle Seat/Zone Occupany Detection, etc.
 
 # System
     Raspberry pi 4.0
@@ -111,7 +111,7 @@ Examples:
 	port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
 	please use $ls /dev/tty* to check device and use "/dev/tty.usbmodemGY0052534"
 	
-	#for Intel NUC ubuntu 
+      	#for Intel NUC ubuntu 
       	port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 
 	
