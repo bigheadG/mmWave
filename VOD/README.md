@@ -112,7 +112,7 @@ Examples:
 	please use $ls /dev/tty* to check device and use "/dev/tty.usbmodemGY0052534"
 	
       	#for Intel NUC ubuntu 
-      	port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
+	port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 
 	
 ## Reference:
