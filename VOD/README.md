@@ -6,8 +6,9 @@ This repository contains Batman mmWave-VOD Vehicle Occupancy Detection and Child
 # System
     Raspberry pi 4.0
     Jetson Nano
-    Windows + USB to UART Bridge
+    Windows PC + USB to UART Bridge
     Mac + USB to UART Bridge
+    Intel NUC + USB to UART Bridge 
     
 # Installing
 
@@ -97,21 +98,21 @@ Examples:
  
 ## UART setting:
 
+	#Raspberry pi 4
+	port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
+
 	#Jetson nano
 	port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
-	
-	#raspberry pi 4
-	port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
-	
-	#windows
+		
+	#Windows PC
   	port = serial.Serial("COMXXX",baudrate = 921600, timeout = 0.5) 
-		notes: COMXXX please check UART Port then change XXX
+	notes: COMXXX please check UART Port then change XXX
 	 
   	#MacOS use tty.usbmodem....
 	port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
 	please use $ls /dev/tty* to check device and use "/dev/tty.usbmodemGY0052534"
 	
-	#for Intel NUC ubuntu 
+	#Intel NUC on ubuntu 
 	port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 
 	
