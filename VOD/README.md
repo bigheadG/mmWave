@@ -1,4 +1,6 @@
-# Under Construction......
+# Under Construction...... 
+# will be released soon on 2021.01.11
+
 # Vehicle Occupancy Detection Based on BM201-VOD
 
 This repository contains Batman mmWave-VOD Vehicle Occupancy Detection and Child Presence Detection mmWave Sensor SDK. The sample code below consists of instruction for using the mmWave lib. This mmWave-VOD Python Program will work with Vehicle Occupancy Detection (VOD) based Batman BM201-VOD mmWave Kit solution. This App works with Raspberry pi 4, Jetson Nano, Intel NUC PC, etc. along with the Batman BM201-VOD EVM Kit hardware; and it is capable of plotting a Range-Azimuth-Heatmap with a 64 x 48 Grid Matrix covering: Range of 3meter/64row (approx. 0.047meter per row) x Azimuth of 120degree/48column (approx. 2.5degree/column).  Subsequently a programmer may write a program to group the Grid(s) into Zone(s) for detecting whether the particular Zone(s) is occupied by Target(s) for Vehicle Seat/Zone Occupany Detection, etc.
@@ -28,7 +30,7 @@ pySerial Library:
  
 Examples:
 
-    vehicleODHeatMap_ex0.py
+   BM201_V5205_VOD_ex1_heatMap_V5205_02R.py
  
 ## Header:
 
@@ -64,7 +66,7 @@ Examples:
 	perpendicular to the antennas, with 60 degrees of view on each side. With 48 total angles, 
 	there are 24 angles per 60 degrees on each side, or 2.55 degrees per angle.  
 
-## V9: Feature Vector
+## V9: Feature Vector (ALERT: not used in this lab)
 
 	Size: 5 x sizeOf(float)
 	
@@ -96,23 +98,23 @@ Examples:
 	import serial
 	from mmWave import vehicleODHeatMap
  
-## UART setting:
+## UART setting: (ALERT: serial port name based on platform)
 
-	#Raspberry pi 4
+	# (1) Raspberry pi 4
 	port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
 
-	#Jetson nano
+	# (2) Jetson nano
 	port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
 		
-	#Windows PC
+	# (3) Windows PC
   	port = serial.Serial("COMXXX",baudrate = 921600, timeout = 0.5) 
 	notes: COMXXX please check UART Port then change XXX
 	 
-  	#MacOS use tty.usbmodem....
+  	# (4) MacOS use tty.usbmodem....
 	port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
 	please use $ls /dev/tty* to check device and use "/dev/tty.usbmodemGY0052534"
 	
-	#Intel NUC on ubuntu 
+	# (5) Intel NUC on ubuntu 
 	port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 
 	
