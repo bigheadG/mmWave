@@ -20,7 +20,7 @@ This repository contains Batman mmWave-VOD Vehicle Occupancy Detection and Child
     
 # Installing
 
-Library install for Python
+Library install for Python:
 
     $sudo pip install mmWave
     $sudo pip3 install mmWave
