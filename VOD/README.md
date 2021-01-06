@@ -31,6 +31,7 @@ pySerial Library:
 Examples:
 
    BM201_V5205_VOD_ex1_heatMap_V5205_02R.py
+   jb_lib_V5205_VOD_R.py 
  
 ## Header:
 
