@@ -103,10 +103,10 @@ Examples:
 	if a positive (occupied) decision has been calculated. It is zero otherwise.
 	
 
-## import Library
+## Import Library
 
 	import serial
-	from mmWave import vehicleODHeatMap
+	import jb_lib_V5205_VOD_R as vehicleOD
  
 ## UART setting: (ALERT: serial port name based on platform)
 
