@@ -127,5 +127,5 @@ Examples:
 	
 ## Reference:
 
-1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/ODdemo_usersguide.pdf
+1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/(V52_VOD_A320)ODdemo_usersguide.pdf
 	
