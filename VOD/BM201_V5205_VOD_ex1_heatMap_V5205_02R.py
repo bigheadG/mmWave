@@ -12,9 +12,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import time
 import serial
-#from mmWave import vehicleOD
-# (v5204.01) using local lib
-import jb_lib_V5205_VOD_R as vehicleOD
+from mmWave import vehicleODR
 import sys
 from threading import Thread
 import math # for pi
@@ -236,7 +234,7 @@ def jb_animateCB(xdata, im):
 ##########################################################################################
     
 ##########################################################################################
-pm = vehicleOD.VehicleOD(port)
+pm = vehicleODR.VehicleODR(port)
 heatA = np.zeros((JB_RANGE_GRID_64, JB_AZIMUTH_GRID_48))
 
 thread1 = Thread(target = jb_uartThreadCB, args =("UART",))
