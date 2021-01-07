@@ -102,7 +102,7 @@ Examples:
 ## Import Library
 
 	import serial
-	import jb_lib_V5205_VOD_R as vehicleOD
+	from mmWave import vehicleODR  
  
 ## UART setting: (ALERT: serial port name based on platform)
 
