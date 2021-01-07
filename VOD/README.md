@@ -29,8 +29,6 @@ Examples:
 
    BM201_V5205_VOD_ex1_heatMap_V5205_02R.py
    
-   jb_lib_V5205_VOD_R.py 
-   
    ![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/V5205_02R_VOD_Screenshot%20from%202021-01-05%2019-28-32_text.png)
     
     above screen shot based on running BM201_V5205_VOD_ex1_heatMap_V5205_02R.py 
@@ -51,9 +49,10 @@ Examples:
 
       
  ## Get mmWave Sensor data:
-
-    vd = vehicleODHeatMap.VehicleODHeatMap(port)	
-    (dck,v8,v9,v10) = vd.tlvRead(False)
+ 
+    from mmWave import vehicleODR    
+    pm = vehicleODR.VehicleODR(port)
+    (dck,v8,v9,v10) = pm.tlvRead(False)
     (pass_fail, v8, v9, v10)
     pass_fail: True: Data available    False: Data not available
 
