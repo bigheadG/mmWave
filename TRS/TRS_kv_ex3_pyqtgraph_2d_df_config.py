@@ -383,7 +383,7 @@ def getFileName():
 def trsExec(writer):
 	global spots0,spots1,spots2,v21len,prev_fn,fn,objBuf,flag
 	
-	(dck,v21) = trs.tmdRead(False)
+	(dck,v21) = trs.trsRead(False)
 	
 	hdr = trs.getHeader()
 	fn = hdr.frameNumber
