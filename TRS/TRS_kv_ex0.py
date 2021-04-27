@@ -28,7 +28,7 @@ def uartGetdata(name):
 	print("mmWave: {:} example:".format(name))
 	port.flushInput()
 	while True:
-		(dck,v21)=trs.tmdRead(False)
+		(dck,v21)=trs.trsRead(False)
 		if dck:
 			print(v21)
 			 
