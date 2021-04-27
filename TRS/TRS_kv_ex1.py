@@ -69,7 +69,7 @@ def uartGetdata(name):
 	print("mmWave: {:} example:".format(name))
 	port.flushInput()
 	while True:
-		(dck,v21)=tmd.tmdRead(False) 
+		(dck,v21)=tmd.trsRead(False) 
 		if dck and len(v21) > 0:
 			print(v21)
 			if v21.indexMax[0] != 0:
