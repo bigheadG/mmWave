@@ -32,7 +32,7 @@ Hardware Sensor:
 		tid: target ID 
 		pos: position  m
 		vel: velocity  m/s
-		acc: acceleration  m/s2
+		acc: acceleration  m/s^2
         
 # Physical Setup
         Setup Requirements:
@@ -116,11 +116,11 @@ Each Target List consists of an array of targets. Each target data structure def
         posY: float     #Target position in Y, m
         velX: float     #Target velocity in X, m/s
         velY: float     #Target velocity in Y, m/s
-        accX: float     #Target velocity in X, m/s
-        accY: float     #Target velocity in Y, m/s
+        accX: float     #Target velocity in X, m/s^2
+        accY: float     #Target velocity in Y, m/s^2
         posZ: float     #Target position in Z, m
         velZ: float     #Target velocity in Z, m/s
-        accZ: float     #Target velocity in Z, m/s
+        accZ: float     #Target velocity in Z, m/s^2
         
         V7 =: [(tid,posX,posY,velX,velY,accX,accY,posZ,velZ,accZ),....]
         

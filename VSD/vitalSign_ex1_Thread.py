@@ -9,8 +9,8 @@ import sys
 from collections import deque
 import numpy as np
 from threading import Thread
-import RPi.GPIO as GPIO
-from matplotlib.figure import Figure
+#import RPi.GPIO as GPIO
+#from matplotlib.figure import Figure
 import numpy as np
 from mmWave import vitalsign
 
@@ -41,11 +41,13 @@ class globalV:
 		self.count = count
 		
 #UART initial
-try:    #pi 3
-	port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
-except: #pi 2
-	port = serial.Serial("/dev/ttyAMA0",baudrate = 921600, timeout = 0.5)
-
+#pi 3
+port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
+#pi 2
+#port = serial.Serial("/dev/ttyAMA0",baudrate = 921600, timeout = 0.5)
+# For MacOS
+# port = serial.Serial("/dev/cu.usbmodemGY0043914",baudrate = 921600, timeout = 0.5)
+#
 #
 #Object initail
 #
