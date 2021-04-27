@@ -239,7 +239,7 @@ def uartThread(name):
 		writer = csv.writer(csvfile)
 		writer.writerow(fieldsA)
 		while True:
-			(dck,v21)=trs.tmdRead(False) 
+			(dck,v21)=trs.trsRead(False) 
 			if dck and len(v21) > 0:
 					#print(v21)
 				if v21.indexMax[0] != 0:
