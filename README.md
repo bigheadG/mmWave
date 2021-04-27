@@ -15,6 +15,7 @@ SVD:	Surface Velocity Detection.<br/>
 DRN:	Drone Radar Navigation.<br/>
 VOD:	Vehicle Occupancy Detection.<br/>
 PC3:	People Counting Detection.<br/>
+TRS:       Traffic_Monitoring_Detection Roadway Sensing
 
 ## Youtube Demo:
 
@@ -35,6 +36,7 @@ PC3:	People Counting Detection.<br/>
        DRN: Batman Kit 201(ISK) :IWR6843-DRN
        VOD: Batman Kit 201(ISK) :IWR6843-VOD
        PC3: Batman Kit 201(ISK) :IWR6843-PC3
+       TRS: Batman Kit 201(ISK) :IWR6843-TRS
 
 
 # Install Library:
