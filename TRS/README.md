@@ -128,6 +128,8 @@ If Run demo program can not find any Raw data output:
         min_d := -150   //unit: km/Hr  
         max_d := -0.01  //unit: km/Hr
     
+## Record TRS data:
+![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/trs-reocod.png)
 
 ## Reference:
 
