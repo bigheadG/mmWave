@@ -129,7 +129,7 @@ If Run demo program can not find any Raw data output:
         max_d := -0.01  //unit: km/Hr
     
 ## Record TRS data:
-![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/trs-record.png)
+![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/trs-record_ex2.png)
 
 
 ## Reference:
