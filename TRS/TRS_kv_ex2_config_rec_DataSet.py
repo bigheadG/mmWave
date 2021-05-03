@@ -1,6 +1,10 @@
 ''' 
-Traffic Monitoring Detection Roadway Sensing (ISK) for BM-201" : 2021/04/18
 ex2:
+
+Traffic Monitoring Detection Roadway Sensing (ISK) for BM-201" : 2021/04/18
+v1.0.1 : 2021/05/03
+output: ['fn','indexMax','index','x','y','range','doppler','area','ptsNum','NotObject','MAN','MotorCycle','car','CAR'] 
+
 Hardware: BM201-TRS kit
 
 
@@ -211,7 +215,9 @@ def getFileName():
 # ytA: [NotObject,MAN,MotorCycle,car,CAR]
 ytA = {'NotObject':[1,0,0,0,0],'MAN':[0,1,0,0,0] ,'MotorCycle':[0,0,1,0,0] ,'car':[0,0,0,1,0],'CAR':[0,0,0,0,1]}
 
-fieldsA = ['fn','x','y','range','doppler','area','ptsNum','NotObject','MAN','MotorCycle','car','CAR']
+#  ['flow','fn','indexMax','index','x','y','range','doppler','area','ptsNum','cid']")
+
+fieldsA = ['fn','indexMax','index','x','y','range','doppler','area','ptsNum','NotObject','MAN','MotorCycle','car','CAR']
 
 ############## Baud Rate Setting ########### 
 
@@ -244,14 +250,24 @@ def uartThread(name):
 					#print(v21)
 				if v21.indexMax[0] != 0:
 					#(1)extract data for operation
-					opA = v21.loc[:,['fn','x','y','range','doppler','area','ptsNum']]
+					#opA = v21.loc[:,['fn','x','y','range','doppler','area','ptsNum']]
+					opA = v21.loc[:,['fn','indexMax','index','x','y','range','doppler','area','ptsNum']]
 					objA = []
 					opAn = opA.to_numpy()
 					
-					
 					#(2)Judge Object based on range/doppler/ptsNum/area and Save Detected Object to csv file
 					for i in range(len(opAn)):
-						(obj,rng,speed)  = objectRuleBasedReport(opAn[i][1],opAn[i][2],opAn[i][3],opAn[i][4]) 
+						fn = 		opAn[i][0]
+						indexMax =	opAn[i][1]
+						idx = 		opAn[i][2]
+						x =  		opAn[i][3]
+						y =  		opAn[i][4]
+						ran = 		opAn[i][5]
+						dop = 		opAn[i][6]
+						area = 		opAn[i][7]
+						ptsNum = 	opAn[i][8]
+						
+						(obj,rng,speed)  = objectRuleBasedReport(x,y,ran,dop) 
 						print("================= result ===========================")
 						print("object({:})  range:{:5.2f}m  speed:{:5.2f}km/hr".format(obj,rng,speed))
 						print("====================================================")
@@ -259,22 +275,14 @@ def uartThread(name):
 						objString.set('# {:10s}'.format(obj))
 						dataString.set('r={:3.0f}m,v={:5.0f}Km/Hr'.format(rng, speed))
 						
-						fn = opAn[i][0]
-						x =  opAn[i][1]
-						y =  opAn[i][2]
-						ran = opAn[i][3]
-						dop = opAn[i][4]
-						area = opAn[i][5]
-						ptsNum = opAn[i][6]
-						
 						if rec_Flag == True: 
-							csvData = [fn,x,y,ran,dop,area,ptsNum] + ytA[obj] 
+							csvData = [fn,indexMax,idx,x,y,ran,dop,area,ptsNum] + ytA[obj] 
 							writer.writerow(csvData)
 							csvfile.flush()
 							print(csvData)
 					
 
-thread1 = Thread(target = uartThread, args =("Traffic Monitoring Detection Roadway Sensing (TRS)",))
+thread1 = Thread(target = uartThread, args =("Traffic monitoring detection Roadway Sensing (TRS)",))
 thread1.setDaemon(True)
 thread1.start()
 window.mainloop()
