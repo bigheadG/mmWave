@@ -116,7 +116,7 @@ If Run demo program can not find any Raw data output:
      
 ## read record data file(csv) and get a record data based on frame number:
  	
-	(1) read record data from file
+	(1) read record data from file (for playback)
 	
 	v21 = trs.readFile(fileName)
 	
@@ -132,11 +132,11 @@ If Run demo program can not find any Raw data output:
 	4    1157.0  2.167170  14.244955  14.427443  ...    0           0    0    1
 	[5 rows x 12 columns]
 	
-	(2) get a record data based on frame number
+	(2) get a record data based on frame number (for playback)
 	
 	(chk,cur_rec) = trs.getRecordData(frameNum)
 	chk: data check true: Data is avaliable, false: Data invalid
-	cur_rec: Obtain v21 object data according to the frame number
+	cur_rec: Obtain v21 objects data according to the frame number
 	
 	usage:
 	(chk,cur_rec) = trs.getRecordData(int(1159))
