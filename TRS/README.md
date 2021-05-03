@@ -110,9 +110,10 @@ If Run demo program can not find any Raw data output:
     trs = roadwayTMD_kv.roadwayTmdISK_kv(port)
 
 ## get kv Data
+
     (dck,v21)=trs.trsRead(False)
     dck: data check true: Data is avaliable, false: Data invalid
-    v21: is a detected object dataFrame 
+    v21: is a detected object dataFrame  
      
 ## read record data file(csv) and get a record data based on frame number:
  	
@@ -120,6 +121,7 @@ If Run demo program can not find any Raw data output:
 	
 	v21 = trs.readFile(fileName)
 	
+	v21 data fields from file = ['fn','indexMax','index','x','y','range','doppler','area','ptsNum','NotObject','MAN','MotorCycle','car','CAR']
 	usage:
 	v21Read = trs.readFile("Roadwaytmd_2021-04-28-10-56-07.csv")
 
