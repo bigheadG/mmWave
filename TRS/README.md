@@ -1,3 +1,4 @@
+ # 🚧  Under Construction 🚧 
  # mmWave-TRS (Traffic_Monitoring_Detection Roadway Sensing)
  This repository contains the Batman Kit- Traffic_Monitoring_Detection Roadway Sensing mmWave Sensor SDK.
  The sample code below consists of instruction for using the mmWave lib.
@@ -161,6 +162,8 @@ If Run demo program can not find any Raw data output:
 ## Record TRS data:
 ![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/trs-record_ex2.png)
 
+## Record data Playback: (work with SIM01-TRS hardware)
+![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/trs-ex3.png)
 
 ## Reference:
 
