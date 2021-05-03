@@ -84,14 +84,14 @@ If Run demo program can not find any Raw data output:
 	please use $ls /dev/tty* to check file for example "/dev/tty.usbmodemGY0052534"
   
 ## data structure
-	TMD Data Format: [subHeader][objPoint],[objPoint]...]
+	TRS Data Format: [subHeader][objPoint],[objPoint]...]
 
 ## Header:
     class header:
-        version = 'v0.1.0'
-        f  rameNumber = 0
+        version = 'v0.1.1'
+        frameNumber = 0
         
-    hdr = tmd.getHeader()
+    hdr = trs.getHeader()
     
 ## v21 data:
     
@@ -107,10 +107,10 @@ If Run demo program can not find any Raw data output:
     cid: cluster/object ID
     
 ## define 
-    tmd = roadwayTMD_kv.roadwayTmdISK_kv(port)
+    trs = roadwayTMD_kv.roadwayTmdISK_kv(port)
 
 ## get kv Data
-    (dck,v21)=pm.tmdRead(False)
+    (dck,v21)=trs.trsRead(False)
     dck: data check true: Data is avaliable, false: Data invalid
     v21: is a detected object dataFrame 
      
@@ -135,7 +135,9 @@ If Run demo program can not find any Raw data output:
 	(2) get a record data based on frame number
 	
 	(chk,cur_rec) = trs.getRecordData(frameNum)
-
+	chk: data check true: Data is avaliable, false: Data invalid
+	cur_rec: Obtain v21 object data according to the frame number
+	
 	usage:
 	(chk,cur_rec) = trs.getRecordData(int(1159))
 	=================v21:1159==============
