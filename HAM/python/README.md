@@ -2,7 +2,7 @@
 This repository contains the Batman Kit- HAM mmWave Sensor SDK. 
 The sample code below consists of instruction for using the mmWave lib.
 This mmWave-HAM Python Program will work with High Accuracy Measurement (HAM) based mmWave Batman Kit solution.
-This App works with Raspberry Pi 3 , Pi 2 and Jetson Nano
+This App works with Raspberry Pi 3 , Pi 2, Jetson Nano, windows/linux PC or MAC 
 The High Accuracy Measurement (HAM) based Batman Kit is for measuring object distance 
 from the mmWave Sensor Module with the range of 30cm ~ 3meters(about 1~10 feet) 
 with millimeter resolution.
