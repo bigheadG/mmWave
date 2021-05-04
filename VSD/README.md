@@ -2,7 +2,7 @@
 This repository contains the Batman Kit- VSD mmWave Sensor SDK. 
 The sample code below consists of instruction for using the mmWave lib.
 This mmWave-VSD Python Program will work with Vital Signs Detection (VSD) based mmWave Batman Kit solution.
-This App works with Raspberry Pi 3 / Pi 2 and Jetson Nano
+This App works with Raspberry Pi 3 / Pi 2 , Jetson Nano , windows/linux PC and Mac
 The Vital Signs Detection (VSD) based Batman Kit is for a contactless and wearableless and 30cm ~ 90cm (about 1~3 feet) distance detection of Vital Signs (Heartbeat Rate & Respiration Rate) of a person, a pet, or an animal. 
 
 
