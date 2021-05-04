@@ -183,7 +183,7 @@ If Run demo program can not find any Raw data output:
 ![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/trs-record_ex2.png)
 
 ## Record data Playback: (work with TRS-ToolKit hardware)
-![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/trs-ex3.png)
+![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/trs-ex4.png)
 
 ## Reference:
 
