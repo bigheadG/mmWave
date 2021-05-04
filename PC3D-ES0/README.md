@@ -63,8 +63,7 @@ Examples:
         op: [objPoint]
 	
     function call: pc3dRead(self)
-		    return objSets
-		
+		    return objSets	
 
 # import lib
 
