@@ -266,8 +266,8 @@ def uartThread(name):
 						dop = 		opAn[i][6]
 						area = 		opAn[i][7]
 						ptsNum = 	opAn[i][8]
-						
-						(obj,rng,speed)  = objectRuleBasedReport(x,y,ran,dop) 
+						      
+						(obj,rng,speed)  = objectRuleBasedReport(ran,dop,area,ptsNum) 
 						print("================= result ===========================")
 						print("object({:})  range:{:5.2f}m  speed:{:5.2f}km/hr".format(obj,rng,speed))
 						print("====================================================")
