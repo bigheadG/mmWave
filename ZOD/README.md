@@ -1,6 +1,6 @@
 # Zone Occupancy Detection and Vital Sign Detection
 
-Zone Occupancy Detection and Vital Sign Detection Based on BM201-ZOD
+Zone Occupancy Detection and  Vital Sign Detection Based on BM201-ZOD
  
 ## Reference:
 
