@@ -126,26 +126,38 @@ If Run demo program can not find any Raw data output:
 	v21Read = trs.readFile("Roadwaytmd_2021-04-28-10-56-07.csv")
 
 	--------------v21Read----------------
-		 fn         x          y      range  ...  MAN  MotorCycle  car  CAR
-	0    1148.0  2.524005  17.224487  17.710978  ...    0           0    0    1
-	1    1151.0  0.679832  17.877119  17.897409  ...    0           0    0    1
-	2    1153.0  1.225039  16.791206  16.841597  ...    0           0    0    1
-	3    1156.0  3.638257  14.604478  15.268085  ...    0           0    0    1
-	4    1157.0  2.167170  14.244955  14.427443  ...    0           0    0    1
-	[5 rows x 12 columns]
+        fn  indexMax  index         x  ...  MAN  MotorCycle  car  CAR
+	0   8526.0       2.0    0.0  1.012783  ...    0           0    0    1
+	1   8526.0       2.0    1.0  1.007694  ...    0           0    0    1
+	2   8527.0       3.0    0.0 -0.091609  ...    0           0    0    1
+	3   8527.0       3.0    1.0  1.183277  ...    0           0    0    1
+	4   8527.0       3.0    2.0  0.471129  ...    0           0    0    1
+	..     ...       ...    ...       ...  ...  ...         ...  ...  ...
+	93  8576.0       2.0    0.0  1.870340  ...    0           0    0    1
+	94  8576.0       2.0    1.0  1.192607  ...    0           0    0    1
+	95  8577.0       2.0    0.0  1.334430  ...    0           0    0    1
+	96  8577.0       2.0    1.0  1.893243  ...    0           0    0    1
+	97  8578.0       1.0    0.0  1.290153  ...    0           0    0    1
+
+	[98 rows x 14 columns]
 	
 	(2) get a record data based on frame number (for playback)
 	
 	(chk,cur_rec) = trs.getRecordData(frameNum)
+	
 	chk: data check true: Data is avaliable, false: Data invalid
 	cur_rec: Obtain v21 objects data according to the frame number
 	
 	usage:
-	(chk,cur_rec) = trs.getRecordData(int(1159))
-	=================v21:1159==============
-       fn         x          y     range  ...  MAN  MotorCycle  car  CAR
-	6  1159.0  2.898755  14.063141  14.41307  ...    0           0    0    1
-	[1 rows x 12 columns]
+	(chk,cur_rec) = trs.getRecordData(int(8526))
+	
+	-----------frameNum:(sim_startFN:fn)=(8526.0:0)--------------:8526.0
+	       fn  indexMax  index         x  ...  MAN  MotorCycle  car  CAR
+	0  8526.0       2.0    0.0  1.012783  ...    0           0    0    1
+	1  8526.0       2.0    1.0  1.007694  ...    0           0    0    1
+
+	[2 rows x 14 columns]
+
 
 
 ## Zone parameter configuration:
