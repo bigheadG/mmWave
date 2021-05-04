@@ -91,7 +91,8 @@ If Run demo program can not find any Raw data output:
         version = 'v0.1.1'
         frameNumber = 0
         
-    hdr = trs.getHeader()
+    hdr = trs.getHeader() 
+    fn = hdr.frameNumber #get frame number
     
 ## v21 data:
     
