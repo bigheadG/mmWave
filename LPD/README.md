@@ -41,8 +41,7 @@ Hardware Sensor:
         Down tilt:~2-3 degree
 ![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/physical_setup_lpd.png)
 
-
-        
+       
 # Installing
 
 Library install for Python
