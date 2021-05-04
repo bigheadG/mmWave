@@ -167,7 +167,8 @@ If Run demo program can not find any Raw data output:
 ## Zone parameter configuration:
 	
     Command Syntax:
-    jb_zoneCfg <flag> <min_x> <max_x> <min_y> <max_y> <min_d> <max_d> 
+    jb_zoneCfg <flag> <min_x> <max_x> <min_y> <max_y> <min_d> <max_d>
+    
     for example:
         "jb_zoneCfg 1.0 -0.5 8.0 0.0 70.0 -150.0 -0.01 \x0d\x0a"
     zone parameter:
