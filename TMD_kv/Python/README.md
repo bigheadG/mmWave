@@ -2,7 +2,7 @@
 This repository contains the Batman Kit- Traffic Monitor Detection mmWave Sensor SDK. 
 The sample code below consists of instruction for using the mmWave lib.
 This mmWave-TMD Python Program will work with Traffic Monitor Detection (TMD) based mmWave Batman Kit solution.
-This App works with Raspberry Pi 3/4, Jetson Nano, windows and Mac
+This App works with Raspberry Pi 3/4, Jetson Nano, windows or Mac
 The Traffic Monitor Detection (TMD) based on BM201-TMD-ISK for a contactless detect object moving in specify zone.
 The detect vehicle range from 5m to 50m  
 
