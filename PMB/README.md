@@ -2,7 +2,7 @@
 This repository contains the Batman Kit- PMB mmWave Sensor SDK. 
 The sample code below consists of instruction for using the mmWave lib.
 This mmWave-PMB Python Program will work with People Movement Behavior (PMB) based mmWave Batman Kit solution.
-This App works with Raspberry Pi 3, Pi 2 and Jetson Nano
+This App works with Raspberry Pi 3, Pi 2 ,Jetson Nano , linux/windows pc or Mac
 The People Movement Behavior (PMB) based Batman Kit is for detecting People movement in a 4 x 4 meter or 16 meter square area (or about 172 square feet). 
 
 
