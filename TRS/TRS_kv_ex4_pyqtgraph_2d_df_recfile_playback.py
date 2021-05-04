@@ -92,7 +92,7 @@ win.resize(1200,800)
 
 pg.setConfigOption('foreground', 'y')
  
-win.setWindowTitle('Roadway Traffic Monitoring Detection Radar')
+win.setWindowTitle('Traffic monitoring detection Roadway Sensing Radar')
 
 #**************************************
 brush_list = [pg.mkColor(c) for c in "rgbcmykwrg"]
