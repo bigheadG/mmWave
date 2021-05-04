@@ -25,9 +25,12 @@ Examples:
 
     TRS_kv_ex0.py is a basic example for reading data from BM201-TRS-ISK
     TRS_kv_ex1.py is a basic example for reading data from BM201-TRS-ISK and judge Detected Object
-    TRS_kv_ex2_config_rec_DataSet.py is example for record data and config detect zone and object behavior
-    TRS_kv_ex3_pyqtgraph_2d_xy_config.py is example for config BM201 detect zone and Doppler and plot data    
+    TRS_kv_ex3_pyqtgraph_2d_xy_config.py is example for config BM201 detect zone and Doppler and plot data
     
+    Record and playback:
+    
+    TRS_kv_ex2_config_rec_DataSet.py is example for record data and config detect zone and object behavior
+    TRS_kv_ex3_pyqtgraph_2d_df_recfile_playback is example for record data playback
   
 If Run demo program can not find any Raw data output:
       Please set UART to R/W mode: 
