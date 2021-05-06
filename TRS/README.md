@@ -189,5 +189,5 @@ If Run demo program can not find any Raw data output:
 ## Reference:
 
 1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/V20_TMD_18xx_68xx_traffic_monitoring_users_guide.pdf
-2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V20_TMD_Protocol_v20_10_pdf.pdf
+2. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V20_Protocol%20for_TRS_KEY_data%20Project_V2015B01_pdf.pdf
 
