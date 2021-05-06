@@ -293,7 +293,7 @@ def trsExec():
 			locBuf.insert(0,fn)
 			
 			#(1.3.2) remove data from objBuf(pop)
-			if len(objBuf) > QUEUE_LEN:
+			if len(locBuf) > QUEUE_LEN:
 				objBuf = objBuf.loc[objBuf.fn != locBuf.pop()]
 			xBuf = objBuf.loc[:,['x','y']]
 			v21np = xBuf.to_numpy()
