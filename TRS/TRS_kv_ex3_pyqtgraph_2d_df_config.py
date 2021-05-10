@@ -77,7 +77,7 @@ import csv
 
 ########################## GUI Method ##################################
 def sendConfigData():
-	strB = "jb_zoneCfg 1.0 -0.5 8.0 0.0 70.0 -150.0 -0.01"
+	strB = "jb_zoneCfg 1.0 -0.5 3.0 10.0 70.0 -150.0 -0.01"
 	tail : bytes = b'\x0d\x0a'
 	d = str.encode(strB) + tail
 	portCFG.write(d)
@@ -146,7 +146,7 @@ labelMaxY.grid(column=2, row=1)
 minYString = tk.StringVar()
 entryMinY = tk.Entry(window, width=10, textvariable=minYString)
 entryMinY.grid(column=1, row=1, padx=10)
-minYString.set(0.0)
+minYString.set(3.0)
 
 maxYString = tk.StringVar()
 entryMaxY = tk.Entry(window, width=10, textvariable=maxYString)
@@ -318,8 +318,8 @@ timer.start(143) #150  80: got(20 Times)   *50ms from uart:
 # ytA: [NotObject,MAN,MotorCycle,car,CAR]
 ytA = {'NotObject':[1,0,0,0,0],'MAN':[0,1,0,0,0] ,'MotorCycle':[0,0,1,0,0] ,'car':[0,0,0,1,0],'CAR':[0,0,0,0,1]}
 
-fieldsA = ['fn','x','y','range','doppler','area','ptsNum','NotObject','MAN','MotorCycle','car','CAR']
-
+#fieldsA = ['fn','x','y','range','doppler','area','ptsNum','NotObject','MAN','MotorCycle','car','CAR']
+fieldsA = ['fn','indexMax','index','x','y','range','doppler','area','ptsNum','NotObject','MAN','MotorCycle','car','CAR']
 ################### Real Time or read from file switch ************
 #rtSwitch = True # real time mode
 rtSwitch = True  # read data from file
@@ -406,7 +406,8 @@ def trsExec(writer):
 			#(1.0) Extract data for plot
 			xy21A = v21.loc[:,['x','y']] 
 			drA   = v21.loc[:,['doppler','range']]
-			opA   = v21.loc[:,['fn','x','y','range','doppler','area','ptsNum']]
+			#opA   = v21.loc[:,['fn','x','y','range','doppler','area','ptsNum']]
+			opA   = v21.loc[:,['fn','indexMax','index','x','y','range','doppler','area','ptsNum']]
 			fxyA  = v21.loc[:,['fn','x','y','cid','doppler','ptsNum']]
 			
 			#(1.1) Plot Object
@@ -420,15 +421,18 @@ def trsExec(writer):
 			objA = []
 			opAn = opA.to_numpy()
 			for i in range(len(opAn)):
-				fn = opAn[i][0]
-				x =  opAn[i][1]
-				y =  opAn[i][2]
-				distance = opAn[i][3]
-				dop = opAn[i][4]
-				area = opAn[i][5]
-				ptsNum = opAn[i][6]
+				fn = 		opAn[i][0]
+				indexMax =	opAn[i][1]
+				idx = 		opAn[i][2]
+				x =  		opAn[i][3]
+				y =  		opAn[i][4]
+				ran = 		opAn[i][5]
+				dop = 		opAn[i][6]
+				area = 		opAn[i][7]
+				ptsNum = 	opAn[i][8]
+				
 				#distance,doppler,area,nop)
-				(obj,rng,speed)  = objectReport(distance,dop,area,ptsNum) 
+				(obj,rng,speed)  = objectReport(ran,dop,area,ptsNum) 
 				if obj == 'TRUCK' or obj == 'CAR' or obj == 'MotorCycle':
 					print('############################## {:} #######################################'.format(fn))
 					print('# WARNING: VEHICLE FROM LEFT SIDE, obj={:10s}, r={:3.0f} m, v={:5.0f} Km/Hr'.format(obj, rng, speed))
@@ -439,7 +443,8 @@ def trsExec(writer):
 					dataString.set('r={:3.0f}m,v={:5.0f}Km/Hr'.format(rng, speed))
 					
 					if rec_Flag == True:
-						csvData = [fn,x,y,distance,dop,area,ptsNum] + ytA[obj] 
+						#csvData = [fn,x,y,distance,dop,area,ptsNum] + ytA[obj] 
+						csvData =  [fn,indexMax,idx,x,y,ran,dop,area,ptsNum]  + ytA[obj] 
 						writer.writerow(csvData)
 						print(csvData)
 					
