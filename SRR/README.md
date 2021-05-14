@@ -37,8 +37,8 @@ If Run demo program can not find any Raw data output:
       jetson
       $ls -l /dev/ttyTHS1
       $sudo chmod +777 /dev/ttyTHS1
-    
-![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/srr_scrot.jpeg)    
+
+https://user-images.githubusercontent.com/2010446/118252784-b7d59f00-b4db-11eb-8442-2214cd5fcfd3.mov
     
 ## Header:
 
