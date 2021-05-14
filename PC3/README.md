@@ -58,8 +58,11 @@ If Run demo program can not find any Raw data output:
 
 ## pyqtgraph_3d_pc3_occupancy.py screenshot
 
-![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/position.png)
  
+https://user-images.githubusercontent.com/2010446/118247174-7510c880-b4d5-11eb-91a2-173c0d3ddb3b.mov
+
+
+
  # import lib
 
     from mmWave import pc3
