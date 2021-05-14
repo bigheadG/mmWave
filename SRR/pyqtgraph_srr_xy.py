@@ -153,7 +153,11 @@ timer.start(143) #150  80: got(20 Times)   *50ms from uart:
 #port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
 
 #for pi 4 UART port
-port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
+#port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
+
+#Mac OS
+port = serial.Serial("/dev/tty.usbmodemGY0050514",baudrate = 921600, timeout = 0.5)
+
 #Short Range Radar initial 
 srr = srradar.SRR(port)
 
