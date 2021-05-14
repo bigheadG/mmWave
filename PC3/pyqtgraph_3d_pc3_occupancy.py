@@ -57,7 +57,7 @@ class CustomTextItem(gl.GLGraphicsItem.GLGraphicsItem):
 
 	def paint(self):
 		self.GLViewWidget.qglColor(QtCore.Qt.cyan)
-		self.GLViewWidget.renderText(self.X, self.Y, self.Z, self.text)
+		self.GLViewWidget.renderText(round(self.X), round(self.Y), round(self.Z), self.text)
 
 
 class Custom3DAxis(gl.GLAxisItem):
@@ -190,10 +190,12 @@ winH.show()
 #
 #Drone Object Detect Radar initial 
 #port = serial.Serial("/dev/tty.usbmodemGY0052854",baudrate = 921600, timeout = 0.5)
-port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
+#port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
 #for NUC ubuntu 
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 #
+port = serial.Serial("/dev/tty.SLAB_USBtoUART3",baudrate = 921600 , timeout = 0.5)
+
 ###############################################################################
 
 radar = pc3.Pc3(port)
@@ -204,7 +206,7 @@ v8len = 0
 
 pos = np.zeros((100,3))
 color = [1.0, 0.0, 0.0, 1.0]
-sp1 = gl.GLScatterPlotItem(pos=pos,color=color,size = 3.0)
+sp1 = gl.GLScatterPlotItem(pos=pos,color=color,size = 4.0)
 w.addItem(sp1)
 
 gcolorA = np.empty((100,4), dtype=np.float32)

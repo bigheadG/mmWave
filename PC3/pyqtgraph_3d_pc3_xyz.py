@@ -49,7 +49,7 @@ class CustomTextItem(gl.GLGraphicsItem.GLGraphicsItem):
 
 	def paint(self):
 		self.GLViewWidget.qglColor(QtCore.Qt.cyan)
-		self.GLViewWidget.renderText(self.X, self.Y, self.Z, self.text)
+		self.GLViewWidget.renderText(round(self.X), round(self.Y), round(self.Z), self.text)
 
 
 class Custom3DAxis(gl.GLAxisItem):
