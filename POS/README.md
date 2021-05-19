@@ -22,7 +22,7 @@ This repository contains the Batman mmWave-PC3 People Counting & Detection mmWav
 
 # Hardware:
     Batman kit-501 (AOP)
-    ![BM501-AOP](https://user-images.githubusercontent.com/2010446/118783245-7705cd80-b8c1-11eb-8ec4-dea6dd683e6e.png)
+   ![BM501-AOP](https://user-images.githubusercontent.com/2010446/118783245-7705cd80-b8c1-11eb-8ec4-dea6dd683e6e.png)
 
     Measure Range: 6x6 meters
     Power supply: 5Vdc/3.0A 
@@ -41,15 +41,14 @@ Library update:
 
 Examples:
 
-    
     pc3OVH_pyqtgraph_3d_xyz_df_queue_v6.py  #point cloud
     pc3OVH_pyqtgraph_3d_xyz_df_queue_v7.py  #object tracking
     
 https://user-images.githubusercontent.com/2010446/118780152-55efad80-b8be-11eb-9927-ee296dfaed8e.mov
     
     pc3OVH_record.py                            # record data 
-    pc3OVH_pyqtgraph_3d_xyz_df_playback.py  # point cloud data playback
-    pc3Aop2021-04-07-23-52-34.csv.    # test data for pc3OVH_pyqtgraph_3d_xyz_df_playback.py
+    pc3OVH_pyqtgraph_3d_xyz_df_playback.py 	# point cloud data playback
+    pc3Aop2021-04-07-23-52-34.csv.     		# test file for pc3OVH_pyqtgraph_3d_xyz_df_playback.py
     
 If Run demo program can not find any Raw data output:
       Please set UART to R/W mode: 
@@ -73,8 +72,7 @@ If Run demo program can not find any Raw data output:
 
   ### raspberry pi 4 use ttyS0
     port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
-
-    
+ 
   ### Jetson Nano use ttyTHS1
       port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
     and please modify: 
@@ -87,7 +85,6 @@ If Run demo program can not find any Raw data output:
   
   ### ubuntu NUC
     port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
-
 
 ## define
 
