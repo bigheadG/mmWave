@@ -64,13 +64,6 @@ If Run demo program can not find any Raw data output:
       $ls -l /dev/ttyTHS1
       $sudo chmod +777 /dev/ttyTHS1
 
-## pyqtgraph_3d_pc3_xyz.py screenshot
-
-![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/pc3_xyz.png)
-
-## pyqtgraph_3d_pc3_occupancy.py screenshot
-
-![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/position.png)
  
  # import lib
 
