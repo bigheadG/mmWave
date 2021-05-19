@@ -62,6 +62,13 @@ POS:	People counting Overhead Sensor.
       RPi.GPIO library please reference:
       https://www.raspberrypi-spy.co.uk/2012/05/install-rpi-gpio-python-library/
       
+      pandas Library
+      $sudo pip3 install pandas
+      
+      scikit-learn Library
+      $sudo pip3 install scikit-learn
+      
+      
  ## Some install problem the following information for reference:
       (1)-------libf77blas.so.3-----------------------------------------
       from scipy.linalg import _fblas
