@@ -1,10 +1,10 @@
 #=============================================
-# File Name: pyqtgraph_3d_xyz_df.py
+# File Name: pyqtgraph_3d_xyz_df_playback.py
 #
 # Requirement:
 # Hardware: BM201-ISK or BM501-AOP
 # Firmware: PC3-I471
-#
+# playback kit(hardware): toolkit-PC3-AOP
 # config file: (V34_PC3_6m_100m)ISK_6m_default.cfg
 # lib: pc3OVH
 # plot tools: pyqtgraph
@@ -160,11 +160,12 @@ rtSwitch = False # real time mode
 #
 #Drone Object Detect Radar initial 
 #port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
-#port = serial.Serial("/dev/tty.usbmodem14103",baudrate = 115200 , timeout = 0.5)  
-port = serial.Serial("/dev/tty.SLAB_USBtoUART3",baudrate = 921600, timeout = 0.5)  
+port = serial.Serial("/dev/tty.usbmodem14103",baudrate = 115200 , timeout = 0.5)  
+#port = serial.Serial("/dev/tty.SLAB_USBtoUART3",baudrate = 921600, timeout = 0.5)  
 
 #for NUC ubuntu 
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
+
 
 radar = pc3OVH.Pc3OVH(port)
 
@@ -241,7 +242,7 @@ def radarExec():
 		fn = hdr.frameNumber
 		(dck,v6,v7,v8) = radar.getRecordData(fn)
 	
-	 
+	#(dck,v6,v7,v8)  = radar.getRecordData(fn)
 	showData(dck,v6,v7,v8)
 	
 			
