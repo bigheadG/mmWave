@@ -22,6 +22,8 @@ This repository contains the Batman mmWave-PC3 People Counting & Detection mmWav
 
 # Hardware:
     Batman kit-501 (AOP)
+    ![BM501-AOP](https://user-images.githubusercontent.com/2010446/118783245-7705cd80-b8c1-11eb-8ec4-dea6dd683e6e.png)
+
     Measure Range: 6x6 meters
     Power supply: 5Vdc/3.0A 
     
