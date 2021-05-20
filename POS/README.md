@@ -1,4 +1,3 @@
-![Platform](https://img.shields.io/badge/Raspberry-Pi3-orange.svg)&nbsp;
 ![Platform](https://img.shields.io/badge/Raspberry-Pi4-orange.svg)&nbsp;
 ![Platform](https://img.shields.io/badge/ubuntu-NCU-orange.svg)&nbsp;
 ![Platform](https://img.shields.io/badge/Win-OS-blue)&nbsp;
@@ -235,10 +234,6 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
     v7: target object of dataframe type data  
     v8: target id of dataframe type data
     
-    
-    
- ![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/objGeoSmall.png)
-			
 
 
 ## Reference
