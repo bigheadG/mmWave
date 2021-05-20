@@ -8,23 +8,25 @@
 ![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)
 
 # 🚧  Under Construction 🚧 
-# mmWave-pc3POS (People Counting Overhead Sensor SDK)
+# mmWave-PC3POS (People Counting Overhead Sensor SDK)
 
 Current PI's OS is supports python 3.7.0
 
 https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
 
-This repository contains the Batman mmWave-PC3 People Counting & Detection mmWave Sensor SDK. The sample code below consists of instruction for using the mmWave lib. This mmWave-PC3 Python Program will work with People Counting & Detection based Batman AOP-PC3 mmWave Kit solution. This Python Program works with a Raspberry Pi 4 and/or NVIDIA Jetson Nano computer with Batman AOP-PC3 Kit attached via Kit’s HAT Board; and that the BM501 Kit is an easy-to-use mmWave sensor evaluation kit for People Sensing, People Counting, or People Occupancy Density Estimation in approx. 6m x 6m area without privacy invasion; and where the Python Program would have multiple people detection in a 3-Dimentional Area with ID tag, posX, posY, posZ, velx, vely, velz, accX, accY, accZ parameters, along with Point Clouds with elevation, azimuth, doppler, range, and snr parameters. 
+This repository contains the Batman mmWave-POS People Counting Overhead Sensor SDK. The sample code below consists of instruction for using the mmWave lib. This mmWave-POS Python Program will work with People Counting Overhead Sensor based Batman BM501-POS mmWave Kit solution. This Python Program works with a Raspberry Pi 4, NVIDIA Jetson Nano, Windows, Linux, or MAC computer with Batman BM501-POS Kit attached via Kit’s HAT Board; and that the BM501 Kit is an easy-to-use mmWave sensor evaluation kit for People Sensing, People Counting, or People Occupancy Density Estimation in approx. 6m x 6m x 3m region without privacy invasion; and where the Python Program would have multiple people detection in a 3-Dimentional Area with ID tag, posX, posY, posZ, velX, velY, velZ, accX, accY, accZ parameters, along with Point Clouds with elevation, azimuth, doppler, range, and snr parameters. 
 
-# AOP-PC3 Kit Mouting and Scene Conditions
-    The EVM Sensor needs to be mounted at a heigh of 2.8-3.0m in the center of area of interest, with the sensor directly facing the ground. Notes: If you use Tripod to elevate the EVM, Please make sure that it has an extension arm(minimun 12-15 inches) to project the EVM away from the Triple stem.
+# BM501-POS EVM Kit Mounting and Scene Conditions
+The BM501 Module from the EVM Kit needs to be mounted at a heigh of 2.8-3.0m top-down in the center of the area of interest, with the BM501 Module sensor directly facing the ground. Notes: If you use Tripod to elevate the EVM, Please make sure that it has an extension arm (minimun 305mm ~ 381mm or 12-15 inches) to set apart the EVM away from the Tripod's stem.
     
 
 # Hardware:
-    Batman kit-501 (AOP)
-   ![BM501-AOP](https://user-images.githubusercontent.com/2010446/118783245-7705cd80-b8c1-11eb-8ec4-dea6dd683e6e.png)
+    Batman BM501-POS EVM Kit (TI IWR6843AOP ASIC based mmWave solution)
+ 
+ ![BM501 EVM Kit Structure](https://user-images.githubusercontent.com/2010446/118910376-ed084400-b956-11eb-8d10-defee8be9c49.png)
 
-    Measure Range: 6x6 meters
+ 
+    Measure Range: 6x6x3 meters
     Power supply: 5Vdc/3.0A 
     
 # Installing
