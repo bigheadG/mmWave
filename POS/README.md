@@ -244,7 +244,7 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 ## Reference
 
  
-1. LabGuide: 
+1. LabGuide: [People counting Overhead reference guide](https://dev.ti.com/tirex/explore/node?node=AGn5r.xojDrrAKHxSfvzFg__VLyFKFf__LATEST)
 
 
 
