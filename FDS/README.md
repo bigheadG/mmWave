@@ -4,7 +4,7 @@
 ![Platform](https://img.shields.io/badge/Win-OS-blue)&nbsp;
 ![Platform](https://img.shields.io/badge/Mac-OS-lightgrey)&nbsp;
 ![Platform](https://img.shields.io/badge/Jeson-Nano-green.svg)&nbsp;
-![Language](https://img.shields.io/badge/python-%3E3.6%20-green.svg)&nbsp;
+![Language](https://img.shields.io/badge/python-%3E3.7%20-green.svg)&nbsp;
 ![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)
 
 # 🚧  Under Construction 🚧 
