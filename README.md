@@ -15,7 +15,7 @@ SVD:	Surface Velocity Detection.<br/>
 DRN:	Drone Radar Navigation.<br/>
 VOD:	Vehicle Occupancy Detection.<br/>
 PC3:	People Counting Detection.<br/>
-TRS:    Traffic_Monitoring_Detection Roadway Sensing.<br/>
+TRS:    Traffic_monitoring_detection Roadway Sensing.<br/>
 POS:	People counting Overhead Sensor.
 PCR:    People Counting short Range sensing
 
