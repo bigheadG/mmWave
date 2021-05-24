@@ -15,10 +15,10 @@ Current PI's OS is supports python 3.7.0
 
 https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
 
-This repository contains the Batman mmWave-PC3 People-counting short Range sensor SDK. The sample code below consists of instruction for using the mmWave lib. This mmWave-PCR Python Program will work with People-Counting short Range sensor based Batman BM501-PCR mmWave Kit solution. This Python Program works with a Raspberry Pi 4, NVIDIA Jetson Nano, Windows, Linux, or MAC computer with Batman BM501-PCR Kit attached via Kit’s HAT Board; and that the BM501 Kit is an easy-to-use mmWave sensor evaluation kit for object Sensing. short range region is 30cm - 1m; and where the Python Program would have multiple people detection in a 3-Dimentional Area with ID tag, posX, posY, posZ, velX, velY, velZ, accX, accY, accZ parameters, along with Point Clouds with elevation, azimuth, doppler, range, and snr parameters.
+This repository contains the Batman mmWave-PCR People/Object-Counting short Range sensor SDK. The sample code below consists of instruction for using the mmWave lib. This mmWave-PCR Python Program will work with People/Object-Counting short Range sensor based Batman BM501-PCR mmWave Kit solution. This Python Program works with a Raspberry Pi 4, NVIDIA Jetson Nano, Windows, Linux, or MAC computer with Batman BM501-PCR Kit attached via Kit’s HAT Board; and that the BM501 Kit is an easy-to-use mmWave sensor evaluation kit for People/Object Sensing in approx. 30cm ~ 1m short range region; and where the Python Program would have multiple People/Object detection in a 3-Dimentional Area with ID tag, posX, posY, posZ, velX, velY, velZ, accX, accY, accZ parameters, along with Point Clouds with elevation, azimuth, doppler, range, and snr parameters.
 
 # Hardware:
-    Batman BM501-POS EVM Kit (TI IWR6843AOP ASIC based mmWave solution)
+    Batman BM501-PCR EVM Kit (TI IWR6843AOP ASIC based mmWave solution)
 
 ![BM501 EVM Kit Structure](https://user-images.githubusercontent.com/2010446/118910376-ed084400-b956-11eb-8d10-defee8be9c49.png)
   
