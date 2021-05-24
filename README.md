@@ -16,7 +16,7 @@ DRN:	Drone Radar Navigation.<br/>
 VOD:	Vehicle Occupancy Detection.<br/>
 PC3:	People Counting Detection.<br/>
 TRS:    Traffic_monitoring_detection Roadway Sensing.<br/>
-POS:	People counting Overhead Sensor.
+POS:	People counting Overhead Sensor.<br/>
 PCR:    People Counting short Range sensing
 
 ## Youtube Demo:
