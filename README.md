@@ -17,6 +17,7 @@ VOD:	Vehicle Occupancy Detection.<br/>
 PC3:	People Counting Detection.<br/>
 TRS:    Traffic_Monitoring_Detection Roadway Sensing.<br/>
 POS:	People counting Overhead Sensor.
+PCR:    People Counting short Range sensing
 
 ## Youtube Demo:
 
@@ -39,6 +40,7 @@ POS:	People counting Overhead Sensor.
        PC3: Batman Kit 201(ISK) :IWR6843-PC3
        TRS: Batman Kit 201(ISK) :IWR6843-TRS
        POS: Batman Kit 201(ISK) :IWR6843-POS and AOP-POS
+       PCR: Batman Kit 201(ISK) :IWR6843-POS and AOP-POS
 
 
 # Install Library:
