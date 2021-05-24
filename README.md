@@ -39,8 +39,8 @@ PCR:    People Counting short Range sensing
        VOD: Batman Kit 201(ISK) :IWR6843-VOD
        PC3: Batman Kit 201(ISK) :IWR6843-PC3
        TRS: Batman Kit 201(ISK) :IWR6843-TRS
-       POS: Batman Kit 201(ISK) :IWR6843-POS and AOP-POS
-       PCR: Batman Kit 201(ISK) :IWR6843-PCR and AOP-PCR
+       POS: Batman Kit 201(ISK) :IWR6843-POS and BM501 AOP-POS
+       PCR: Batman Kit 201(ISK) :IWR6843-PCR and BM501 AOP-PCR
 
 
 # Install Library:
