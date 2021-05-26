@@ -89,16 +89,16 @@ Other packages install:
   
     #read file
    
-      (v6smu,v7smu,v8smu) = radar.readFile("pc3az2021-04-01-23-18-25.csv")
+      (v6smu,v7smu,v8smu,v9smu) = radar.readFile("pc3az2021-04-01-23-18-25.csv")
    
     #get frame number from header
    
       hdr = radar.getHeader()
       fn = hdr.frameNumber
    
-    #get v6,v7 and v8 based on fn(frameNum)
+    #get v6,v9,v7 and v8 based on fn(frameNum)
    
-      (dck,v6,v7,v8)  = radar.getRecordData(fn)
+      (dck,v6,v7,v8,v9)  = radar.getRecordData(fn)
    
    
    
