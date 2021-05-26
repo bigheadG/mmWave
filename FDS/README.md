@@ -172,5 +172,7 @@ Other packages install:
 
 
 # Refernce:
-    1. LabGuide: The Data Formats in this document is dedicated working for FIRMWARE V24.50 or later
+    1. LabGuide: 
         https://github.com/bigheadG/mmWaveDocs/blob/master/V2450_FDS_68xx_long_range_people_det_user_guide_pdf(forFwV2450).pdf
+        ALERT: The Data Formats Section in this document is dedicated working for FIRMWARE V24.50 or later
+        
