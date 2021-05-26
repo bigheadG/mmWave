@@ -90,9 +90,10 @@ Other packages install:
    
    
    
-# V6(point cloud),V7(target object) and V8(target index) DataFrame Structure:
+# V6(point cloud),V7(target object) and V8(target index) and v9(point cloud side info)DataFrame Structure:
 
     V6 data structure: (point cloud)
+    
       fN           int64    #frameNum
       type        object    #v6
       range      float64    #Range in meters
@@ -117,7 +118,10 @@ Other packages install:
         9   4699   v6  0.697416  0.635793  ... -0.162032  0.414091  0.561080 -0.010353
 
 
+
+
     V7 data structure: (Target Object)
+    
       fN        int64     #frameNum
       type     object     #v7
       posX    float64     #Target position in X, m
@@ -137,8 +141,12 @@ Other packages install:
          ------------------ v7 dataFrame ----------------------
           fN  type      posX      posY      posZ  ...      ec14      ec15    g  confi  tid
       0  5212   v7  0.478549  0.557044 -0.047848  ... -0.189876  5.912879  3.0    1.0    0
-    
+
+
+
+
     V8 data structure: (Target Index)
+    
       fN           int64.  #frameNum
       type        object.  #v8
       targetID    object   #Target ID
@@ -147,7 +155,6 @@ Other packages install:
       253:Point not associated, SNR to weak
       254:Point not associated, located outside boundary of interest
       255:Point not associated, considered as noise
-      
       
             ------------------ v8 dataFrame ----------------------
                fN type                                           targetID
