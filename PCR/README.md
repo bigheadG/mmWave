@@ -8,7 +8,7 @@
 ![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)
 
 # 🚧   Under Construction -  🚧 
-# mmWave_PCR (People/Object Counting short Range sensor)
+# mmWave_PCR (People/object Counting short Range sensing)
 
 
 Current PI's OS is supports python 3.7.0
