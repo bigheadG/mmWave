@@ -197,6 +197,8 @@ Other packages install:
 # Reference
 
 LabGuide: reference from TI:
+
 https://github.com/bigheadG/mmWaveDocs/blob/master/V2450_FDS_68xx_long_range_people_det_user_guide_pdf.pdf
-ALERT: only Data Formats Section in this document be used here
+
+ALERT: the user can read "Data Formats" section in this document for more detail on Data Structure for V6, V9, V7 and V8 etc
 
