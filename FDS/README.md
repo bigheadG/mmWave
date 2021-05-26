@@ -169,3 +169,9 @@ Other packages install:
 
 # csv data file for test
 
+
+
+# Appendix:
+
+ [68xx_long_range_people_det_user_guide_pdf(forFwV2450).pdf](https://github.com/bigheadG/mmWave/files/6543732/68xx_long_range_people_det_user_guide_pdf.forFwV2450.pdf)
+
