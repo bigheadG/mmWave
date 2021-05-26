@@ -153,10 +153,7 @@ Other packages install:
       2090   2365   v8  [255, 255, 255, 255, 255, 255, 7, 7, 7, 7, 7, ...
       2260   2366   v8  [254, 254, 254, 254, 254, 254, 254, 254, 254, ...
       
-      # Reference
-      [68xx_long_range_people_det_user_guide_pdf(forFwV2450).pdf](https://github.com/bigheadG/mmWave/files/6543727/68xx_long_range_people_det_user_guide_pdf.forFwV2450.pdf)
-
-      
+        
 
 # Example
 
@@ -174,6 +171,8 @@ Other packages install:
 # Refernce:
     1. LabGuide: 
         https://github.com/bigheadG/mmWaveDocs/blob/master/V2450_FDS_68xx_long_range_people_det_user_guide_pdf(forFwV2450).pdf
+        https://github.com/bigheadG/mmWaveDocs/blob/master/V2450_FDS_68xx_long_range_people_det_user_guide_pdf(forFwV2450).pdf
+        
         https://github.com/bigheadG/mmWaveDocs/blob/master/V2450_FDS_68xx_long_range_people_det_user_guide_pdf(forFwV2450).pdf
         
         ALERT: The Data Formats Section in this document is dedicated working for FIRMWARE V24.50 or later
