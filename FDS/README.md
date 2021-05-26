@@ -22,6 +22,18 @@ This repository contains the Batman mmWave-FDS Fall Detection Sensor SDK. The sa
 
 ![BM501 EVM Kit Structure](https://user-images.githubusercontent.com/2010446/118910376-ed084400-b956-11eb-8d10-defee8be9c49.png)
   
+# Example:
+
+    lpdFDS_raw_ex0.py             #get v6,v7,v8 and v9 data from sensor
+    lpdFDS_pyqtgraph_3d_xyz_df_queue_v7.py 
+    
+
+Uploading v7_demo.mov…
+
+
+    lpdFDS_pyqtgraph_3d_xyz_df_queue_v6.py
+    
+    
 # installing
 Library install for Python
 
@@ -63,11 +75,11 @@ Other packages install:
     port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 
 # Define:
-      radar = pc3.Pc3(port)
+      radar = lpdFDS.LpdFDS(port)
   
   ## (Real Time: BaudRate:921600) 
      
-     (dck,v6,v7,v8) = radar.tlvRead(False,df = 'DataFrame')
+     (dck,v6,v7,v8,v9) = radar.tlvRead(False,df = 'DataFrame')
      
       dck: True: data avaliable
           false: data invalid
@@ -187,10 +199,6 @@ Other packages install:
         9   9077   v9  263    481
         10  9077   v9  294    483
       
-
-# Example
-
-    
 
 
 # the following example work with toolkit-PC3
