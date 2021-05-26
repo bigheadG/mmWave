@@ -180,3 +180,134 @@ https://user-images.githubusercontent.com/2010446/118364473-1c235c00-b5cb-11eb-8
 <pre> pc3az2021-05-04-11-05-59_2_30cm.csv       #distance: 30cm 2 object</pre> 
 <pre> pc3az2021-05-04-11-10-03_3_10cm.csv       #distance: 10cm 3 object</pre> 
 <pre> pc3az2021-05-04-11-25-09_all_1m2.csv      #distance: 1m2 all object</pre>
+
+
+# Reference
+
+UART Output Data Format
+----------- 
+
+The demo outputs the point cloud and tracking information using a TLV(type-length-value) encoding scheme with little endian byte order. For every frame, a packet is sent consisting of a fixed sized **Frame Header** and then a variable number of TLVs depending on what was detected in that scene. The TLVs can be of types representing the 3D point cloud, target list object, and associated points.
+
+<img src="images/packet_structure.png" width="600"/>
+
+### Frame Header
+Size: 48 bytes
+
+```Matlab
+frameHeaderStructType = struct(...
+    'sync',                         {'uint64', 8}, ... % syncPattern in hex is: '02 01 04 03 06 05 08 07' 
+    'version',                      {'uint32', 4}, ... % 0xA6843
+    'totalPacketLen',               {'uint32', 4}, ... % See description below
+    'platform',                     {'uint32', 4}, ... % 600MHz free running clocks
+    'frameNumber',                  {'uint32', 4}, ... % In bytes, including header
+    'subFrameNumber',               {'uint32', 4}, ... % Starting from 1
+    'chirpProcessingMargin',        {'uint32', 4}, ... % Chirp Processing margin, in ms
+    'frameProcessingMargin',        {'uint32', 4}, ... % Frame Processing margin, in ms
+    'trackProcessTime',             {'uint32', 4}, ... % Tracking Processing time, in ms
+    'uartSentTime' ,                {'uint32', 4}, ... % Time spent to send data, in ms
+    'numTLVs' ,                     {'uint16', 2}, ... % Number of TLVs in thins frame
+    'checksum',                     {'uint16', 2});    % Header checksum
+
+```**Frame Header Structure: name, type, length**
+
+```Matlab
+% Input: frameheader is a 48x1 double array, each index represents a byte of the frame header
+% Output: CS is checksum indicator. If CS is 0, checksum is valid.
+
+function CS = validateChecksum(frameheader)
+    h = typecast(uint8(header),'uint16');
+    a = uint32(sum(h));
+    b = uint16(sum(typecast(a,'uint16')));
+    CS = uint16(bitcmp(b));
+end
+```**validateChecksum(frameheader) in MATLAB syntax**   
+
+### TLVs 
+The TLVs can be of type **POINT CLOUD**, **TARGET LIST**, **TARGET INDEX** or **PRESENCE INDICATION**.
+
+#### **TLV Header**
+Size: 8 bytes
+```Matlab
+% TLV Type: 06 = Point cloud, 07 = Target object list, 08 = Target index
+tlvHeaderStruct = struct(...
+    'type',             {'uint32', 4}, ... % TLV object 
+    'length',           {'uint32', 4});    % TLV object Length, in bytes, including TLV header 
+```**TLV header**  
+
+Following the header, is the the TLV-type specific payload
+
+#### **Point Cloud TLV**
+Size: sizeof (tlvHeaderStruct) + sizeof(pointUnit) + sizeof (pointStruct) x numberOfPoints 
+
+Each Point Cloud TLV consists of an array of points. Each point is defined in 8 bytes. The pointUnit struct is used to uncompress each point to five floats (20 bytes).
+
+```java
+pointUnit = struct(...
+    'elevationUnit',        {'float', 4}, ... % Multiply each point by this value - used for compression
+    'azimuthUnit',          {'float', 4}, ... % Multiply each point by this value - used for compression
+    'dopplerUnit',          {'float', 4}, ... % Multiply each point by this value - used for compression
+    'rangeUnit',            {'float', 4}, ... % Multiply each point by this value - used for compression
+    'snrUnit',              {'float', 4});    % Multiply each point by this value - used for compression
+```**Point Structure** 
+
+```java
+pointStruct = struct(...
+    'elevation',        {'int8_t', 1}, ... % Elevation in radians
+    'azimuth',          {'int8_t', 1}, ... % Azimuth, in radians
+    'doppler',          {'int16_t', 2}, ... % Doppler, in m/s
+    'range',            {'uint16_t', 2}, ... % Range, in meters
+    'snr',              {'uint16_t', 2});    % SNR, ratio
+```**Point Structure**  
+
+#### **Target List TLV**
+Size: sizeof (tlvHeaderStruct) + sizeof (trackerProc_Target) x numberOfTargets
+ 
+The Target List TLV consists of an array of targets. Each target object is defined as given below.
+
+
+```java
+targetStruct3D = struct(...
+    'tid',             {'uint32', 4}, ... % Track ID
+    'posX',            {'float', 4}, ... % Target position in X dimension, m
+    'posY',            {'float', 4}, ... % Target position in Y dimension, m
+    'posZ',            {'float', 4}, ... % Target position in Z dimension, m
+    'velX',            {'float', 4}, ... % Target velocity in X dimension, m/s
+    'velY',            {'float', 4}, ... % Target velocity in Y dimension, m/s
+    'velZ',            {'float', 4}, ... % Target velocity in Z dimension, m/s
+    'accX',            {'float', 4}, ... % Target acceleration in X dimension, m/s2
+    'accY',            {'float', 4}, ... % Target acceleration in Y dimension, m/s
+    'accZ',            {'float', 4}, ... % Target acceleration in Z dimension, m/s
+    'ec[16]',          {'float', 16x4}, ... % Tracking error covariance matrix, [4x4] in range/azimuth/elevation/doppler coordinates
+    'g',               {'float', 4}, ... % Gating function gain
+    'confidenceLevel'  {'float', 4}, ... % Confidence Level
+
+```**Target Structure**  
+
+#### **Target Index TLV**
+Size: sizeof (tlvHeaderStruct) + sizeof(uint8) x numberOfPoints (NOTE: here the number of points are for frame n-1)
+ 
+The Target Index TLV consists of an array of target IDs. A targetID at index ***i*** is the target to which point ***i*** of the previous frame's point cloud was associated.
+Valid IDs range from 0-249. 
+
+```java
+targetIndex = struct(...
+'targetID',         {'uint8', 1});    % Track ID
+
+```**Target ID Structure**   
+
+Other Target ID values:
+
+Value       | Meaning
+------------|-----------
+253         | Point not associated, SNR too weak
+254         | Point not associated, located outside boundary of interest
+255         | Point not associated, considered as noise
+
+#### **Presence Indication TLV**
+Size: sizeof (tlvHeaderStruct) + sizeof(uint32)
+ 
+The Presence Indication TLV consists of a single uint32 value to provide a binary indication of presence in the presence boundary box. A value of 1 represents presence detected and 0 represents no presence detected.
+
+
+
