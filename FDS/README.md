@@ -55,7 +55,7 @@ Other packages install:
 
 # import lib:
 
-    from mmWave import pc3
+    from mmWave import lpdFDS
 ### raspberry pi 4 use ttyS0
     port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
 
