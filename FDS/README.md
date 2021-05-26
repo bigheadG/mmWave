@@ -171,7 +171,6 @@ Other packages install:
 
 
 
-# Appendix:
-
- [68xx_long_range_people_det_user_guide_pdf(forFwV2450).pdf](https://github.com/bigheadG/mmWave/files/6543732/68xx_long_range_people_det_user_guide_pdf.forFwV2450.pdf)
-
+# Refernce:
+    1. LabGuide: The Data Formats in this document is dedicated working for FIRMWARE V24.50 or later
+        https://github.com/bigheadG/mmWaveDocs/blob/master/V2450_FDS_68xx_long_range_people_det_user_guide_pdf(forFwV2450).pdf
