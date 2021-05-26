@@ -198,5 +198,5 @@ Other packages install:
 
 LabGuide: reference from TI:
 https://github.com/bigheadG/mmWaveDocs/blob/master/V2450_FDS_68xx_long_range_people_det_user_guide_pdf.pdf
-
+ALERT: only Data Formats Section in this document be used here
 
