@@ -183,7 +183,7 @@ https://user-images.githubusercontent.com/2010446/118364473-1c235c00-b5cb-11eb-8
 
 
 # Reference
-
-https://github.com/bigheadG/mmWaveDocs/blob/master/V5050_PCR_based_on_BM501_PC3_AOP_2021_05_26_pdf.pdf
+1. Lab Data Structure:
+   https://github.com/bigheadG/mmWaveDocs/blob/master/V5050_PCR_based_on_BM501_PC3_AOP_2021_05_26_pdf.pdf
 
 
