@@ -26,10 +26,8 @@ This repository contains the Batman mmWave-FDS Fall Detection Sensor SDK. The sa
 
     lpdFDS_raw_ex0.py             #get v6,v7,v8 and v9 data from sensor
     lpdFDS_pyqtgraph_3d_xyz_df_queue_v7.py 
-    
 
-Uploading v7_demo.mov…
-
+https://user-images.githubusercontent.com/2010446/119662157-a5f0e600-be63-11eb-814a-18a38f9b34ba.mov
 
     lpdFDS_pyqtgraph_3d_xyz_df_queue_v6.py
     
