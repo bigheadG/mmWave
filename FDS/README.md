@@ -196,5 +196,10 @@ Other packages install:
 
 # Appendix:
 
- [68xx_long_range_people_det_user_guide_pdf(forFwV2450).pdf](https://github.com/bigheadG/mmWave/files/6543732/68xx_long_range_people_det_user_guide_pdf.forFwV2450.pdf)
+LabGuide: reference from TI:
+ [68xx_long_range_people_det_user_guide_pdf(forFwV2450).pdf 
+ https://github.com/bigheadG/mmWave/files/6543732/68xx_long_range_people_det_user_guide_pdf.forFwV2450.pdf
+
+
+
 
