@@ -118,12 +118,12 @@ class Custom3Dlabel(gl.GLGraphicsItem.GLGraphicsItem):
 		self.parent.addItem(val)
 
 ##################### Parameter ################################### 
-QUEUE_LEN = 15
+QUEUE_LEN = 10
 
 ################### Real Time or read from file switch ************
 rtSwitch = True # real time mode
 # rtSwitch = False  # read data from file
-JB_RADAR_INSTALL_HEIGHT = 2.46
+JB_RADAR_INSTALL_HEIGHT =  1.0    #in pc3 2.46
 
 
 app = QtGui.QApplication([])
@@ -155,8 +155,8 @@ g.setSize(x=50,y=50,z=50)
 w.addItem(g)
 
 axis = Custom3DAxis(w, color=(0.2,0.2,0.2,1.0))
-axis.setSize(x=5, y=5, z=5)
-xt = [0,1,2,3,4,5]  
+axis.setSize(x=10, y=10, z=10)
+xt = [0,1,2,3,4,5,6,7,8,9,10]  
 axis.add_tick_values(xticks=xt, yticks=xt, zticks=xt)
 w.addItem(axis)
 
@@ -185,7 +185,8 @@ for i in range(15):
 #port = serial.Serial("/dev/tty.usbmodem14103",baudrate = 115200 , timeout = 0.5)  
 #port = serial.Serial("/dev/tty.usbmodemGY0050674",baudrate = 921600, timeout = 0.5)  
 #port = serial.Serial("/dev/tty.SLAB_USBtoUART3",baudrate = 921600, timeout = 0.5)  
-port = serial.Serial("/dev/tty.usbmodemGY0043864",baudrate = 921600, timeout = 0.5) 
+port = serial.Serial("/dev/tty.usbmodemGY0043914",baudrate = 921600, timeout = 0.5) 
+ 
 #for NUC ubuntu 
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 
@@ -195,13 +196,12 @@ radar = lpdFDS.LpdFDS(port)
 
 v6len = 0
 v7len = 0
+v7elen = 0
 v8len = 0
 v9len = 0
 
-
-color = [1.0, 0.0, 0.0, 1.0]
 pos = np.zeros((100,3))
-sp1 = gl.GLScatterPlotItem(pos=pos,color=color,size = 12.0)
+sp1 = gl.GLScatterPlotItem(pos=pos,color=[1.0, 0.0, 0.0, 1.0],size = 12.0)
 w.addItem(sp1)
 
 
@@ -226,19 +226,16 @@ def update():
 	global pos1,uFlag,gcolorA,lblA,lblTextA
 	if uFlag == True:
 		uFlag = False
-		gcolor = np.array(gcolorA)
+		
 		#print("------------------ pos1 ----------------------:{:}".format(len(gcolor)))
 		#print(gcolor)
-		sp1.setData(pos=pos1,color=gcolor)
-		
-		'''
-		#labeling id in target
-		for i in range(15):
-			if i > len(lblA):
-				lblA[i].set_values('',0,0,0)
-			else:
-				lblA[i].set_values(lblTextA[i],pos1[i,0],pos1[i,1],pos1[i,2])
-		'''
+		if len(pos1) != 0:
+			gcolor = np.array(gcolorA)
+			sp1.setData(pos=pos1,color=gcolor)
+		else:  #clear object 
+			posBlack = np.zeros((0,3))
+			sp1.setData(pos=posBlack,color= [1.0, 0.0, 0.0, 1.0])
+			 
     
 t = QtCore.QTimer()
 t.timeout.connect(update)
@@ -271,9 +268,10 @@ locBuf = []
 objBuf = pd.DataFrame([], columns=['fN','posX','posY','posZ','tid'])
 
 def radarExec():
-	global v6len,v7len,v8len,pos1,prev_fn,flag,uFlag,sim_stopFN,fn,objBuf,locBuf,JB_RADAR_INSTALL_HEIGHT,QUEUE_LEN,colorSet,gcolorA,lblTextA
+	global v6len,v7len,v8len,v7elen,pos1,prev_fn,flag,uFlag,sim_stopFN,fn,objBuf,locBuf,JB_RADAR_INSTALL_HEIGHT,QUEUE_LEN,colorSet,gcolorA,lblTextA
 	v6 = []
 	v7 = []
+	v7e = []
 	v8 = []
 	v9 = []
 	
@@ -282,6 +280,7 @@ def radarExec():
 	
 	hdr = radar.getHeader()
 	fn = hdr.frameNumber
+	
 	#(playback) 
 	if rtSwitch == False:
 		print("-----------fn:{:}--------start:{:}   stop:{:}".format(fn,radar.sim_startFN,radar.sim_stopFN))
@@ -297,12 +296,18 @@ def radarExec():
 		v7len = len(v7)
 		v9len = len(v9)
 		
-		print("Sensor Data: [v6,v7,v8,v9]:[{:d},{:d},{:d},{:d}]".format(v6len,v7len,v8len,v9len))
+		
+		v7elen = 0
 		if v7len != 0 and flag == True:
 			flag = False
+			print("Sensor Data: [v6,v7,v8,v9]:[{:d},{:d},{:d},{:d}]".format(v6len,v7len,v8len,v9len))
+			#(1.0)remove velX = 0 , velY = 0 and velZ = 0 object
+			v7e = v7.loc[(v7.velX != 0.0) & (v7.velY != 0.0) & (v7.velZ != 0.0)]
+			v7elen = len(v7e)
+			print(v7e)
 			
 			#(1.1) insert v7 to data Queue(objBuf) 
-			objBuf = objBuf.append(v7.loc[:,['fN','posX','posZ','posY','tid']], ignore_index=True)
+			objBuf = objBuf.append(v7e.loc[:,['fN','posX','posZ','posY','tid']], ignore_index=True)
 			locBuf.insert(0,fn)
 			if len(locBuf) > QUEUE_LEN:
 				objBuf = objBuf.loc[objBuf.fN != locBuf.pop()]
@@ -317,18 +322,16 @@ def radarExec():
 			
 			for i in range(len(tidA)):
 				gcolorA.append(colorSet[int(tidA[i])%15])
-				
-				#labeling id in target 
-				#idString = "" # "id{:}".format(int(tidA[i])%15)
-				#lblTextA.append(idString)
-				
 			
-			#(1.3)TargetID 
+			
+			#(1.3)Extract Target position & convert to numpy
 			xBuf = objBuf.loc[:,['posX','posY','posZ']]
 			pos_np = xBuf.to_numpy()
 			#Radar install position
-			#pos_np[:,2] = JB_RADAR_INSTALL_HEIGHT - pos_np[:,2]
+			pos_np[:,2] = JB_RADAR_INSTALL_HEIGHT - pos_np[:,2]
 			pos1 = pos_np
+			
+			
 			
 			uFlag = True
 			flag = True
