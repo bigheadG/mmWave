@@ -169,7 +169,10 @@ for i in range(15):
 	lblA.append(lbl)
 
 
-###################################################################
+######################### Select UART ################################
+# How to select UART
+# use $ls /dev/tty*
+#     then check select UART port 
 #
 #use USB-UART
 #port = serial.Serial("/dev/ttyUSB0",baudrate = 921600, timeout = 0.5)
@@ -330,8 +333,6 @@ def radarExec():
 			#Radar install position
 			pos_np[:,2] = JB_RADAR_INSTALL_HEIGHT - pos_np[:,2]
 			pos1 = pos_np
-			
-			
 			
 			uFlag = True
 			flag = True
