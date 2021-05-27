@@ -168,12 +168,11 @@ w.addItem(evmBox)
 #Drone Object Detect Radar initial 
 #port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
 #port = serial.Serial("/dev/tty.usbmodem14103",baudrate = 115200 , timeout = 0.5)  
-port = serial.Serial("/dev/tty.usbmodemGY0043864",baudrate = 921600, timeout = 0.5) 
+port = serial.Serial("/dev/tty.usbmodemGY0043914",baudrate = 921600, timeout = 0.5) 
 #port = serial.Serial("/dev/tty.SLAB_USBtoUART3",baudrate = 921600, timeout = 0.5)   
 
 #for NUC ubuntu 
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
-
 
 radar = lpdFDS.LpdFDS(port)
 
@@ -217,21 +216,25 @@ t.start(150)
 fn = 0 
 prev_fn = 0
 lblA =[]
-def showData(dck,v6i,v7i,v8i):
+def showData(dck,v6i,v7i,v8i,v9i):
 	if dck:
 		v6len = len(v6i)
 		v7len = len(v7i)
 		v8len = len(v8i)
-		print("Sensor Data: [v6,v7,v8]:[{:d},{:d},{:d}]".format(v6len,v7len,v8len))
+		v9len = len(v9i)
+		print("Sensor Data: [v6,v7,v8]:[{:d},{:d},{:d}]".format(v6len,v7len,v8len,v9len))
 		if v6len > 0:
 			print("\n--------v6-----------fn:{:} len({:})".format(fn,v6len))
 			print(v6i)
 		if v7len > 0:
 			print("\n--------v7-----------fn:{:} len({:})".format(fn,v7len))
 			print(v7i)
-		if v8len > 2:
-			print("\n--------v8-----------fn:{:} len({:})".format(fn,v8len-2))
+		if v8len > 0:
+			print("\n--------v8-----------fn:{:} len({:})".format(fn,v8len))
 			print(v8i)
+		if v9len > 0:
+			print("\n--------v9-----------fn:{:} len({:})".format(fn,v9len))
+			print(v9i)
 
 #objBuf = [[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]]
 locBuf = []
@@ -276,22 +279,24 @@ def radarExec():
 		v8len = len(v8)
 		v9len = len(v9)
 		print("Sensor Data: [v6,v7,v8,v9]:[{:d},{:d},{:d},{:d}]".format(v6len,v7len,v8len,v9len))
-		if v9len != 0:
-			print(v9)
-			 
-		return
+		#print(v9.dtypes)
+		#print(v9)
+		
 		
 		if v6len != 0 and flag == True:
 			flag = False
 			posTemp = v6
 			v6Temp = v6
 			print(v6)
-			v6op = v6    #v6Temp[(v6Temp.sx > -0.5) & (v6Temp.sx < 0.5) & (v6Temp.sy < 1.0) & (v6Temp.doppler != 0) ]
+			#(1.0)extract in range point cloud (6mx6mx6m) 
+			v6op = v6Temp[(v6Temp.sx > -3.0) & (v6Temp.sx < 3) & (v6Temp.sy < 3.0) & (v6Temp.sy > -3.0) & (v6Temp.sz < 3.0) & (v6Temp.sz > -3.0) & (v6Temp.doppler != 0) ]
 			d = v6op.loc[:,['sx','sy','sz']] 
 			dd = v6op.loc[:,['sx','sy','sz','doppler']] 
 			
-			#(1.1) insert v6 to data Queue(objBuf) 
+			#(1.1) insert v6 to data Queue(objBuf)
 			objBuf = objBuf.append(v6op.loc[:,['fN','sx','sy','sz']], ignore_index=False)
+			
+			#(1.1.0)keep frame number for pop data based on keep frameNumber
 			locBuf.insert(0,fn)
 			if len(locBuf) > QUEUE_LEN:
 				objBuf = objBuf.loc[objBuf.fN != locBuf.pop()]
@@ -319,9 +324,10 @@ def radarExec():
 				print(sensorA)
 				lblA = sensorA[:,4]
 				
+				#(1.4) remove labels
 				dm = d[~mask] #
 				
-				xBuf = objBuf.loc[:,['sx','sz','sy']]
+				xBuf = objBuf.loc[:,['sx','sy','sz']]
 				pos_np = xBuf.to_numpy()  #dm.to_numpy()
 			
 				pos_np[:,2] = JB_RADAR_INSTALL_HEIGHT - pos_np[:,2]
