@@ -365,7 +365,7 @@ fileName = "tmd{:}.csv".format(dt)
 
 
 if rtSwitch == False:
-	(v6smu,v7smu,v8smu,v9smu) = tmd.readFile("tmd2021-04-05-10-27-43.csv")
+	(v6smu,v7smu,v8smu,v9smu) = trs.readFile("tmd2021-04-05-10-27-43.csv")
 	print("------------------ v6smu --------start:{:}  stop:{:}--------------".format(tmd.sim_startFN,tmd.sim_stopFN))
 
 
