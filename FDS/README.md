@@ -31,6 +31,7 @@ https://user-images.githubusercontent.com/2010446/119662157-a5f0e600-be63-11eb-8
 
     lpdFDS_pyqtgraph_3d_xyz_df_queue_v6.py
     
+    lpdFDS_raw_v7_recorder.py   #record v7 data
     
 # installing
 Library install for Python
