@@ -2,8 +2,9 @@
 # File Name: lpdFDS_pyqtgraph_3d_xyz_df_queue_v7.py
 #
 # Requirement:
-# Hardware: BM201-ISK or BM501-AOP
-# Firmware: PC3-I471
+# Hardware: BM201-ISK
+# Firmware: V2450_FDS
+# Software: 
 # config file: 
 # lib: lpdFDS 
 #
