@@ -274,7 +274,7 @@ winH.show()
 #port = serial.Serial("/dev/ttyACM2",baudrate = 921600, timeout = 0.5)
 
 #port = serial.Serial("/dev/ttyUSB1",baudrate = 921600, timeout = 0.5)
-port = serial.Serial("/dev/tty.SLAB_USBtoUART4",baudrate = 921600 , timeout = 0.5)
+port = serial.Serial("/dev/tty.SLAB_USBtoUART3",baudrate = 921600 , timeout = 0.5)
 #
 ###############################################################################
 
