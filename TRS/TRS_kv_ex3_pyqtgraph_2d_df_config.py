@@ -346,13 +346,17 @@ else:
 #port = serial.Serial("/dev/ttyACM1",baudrate = 115200 , timeout = 0.5) # set 115200 for Algorithm develelop 
 #port = serial.Serial("/dev/ttyACM3",baudrate = 921600 , timeout = 0.5) # set 921600 for REAL case
 
-
-port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = dataBaudRate , timeout = 0.5)   # Data port
-portCFG = serial.Serial("/dev/tty.usbmodemGY0052531",baudrate = configBaudRate , timeout = 0.5) # config port
+#for MAC
+#port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = dataBaudRate , timeout = 0.5)   # Data port
+#portCFG = serial.Serial("/dev/tty.usbmodemGY0052531",baudrate = configBaudRate , timeout = 0.5) # config port
 
 
 #for pi 4 UART port
 #port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
+
+#for Windows
+portCFG = serial.Serial("COM37",baudrate = 115200 , timeout = 0.5) # set 115200 for Algorithm develelop 
+port = serial.Serial("COM36",baudrate = 921600 , timeout = 0.5) # set 921600 for REAL case
 
 trs = roadwayTMD_kv.roadwayTmdISK_kv(port)
 
@@ -391,6 +395,7 @@ def trsExec(writer):
 	#if rtSwitch == False:
 	#	(dck,v6,v7,v8,v9) = trs.getRecordData(fn)
 	
+	pd.options.display.float_format = '{:+.2f}'.format
 	print(v21)
 	
 	v21len = len(v21)
