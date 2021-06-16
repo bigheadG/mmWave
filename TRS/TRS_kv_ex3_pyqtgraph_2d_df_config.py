@@ -265,6 +265,8 @@ def update():
 		curveS2.setData(spots2)
 
 def objectReport(distance,doppler,area,nop):
+	
+	'''
 	obj = "CAR"
 	speed = -doppler*3600.0/1000.0
 	#############################
@@ -303,10 +305,10 @@ def objectReport(distance,doppler,area,nop):
 		obj = "MotorCycle"
 	elif distance < 20 and distance >= 10 and nop >= 3 and area < 4.00: 
 		obj = "MotorCycle"
+	'''
 	
-	
-	return (obj,distance,speed)
-
+	#return (obj,distance,speed)
+	return ("NotObject", 0.0, 0.0)#tmp turn off RULE based algorithm
 
 #----------timer Update--------------------   
 timer = pg.QtCore.QTimer()
