@@ -319,7 +319,8 @@ def radarExec():
 				
 			
 			#(1.3)TargetID 
-			xBuf = objBuf.loc[:,['posX','posZ','posY']]
+			#xBuf = objBuf.loc[:,['posX','posZ','posY']] # OVER HEAD
+			xBuf = objBuf.loc[:,['posX','posY','posZ']]  # WALL MOUNT
 			pos_np = xBuf.to_numpy()
 			
 			#Radar install position
