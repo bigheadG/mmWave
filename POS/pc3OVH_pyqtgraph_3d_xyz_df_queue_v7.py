@@ -123,7 +123,8 @@ QUEUE_LEN = 15
 ################### Real Time or read from file switch ************
 rtSwitch = True # real time mode
 # rtSwitch = False  # read data from file
-JB_RADAR_INSTALL_HEIGHT = 2.46
+#JB_RADAR_INSTALL_HEIGHT = 2.46 #OVER HEAD
+JB_RADAR_INSTALL_HEIGHT = 2 # WALL MOUNT
 
 
 app = QtGui.QApplication([])
