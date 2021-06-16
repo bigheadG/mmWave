@@ -123,8 +123,10 @@ QUEUE_LEN = 15
 ################### Real Time or read from file switch ************
 rtSwitch = True # real time mode
 # rtSwitch = False  # read data from file
+
+# ALERT: Assume RADAR board tilt 0 degree
 #JB_RADAR_INSTALL_HEIGHT = 2.46 #OVER HEAD
-JB_RADAR_INSTALL_HEIGHT = 2 # WALL MOUNT
+JB_RADAR_INSTALL_HEIGHT = 2.00 # WALL MOUNT
 
 
 app = QtGui.QApplication([])
@@ -321,7 +323,8 @@ def radarExec():
 			xBuf = objBuf.loc[:,['posX','posZ','posY']]
 			pos_np = xBuf.to_numpy()
 			#Radar install position
-			pos_np[:,2] = JB_RADAR_INSTALL_HEIGHT - pos_np[:,2]
+			#pos_np[:,2] = JB_RADAR_INSTALL_HEIGHT - pos_np[:,2]
+			pos_np[:,2] =  JB_RADAR_INSTALL_HEIGHT + pos_np[:,2]  # WALL MOUNT
 			pos1 = pos_np
 			
 			uFlag = True
