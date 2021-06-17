@@ -11,6 +11,9 @@
 # Type: Raw Data 
 # Baud Rate: PlayBack: 119200
 #            RealTime: 921600
+
+# ALERT: use pyqtgraph 0.11.0
+
 #=============================================
 
 from pyqtgraph.Qt import QtCore, QtGui
