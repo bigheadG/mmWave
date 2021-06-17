@@ -9,8 +9,8 @@
 # Plot Tools: pyqtgraph
 # Plot Target (V7) in 3D figure 
 # Type: Raw Data 
-# Baud Rate: Playback: 119200
-# Real Time: 921600
+# Baud Rate: PlayBack: 119200
+#            RealTime: 921600
 #=============================================
 
 from pyqtgraph.Qt import QtCore, QtGui
