@@ -1,17 +1,16 @@
 #=============================================
-# File Name: PC3_FDS_ex2_pyqtgraph_3d_xyz_df_queue_v7.py
+# File Name: PC3_FDS_ex2_pyqtgraph_3d_xyz_df_queue_v7_WallMount.py
 #
 # Requirement:
 # Hardware: BM501-AOP
-# Firmware: PC3-I471
-# lib: pc3OVH 
+# Firmware: V5051 PC3-I470 for WallMount
+# Lib: pc3OVH 
 #
-# plot tools: pyqtgraph
+# Plot Tools: pyqtgraph
 # Plot Target (V7) in 3D figure 
-# people overhead detect
-# type: Raw data
-# Baud Rate: playback: 119200
-#			 real time: 921600
+# Type: Raw Data 
+# Baud Rate: Playback: 119200
+# Real Time: 921600
 #=============================================
 
 from pyqtgraph.Qt import QtCore, QtGui
