@@ -191,6 +191,9 @@ port = serial.Serial("/dev/tty.SLAB_USBtoUART3",baudrate = 921600, timeout = 0.5
 #for NUC ubuntu 
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 
+# for PC3 WINDOWS10
+#port = serial.Serial("COM125",baudrate = 921600, timeout = 0.5)  
+
 
 radar = pc3OVH.Pc3OVH(port)
 
