@@ -1,5 +1,5 @@
 #=============================================
-# File Name: pyqtgraph_3d_xyz_df_ex1_forGesture.py
+# File Name: pyqtgraph_3d_xyz_df_ex3_forGesture.py
 #
 # Requirement:
 # Hardware: BM501-AOP
