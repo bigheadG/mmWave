@@ -123,8 +123,9 @@ rtSwitch = True # real time mode
 # rtSwitch = False  # read data from file
 
 # ALERT: Assume RADAR board tilt 0 degree
-#JB_RADAR_INSTALL_HEIGHT = 2.46 #OVER HEAD
-JB_RADAR_INSTALL_HEIGHT = 2.00 # WALL MOUNT
+# ALERT: This value may be changed depends on your RADAR installation
+#JB_RADAR_INSTALL_HEIGHT = 2.46 # OVER HEAD
+JB_RADAR_INSTALL_HEIGHT = 2.00 # WALL MOUNT 
 
 
 app = QtGui.QApplication([])
