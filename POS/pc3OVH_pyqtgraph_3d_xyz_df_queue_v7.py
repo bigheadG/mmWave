@@ -12,10 +12,8 @@
 # people overhead detect
 # type: Raw data
 # Baud Rate: playback: 119200
-#			 real time: 921600
-
+#            real time: 921600
 # ALERT: use pyqtgraph 0.11.0 for PC Windows
-
 #=============================================
 
 from pyqtgraph.Qt import QtCore, QtGui
@@ -128,8 +126,8 @@ rtSwitch = True # real time mode
 # rtSwitch = False  # read data from file
 
 # ALERT: Assume RADAR board tilt 0 degree
-#JB_RADAR_INSTALL_HEIGHT = 2.46 #OVER HEAD
-JB_RADAR_INSTALL_HEIGHT = 2.00 # WALL MOUNT
+JB_RADAR_INSTALL_HEIGHT = 2.46  # OVER HEAD
+#JB_RADAR_INSTALL_HEIGHT = 2.00 # WALL MOUNT
 
 
 app = QtGui.QApplication([])
@@ -190,11 +188,13 @@ for i in range(15):
 #port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
 #port = serial.Serial("/dev/tty.usbmodem14103",baudrate = 115200 , timeout = 0.5)  
 #port = serial.Serial("/dev/tty.usbmodemGY0050674",baudrate = 921600, timeout = 0.5)  
-port = serial.Serial("/dev/tty.SLAB_USBtoUART3",baudrate = 921600, timeout = 0.5)  
+#port = serial.Serial("/dev/tty.SLAB_USBtoUART3",baudrate = 921600, timeout = 0.5)  
 
 #for NUC ubuntu 
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 
+#for PC Windows
+port = serial.Serial("COM37",baudrate = 921600, timeout = 0.5)
 
 radar = pc3OVH.Pc3OVH(port)
 
@@ -326,8 +326,8 @@ def radarExec():
 			xBuf = objBuf.loc[:,['posX','posZ','posY']]
 			pos_np = xBuf.to_numpy()
 			#Radar install position
-			#pos_np[:,2] = JB_RADAR_INSTALL_HEIGHT - pos_np[:,2]
-			pos_np[:,2] =  JB_RADAR_INSTALL_HEIGHT + pos_np[:,2]  # WALL MOUNT
+			pos_np[:,2] = JB_RADAR_INSTALL_HEIGHT - pos_np[:,2]  # OVERHEAD
+			#pos_np[:,2] =  JB_RADAR_INSTALL_HEIGHT + pos_np[:,2]  # WALL MOUNT
 			pos1 = pos_np
 			
 			uFlag = True
