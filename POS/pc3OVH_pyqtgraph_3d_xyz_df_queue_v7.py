@@ -12,8 +12,7 @@
 # people overhead detect
 # type: Raw data
 # Baud Rate: playback: 119200
-#            real time: 921600
-# ALERT: use pyqtgraph 0.11.0 for PC Windows
+#			 real time: 921600
 #=============================================
 
 from pyqtgraph.Qt import QtCore, QtGui
@@ -126,7 +125,7 @@ rtSwitch = True # real time mode
 # rtSwitch = False  # read data from file
 
 # ALERT: Assume RADAR board tilt 0 degree
-JB_RADAR_INSTALL_HEIGHT = 2.46  # OVER HEAD
+JB_RADAR_INSTALL_HEIGHT = 2.30 # 2.46 #OVER HEAD
 #JB_RADAR_INSTALL_HEIGHT = 2.00 # WALL MOUNT
 
 
@@ -193,8 +192,7 @@ for i in range(15):
 #for NUC ubuntu 
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 
-#for PC Windows
-port = serial.Serial("COM37",baudrate = 921600, timeout = 0.5)
+port = serial.Serial("/dev/ttyUSB1",baudrate = 921600, timeout = 0.5)
 
 radar = pc3OVH.Pc3OVH(port)
 
@@ -323,11 +321,26 @@ def radarExec():
 				
 			
 			#(1.3)TargetID 
-			xBuf = objBuf.loc[:,['posX','posZ','posY']]
+			#xBuf = objBuf.loc[:,['posX','posZ','posY']] # CEILING
+			xBuf = objBuf.loc[:,['posX','posY','posZ']]
 			pos_np = xBuf.to_numpy()
-			#Radar install position
-			pos_np[:,2] = JB_RADAR_INSTALL_HEIGHT - pos_np[:,2]  # OVERHEAD
+			# Rotate Axis Rule:
+			# Radar install position: h
+			# Anttena Based Location: x1, y1, z1
+			# Ground  Based Location: x,  y,  z
+			# x = x1
+			# y = z1
+			# z = h - y1			 
+			x = pos_np[:, 0] # x = x1; CEILING MOUNT
+			y = pos_np[:, 2] # y = z1; CEILING MOUNT
+			z = JB_RADAR_INSTALL_HEIGHT - pos_np[:, 1] # z = h - y1; CEILING MOUNT
+			pos_np[:, 0] = x
+			pos_np[:, 1] = y
+			pos_np[:, 2] = z
+			
+			
 			#pos_np[:,2] =  JB_RADAR_INSTALL_HEIGHT + pos_np[:,2]  # WALL MOUNT
+			
 			pos1 = pos_np
 			
 			uFlag = True
