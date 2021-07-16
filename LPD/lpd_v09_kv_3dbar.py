@@ -1,3 +1,16 @@
+#=======================================================================
+# File Name: lpd_v09_kv_3dbar.py
+#
+# Requirement:
+# Hardware: BM201-ISK
+# Firmware: V0905_LPD
+# Lib: lpdISK 
+# Type: Key data 
+# Baud Rate: 921600 /8 /n /1
+# ALERT: Dedicated for V0905_LPD Firmware Only 
+#        Not supported for V0910_LPD Firmware
+#=======================================================================
+
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
