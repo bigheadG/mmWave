@@ -93,8 +93,9 @@ If Run demo program can not find any Raw data output:
 
 ## Lib import(Raw Data):
 
-from mmWave import trafficMD
-tmd = trafficMD.TrafficMD(port)
+	from mmWave import trafficMD
+	
+	tmd = trafficMD.TrafficMD(port)
    
 V6: Point Cloud<br/>
 Each Point Cloud list consists of an array of points, Each point data structure is defined as following
