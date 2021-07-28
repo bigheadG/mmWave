@@ -17,7 +17,8 @@ VOD:	Vehicle Occupancy Detection.<br/>
 PC3:	People Counting Detection.<br/>
 TRS:    Traffic_monitoring_detection Roadway Sensing.<br/>
 POS:	People counting Overhead Sensor.<br/>
-PCR:    People Counting short Range sensing
+PCR:    People Counting short Range sensing.<br/>
+VED:    Vital Energy Detection.
 
 ## Youtube Demo:
 
@@ -41,6 +42,7 @@ PCR:    People Counting short Range sensing
        TRS: Batman Kit 201(ISK) :IWR6843-TRS
        POS: Batman Kit 201(ISK) :IWR6843-POS and BM501 AOP-POS
        PCR: Batman Kit 201(ISK) :IWR6843-PCR and BM501 AOP-PCR
+       VED: Batman Kit 201(ISK) :IWR6843-VED and BM501 AOP 
 
 
 # Install Library:
