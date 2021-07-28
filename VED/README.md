@@ -18,7 +18,8 @@ This repository contains Batman mmWave-VED Vital Energy Detection SDK. The sampl
 
     pyqtgraph_VED_waterfall_2d.py
 
-https://user-images.githubusercontent.com/2010446/127131249-9abf4d85-f182-497b-b42d-d6ddb88df159.mp4
+
+https://user-images.githubusercontent.com/2010446/127278655-d739df53-fba4-4493-b6ea-2e337c102837.mp4
 
     pyqtgraph_VED_waterfall.py
 
@@ -114,6 +115,16 @@ https://user-images.githubusercontent.com/2010446/122055863-a3a6f980-ce1b-11eb-8
 
     #for NUC ubuntu 
     port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
+   
+ # get data function
+ 
+    (dck,v8,v9,v10) = radar.tlvRead(False)
+    dck : True  : data avaliable
+    False : data invalid
+    v8:  Range Azimuth HeatMap
+    v9:  Feature Vector (ALERT: not used in this lab)
+    v10: Decision Vector
+    
     
  # record cvs data file
     ved_yyyy-mm-dd-hh-MM-ss.csv
