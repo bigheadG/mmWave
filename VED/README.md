@@ -1,18 +1,19 @@
 # Vital Energy Detection Based on BM201-VED
 
-This repository contains Batman mmWave-VED Vital Energy Detection SDK. The sample code below consists of instruction for using the mmWave lib. This mmWave-VED Python Program will work with Vital Energy Detection (VED) based Batman BM201-VED mmWave Kit solution. This Python Program works with Raspberry Pi 4, NVIDIA Jetson Nano, Windows/Linux Computer (such as Intel NUC PC), or a Mac Computer with Batman BM201-VED EVM Kit hardware; and it is capable of plotting a Range-Azimuth-Heatmap with a 64 x 48 Grid Matrix covering: Range of 3meter/64row (approx. 0.05meter per row) x Azimuth of 108degree/48column (approx. 2.25degree/column); and also capable of plotting a 3-Dimensional WaterFall Plot, and where the Z-axis will indicate the Vital Energy Level in a given region(s). Subsequently a programmer may write a program for detecting whether a particular region(s) is occupied by a Vital Target(s) in approx. 3meter x 3meter area. 
+This repository contains Batman mmWave-VED Vital Energy Detection SDK. The sample code below consists of instruction for using the mmWave lib. This mmWave-VED Python Program will work with Vital Energy Detection (VED) based Batman BM201-VED mmWave Kit solution. This Python Program works with Raspberry Pi 4, NVIDIA Jetson Nano, Windows/Linux Computer (such as Intel NUC PC), or a Mac Computer with Batman BM201-VED EVM Kit hardware; and it is capable of plotting a Range-Azimuth-Heatmap with a 64 x 48 Grid Matrix covering: Range of 3meter/64row (approx. 0.05meter per row) x Azimuth of 108degree/48column (approx. 2.25degree/column); and also capable of plotting a 3-Dimensional WaterFall Plot, and where the Z-axis will indicate the Vital Energy Level in range. Subsequently a programmer may write a program for detecting whether a particular region(s) is occupied by a Vital Target(s) in approx. 3meter x 3meter area. 
     
     
     Use VED to implement 
     Hardware: BM-201 
     Firmware: v5205R
     pypi lib: vehicleODR
+    range: 3m x 3m
 
 
 # example
-    pyqtgraph_VED_waterfall.py
+    pyqtgraph_VED_waterfall.py           # Represented v8 heatmap data by waterfall
     pyqtgraph_VED_waterfall_record.py    #record v8 data 
-    pyqtgraph_VED_waterfall_2d.py  
+    pyqtgraph_VED_waterfall_2d.py        # 
     
 ## Screen shot
 
