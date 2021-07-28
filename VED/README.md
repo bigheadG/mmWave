@@ -15,7 +15,7 @@ This repository contains Batman mmWave-VED Vital Energy Detection SDK. The sampl
     pyqtgraph_VED_waterfall_record.py    #record v8 data 
     pyqtgraph_VED_waterfall_2d.py        # 
     
-## Screen shot
+## Demo Video & Screen shot
 
     pyqtgraph_VED_waterfall_2d.py
 
