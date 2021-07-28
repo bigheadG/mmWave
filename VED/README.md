@@ -15,6 +15,7 @@ This repository contains Batman mmWave-VED Vital Energy Detection SDK. The sampl
     pyqtgraph_VED_waterfall_2d.py  
     
 ## Screen shot
+
     pyqtgraph_VED_waterfall_2d.py
 
 https://user-images.githubusercontent.com/2010446/127131249-9abf4d85-f182-497b-b42d-d6ddb88df159.mp4
@@ -119,3 +120,7 @@ https://user-images.githubusercontent.com/2010446/122055863-a3a6f980-ce1b-11eb-8
     
     ex:
     ved_2021-06-15-22-39-47.csv
+    
+## Reference:
+
+1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/(V52_VOD_A320)ODdemo_usersguide.pdf
