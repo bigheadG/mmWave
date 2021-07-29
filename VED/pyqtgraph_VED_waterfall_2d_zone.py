@@ -66,11 +66,6 @@ class CustomTextItem(gl.GLGraphicsItem.GLGraphicsItem):
 
 
 #################################################################
-X_hi = 0 #38
-X_lo = 10 #16
-Y_lo = 10 #48
-Y_hi = 20 #64 
-
 
 
 st = datetime.now()
@@ -319,10 +314,10 @@ def radarExec():
 			# 	mask: true  => only show data locate in zone
 			# 	mask: false => show all point data 
 			#
-			mask = False 
+			mask = True 
 			if len(d) > 0:
 				sensorA0 = np.array(d)
-				(zoneA0 , ratio0) = pointsInZone( 0,20,10,20,sensorA0,'b')
+				(zoneA0 , ratio0) = pointsInZone( 9,35,42,51,sensorA0,'b')
 				(zoneA1 , ratio1) = pointsInZone(20,40,30,40,sensorA0,'r')
 				
 				if mask == True:
@@ -347,11 +342,11 @@ def radarExec():
 #==========================================
 #
 # input: pointCloud
-# square Zone: y_lo,y_hi  : x_lo,x_hi
+# square Zone: x_lo,x_hi, y_lo,y_hi 
 # 
 # output: (pointsArray, ratio)
 #
-def pointsInZone(y_lo,y_hi,x_lo,x_hi,pointCloud,color):
+def pointsInZone(x_lo,x_hi,y_lo,y_hi,pointCloud,color):
 	pc = pointCloud
 	zone = (y_hi - y_lo) * (x_hi - x_lo)
 	pointA = []
