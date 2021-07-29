@@ -1,5 +1,5 @@
 #=============================================
-# File Name: pyqtgraph_VED_waterfall_2d_zone.py
+# File Name: pyqtgraph_VED_2d_zone_ex1.py
 #
 # Requirement:
 # Hardware: BM201-ISK or BM501-AOP
@@ -9,8 +9,8 @@
 # radar installation: wall momunt
 #
 # plot tools: pyqtgraph
-# Plot Target (V8) in 3D figure
-# Plot
+# Plot Target (V8) in 2D figure
+# 
 # Vital Energy Detection(VED)
 # type: Raw data
 # Baud Rate: playback: 119200
@@ -18,95 +18,15 @@
 #=============================================
 
 from pyqtgraph.Qt import QtCore, QtGui
-import pyqtgraph.opengl as gl
 import pyqtgraph as pg
 import numpy as np
 from mmWave import vehicleODR
-#import vehicleODR
-
 import serial
 from threading import Thread
 
-from datetime import date,datetime,time
-import pandas as pd
-from sklearn.cluster import DBSCAN
-from sklearn.preprocessing import StandardScaler
-
-
-class CustomTextItem(gl.GLGraphicsItem.GLGraphicsItem):
-	def __init__(self, X, Y, Z, text):
-		gl.GLGraphicsItem.GLGraphicsItem.__init__(self)
-		self.text = text
-		self.X = X
-		self.Y = Y
-		self.Z = Z
-
-	def setGLViewWidget(self, GLViewWidget):
-		self.GLViewWidget = GLViewWidget
-
-	def setText(self, text):
-		self.text = text
-		self.update()
-
-	def setX(self, X):
-		self.X = X
-		self.update()
-
-	def setY(self, Y):
-		self.Y = Y
-		self.update()
-
-	def setZ(self, Z):
-		self.Z = Z
-		self.update()
-
-	def paint(self):
-		self.GLViewWidget.qglColor(QtCore.Qt.cyan)
-		self.GLViewWidget.renderText(round(self.X), round(self.Y), round(self.Z), self.text)
-
-
 #################################################################
 
-
-st = datetime.now()
-sim_startFN = 0
-sim_stopFN = 0
-
-################### Real Time or read from file switch ************
-rtSwitch = True # real time mode
-# rtSwitch = False  # read data from file
-
-app = QtGui.QApplication([])
-
-##################### init Water fall frame ##############################
-traces = dict()
-wf = gl.GLViewWidget()
-wf.opts['distance'] = 40
-wf.setWindowTitle('VED waterfall')
-wf.setGeometry(0, 110, 400, 400)
-wf.show()
-
-
-gx = gl.GLGridItem()
-gx.rotate(90, 0, 1, 0)
-#gx.translate(-10, 0, 0)
-gx.translate(-10, 0, 10)
-wf.addItem(gx)
-
-gy = gl.GLGridItem()
-gy.rotate(90, 1, 0, 0)
-#gy.translate(0, -10, 0)
-gy.translate(0, -10, 10)
-wf.addItem(gy)
-
-gz = gl.GLGridItem()
-#gz.translate(0, 0, -10)
-gz.translate(0, 0, 0)
-wf.addItem(gz)
-
-
-
-#=====================xy scalter
+#=====================xy scatter
 win = pg.GraphicsWindow()
 win.resize(600,600)
 #pg.setConfigOption('background', 'w')
@@ -124,48 +44,10 @@ w0.addItem(curveS0)
 
 
 
-######### for traces initial ##############################
-n = 200
-m = 200
-y = np.linspace(-10, 10, n)
-x = np.linspace(-10, 10, m)
-
-phase = 0
-
-yA = np.zeros(48)
-xA = np.linspace(-10, 10, 48)
-
-for i in range(n):
-	yi = np.array([y[i]] * m)
-	d = np.sqrt(x ** 2 + yi ** 2)
-	z = 10 * np.cos(d + phase) / (d + 1)
-	pts = np.vstack([x, yi, z]).transpose()
-	#shader='heightColor', computeNormals=False, smooth=False
-	traces[i] = gl.GLLinePlotItem(pos=pts, color=(0,0,0,0), width=(i + 1) / 10, antialias=True)
-	wf.addItem(traces[i])
-
-########## set data for 3d plot ####################
-
-def set_plotdata(name, points, color, width):
-	traces[name].setData(pos=points, color=color, width=width)
-
-##################### water fall & 2d diagram update ################################ 
+##################### 2d diagram update ################################ 
 
 def updateWF():
 	global x,y,v8A,sensorA,curveS0
-	np.set_printoptions(precision=2)
-	zA = np.array(v8A).reshape(64,48)
-	#print(zA)
-	for i in range(len(zA)):
-		pts = np.vstack((xA,yA+ (float(i)/3.0) - 10.0,zA[i])).transpose()
-		col = np.zeros((48,4))
-		for j in range(48):
-			#col[j] = colorMapping(j)
-			col[j] = colorMapping(zA[i,j])
-			#col[j] = colorMapping(yy[j])
-		set_plotdata(name=i, points=pts,color= col,width= 3.0)
-	#print("-----------------updateWF-------------------")
-	
 	curveS0.setData(x=sensorA[:,0],y=sensorA[:,1], pen = 'g', symbol='s')
 	#curveS0.setData(x=sensorA[:,0],y=sensorA[:,1], pen= sensorA[:,2], symbol='s')
 
@@ -198,23 +80,7 @@ v8len = 0
 v9len = 0
 v10len = 0
 
-def colorMapping(inp):
-	#print(inp)
-	cx = (0,0,1,1)
-	if inp < 0.2:
-		cx = (0, 0, 0.7, 0.8) # blue
-	elif inp >= 0.2 and inp < 0.6:
-		cx = (0, 0, 1, 1)
-	elif inp >= 0.6 and inp < 1.4:
-		cx = (0,0.13,0.78,1)
-	elif inp >= 1.4 and inp < 2.0:
-		cx = (0,0.78,0,1)
-	elif inp >= 2.0 and inp < 2.8:
-		cx = (1,0.5,0,1)
-	else: # R 20
-		cx = (1,0,0,1)
-	return cx
-
+ 
 
 def jb_mapF32(inp, xMin, xMax, yMin, yMax):
 	slope = (yMax - yMin) / (xMax - xMin)
@@ -251,11 +117,12 @@ np.set_printoptions(threshold=np.inf,precision=3,suppress=True)
 t = QtCore.QTimer()
 t.timeout.connect(update)
 t.start(150)
+
 fn = 0 
 prev_fn = 0
 
 def radarExec():
-	global v9len,v10len,v8len,prev_fn,flag,uFlag,fn,v8A,sensorA
+	global v9len,v10len,v8len,flag,v8A,sensorA
 
 	v8 = []
 	v9 = []
@@ -263,12 +130,7 @@ def radarExec():
 	flag = True
 	(dck,v8,v9,v10) = radar.tlvRead(False)
 	
-	hdr = radar.getHeader()
-	fn = hdr.frameNumber
-	
-	if  fn != prev_fn:
-		#print("--------------{:}-----------".format(fn))
-		prev_fn = fn
+	if  dck: 
 		v8len = len(v8)
 		v9len = len(v9)
 		v10len = len(v10)
@@ -318,7 +180,7 @@ def radarExec():
 			if len(d) > 0:
 				sensorA0 = np.array(d)
 				#
-				# Add Zone 
+				# Add Zone here
 				#
 				(zoneA0 , ratio0) = pointsInZone( 9,35,42,51,sensorA0,'b')
 				(zoneA1 , ratio1) = pointsInZone(20,40,30,40,sensorA0,'r')
@@ -337,9 +199,6 @@ def radarExec():
 			
 		
 	port.flushInput()
-
-
-	
 
 
 #==========================================
