@@ -1,5 +1,5 @@
 #=============================================
-# File Name: pyqtgraph_VED_waterfall_2d.py
+# File Name: pyqtgraph_VED_waterfall_2d_zone.py
 #
 # Requirement:
 # Hardware: BM201-ISK or BM501-AOP
@@ -63,6 +63,14 @@ class CustomTextItem(gl.GLGraphicsItem.GLGraphicsItem):
 	def paint(self):
 		self.GLViewWidget.qglColor(QtCore.Qt.cyan)
 		self.GLViewWidget.renderText(round(self.X), round(self.Y), round(self.Z), self.text)
+
+
+#################################################################
+X_hi = 0 #38
+X_lo = 10 #16
+Y_lo = 10 #48
+Y_hi = 20 #64 
+
 
 
 st = datetime.now()
@@ -146,7 +154,7 @@ for i in range(n):
 def set_plotdata(name, points, color, width):
 	traces[name].setData(pos=points, color=color, width=width)
 
-##################### water fall update ################################ 
+##################### water fall & 2d diagram update ################################ 
 
 def updateWF():
 	global x,y,v8A,sensorA,curveS0
@@ -163,7 +171,8 @@ def updateWF():
 		set_plotdata(name=i, points=pts,color= col,width= 3.0)
 	#print("-----------------updateWF-------------------")
 	
-	curveS0.setData(x=sensorA[:,0],y=sensorA[:,1], pen='g', symbol='s')
+	curveS0.setData(x=sensorA[:,0],y=sensorA[:,1], pen = 'g', symbol='s')
+	#curveS0.setData(x=sensorA[:,0],y=sensorA[:,1], pen= sensorA[:,2], symbol='s')
 
 
 #
@@ -271,16 +280,17 @@ def radarExec():
 		
 		if v8len != 0:
 			#print("Sensor Data: [v8,v9,v10]:[{:d},{:d},{:d}]".format(v8len,v9len,v10len))
+			
+			#
+			#(1) data normalize and filter out unwant data
+			# input data => (filter + normalize) 
+			#
 			'''
 			vs2 = np.log(v8) #np.sqrt(np.sqrt(v8))
 			print("===> Normalized={:.2f}, {:.2f}".format(max(v8), min(v8)))
 			v8A = (vs2 /  np.linalg.norm(vs2)) * 100.0
 			
 			'''
-			#
-			#(1) data normalize and filter out unwant data
-			# input data => (filter + normalize) 
-			#
 			vs = np.array(v8)
 			vs = jb_mapF32(vs, 0.0, 32000.0/ 4.0, 0.0, 2.8)
 			
@@ -296,45 +306,42 @@ def radarExec():
 			knee = 0.005 / 16.0 # default 0.005
 			vsc = jb_chargeKnee(vs, tau, knee)
 			
-			 
 			#
 			#(2) remove unwant data 
 			#
 			xx = [ jb_limitValue if vsc[i] > jb_limitValue-0.2 else 0 for i in range(len(vsc))]
 			xxe = np.array(xx) #[0::2])
 			xr = xxe.reshape(64,48)
-			
-			d = sortByLimitXY(jb_limitValue,xr) 
+			d = sortByLimitXY(jb_limitValue,xr)
 			 
 			#
-			#(3) cluster point cloud data
-			#  
+			#(3)setup the zone location
+			# 	mask: true  => only show data locate in zone
+			# 	mask: false => show all point data 
+			#
+			mask = False 
 			if len(d) > 0:
-				d_np = np.array(d)
-				d_std = StandardScaler().fit_transform(d_np)
-				sample_point = 4 # default 5
-				db = DBSCAN(eps= 1.0, min_samples=sample_point).fit(d_std) # 1.2
+				sensorA0 = np.array(d)
+				(zoneA0 , ratio0) = pointsInZone( 0,20,10,20,sensorA0,'b')
+				(zoneA1 , ratio1) = pointsInZone(20,40,30,40,sensorA0,'r')
 				
-				labels = db.labels_
-				#print("labels(len:{:}):{:}".format(len(labels),labels))
-				#print(db)
+				if mask == True:
+					sensorA = np.array(zoneA0 + zoneA1)
+				else:
+					sensorA = np.array(d)
+					
+				print("ratio0:{:} ratio1:{:}".format(ratio0,ratio1)) 
 				
-				#mask = (labels == -1)
-				sensorA = []
-				#sensorA = np.array(d_np[~mask])
-				sensorA = np.array(d_np)
-				#print("len:{:}   sensorA:\n{:}".format(len(sensorA),sensorA))
-				
-				
-				print("pointA({:}): pointA\n{:}".format(len(sensorA),sensorA))
 			
-				 
 			#print(vs) 
 			v8A = vs
 			 
 			
 		
 	port.flushInput()
+
+
+	
 
 
 #==========================================
@@ -368,7 +375,6 @@ def pointsInZone(y_lo,y_hi,x_lo,x_hi,pointCloud,color):
 		pointA.append([x_lo,i,color])
 		
 	return (pointA, ratio)
-	
 
 #
 #  get zA: Matrix data
