@@ -69,7 +69,8 @@ def updateWF():
 #port = serial.Serial("/dev/tty.usbmodemGY0050674",baudrate = 921600, timeout = 0.5)  
 #port = serial.Serial("/dev/tty.SLAB_USBtoUART3",baudrate = 921600, timeout = 0.5)  
 #port = serial.Serial("/dev/tty.usbmodemGY0043914",baudrate = 921600, timeout = 0.5)
-port = serial.Serial("/dev/tty.usbmodemGY0050694",baudrate = 921600, timeout = 0.5)   
+ 
+port = serial.Serial("/dev/tty.usbmodemGY0043864",baudrate = 921600, timeout = 0.5)  
 
 #for NUC ubuntu 
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)

@@ -80,28 +80,48 @@ traces = dict()
 wf = gl.GLViewWidget()
 wf.opts['distance'] = 40
 wf.setWindowTitle('VED waterfall')
-wf.setGeometry(0, 110, 400, 400)
+wf.setGeometry(0, 50, 500, 400)
 wf.show()
 
-
+'''
 gx = gl.GLGridItem()
 gx.rotate(90, 0, 1, 0)
 #gx.translate(-10, 0, 0)
 gx.translate(-10, 0, 10)
 wf.addItem(gx)
+'''
 
 gy = gl.GLGridItem()
 gy.rotate(90, 1, 0, 0)
-#gy.translate(0, -10, 0)
-gy.translate(0, -10, 10)
+gy.translate(0, -48, 15)
+gy.setSize(48, 36)
+gy.setSpacing(1, 1)
+
 wf.addItem(gy)
 
 gz = gl.GLGridItem()
-#gz.translate(0, 0, -10)
-gz.translate(0, 0, 0)
+gz.translate(0, -18, 0)
+gz.setSize(48, 66)
+gz.setSpacing(1, 1)
+
 wf.addItem(gz)
 
+'''
+gy = gl.GLGridItem()
+gy.rotate(90, 1, 0, 0)
+gy.translate(0, -48, 10)
+gy.setSize(48, 24)
+gy.setSpacing(1, 1)
 
+wf.addItem(gy)
+
+gz = gl.GLGridItem()
+gz.translate(0, -18, 0)
+gz.setSize(48, 66)
+gz.setSpacing(1, 1)
+
+wf.addItem(gz)
+'''
 
 #=====================xy scalter
 win = pg.GraphicsWindow()
@@ -130,7 +150,7 @@ x = np.linspace(-10, 10, m)
 phase = 0
 
 yA = np.zeros(48)
-xA = np.linspace(-10, 10, 48)
+xA = np.linspace(-24, 24, 48)
 
 for i in range(n):
 	yi = np.array([y[i]] * m)
@@ -154,7 +174,7 @@ def updateWF():
 	zA = np.array(v8A).reshape(64,48)
 	#print(zA)
 	for i in range(len(zA)):
-		pts = np.vstack((xA,yA+ (float(i)/3.0) - 10.0,zA[i])).transpose()
+		pts = np.vstack((xA,yA+ float(i) - 48.0,zA[i])).transpose()
 		col = np.zeros((48,4))
 		for j in range(48):
 			#col[j] = colorMapping(j)
@@ -183,7 +203,7 @@ def updateWF():
 #port = serial.Serial("/dev/tty.usbmodemGY0050674",baudrate = 921600, timeout = 0.5)  
 #port = serial.Serial("/dev/tty.SLAB_USBtoUART3",baudrate = 921600, timeout = 0.5)  
 #port = serial.Serial("/dev/tty.usbmodemGY0043914",baudrate = 921600, timeout = 0.5)
-port = serial.Serial("/dev/tty.usbmodemGY0050694",baudrate = 921600, timeout = 0.5)   
+port = serial.Serial("/dev/tty.usbmodemGY0043864",baudrate = 921600, timeout = 0.5)   
 
 #for NUC ubuntu 
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
