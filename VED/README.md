@@ -14,7 +14,7 @@ This repository contains Batman mmWave-VED Vital Energy Detection SDK. The sampl
     pyqtgraph_VED_waterfall.py             # Represented v8 heatmap data by waterfall
     pyqtgraph_VED_waterfall_2d.py          # Represented v8 data by waterfall and 2d(x,y)
     pyqtgraph_VED_waterfall_2d_zone.py     # get defined zone data
-    pyqtgraph_VED_waterfall_record.py      #record v8 data 
+    pyqtgraph_VED_waterfall_record.py      # record v8 data 
     
 ### other example
   matplotlib example you can reference:  https://github.com/bigheadG/mmWave/blob/master/VOD/BM201_V5205_VOD_ex1_heatMap_V5205_02R.py
