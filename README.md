@@ -33,9 +33,9 @@ BM501: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM501_B_C.pd
 	
 # Hardware requirements:
       
-       VSD: Batman kit 101: IWR1642-VSD
-       HAM: Batman kit 101: IWR1642-HAM
-       PMB: Batman kit 101: IWR1642-PMB
+       VSD: Batman kit 101/201: IWR1642-VSD/IWR6843-VSD
+       HAM: Batman kit 101/201: IWR1642-HAM/IWR6843-HAM
+       PMB: Batman kit 101/201: IWR1642-PMB/IWR6843-PMB
        SRR: Batman kit 101: IWR1642-SRR
        
        LPD: Batman kit 201: IWR6843-LPD
