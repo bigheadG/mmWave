@@ -2,6 +2,7 @@
 mmWave SDK examples based on Batman Kit mmWave Sensor module
 This App works with Raspberry Pi 3, Pi 2 , Pi 4, Jetson Nano ,Windows, MacOS or Intel NUC.
 Run this repository example needs install mmWave lib. Those examples are<br/>
+
 VSD,HAM,PMB,SRR,LPD,PC3D,TMD,ZOD,SVD,DRN,VOD,PC3,POS, PCR and VED examples:<br/><br/> 
 VSD:	Vital Signs Detection.<br/> 
 HAM:	High Accuracy Measurement.<br/>
@@ -19,6 +20,12 @@ TRS:    Traffic_monitoring_detection Roadway Sensing.<br/>
 POS:	People counting Overhead Sensor.<br/>
 PCR:    People Counting short Range sensing.<br/>
 VED:    Vital Energy Detection.
+
+# mmWave Data Sheet:
+BM101: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM101_F_C.pdf (deprecated) <br/> 
+BM201: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM201_I_C.pdf <br/> 
+BM301: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM301FDS_D_C.pdf (deprecated) <br/> 
+BM501: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM501_B_C.pdf <br/> 
 
 ## Youtube Demo:
 
