@@ -150,6 +150,8 @@ def set_plotdata(name, points, color, width):
 
 def updateWF():
 	global x,y,v8A
+	if len(v8A) != 3072:
+		return
 	np.set_printoptions(precision=2)
 	zA = np.array(v8A).reshape(64,48)
 	#print(zA)
@@ -260,7 +262,7 @@ def radarExec():
 		v9len = len(v9)
 		v10len = len(v10)
 		
-		if v8len != 0:
+		if v8len == 3072:
 			print("Sensor Data: [v8,v9,v10]:[{:d},{:d},{:d}]".format(v8len,v9len,v10len))
 			
 			#vs2 = np.log(v8) #np.sqrt(np.sqrt(v8))
