@@ -153,6 +153,8 @@ def set_plotdata(name, points, color, width):
 
 def updateWF():
 	global x,y,v8A
+	if len(v8A) != 3072:
+		return
 	np.set_printoptions(precision=2)
 	zA = np.array(v8A).reshape(64,48)
 	#print(zA)
@@ -275,7 +277,7 @@ def radarExec(writer):
 		v9len = len(v9)
 		v10len = len(v10)
 		
-		if v8len != 0:
+		if v8len == 3072:
 			ts = datetime.now() 
 			writer.writerow([fn,ts,v8])
 			
