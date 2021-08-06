@@ -2,6 +2,7 @@
 mmWave SDK examples based on Batman Kit mmWave Sensor module
 This App works with Raspberry Pi 3, Pi 2 , Pi 4, Jetson Nano ,Windows, MacOS or Intel NUC.
 Run this repository example needs install mmWave lib. Those examples are<br/>
+
 VSD,HAM,PMB,SRR,LPD,PC3D,TMD,ZOD,SVD,DRN,VOD,PC3,POS, PCR and VED examples:<br/><br/> 
 VSD:	Vital Signs Detection.<br/> 
 HAM:	High Accuracy Measurement.<br/>
@@ -20,15 +21,21 @@ POS:	People counting Overhead Sensor.<br/>
 PCR:    People Counting short Range sensing.<br/>
 VED:    Vital Energy Detection.
 
+# mmWave Data Sheet:
+BM101: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM101_F_C.pdf (deprecated) <br/> 
+BM201: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM201_I_C.pdf <br/> 
+BM301: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM301FDS_D_C.pdf (deprecated) <br/> 
+BM501: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM501_B_C.pdf <br/> 
+
 ## Youtube Demo:
 
 [![Watch the video](https://github.com/bigheadG/imageDir/blob/master/YouTube-icon-full_color.png)](https://www.youtube.com/playlist?list=PL4QD4eKmMP2WvnZ4I8-AomJjiYkygw3G2 "Watch the Video")
 	
 # Hardware requirements:
       
-       VSD: Batman kit 101: IWR1642-VSD
-       HAM: Batman kit 101: IWR1642-HAM
-       PMB: Batman kit 101: IWR1642-PMB
+       VSD: Batman kit 101/201: IWR1642-VSD/IWR6843-VSD
+       HAM: Batman kit 101/201: IWR1642-HAM/IWR6843-HAM
+       PMB: Batman kit 101/201: IWR1642-PMB/IWR6843-PMB
        SRR: Batman kit 101: IWR1642-SRR
        
        LPD: Batman kit 201: IWR6843-LPD
