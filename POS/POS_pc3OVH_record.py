@@ -17,7 +17,7 @@ import datetime
 import numpy as np
 #from mmWave import pc3AOP
 
-import pc3AOP as pc3AOP
+from mmWave import pc3OVH
 from datetime import date,datetime,time
 import csv
 import pandas as pd
@@ -29,13 +29,13 @@ import pandas as pd
 #port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
 #port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600 , timeout = 0.5)
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600 , timeout = 0.5)
-port = serial.Serial("/dev/tty.SLAB_USBtoUART4",baudrate = 921600, timeout = 0.5)  
+port = serial.Serial("/dev/tty.SLAB_USBtoUART5",baudrate = 921600, timeout = 0.5)  
 
 #
 #initial global value
 #
 
-radar = pc3AOP.Pc3AOP(port)
+radar = pc3OVH.Pc3OVH(port)
 
 
 
