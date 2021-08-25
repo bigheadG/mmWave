@@ -24,8 +24,8 @@ import datetime
 from scipy.fftpack import fft
 from scipy import signal
 
-from PyQt5 import QtWidgets
-from PyQt5.QtGui import QPalette,QFont,QLabel,QMainWindow
+from PyQt5.QtGui import QPalette,QFont
+from PyQt5.QtWidgets import QLabel,QMainWindow
 from PyQt5.QtCore import Qt
 
 class MainWindow(QMainWindow):
