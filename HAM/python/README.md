@@ -107,16 +107,10 @@ function call:
 		   
 		hd := Detected Objects Data (dos type)
 	
-		rangeBuf := Range Profile data. Contains the magnitude of Range FFTs
-		Size: 512 RangeBins * 2
-		RangesBins = (Real part for 4Bytes(float), Image part for 4 Bytes(float))
-		totalBins = 512 Bins
-		rangeBuf = [r0,i0,r1,i1,r2,i2.....r511,i511]
-		Ex. point0 = sqrt(r0**2 + i0**2)
-	    	    point1 = sqrt(r1**2 + i1**2)
-		....
-	    	len(rangeBuf) = 1024 points => r:512points + i:512 points
-		unit: meter
+		rangeBuf := Range Profile data. Contains the magnitude of Range(time domain)
+		Size: 1024 float value
+		
+		Detail please reference HAM_ex3_rangeProfile.py
 
 
 # import lib
