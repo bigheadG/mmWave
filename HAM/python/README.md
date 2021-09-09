@@ -23,8 +23,9 @@ Examples:
 
 	HAM_ex0.py is a basic example for reading data from Batman EVK
  	HAM_ex1_Thread.py is an example of using thread to read data from Batman EVK
- 	HAM_ex2_intr18.py is an example of using GPIO Pin18 rise-edge to trigger function 
+ 	HAM_ex2_intr18.py is an example of using GPIO Pin18 rise-edge to trigger function
 	to read data from Batman EVK
+	HAM_ex3_rangeProfile.py ia an example for plot range profile data
 
 If Run demo program can not find any Raw data output:
       Please set UART to R/W mode: 
