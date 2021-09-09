@@ -27,7 +27,8 @@ Examples:
 	to read data from Batman EVK
 	HAM_ex3_rangeProfile.py ia an example for plot range profile data
 
-HAM Range Profile Demo (based on HAM_ex3_rangeProfile.py):
+# HAM Range Profile Demo (based on HAM_ex3_rangeProfile.py):
+
 https://user-images.githubusercontent.com/2010446/132655676-7ef3f09a-c3d0-4cf3-8e79-3f463b552cc7.mov
 
 
