@@ -1,16 +1,9 @@
 ###########################################################################
 # jb_pyqtgraphy_TMD_ex1.py    2021.09.11
-# Hardware: IWR1843 ISK ES2
+# Hardware: IWR1843/6843 ISK
 # Firmware: V80.31 TMD 2D70M50ms
 # Software: jb04_pyqtgraphy_TMD_ex1.py
 # Python: V3.9.5
-# Revision History:
-# jb00 2021.09.11 1. original
-# jb01 2021.09.12 1. added jb_v7Text() and called in update() thread 
-# jb02 2021.09.13 1. draw grid on window 
-# jb03 2021.09.15 1. for 2D70M50ms based on V80.31_TMD
-#                 2. library 'trafficTMD' should be updated to fit new data structure
-# jb04 2021.09.15 1. for real field testing 
 ###########################################################################
 # Parameters:
 JB_UART_PORT 		= 'COM12'
