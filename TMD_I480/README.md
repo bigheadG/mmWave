@@ -8,8 +8,7 @@
 ![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)
 
 
-# 🚧  Under Construction 🚧 
-# mmWave-TMD (Traffic Monitor Detector)
+# mmWave-TMD I480 (Traffic Monitor Detector)
 # Notes: mmWave Library supports: python Version >= 3.6
 
 Current PI's OS is supports python 3.7.0
