@@ -53,11 +53,11 @@ Library update:
     $sudo pip3 install mmWave -U
 
 # Examples:
+	
+	jb04_release_pyqtgraph_TMD_ex1.py is an example output V6(point cloud) and V7(Target Objects) demo.
+        
 
-        TMD_ex0.py is an example output V6(Point Cloud),V7(Target Objects),V8(Target Index), V9(Point Cloud Side Info) data
-        pyqtgraph_TMD_ex1.py is an example show point cloud in real time graphic use pyqtgraph
-        TMD_ex2_pointCloud.py is an example plot point cloud in 3D use matplotlib
-        pyqtgraph_3d_tmd.py is an example plot point cloud in 3D use pyqtgraph. The display speed is fast than matplotlib
+https://user-images.githubusercontent.com/2010446/133593560-9c248411-c29a-44dd-94d9-ecab8feb103d.mov
     
 
 If Run demo program can not find any Raw data output:
