@@ -79,6 +79,10 @@ BM501: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM501_B_C.pd
       scikit-learn Library
       $sudo pip3 install scikit-learn
       
+      pyqtgraph Library
+      $sudo pip3 install pyqtgraph
+      https://pyqtgraph.readthedocs.io/en/latest/installation.html
+      
       
  ## Some install problem the following information for reference:
       (1)-------libf77blas.so.3-----------------------------------------
