@@ -1,3 +1,10 @@
+# mmWave based on AI Coming Soon! 2021.11.12
+
+
+https://user-images.githubusercontent.com/2010446/141447812-ecb79563-1f78-440d-9533-c14793f3fec2.mov
+
+
+
 # mmWave
 mmWave SDK examples based on Batman Kit mmWave Sensor module
 This App works with Raspberry Pi 3, Pi 2 , Pi 4, Jetson Nano ,Windows, MacOS or Intel NUC.
