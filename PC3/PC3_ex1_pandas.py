@@ -24,8 +24,7 @@ update:
 
 import serial
 import numpy as np
-#from mmWave import pc3
-import pc3
+from mmWave import pc3
 import serial
 from sklearn.cluster import DBSCAN
 import pandas as pd
