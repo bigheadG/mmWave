@@ -189,7 +189,7 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 	4  31569   v6 -0.24     0.15  0.06972  0.88525  7.64  0.128498  0.850221 -0.210426
 	
     	-------------- v7 ---------------
-    	     fN type      posX      posY      velX      velY      accX      accY      posZ      velZ      accZ         tid
+    	    fN type      posX      posY      velX      velY      accX      accY      posZ      velZ      accZ         tid
 	0  7971   v7 -0.040078  0.829420  0.061835 -0.248975  0.013546 -0.153394  0.040553 -0.450048  0.132277           3
 
     
