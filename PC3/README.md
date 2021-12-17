@@ -169,6 +169,10 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 			
 ## Get data use dataFrame: (reference: PC3_ex1_pandas.py)
 
+	v6_col_names = ['time','fN','type','elv','azimuth','doppler','range' ,'snr','sx', 'sy', 'sz']
+	v7_col_names = ['time','fN','type','posX','posY','velX','velY','accX','accY','posZ','velZ','accZ','tid']
+	v8_col_names = ['time','fN','type','targetID']
+
     Function call: 
         (dck,v6,v7,v8) = radar.tlvRead(False,df = 'DataFrame') 
         dck : True  : data avaliable
@@ -188,8 +192,8 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 	3  31569   v6 -0.24     0.15  0.06972  0.82200  7.52  0.119317  0.789474 -0.195392
 	4  31569   v6 -0.24     0.15  0.06972  0.88525  7.64  0.128498  0.850221 -0.210426
 	
-    	-------------- v7 ---------------
-    	    fN type      posX      posY      velX      velY      accX      accY      posZ      velZ      accZ         tid
+	-------------- v7 ---------------
+	     fN type      posX      posY      velX      velY      accX      accY      posZ      velZ      accZ         tid
 	0  7971   v7 -0.040078  0.829420  0.061835 -0.248975  0.013546 -0.153394  0.040553 -0.450048  0.132277           3
 
     
