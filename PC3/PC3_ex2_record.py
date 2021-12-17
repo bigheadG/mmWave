@@ -5,10 +5,10 @@
 # Hardware: BM201-PC3
 # Firmware: 
 # lib: pc3
-# show V6,V7,V8
-# type: raw 
-# Application: output RAW data
-#          save data in csv file.
+# Get V6,V7 and V8 
+# type: raw data (DataFrame)
+# Application: Get RAW data from radar sensor
+#    Save v6,v7 and v8 data in csv file.
 #=============================================
 import serial
 import struct
