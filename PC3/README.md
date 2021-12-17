@@ -33,7 +33,8 @@ Library update:
     $sudo pip3 install mmWave -U
 
 Examples:
-    
+    PC3_ex0.py # show v6,v7,v8 and v8 data
+    PC3_ex1_pandas.py # show v6,v7 data useing dataFrame
     pyqtgraph_3d_pc3_xyz.py # show detected point cloud in 3D
     pyqtgraph_3d_pc3_occupancy.py # show occupancy detection
     
