@@ -153,7 +153,6 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 
         return dck,v6,v7,v8 
       
-      
         getHeader()
         headerShow()
         
@@ -167,8 +166,29 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
     
  ![MainMenu 1](https://github.com/bigheadG/imageDir/blob/master/objGeoSmall.png)
 			
+## Get data use dataFrame: (reference: PC3_ex1_pandas.py)
 
+    Function call: 
+        (dck,v6,v7,v8) = radar.tlvRead(False,df = 'DataFrame') 
+        dck : True  : data avaliable
+              False : data invalid
+        v6: point cloud of array
+        v7: target object of array
+        v8: target id of array
 
+        return dck,v6,v7,v8 
+	
+    v6 data: ex: print(v6)
+	    -------------- v6 ---------------
+	      fN type   elv  azimuth    range  doppler   snr        sx        sy        sz
+	0  31569   v6 -0.27     0.07 -0.13916  1.45425  5.88  0.098029  1.398131 -0.387894
+	1  31569   v6 -0.27     0.07 -0.13916  1.51750  5.88  0.102293  1.458941 -0.404765
+	2  31569   v6 -0.27     0.15  0.06972  0.75875  5.64  0.109278  0.723050 -0.202382
+	3  31569   v6 -0.24     0.15  0.06972  0.82200  7.52  0.119317  0.789474 -0.195392
+	4  31569   v6 -0.24     0.15  0.06972  0.88525  7.64  0.128498  0.850221 -0.210426
+    
+    
+	
 ## Reference
 
  
