@@ -54,7 +54,6 @@ port = serial.Serial("/dev/tty.usbmodemGY0043914",baudrate = 921600, timeout = 0
 radar = pc3.Pc3(port)
 
 def radarExec(name):
-	global v6len,v7len,v8len,pos1,gcolorA,zOffSet,sensorA,mapA,mapSum
 	print("mmWave: {:} example:".format(name))
 	port.flushInput()
 	while(True):
