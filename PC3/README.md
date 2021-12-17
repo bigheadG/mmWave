@@ -184,13 +184,11 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
         return dck,v6,v7,v8 
 	
     v6 & v7 data: ex: print(v6) a]nd print(v7)
+    
 	    -------------- v6 ---------------
-	      fN type   elv  azimuth    range  doppler   snr        sx        sy        sz
-	0  31569   v6 -0.27     0.07 -0.13916  1.45425  5.88  0.098029  1.398131 -0.387894
-	1  31569   v6 -0.27     0.07 -0.13916  1.51750  5.88  0.102293  1.458941 -0.404765
-	2  31569   v6 -0.27     0.15  0.06972  0.75875  5.64  0.109278  0.723050 -0.202382
-	3  31569   v6 -0.24     0.15  0.06972  0.82200  7.52  0.119317  0.789474 -0.195392
-	4  31569   v6 -0.24     0.15  0.06972  0.88525  7.64  0.128498  0.850221 -0.210426
+	      fN type   elv  azimuth  doppler    range   snr        sx        sy        sz
+	0  16944   v6  0.32    -0.33  0.06972  1.07475  5.36 -0.330586  0.965144  0.338080
+	1  16944   v6  0.25    -0.32  0.06972  1.13800  5.24 -0.346848  1.046648  0.281546
 	
 	-------------- v7 ---------------
 	     fN type      posX      posY      velX      velY      accX      accY      posZ      velZ      accZ         tid
