@@ -37,7 +37,8 @@ Examples:
 	    PC3_ex0.py # show v6,v7,v8 and v8 data
 	    PC3_ex1_pandas.py # show v6,v7 data using dataFrame
 	    PC3_ex2_record.py # recording v6,v7 and v8 data
-	    PC3_ex3_pyqtgraph_xyz_playnback.py # v6 data playback 
+	    PC3_ex3_pyqtgraph_xyz_playnback.py # v6 data playback
+	       pc3_2021-12-19-21-25-28.csv # for PC3_ex3_pyqtgraph_xyz_playnback.py playback use
 	    pyqtgraph_3d_pc3_xyz.py # show detected point cloud in 3D
 	    pyqtgraph_3d_pc3_occupancy.py # show occupancy detection
     
