@@ -1,5 +1,5 @@
 #=============================================
-# File Name: Pc3_ex2_record.py
+# File Name: PC3_ex2_record.py
 #
 # Requirement:
 # Hardware: BM201-PC3
