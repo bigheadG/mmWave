@@ -7,7 +7,7 @@
 # lib: pc3
 # Get V6,V7 and V8 
 # type: raw data (DataFrame)
-# Application: Get RAW data from radar sensor
+# Application: Record RAW data
 #    Save v6,v7 and v8 data in csv file.
 #=============================================
 import serial
@@ -28,11 +28,6 @@ import pandas as pd
 #port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600 , timeout = 0.5)
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600 , timeout = 0.5)
 port = serial.Serial("/dev/tty.usbmodemGY0043914",baudrate = 921600, timeout = 0.5)  
-
-#
-#initial global value
-#
-
 
 radar = pc3.Pc3(port)
 
