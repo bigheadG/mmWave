@@ -230,8 +230,9 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
     More detailed information please reference PC3_ex3_pyqtgraph_xyz_playback.py 
     
 ## Playback working process (works with TK101-pc3):
-	![tk101-pc3](https://user-images.githubusercontent.com/2010446/146706147-1e3319b2-6a91-48b7-b984-b392170b686e.png)
 
+![tk101-pc3](https://user-images.githubusercontent.com/2010446/146707672-3880c332-45f8-447f-bb40-92e5b8377ade.png)
+	
 ## Reference
 
  
