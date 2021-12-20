@@ -38,7 +38,7 @@ Examples:
 	    PC3_ex1_pandas.py # show v6,v7 data using dataFrame
 	    PC3_ex2_record.py # recording v6,v7 and v8 data
 	    PC3_ex3_pyqtgraph_xyz_playback.py # v6 data playback
-	       pc3_2021-12-19-21-25-28.csv # for PC3_ex3_pyqtgraph_xyz_playback.py playback use
+	       pc3_2021-12-19-21-25-28.csv # for PC3_ex3_pyqtgraph_xyz_playnback.py playback use
 	    pyqtgraph_3d_pc3_xyz.py # show detected point cloud in 3D
 	    pyqtgraph_3d_pc3_occupancy.py # show occupancy detection
     
@@ -237,6 +237,9 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 ## Playback working process (works with TK101-pc3):
 
 ![tk101-pc3](https://user-images.githubusercontent.com/2010446/146707672-3880c332-45f8-447f-bb40-92e5b8377ade.png)
+
+https://user-images.githubusercontent.com/2010446/146724568-6dcbbe0b-c5b1-4d0e-871c-7d51125d5239.mp4
+
 	
 ## Reference
 
