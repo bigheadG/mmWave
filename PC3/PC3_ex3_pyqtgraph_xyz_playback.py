@@ -236,7 +236,6 @@ def radarExec():
 	fn = hdr.frameNumber
 	(dck,v6,v7,v8) = radar.getRecordData(fn)
 	
-	#(dck,v6,v7,v8)  = radar.getRecordData(fn)
 	#showData(dck,v6,v7,v8)
 	
 
