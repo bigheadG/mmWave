@@ -198,7 +198,12 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 	     fN type      posX      posY      velX      velY      accX      accY      posZ      velZ      accZ         tid
 	0  7971   v7 -0.040078  0.829420  0.061835 -0.248975  0.013546 -0.153394  0.040553 -0.450048  0.132277           3
 
-## read record data file(csv) and extract csv data based on frame number:
+## (Playback) read record data file(csv) and extract csv data based on frame number:
+	
+	(0) UART Baud Rate set to 115200
+	
+	port = serial.Serial("/dev/tty.usbmodem14203",baudrate = 115200 , timeout = 0.5)
+	radar = pc3.Pc3(port)
  	
 	(1) read record data from csv file (for playback)
 	
