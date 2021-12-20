@@ -222,13 +222,16 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 	      fN type   elv  azimuth  doppler    range   snr        sx        sy        sz
 	0  16944   v6  0.32    -0.33  0.06972  1.07475  5.36 -0.330586  0.965144  0.338080
 	1  16944   v6  0.25    -0.32  0.06972  1.13800  5.24 -0.346848  1.046648  0.281546
-	
+		
 	-------------- v7 ---------------
 	     fN type      posX      posY      velX      velY      accX      accY      posZ      velZ      accZ         tid
 	0  7971   v7 -0.040078  0.829420  0.061835 -0.248975  0.013546 -0.153394  0.040553 -0.450048  0.132277           3
     
     More detailed information please reference PC3_ex3_pyqtgraph_xyz_playback.py 
-	
+    
+## Playback working process (works with TK101-pc3):
+	![tk101-pc3](https://user-images.githubusercontent.com/2010446/146706147-1e3319b2-6a91-48b7-b984-b392170b686e.png)
+
 ## Reference
 
  
