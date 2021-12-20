@@ -37,7 +37,7 @@ Examples:
 	    PC3_ex0.py # show v6,v7,v8 and v8 data
 	    PC3_ex1_pandas.py # show v6,v7 data using dataFrame
 	    PC3_ex2_record.py # recording v6,v7 and v8 data
-	    PC3_ex3_pyqtgraph_xyz_playnback.py # v6 data playback
+	    PC3_ex3_pyqtgraph_xyz_playback.py # v6 data playback
 	       pc3_2021-12-19-21-25-28.csv # for PC3_ex3_pyqtgraph_xyz_playnback.py playback use
 	    pyqtgraph_3d_pc3_xyz.py # show detected point cloud in 3D
 	    pyqtgraph_3d_pc3_occupancy.py # show occupancy detection
@@ -187,7 +187,7 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 
         return dck,v6,v7,v8 
 	
-    v6 & v7 data: ex: print(v6) a]nd print(v7)
+    v6 & v7 data: ex: print(v6) and print(v7)
     
 	    -------------- v6 ---------------
 	      fN type   elv  azimuth  doppler    range   snr        sx        sy        sz
@@ -198,7 +198,36 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 	     fN type      posX      posY      velX      velY      accX      accY      posZ      velZ      accZ         tid
 	0  7971   v7 -0.040078  0.829420  0.061835 -0.248975  0.013546 -0.153394  0.040553 -0.450048  0.132277           3
 
+## read record data file(csv) and extract csv data based on frame number:
+ 	
+	(1) read record data from csv file (for playback)
+	
+	# read csv record file for playback(csv file in same directory)
+	ex: fileName = "pc3_2021-12-19-21-25-28.csv" 
+	(v6smu,v7smu,v8smu) = radar.readFile(fileName)
+	
+	# tlvRead provides header and frame Number for 
+	(dck,v6,v7, v8) = radar.tlvRead(False,df = 'DataFrame')
+	
+	(2) get a record data based on frame number (for playback)
+	
+	hdr = radar.getHeader()
+	fn = hdr.frameNumber
+	(dck,v6,v7,v8) = radar.getRecordData(fn)
+	
+	chk: data check true: Data is avaliable, false: Data invalid	
+	fN: means frameNumber
+	
+	    -------------- v6 ---------------
+	      fN type   elv  azimuth  doppler    range   snr        sx        sy        sz
+	0  16944   v6  0.32    -0.33  0.06972  1.07475  5.36 -0.330586  0.965144  0.338080
+	1  16944   v6  0.25    -0.32  0.06972  1.13800  5.24 -0.346848  1.046648  0.281546
+	
+	-------------- v7 ---------------
+	     fN type      posX      posY      velX      velY      accX      accY      posZ      velZ      accZ         tid
+	0  7971   v7 -0.040078  0.829420  0.061835 -0.248975  0.013546 -0.153394  0.040553 -0.450048  0.132277           3
     
+    More detailed please reference PC3_ex3_pyqtgraph_xyz_playback.py 
 	
 ## Reference
 
