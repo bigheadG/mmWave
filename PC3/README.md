@@ -200,7 +200,7 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 
 ## (Playback) read record data file(csv) and extract csv data based on frame number:
 	
-	(0) UART Baud Rate set to 115200
+	(0) UART configuration: Baud Rate set to 115200 in playback mode
 	
 	port = serial.Serial("/dev/tty.usbmodem14203",baudrate = 115200 , timeout = 0.5)
 	radar = pc3.Pc3(port)
@@ -211,7 +211,7 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 	ex: fileName = "pc3_2021-12-19-21-25-28.csv" 
 	(v6smu,v7smu,v8smu) = radar.readFile(fileName)
 	
-	# tlvRead provides header and frame Number for 
+	# tlvRead provides header and frame Number for sync record data 
 	(dck,v6,v7, v8) = radar.tlvRead(False,df = 'DataFrame')
 	
 	(2) get a record data based on frame number (for playback)
