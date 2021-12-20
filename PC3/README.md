@@ -227,7 +227,7 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 	     fN type      posX      posY      velX      velY      accX      accY      posZ      velZ      accZ         tid
 	0  7971   v7 -0.040078  0.829420  0.061835 -0.248975  0.013546 -0.153394  0.040553 -0.450048  0.132277           3
     
-    More detailed please reference PC3_ex3_pyqtgraph_xyz_playback.py 
+    More detailed information please reference PC3_ex3_pyqtgraph_xyz_playback.py 
 	
 ## Reference
 
