@@ -38,7 +38,7 @@ Examples:
     PC3_ex1_pandas.py   
     PC3_ex2_record.py   # record v6,v7 and v8 data
     PC3_ex3_pyqtgraph_xyz_playback.py  #playback
-    pyqtgraph_3d_pc3_xyz.py #show point cloufd
+    pyqtgraph_3d_pc3_xyz.py #show points cloud
     pyqtgraph_3d_pc3_occupancy.py
    
     
