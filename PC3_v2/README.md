@@ -18,8 +18,8 @@ This repository contains the Batman mmWave-PC3-v2 People Counting & Detection mm
 
 # Hardware:
     Batman kit-201 (ISK)
-    Measure Range: 6 meters
-    
+    Batman kit-501 (AOP)
+   
 # Installing
 
 Library install for Python
@@ -43,8 +43,7 @@ Examples:
     pyqtgraph_3d_pc3_uDoppler_json_image.py # show occupancy detection
     mmWave_uDoppler.json. # control file works with pyqtgraph_3d_pc3_uDoppler_json_image.piy
     JBUIWidget.py. #library
-    
-    
+   
     
 If Run demo program can not find any Raw data output:
       Please set UART to R/W mode: 
