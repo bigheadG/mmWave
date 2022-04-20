@@ -7,7 +7,7 @@
 ![Language](https://img.shields.io/badge/python-%3E3.6%20-green.svg)&nbsp;
 ![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)
 
-# mmWave-PC3 (People Counting 3D SDK)
+# mmWave-PC3 (People Counting 3D SDK) - Deprecated 
 
 Current PI's OS is supports python 3.7.0
 
