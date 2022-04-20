@@ -1,0 +1,47 @@
+{
+  "mmWave": {
+    "working_mode": {
+        "select" : 3,
+        "comments": "0: playback, 1:real_time mode, 2:recording,3: AI run time",
+        "playbackFile" : "uDoppler_2021-10-26-21-58-15.csv",
+        "fileType": 0,
+        "file Comments": "0:doppler, 1:v6",
+        "labelingType": ["walk","boxing","jump","others"]
+    },
+    "uart": {
+        "port": "/dev/tty.SLAB_USBtoUART5",  
+        "notes":"/dev/tty.usbmodemGY0043864"
+    },
+    "uDoppler": {
+       "uD_hi": 1000,
+       "uD_lo": -1000,
+       "comment": "for frequency resolution",
+       "sigma": 50,
+       "3DEnable": 0
+    },
+    "install_height": {
+      "height": 100
+    },
+    "queueLen": {
+      "len": 3
+    },
+    "v6": {
+      "flag": 1,
+      "range_x_lo": -300,
+      "range_x_hi": 300,
+      "range_z_lo": -300,
+      "range_z_hi": 300,
+      "DBSCAN_sampling_point": 5,
+      "range_limit_flag": 1
+    },
+    "v7": {
+      "flag": 1
+    },
+    "v8": {
+      "flag": 0
+    } 
+  }
+}
+
+ 
+
