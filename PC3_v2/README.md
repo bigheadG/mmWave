@@ -245,7 +245,7 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 ## Reference
 
  
-1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/3d_pplcount_user_guide.pdf
+1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/3d_pplcount_user_guide_I470.pdf
 
 
 
