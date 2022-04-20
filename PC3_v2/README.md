@@ -7,13 +7,13 @@
 ![Language](https://img.shields.io/badge/python-%3E3.6%20-green.svg)&nbsp;
 ![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)
 
-# mmWave-PC3 (People Counting 3D SDK)
+# mmWave-PC3-v2 (People Counting 3D v2 SDK)
 
 Current PI's OS is supports python 3.7.0
 
 https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
 
-This repository contains the Batman mmWave-PC3 People Counting & Detection mmWave Sensor SDK. The sample code below consists of instruction for using the mmWave lib. This mmWave-PC3 Python Program will work with People Counting & Detection based Batman BM201-PC3 mmWave Kit solution. This Python Program works with a Raspberry Pi 4 , NVIDIA Jetson Nano, windows/linux computer or MAC with Batman BM201-PC3 Kit attached via Kit’s HAT Board; and that the BM201 Kit is an easy-to-use mmWave sensor evaluation kit for People Sensing, People Counting, or People Occupancy Density Estimation in approx. 6m x 6m area without privacy invasion; and where the Python Program would have multiple people detection in a 3-Dimentional Area with ID tag, posX, posY, posZ, velx, vely, velz, accX, accY, accZ parameters, along with Point Clouds with elevation, azimuth, doppler, range, and snr parameters.
+This repository contains the Batman mmWave-PC3-v2 People Counting & Detection mmWave Sensor SDK. The sample code below consists of instruction for using the mmWave lib. This mmWave-PC3 Python Program will work with People Counting & Detection based Batman BM201-PC3 mmWave Kit solution. This Python Program works with a Raspberry Pi 4 , NVIDIA Jetson Nano, windows/linux computer or MAC with Batman BM201-PC3 Kit attached via Kit’s HAT Board; and that the BM201 Kit is an easy-to-use mmWave sensor evaluation kit for People Sensing, People Counting, or People Occupancy Density Estimation in approx. 6m x 6m area without privacy invasion; and where the Python Program would have multiple people detection in a 3-Dimentional Area with ID tag, posX, posY, posZ, velx, vely, velz, accX, accY, accZ parameters, along with Point Clouds with elevation, azimuth, doppler, range, and snr parameters.
 
 
 # Hardware:
@@ -65,7 +65,7 @@ https://user-images.githubusercontent.com/2010446/118247174-7510c880-b4d5-11eb-9
 
  # import lib
 
-    from mmWave import pc3
+    from mmWave import pc3_v2
 
   ### raspberry pi 4 use ttyS0
     port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
@@ -87,7 +87,7 @@ https://user-images.githubusercontent.com/2010446/118247174-7510c880-b4d5-11eb-9
 
 ## define
 
-    radar = pc3.Pc3(port)
+    radar = pc3_v2.Pc3_v2(port)
 
 ## Header:
 
