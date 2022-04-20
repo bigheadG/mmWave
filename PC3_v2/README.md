@@ -34,8 +34,17 @@ Library update:
 
 Examples:
     
-    pyqtgraph_3d_pc3_xyz.py # show detected point cloud in 3D
-    pyqtgraph_3d_pc3_occupancy.py # show occupancy detection
+    PC3_ex0.py
+    PC3_ex1_pandas.py   
+    PC3_ex2_record.py   # record v6,v7 and v8 data
+    PC3_ex3_pyqtgraph_xyz_playback.py  #playback
+    pyqtgraph_3d_pc3_xyz.py
+    pyqtgraph_3d_pc3_occupancy.py
+    pyqtgraph_3d_pc3_uDoppler_json_image.py # show occupancy detection
+    mmWave_uDoppler.json. # control file works with pyqtgraph_3d_pc3_uDoppler_json_image.piy
+    JBUIWidget.py. #library
+    
+    
     
 If Run demo program can not find any Raw data output:
       Please set UART to R/W mode: 
