@@ -13,7 +13,7 @@ Current PI's OS is supports python 3.7.0
 
 https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
 
-This repository contains the Batman mmWave-PC3-v2 People Counting & Detection mmWave Sensor SDK. The sample code below consists of instruction for using the mmWave lib. This mmWave-PC3 Python Program will work with People Counting & Detection based Batman BM201-PC3 mmWave Kit solution. This Python Program works with a Raspberry Pi 4 , NVIDIA Jetson Nano, windows/linux computer or MAC with Batman BM201-PC3 Kit attached via Kit’s HAT Board; and that the BM201 Kit is an easy-to-use mmWave sensor evaluation kit for People Sensing, People Counting, or People Occupancy Density Estimation in approx. 6m x 6m area without privacy invasion; and where the Python Program would have multiple people detection in a 3-Dimentional Area with ID tag, posX, posY, posZ, velx, vely, velz, accX, accY, accZ parameters, along with Point Clouds with elevation, azimuth, doppler, range, and snr parameters.
+This repository contains the Batman mmWave-PC3-v2 People Counting & Detection mmWave Sensor SDK. The sample code below consists of instruction for using the mmWave lib. This mmWave-PC3 Python Program will work with People Counting & Detection based Batman BM201/501-PC3 mmWave Kit solution. This Python Program works with a Raspberry Pi 4 , NVIDIA Jetson Nano, windows/linux computer or MAC with Batman BM201/501-PC3 Kit attached via Kit’s HAT Board; and that the BM201 Kit is an easy-to-use mmWave sensor evaluation kit for People Sensing, People Counting, or People Occupancy Density Estimation in approx. 6m x 6m area without privacy invasion; and where the Python Program would have multiple people detection in a 3-Dimentional Area with ID tag, posX, posY, posZ, velx, vely, velz, accX, accY, accZ parameters, along with Point Clouds with elevation, azimuth, doppler, range, and snr parameters.
 
 
 # Hardware:
@@ -38,11 +38,8 @@ Examples:
     PC3_ex1_pandas.py   
     PC3_ex2_record.py   # record v6,v7 and v8 data
     PC3_ex3_pyqtgraph_xyz_playback.py  #playback
-    pyqtgraph_3d_pc3_xyz.py
+    pyqtgraph_3d_pc3_xyz.py #show point cloufd
     pyqtgraph_3d_pc3_occupancy.py
-    pyqtgraph_3d_pc3_uDoppler_json_image.py # show occupancy detection
-    mmWave_uDoppler.json. # control file works with pyqtgraph_3d_pc3_uDoppler_json_image.piy
-    JBUIWidget.py. #library
    
     
 If Run demo program can not find any Raw data output:
