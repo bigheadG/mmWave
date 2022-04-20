@@ -23,6 +23,7 @@ SVD:	Surface Velocity Detection.<br/>
 DRN:	Drone Radar Navigation.<br/>
 VOD:	Vehicle Occupancy Detection.<br/>
 PC3:	People Counting Detection.<br/>
+PC3_v2:	People Counting Detection 3D version:2.<br/>
 TRS:    Traffic_monitoring_detection Roadway Sensing.<br/>
 POS:	People counting Overhead Sensor.<br/>
 PCR:    People Counting short Range sensing.<br/>
@@ -53,6 +54,7 @@ BM501: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM501_B_C.pd
        DRN: Batman Kit 201(ISK) :IWR6843-DRN
        VOD: Batman Kit 201(ISK) :IWR6843-VOD
        PC3: Batman Kit 201(ISK) :IWR6843-PC3 and BM501 AOP-PC3
+       PC3_v2: Batman Kit 201(ISK)/501(AOP) :IWR6843-PC3 and BM501 AOP-PC3
        TRS: Batman Kit 201(ISK) :IWR6843-TRS
        POS: Batman Kit 201(ISK) :IWR6843-POS and BM501 AOP-POS
        PCR: Batman Kit 201(ISK) :IWR6843-PCR and BM501 AOP-PCR
