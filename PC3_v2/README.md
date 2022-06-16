@@ -122,6 +122,9 @@ Each Point Cloud list consists of an array of points,Each point data structure i
         doppler:  float   #Doppler in m/s
         range:    float   #Range in meters
         snr:      float   #SNR, ratio
+	sx : 	  float #point position x
+    	sy :      float #point position y
+    	sz :      float #point position z
         
 V7: Target Object<br/>
 Each Target List consists of an array of targets. Each target data structure defind as following:
