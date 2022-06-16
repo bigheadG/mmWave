@@ -95,7 +95,7 @@ https://user-images.githubusercontent.com/2010446/118247174-7510c880-b4d5-11eb-9
     radar = pc3_v2.Pc3_v2(port)
     
     For v6 offset Azimuth:
-    	radar  = pc3_v2.Pc3_v2(port,degree = 120.0)
+    radar  = pc3_v2.Pc3_v2(port,degree = 120.0)
 
 ## Header:
 
