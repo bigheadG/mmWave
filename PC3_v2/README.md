@@ -122,9 +122,9 @@ Each Point Cloud list consists of an array of points,Each point data structure i
         doppler:  float   #Doppler in m/s
         range:    float   #Range in meters
         snr:      float   #SNR, ratio
-	sx : 	  float #point position x
-    	sy :      float #point position y
-    	sz :      float #point position z
+        sx : 	  float #point position x
+        sy :      float #point position y
+        sz :      float #point position z
         
 V7: Target Object<br/>
 Each Target List consists of an array of targets. Each target data structure defind as following:
@@ -195,10 +195,10 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
         azimuth:  float   #Azimuth in radians
         doppler:  float   #Doppler in m/s
         range:    float   #Range in meters
-        snr: #SNR, ratio
-        sx : point position x
-        sy : point position y
-        sz : point position z
+        snr: float #SNR, ratio
+        sx : float #point position x
+        sy : float #point position y
+        sz : float #point position z
         
     Type v7:
         ['fN','type','posX','posY','posZ','velX','velY','velZ','accX','accY','accZ','ec0','ec1','ec2','ec3','ec4','ec5','ec6','ec7','ec8','ec9','ec10','ec11','ec12','ec13','ec14','ec15','g','confi','tid']
