@@ -1,4 +1,4 @@
-# mmWave based on AI Coming Soon! 2021.11.12
+# mmWave based on AI (by request with purcahse of corresponding AI enabled mmWave EVM Kit)
 
 
 https://user-images.githubusercontent.com/2010446/141447812-ecb79563-1f78-440d-9533-c14793f3fec2.mov
