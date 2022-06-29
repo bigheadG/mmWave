@@ -88,8 +88,8 @@ class globalV:
 	def __init__(self, count):
 		self.count = count
 
-win = pg.GraphicsWindow()
-
+#win = pg.GraphicsWindow()
+win = pg.GraphicsLayoutWidget(show=True) # pg.GraphicsWindow() deprecated
 pg.setConfigOption('foreground', 'y')
 win.setWindowTitle('Vital Sign Demo')
 
