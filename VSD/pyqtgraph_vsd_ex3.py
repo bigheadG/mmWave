@@ -1,5 +1,5 @@
 # Parameters:
-N19 = 23
+N19 = 23 # range profile points; BM201 := 19; BM501 := 23 
 
 # -*- coding: utf-8 -*-
 """
@@ -101,7 +101,7 @@ hrw1 = np.zeros(maxlen)
 br0  = np.zeros(maxlen)
 hr1  = np.zeros(maxlen)
 cd6  = np.zeros(maxlen)
-rp7  = np.zeros(64)
+rp7  = np.zeros(N19) # changed
 
 #**********************************************
 # fft0: Breathing    fft1: Heart Rate (200points)
