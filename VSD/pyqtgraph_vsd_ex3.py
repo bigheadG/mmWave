@@ -265,7 +265,9 @@ def vtsExec():
 	if dck:
  
 		#print(len(rangeBuf))
-		rp7 = [np.sqrt(rangeBuf[i*2]*rangeBuf[i*2] + rangeBuf[i*2+1]*rangeBuf[i*2+1]) for i in range(19)]
+		#rp7 = [np.sqrt(rangeBuf[i*2]*rangeBuf[i*2] + rangeBuf[i*2+1]*rangeBuf[i*2+1]) for i in range(19)]
+		rp7 = [np.sqrt(rangeBuf[i*2]*rangeBuf[i*2] + rangeBuf[i*2+1]*rangeBuf[i*2+1]) for i in range(len(rangeBuf) // 2)]
+
 		
 		brf = vd.outputFilterBreathOut if vd.outputFilterBreathOut < np.pi else np.pi         
 		hrf = vd.outputFilterHeartOut if vd.outputFilterHeartOut   < np.pi else np.pi
