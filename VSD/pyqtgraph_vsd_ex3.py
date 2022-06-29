@@ -1,4 +1,7 @@
- # -*- coding: utf-8 -*-
+# Parameters:
+N19 = 23
+
+# -*- coding: utf-8 -*-
 """
 Various methods of drawing scrolling plots.
 """
@@ -205,7 +208,7 @@ curve_cd = p6.plot(cd6)
 #######################################
 p7 = win.addPlot(colspan=1)
 p7.setLabel('bottom', 'Range Profile(rp7)', 'y:RCS x:cm')
-p7t = np.linspace(0.3,0.9,19)
+p7t = np.linspace(0.3,0.9, N19)
 p7.setRange(xRange=[0.3,0.9])
 curve_rp = p7.plot(rp7)
 
@@ -265,10 +268,7 @@ def vtsExec():
 	if dck:
  
 		#print(len(rangeBuf))
-		#rp7 = [np.sqrt(rangeBuf[i*2]*rangeBuf[i*2] + rangeBuf[i*2+1]*rangeBuf[i*2+1]) for i in range(19)]
-		rp7 = [np.sqrt(rangeBuf[i*2]*rangeBuf[i*2] + rangeBuf[i*2+1]*rangeBuf[i*2+1]) for i in range(len(rangeBuf) // 2)]
-
-		
+		rp7 = [np.sqrt(rangeBuf[i*2]*rangeBuf[i*2] + rangeBuf[i*2+1]*rangeBuf[i*2+1]) for i in range(N19)]		
 		brf = vd.outputFilterBreathOut if vd.outputFilterBreathOut < np.pi else np.pi         
 		hrf = vd.outputFilterHeartOut if vd.outputFilterHeartOut   < np.pi else np.pi
 		
