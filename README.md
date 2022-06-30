@@ -45,7 +45,7 @@ BM501: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM501_B_C.pd
 	
 # Hardware requirements:
       
-       VSD: Batman kit 101/201: IWR1642-VSD/IWR6843-VSD
+       VSD: Batman kit 101/201/501(AOP): IWR1642-VSD/IWR6843-VSD/IWR6843AOP-VSD
        HAM: Batman kit 101/201: IWR1642-HAM/IWR6843-HAM
        PMB: Batman kit 101/201: IWR1642-PMB/IWR6843-PMB
        SRR: Batman kit 101: IWR1642-SRR
@@ -60,7 +60,7 @@ BM501: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM501_B_C.pd
        PC3: Batman Kit 201(ISK) :IWR6843-PC3 and BM501 AOP-PC3
        PC3_v2: Batman Kit 201(ISK)/501(AOP) :IWR6843-PC3 and BM501 AOP-PC3
        TRS: Batman Kit 201(ISK) :IWR6843-TRS
-       POS: Batman Kit 201(ISK) :IWR6843-POS and BM501 AOP-POS
+       POS: Batman Kit 201(ISK)/501(AOP) :IWR6843-POS and BM501 AOP-POS
        PCR: Batman Kit 201(ISK) :IWR6843-PCR and BM501 AOP-PCR
        VED: Batman Kit 201(ISK) :IWR6843-VED and BM501 AOP 
 
