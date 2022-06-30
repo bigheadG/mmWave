@@ -274,12 +274,10 @@ def vtsExec():
 			ct = datetime.datetime.now()
 			#print("Heart Rate:{:.4f} Breath Rate:{:.4f} #:{:d} execTime:{}".format(gv.hr,gv.br,vs.frameNumber, ct-pt))
 
-			#mainwindow.lbr.setText("{:.2f}".format(gv.br_zc))
-			#mainwindow.lbr.setText("{:.2f}".format(fmax))
-			#mainwindow.lhr.setText("{:.2f}".format(gv.hr_zc))
-			#mainwindow.lfm.setText("{:d}".format(vs.frameNumber))
-			#mainwindow.lex.setText("execTime:{}".format( ct-pt))	
-			#mainwindow.l1.setText("Heart Rate:{:.4f} Breath Rate:{:.4f} #:{:d} execTime:{}".format(gv.hr,gv.br,vs.frameNumber, ct-pt))
+			#vsdWin.lbr.setText("{:.2f}".format(gv.br_zc))
+			#vsdWin.lbr.setText("{:.2f}".format(fmax))
+			#vsdWin.lhr.setText("{:.2f}".format(gv.hr_zc))
+			
 			print("HR:{:.4f} BR:{:.4f} flag:{}".format(gv.hr,gv.br,vd.motionDetectedFlag ))
 
 		 
