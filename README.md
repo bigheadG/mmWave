@@ -3,7 +3,7 @@
 
 https://user-images.githubusercontent.com/2010446/141447812-ecb79563-1f78-440d-9533-c14793f3fec2.mov
 
-# mmWave based on PC3 360 degree application
+# mmWave based on PC3 360 degree application(BM501)
 
 https://user-images.githubusercontent.com/2010446/176392496-6d01bb21-8c48-42b0-9875-4303d25188f1.MOV
 
