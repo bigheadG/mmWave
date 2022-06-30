@@ -10,7 +10,9 @@ Various methods of drawing scrolling plots.
 #import initExample ## Add path to library (just for examples; you do not need this)
 
 import pyqtgraph as pg
-from pyqtgraph.Qt import QtCore, QtGui
+from pyqtgraph.Qt import QtCore, QtGui ,QtWidgets
+
+import UI_vsd as gui
 
 import numpy as np
 import numpy.matlib 
@@ -27,56 +29,7 @@ import datetime
 from scipy.fftpack import fft
 from scipy import signal
 
-from PyQt5.QtGui import QPalette,QFont
-from PyQt5.QtWidgets import QLabel,QMainWindow
-from PyQt5.QtCore import Qt
 
-class MainWindow(QMainWindow):
-    def __init__(self, parent=None):
-        QMainWindow.__init__(self, parent)
- 
-        self.setFixedSize(600,180)
-        self.l0 = QLabel(self)
-        self.l0.setFixedWidth(300)
-        self.l0.setFixedHeight(40)
-        self.l0.setAlignment(Qt.AlignCenter)
-        self.l0.setText("Breathing(bpm)")
-        self.l0.move(0,0)
-        
-        self.l1 = QLabel(self)
-        self.l1.setFixedWidth(300)
-        self.l1.setFixedHeight(40)
-        self.l1.setAlignment(Qt.AlignCenter)
-        self.l1.setText("Heart Rate(bpm)")
-        self.l1.move(300,0)
-        
-        pe = QPalette()
-        pe.setColor(QPalette.WindowText,Qt.yellow)        
-        pe.setColor(QPalette.Background,Qt.gray)
-        self.l0.setAutoFillBackground(True)
-        self.l0.setPalette(pe)
-        self.l1.setAutoFillBackground(True)
-        self.l1.setPalette(pe)
-        
-        self.l0.setFont(QFont("Roman times",20,QFont.Bold))
-        self.l1.setFont(QFont("Roman times",20,QFont.Bold))
-        
-        self.lbr = QLabel(self)
-        self.lbr.setFixedWidth(300)
-        self.lbr.setFixedHeight(60)
-        self.lbr.setAlignment(Qt.AlignCenter)
-        self.lbr.setFont(QFont("Roman times",55,QFont.Bold))
-        self.lbr.setText("Breathing")
-        self.lbr.move(0,75)
-        
-        self.lhr = QLabel(self)
-        self.lhr.setFixedWidth(300)
-        self.lhr.setFixedHeight(60)
-        self.lhr.setAlignment(Qt.AlignCenter)
-        self.lhr.setFont(QFont("Roman times",55,QFont.Bold))
-        self.lhr.setText("Heart Rate")
-        
-        self.lhr.move(300,75)
 
 class globalV:
 	count = 0
@@ -231,8 +184,8 @@ def update():
     update_indata()
     update_windowing()
     update_fft()
-    mainwindow.lbr.setText("{:.2f}".format(gv.br))
-    mainwindow.lhr.setText("{:.2f}".format(gv.hr))
+    vsdWin.lbr.setText("{:.2f}".format(gv.br))
+    vsdWin.lhr.setText("{:.2f}".format(gv.hr))
 
 timer = pg.QtCore.QTimer()
 timer.timeout.connect(update)
@@ -244,7 +197,7 @@ timer.start(250) # 80: got(20 Times)   *50ms from uart:
 #for jetson nano
 #port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
 #for MAC os
-port = serial.Serial("/dev/tty.usbmodemGY0052524",baudrate = 921600, timeout = 0.5)
+port = serial.Serial("/dev/tty.SLAB_USBtoUART5",baudrate = 921600, timeout = 0.5)
 #UART initial
 
 #vital sign setup
@@ -346,6 +299,17 @@ thread1.start()
 if __name__ == '__main__':
 	import sys
 	if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
-		mainwindow=MainWindow()
-		mainwindow.show()
+
+		#
+		# DashBoard config
+		#
+		MainWindow = QtWidgets.QMainWindow()
+		vsdWin = gui.Ui_MainWindow()
+		vsdWin.setupUi(MainWindow)
+		MainWindow.show()
+		
+		
+		
+		
+		
 		QtGui.QApplication.instance().exec_()
