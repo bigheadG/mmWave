@@ -91,6 +91,7 @@ If Run demo program can not find any Raw data output:
     radar = pc3OVH.Pc3OVH(port)
     
     radar = pc3OVH.Pc3OVH(port,tiltAngle = None, height= None)
+            tiltAngle: set to 30°  tiltAngle = 30 
 
 ## Header:
 
