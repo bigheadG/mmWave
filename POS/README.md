@@ -89,6 +89,8 @@ If Run demo program can not find any Raw data output:
 ## define
 
     radar = pc3OVH.Pc3OVH(port)
+    
+    radar = pc3OVH.Pc3OVH(port,tiltAngle = None, height= None)
 
 ## Header:
 
