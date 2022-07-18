@@ -91,7 +91,8 @@ If Run demo program can not find any Raw data output:
     radar = pc3OVH.Pc3OVH(port)
     
     radar = pc3OVH.Pc3OVH(port,tiltAngle = None, height= None)
-            tiltAngle: set to 30°  tiltAngle = 30 
+            tiltAngle: set to 30°  ex. tiltAngle = 30
+            height: radar setting height 2.0 meter, ex. height = 2.0
 
 ## Header:
 
@@ -118,6 +119,9 @@ Each Point Cloud list consists of an array of points,Each point data structure i
         doppler:  float   #Doppler in m/s
         range:    float   #Range in meters
         snr:      float   #SNR, ratio
+        sx :      float   #point position x
+        sy :      float   #point position y
+        sz :      float   #point position z
         
 V7: Target Object<br/>
 Each Target List consists of an array of targets. Each target data structure defind as following:
