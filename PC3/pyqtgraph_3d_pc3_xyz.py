@@ -19,6 +19,10 @@ import numpy as np
 from mmWave import pc3
 import serial
 from threading import Thread
+import pandas as pd
+pd.options.display.float_format = '{:,.2f}'.format
+pd.set_option('display.max_rows', 500)
+
 
 class CustomTextItem(gl.GLGraphicsItem.GLGraphicsItem):
 	def __init__(self, X, Y, Z, text):
@@ -125,9 +129,11 @@ w.addItem(axis)
 #
 #Drone Object Detect Radar initial 
 #port = serial.Serial("/dev/tty.usbmodemGY0052854",baudrate = 921600, timeout = 0.5)
-port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
+#port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
 #for NUC ubuntu 
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
+#for pc
+port = serial.Serial("COM24",baudrate = 921600*2, timeout = 0.5)
 
 
 radar = pc3.Pc3(port)
@@ -167,11 +173,23 @@ def radarExec():
 
 	#hdr = radar.getHeader()
 	radar.headerShow() # check sensor information
-	if dck:
+	#if dck:
+	if len(v6) > 0:
 		v8len = len(v8)
 		v6len = len(v6)
 		v7len = len(v7)
 		print("Sensor Data: [v6,v7,v8]:[{:d},{:d},{:d}]".format(v6len,v7len,v8len))
+		###############################################################################
+		# test, filter out lower TH 'sn' 
+		if 0:
+			SN100 = 380
+			df = pd.DataFrame(v6, columns= ['e', 'a', 'd', 'r', 'sn'])
+			df = df.sort_values(by = ['sn'], ascending = False)
+			df = df[df.sn >= SN100]
+			print('\n\nJB> v6 len= {}, v6= \n{}'.format(len(v6), df))
+			print(type(v6))
+			v6 = df.values.tolist()
+		###############################################################################
 		if v6len != 0 and flag == True:
 			flag = False
 			pct = v6
