@@ -133,7 +133,7 @@ w.addItem(axis)
 #for NUC ubuntu 
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 #for pc
-port = serial.Serial("COM24",baudrate = 921600*2, timeout = 0.5)
+port = serial.Serial("COM24",baudrate = 921600, timeout = 0.5)
 
 
 radar = pc3.Pc3(port)
