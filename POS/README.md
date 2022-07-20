@@ -116,8 +116,8 @@ Each Point Cloud list consists of an array of points,Each point data structure i
     point Struct:
         elevation: float  #Elevation in radians
         azimuth:  float   #Azimuth in radians 
-        doppler:  float   #Doppler in m/s
         range:    float   #Range in meters
+        doppler:  float   #Doppler in m/s
         snr:      float   #SNR, ratio
         sx :      float   #point position x
         sy :      float   #point position y
@@ -187,8 +187,8 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
         type: 'v6'
         elv: float  #Elevation in radians
         azimuth:  float   #Azimuth in radians
-        doppler:  float   #Doppler in m/s
         range:    float   #Range in meters
+        doppler:  float   #Doppler in m/s
         snr: #SNR, ratio
         sx : point position x
         sy : point position y
