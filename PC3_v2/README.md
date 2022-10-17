@@ -254,7 +254,10 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
  
 1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/3d_pplcount_user_guide_I470.pdf
 
-2. DOC_01: Detection Layer Parameter Tuning Guide for the 3D People Counting Demo
-
+2. TuningGuide_01: 
+    
+   Detection Layer Parameter Tuning Guide for the 3D People Counting Demo
+   
+   https://github.com/bigheadG/mmWaveDocs/blob/master/V5050_3D_people_counting_detection_layer_tuning_guide.pdf
 
 
