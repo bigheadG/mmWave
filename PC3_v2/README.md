@@ -262,4 +262,7 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 
 3. Write Config Command Line,
 
-[How to write CONFIG command line in RUN time mode V02   2022.10.18.pdf](https://github.com/bigheadG/mmWave/files/9806917/How.to.write.CONFIG.command.line.in.RUN.time.mode.V02.2022.10.18.pdf)
+
+   [How to write CONFIG command line in RUN time mode V02   2022.10.18.pdf](https://github.com/bigheadG/mmWave/files/9807021/How.to.write.CONFIG.command.line.in.RUN.time.mode.V02.2022.10.18.pdf)
+
+ 
