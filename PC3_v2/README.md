@@ -260,4 +260,6 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
    
    https://github.com/bigheadG/mmWaveDocs/blob/master/V5050_3D_people_counting_detection_layer_tuning_guide.pdf
 
+3. Write Config Command Line,
 
+[How to write CONFIG command line in RUN time mode V02   2022.10.18.pdf](https://github.com/bigheadG/mmWave/files/9806917/How.to.write.CONFIG.command.line.in.RUN.time.mode.V02.2022.10.18.pdf)
