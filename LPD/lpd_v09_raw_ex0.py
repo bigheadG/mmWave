@@ -31,7 +31,7 @@ from mmWave import lpdISK
 
 port = serial.Serial("/dev/tty.usbmodemGY0043864",baudrate = 921600, timeout = 0.5)
 
-pm = lpdISK.LpdISK(port)
+radar = lpdISK.LpdISK(port)
 
  
 prev_fn = 0
@@ -42,8 +42,8 @@ def uartGetdata(name):
 	port.flushInput()
 	while True:
 		
-		(dck,v6,v7,v8,v9)=pm.tlvRead(False) 
-		hdr = pm.getHeader()
+		(dck,v6,v7,v8,v9)=radar.tlvRead(False) 
+		hdr = radar.getHeader()
 		fn = hdr.frameNumber
 		
 		if fn != prev_fn:
