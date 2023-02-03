@@ -28,35 +28,43 @@ from mmWave import lpdISK
 
 #UART initial
 
-try:    #pi 3
-	port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
-except:  #for Jetson nano UART port
-	port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
+
+port = serial.Serial("/dev/tty.usbmodemGY0043864",baudrate = 921600, timeout = 0.5)
 
 pm = lpdISK.LpdISK(port)
 
+ 
+prev_fn = 0
+fn = 0 
 def uartGetdata(name):
+	global prev_fn,fn
 	print("mmWave: {:} example:".format(name))
 	port.flushInput()
 	while True:
-		hdr = pm.getHeader()
+		
 		(dck,v6,v7,v8,v9)=pm.tlvRead(False) 
-		if dck:
+		hdr = pm.getHeader()
+		fn = hdr.frameNumber
+		
+		if fn != prev_fn:
+			prev_fn = fn
+			print(f"\n\n ==================  frameNumber:{fn} ==========================")
+		#if dck:
 			print("V6:V7:V8:V9 = length([{:d},{:d},{:d},{:d}])".format(len(v6),len(v7),len(v8),len(v9)))
 			if len(v6) != 0:
-				print("V6: Point Cloud Spherical v6:len({:d})-----------------".format(len(v6)))
+				print("\nV6: Point Cloud Spherical v6:len({:d})-----------------".format(len(v6)))
 				#[(range,azimuth,elevation,doppler),......]
 				print(v6)
 			if len(v7) != 0:
-				print("V7: Target Object List----v7:len({:d})-----------------".format(len(v7)))
+				print("\nV7: Target Object List----v7:len({:d})-----------------".format(len(v7)))
 				#[(tid,posX,posY,velX,velY,accX,accY,posZ,velZ,accZ),....]
 				print(v7)
 			if len(v8) != 0:
-				print("V8: Target Index----------v8:len({:d})-----------------".format(len(v8)))
+				print("\nV8: Target Index----------v8:len({:d})-----------------".format(len(v8)))
 				#[id1,id2....]
 				print(v8)
 			if len(v9) != 0:
-				print("V9:Point Cloud Side Info--v9:len({:d})-----------------".format(len(v9)))
+				print("\nV9:Point Cloud Side Info--v9:len({:d})-----------------".format(len(v9)))
 				#[(snr,noise'),....]
 				print(v9)
 			
