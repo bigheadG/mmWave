@@ -97,9 +97,10 @@ w0.addItem(curveS1)
 #
 def updatePlot():
 	global v6len,spots0,spots1,v7len
-	if v6len !=0:
-		curveS0.setData(spots0)
-		curveS1.setData(spots1)
+	 
+	curveS0.setData(spots0 if v6len != 0 else [])
+	curveS1.setData(spots1 if v7len != 0 else [])
+		
 		
 # update all plots
 def update():
@@ -124,7 +125,8 @@ timer.start(143) #150  80: got(20 Times)   *50ms from uart:
 #
 #Drone Object Detect Radar initial 
 #port = serial.Serial("/dev/tty.usbmodemGY0052854",baudrate = 921600, timeout = 0.5)
-port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0.5)
+
+port = serial.Serial("/dev/tty.usbmodemGY0043864",baudrate = 921600, timeout = 0.5)
 #for NUC ubuntu 
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 
@@ -142,15 +144,19 @@ radar.sm = False
 		xt = pct[i][0] * np.cos(pct[i][2]) * np.sin(pct[i][1])
 		yt = pct[i][0] * np.cos(pct[i][2]) * np.cos(pct[i][1])
 '''
- 
+
+fn = 0
+prev_fn = 0
 def radarExec():
-	global spots0,spots1,v8len,v9len,v6len,v7len
+	global spots0,spots1,v8len,v9len,v6len,v7len,prev_fn, fn
 	
 	(dck,v6,v7,v8,v9) = radar.tlvRead(False)
-	#hdr = radar.getHeader()
+	hdr = radar.getHeader()
 	#radar.headerShow()
-	 
-	if dck == 1:
+	hdr = radar.getHeader()
+	fn = hdr.frameNumber
+	
+	if prev_fn != fn:
 		v6len = len(v6)
 		v7len = len(v7)
 		v8len = len(v8)
@@ -161,10 +167,14 @@ def radarExec():
 		#v6 struct = [(r,a,e,d),(r,a,e,d),(r,a,e,d)..]
 		if v6len != 0:
 			pc = v6
-			pct = v7
 			spots0  = [{'pos': [pc[i][0] * np.cos(pc[i][2]) * np.sin(pc[i][1]),pc[i][0] * np.cos(pc[i][2]) * np.cos(pc[i][1])],'data': 1, 'brush':pg.intColor(i, v6len), 'symbol': 'o', 'size': 3 } for i in range(v6len)]
+		 
+		if v7len != 0:
+			pct = v7
 			spots1  = [{'pos': [pct[i][1],pct[i][2]],'data': 1, 'brush':pg.intColor(i, v7len), 'symbol': 's', 'size': 10 } for i in range(v7len)]
-			flag = True
+		 
+			
+		flag = True
 			
 	port.flushInput()
 		
