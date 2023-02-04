@@ -102,8 +102,14 @@ If Run demo program can not find any Raw data output:
 		
 ## Lib import(Raw Data):
 
-from mmWave import lpdISK
-lpd = lpdISK.LpdISK(port)
+	from mmWave import lpdISK
+	
+	Firmware verion before v0910 use:
+	lpd = lpdISK.LpdISK(port)
+
+	Firmware v0910 and v0985 use: 
+	lpd = lpdISK.LpdISK(port,seq = "xyz")
+	
    
 V6: Point Cloud Spherical<br/>
 Each Point Cloud list consists of an array of points, Each point data structure is defined as following:
