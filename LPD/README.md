@@ -257,6 +257,10 @@ V9:Point Cloud Side Info<br/>
         if dck:
             print(pc3x) #you will see objPoint infomation
     
+## Demo for distance 50 m (based on V0985)
+
+https://www.dropbox.com/s/8jcwtdrcwewhzs6/2022-11-08%2014-39-04_v0985_lpd_2d50m.mov?dl=0
+    
 ## Reference:
 
 1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide.pdf
