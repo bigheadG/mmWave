@@ -4,7 +4,7 @@
 # Requirement:
 # Hardware: BM201-ISK (AWR6843)
 # Firmware: LPD
-# config file:(V24_JB)people_detection_and_tracking_100m_2D_advanced.cfg
+# config file:(V24_JB)people_detection_and_tracking_50m_2D_advanced.cfg
 # lib: lpdISK 
 # plot tools: pyqtgraph 3D
 # Plot point cloud(V6) in 3D figure 
