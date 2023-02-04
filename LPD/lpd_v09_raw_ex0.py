@@ -33,10 +33,10 @@ port = serial.Serial("/dev/tty.usbmodemGY0043864",baudrate = 921600, timeout = 0
 
  
 #Firmware verion before v0910 use:
-#lpd = lpdISK.LpdISK(port)
+#radar = lpdISK.LpdISK(port)
 
 #Firmware v0910 and v0985 use: 
-lpd = lpdISK.LpdISK(port,seq = "xyz")
+radar = lpdISK.LpdISK(port,seq = "xyz")
  
 prev_fn = 0
 fn = 0 
