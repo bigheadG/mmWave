@@ -269,9 +269,6 @@ V9:Point Cloud Side Info<br/>
 
 ## Demo movie (based on F/W: V0985, S/W: lpd_v24_2d_pyqtgraph_xy_50m.py)
 
-## Demo movie for distance 50 m (based on V0985)
-
-https://www.dropbox.com/s/8jcwtdrcwewhzs6/2022-11-08%2014-39-04_v0985_lpd_2d50m.mov?dl=0
     
 ## Reference:
 
