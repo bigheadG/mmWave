@@ -14,7 +14,7 @@ https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
 This repository contains the Batman Kit- 201(ISK) Sensing mmWave Sensor SDK Device Version:ES2.0 . The sample code below consists of instruction for using the mmWave lib. This mmWave-LPD Python Program will work with Long-Range People Detection based Batman BM201 mmWave Kit solution (BM201-LPD). This Python Program works with a Raspberry Pi 4 and/or NVIDIA Jetson Nano computer with Batman BM201-LPD Kit attached via Kit’s HAT Board; and that the BM201 Kit is an easy-to-use mmWave sensor evaluation kit for tracking multiple people’s movements simultaneously from 1meter ~ 50meter range with a high degree of accuracy suitable for privacy conscious applications; and where the Python Program would detect multiple people movements in a 3-Dimentional Area with ID tag, posX, posY, posZ, velx, vely, velz, accX, accY, accZ parameters, along with Point Clouds with elevation, azimuth, doppler, range, and snr parameters.
 Note: this Python program uses matplotlib for people movement’s 3D plot, and that the current 3D plot update rate is lagging; and where a faster 3D plot library will be desired (while the parameter data are read in real-time as normal).
 
-And Beamforming and BeamSteering has implemented on the device the example show radar detection range is up to 100m away.
+And Beamforming and BeamSteering has implemented on the device the example show radar detection range is up to 50m away.
 
 Hardware Sensor: 
 
@@ -57,7 +57,7 @@ Library update:
 	lpd_v09_raw_ex0.py is a example output V6(Point Cloud Spherical),V7(Target Object List),V8(Target Index), V9(Point Cloud Side Info) data
 	LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide.pdf
         
-	v24 is BM201 use Beamforming and BeamSteering to implemented on the device to detect people in 100m away.
+	v24 is BM201 use Beamforming and BeamSteering to implemented on the device to detect people in 50m away.
 	lpd_v24_2d_pyqtgraph_xyz_50m.py 
 	lpd_v24_2d_pyqtgraph_xy_50m.py
 	LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide_bf_100m.pdf
