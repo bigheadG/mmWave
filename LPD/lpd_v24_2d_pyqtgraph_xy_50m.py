@@ -1,12 +1,12 @@
  # -*- coding: utf-8 -*-
 """
 #=======================================================================
-# File Name: lpd_v24_2d_pyqtgraph_xy_100m.py
+# File Name: lpd_v24_2d_pyqtgraph_xy_50m.py
 #
 # Requirement:
 # Hardware: BM201-ISK (AWR6843)
 # Firmware: LPD
-# config file:(V24_JB)people_detection_and_tracking_100m_2D_advanced.cfg
+# config file:(V24_JB)people_detection_and_tracking_50m_2D_advanced.cfg
 # lib: lpdISK 
 # plot tools: pyqtgraph 2D
 # Plot point cloud(V6) and Target(V7) in 2D figure
