@@ -301,7 +301,7 @@ V9:Point Cloud Side Info<br/>
 
 ## Snapshot raw data logged with V6 and V7 (based on F/W: V0985, S/W: lpd_v09_raw_ex0.py)    
     
-![LPD_V0985_RAW_EX0_20230204](https://user-images.githubusercontent.com/2010446/216743981-c206d5e7-d7dc-4822-965c-6e0203bacb76.png)
+![LPD_V0985_RAW_EX0_20230204001](https://user-images.githubusercontent.com/2010446/216756459-ee198f1c-fdd3-4018-9c5b-a81ad8ebe582.png)
 
 ## Demo movie (based on F/W: V0910, S/W: lpd_v24_2d_pyqtgraph_xy_50m.py)
 
