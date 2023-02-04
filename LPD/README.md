@@ -257,7 +257,13 @@ V9:Point Cloud Side Info<br/>
         if dck:
             print(pc3x) #you will see objPoint infomation
     
-## Demo for distance 50 m (based on V0985)
+## Raw data logged with V6 and V7 (based on V0910)    
+
+
+## Raw data looged with V6 and V7 (based on V0985)    
+    
+    
+## Demo movie for distance 50 m (based on V0985)
 
 https://www.dropbox.com/s/8jcwtdrcwewhzs6/2022-11-08%2014-39-04_v0985_lpd_2d50m.mov?dl=0
     
