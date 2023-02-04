@@ -297,7 +297,7 @@ V9:Point Cloud Side Info<br/>
     
 ## Snapshot raw data logged with V6 and V7 (based on F/W: V0910, S/W: lpd_v09_raw_ex0.py)    
 
-![LPD_V0910_RAW_EX0_20230204](https://user-images.githubusercontent.com/2010446/216743976-82d04272-181a-4b1f-b962-a43c5766cf0b.png)
+![LPD_V0910_RAW_EX0_20230204001](https://user-images.githubusercontent.com/2010446/216756802-f8b030ef-2074-4b6a-972e-65c1140ffab6.png)
 
 ## Snapshot raw data logged with V6 and V7 (based on F/W: V0985, S/W: lpd_v09_raw_ex0.py)    
     
@@ -305,12 +305,12 @@ V9:Point Cloud Side Info<br/>
 
 ## Demo movie (based on F/W: V0910, S/W: lpd_v24_2d_pyqtgraph_xy_50m.py)
 
-https://user-images.githubusercontent.com/2010446/216746207-16d5ed2f-3d54-45c8-873a-4e5d8d81d275.mov
+https://user-images.githubusercontent.com/2010446/216756884-a6ab6ad7-b8b5-46aa-8794-b7dec0d0f4e5.mov
 
 ## Demo movie (based on F/W: V0985, S/W: lpd_v24_2d_pyqtgraph_xy_50m.py)
 
-https://user-images.githubusercontent.com/2010446/216746301-07b07403-3779-4b6e-bd0a-8a36b31f1c85.mov
-    
+https://user-images.githubusercontent.com/2010446/216756901-6e4b1904-73c1-4d74-b751-991248ce03ec.mov
+
 ## Reference:
 
 1. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide.pdf
