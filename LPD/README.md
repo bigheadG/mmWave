@@ -117,11 +117,14 @@ Each Point Cloud list consists of an array of points, Each point data structure 
         V6 =: [(range,azimuth,elevation,doppler),......]
         
 V7: Target Object<br/> 
-# ALERT: We did not show out float ec[16], float g, float confidenceLevel here,
-Each Target List consists of an array of targets. Each target data structure defind as following:
+
+ALERT 01: part of V7
+We recommented user based on this pafrt of V7 data structure ignored 3 parameters of (float ec[16], float g, float confidenceLevel) here, due to those three parameters unused in this working task
+
+Each target data structure defind as following:
     
     target Struct:
-        tid: Int        #Track ID
+        tid: uint32_t        #Track ID
         posX: float     #Target position in X, m
         posY: float     #Target position in Y, m
         velX: float     #Target velocity in X, m/s
@@ -134,21 +137,27 @@ Each Target List consists of an array of targets. Each target data structure def
         
         V7 =: [(tid,posX,posY,velX,velY,accX,accY,posZ,velZ,accZ),....]
 
-# ALERT: if user want to parse V7, please using data structure as followings,
-V7: Target Object<br/>
-    uint32_t     tid;<br/>
-    float        posX;<br/>
-    float        posY;<br/>
-    float        posZ;<br/>
-    float        velX;<br/>
-    float        velY;<br/>
-    float        velZ;<br/>
-    float        accX;<br/>
-    float        accY;<br/>
-    float        accZ;<br/>
-    float        ec[16];<br/>
-    float        g;<br/>
-    float        confidenceLevel;<br/>
+ALERT 02: full of V7
+
+if user want to parse full of V7 patrameters by user's prasing programming effort 
+here show out all of V7 structure inlcude three parameters of (float ec[16], float g, float confidenceLevel)
+
+Each target data structure defind as following:
+	
+	target Struct:
+	    uint32_t     tid;<br/>
+	    float        posX;<br/>
+	    float        posY;<br/>
+	    float        posZ;<br/>
+	    float        velX;<br/>
+	    float        velY;<br/>
+	    float        velZ;<br/>
+	    float        accX;<br/>
+	    float        accY;<br/>
+	    float        accZ;<br/>
+	    float        ec[16];<br/>
+	    float        g;<br/>
+	    float        confidenceLevel;<br/>
 
 V8: Target Index<br/>
 Each Target List consists of an array of target IDs, A targetID at index i is the target to which point i of the previous frame's point cloud was associated. Valid IDs range from 0-249.
