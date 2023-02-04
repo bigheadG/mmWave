@@ -305,7 +305,7 @@ V9:Point Cloud Side Info<br/>
 
 ## Demo movie (based on F/W: V0910, S/W: lpd_v24_2d_pyqtgraph_xy_50m.py)
 
-https://user-images.githubusercontent.com/2010446/216757440-0a095e53-6005-48e8-82b2-ab791a772c36.mov
+https://user-images.githubusercontent.com/2010446/216757691-cd267d35-de21-4b0b-b97b-a72aeb6de0fb.mov
 
 ## Demo movie (based on F/W: V0985, S/W: lpd_v24_2d_pyqtgraph_xy_50m.py)
 
