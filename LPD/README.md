@@ -132,7 +132,23 @@ Each Target List consists of an array of targets. Each target data structure def
         accZ: float     #Target velocity in Z, m/s2
         
         V7 =: [(tid,posX,posY,velX,velY,accX,accY,posZ,velZ,accZ),....]
-        
+
+# ALERT: if user want to parse V7, please using data structure as followings,
+V7: Target Object<br/>
+    uint32_t     tid;
+    float        posX;
+    float        posY;
+    float        posZ;
+    float        velX;
+    float        velY;
+    float        velZ;
+    float        accX;
+    float        accY;
+    float        accZ;
+    float        ec[16];
+    float        g;
+    float        confidenceLevel;
+
 V8: Target Index<br/>
 Each Target List consists of an array of target IDs, A targetID at index i is the target to which point i of the previous frame's point cloud was associated. Valid IDs range from 0-249.
         
