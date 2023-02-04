@@ -259,10 +259,12 @@ V9:Point Cloud Side Info<br/>
     
 ## Raw data logged with V6 and V7 (based on V0910)    
 
+![LPD_V0910_RAW_EX0_20230204](https://user-images.githubusercontent.com/2010446/216743865-d3ed6600-c411-49f0-bc59-a2dcc7a2cc5f.png)
 
 ## Raw data looged with V6 and V7 (based on V0985)    
     
-    
+![LPD_V0985_RAW_EX0_20230204](https://user-images.githubusercontent.com/2010446/216743878-f5953f53-d89d-4d66-b997-16edceacc046.png)
+
 ## Demo movie for distance 50 m (based on V0985)
 
 https://www.dropbox.com/s/8jcwtdrcwewhzs6/2022-11-08%2014-39-04_v0985_lpd_2d50m.mov?dl=0
