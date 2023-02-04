@@ -146,16 +146,16 @@ here show out full of V7 structure inlcude three parameters of (float ec[16], fl
 Each target data structure defind as following:
 	
 	target Struct:
-	    uint32_t     tid;<br/>
-	    float        posX;<br/>
-	    float        posY;<br/>
-	    float        posZ;<br/>
-	    float        velX;<br/>
-	    float        velY;<br/>
-	    float        velZ;<br/>
-	    float        accX;<br/>
-	    float        accY;<br/>
-	    float        accZ;<br/>
+	    uint32_t     tid;
+	    float        posX;
+	    float        posY;
+	    float        posZ;
+	    float        velX;
+	    float        velY;
+	    float        velZ;
+	    float        accX;
+	    float        accY;
+	    float        accZ;
 	    float        ec[16];
 	    float        g;
 	    float        confidenceLevel;
