@@ -118,29 +118,30 @@ Each Point Cloud list consists of an array of points, Each point data structure 
         
 V7: Target Object<br/> 
 
-ALERT 01: part of V7
-We recommented user based on this pafrt of V7 data structure ignored 3 parameters of (float ec[16], float g, float confidenceLevel) here, due to those three parameters unused in this working task
+ALERT 01: part of V7<br/>
+We recommented user based on this part of V7 data structure
+ignored three parameters of (float ec[16], float g, float confidenceLevel) here, 
+due to those three parameters unused in this working task
 
 Each target data structure defind as following:
     
     target Struct:
-        tid: uint32_t        #Track ID
+        tid: uint32_t   #Track ID
         posX: float     #Target position in X, m
         posY: float     #Target position in Y, m
         velX: float     #Target velocity in X, m/s
         velY: float     #Target velocity in Y, m/s
-        accX: float     #Target velocity in X, m/s2
-        accY: float     #Target velocity in Y, m/s2
+        accX: float     #Target velocity in X, m/s^2
+        accY: float     #Target velocity in Y, m/s^2
         posZ: float     #Target position in Z, m
         velZ: float     #Target velocity in Z, m/s
-        accZ: float     #Target velocity in Z, m/s2
+        accZ: float     #Target velocity in Z, m/s^2
         
         V7 =: [(tid,posX,posY,velX,velY,accX,accY,posZ,velZ,accZ),....]
 
-ALERT 02: full of V7
-
+ALERT 02: full of V7<br/>
 if user want to parse full of V7 patrameters by user's prasing programming effort 
-here show out all of V7 structure inlcude three parameters of (float ec[16], float g, float confidenceLevel)
+here show out full of V7 structure inlcude three parameters of (float ec[16], float g, float confidenceLevel)
 
 Each target data structure defind as following:
 	
