@@ -261,7 +261,7 @@ V9:Point Cloud Side Info<br/>
 
 ![LPD_V0910_RAW_EX0_20230204](https://user-images.githubusercontent.com/2010446/216743976-82d04272-181a-4b1f-b962-a43c5766cf0b.png)
 
-## Raw data looged with V6 and V7 (F/W: V0985, S/W: lpd_v09_raw_ex0.py)    
+## Raw data logged with V6 and V7 (based on F/W: V0985, S/W: lpd_v09_raw_ex0.py)    
     
 ![LPD_V0985_RAW_EX0_20230204](https://user-images.githubusercontent.com/2010446/216743981-c206d5e7-d7dc-4822-965c-6e0203bacb76.png)
 
