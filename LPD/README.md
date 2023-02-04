@@ -140,6 +140,7 @@ Each target data structure defind as following:
         V7 =: [(tid,posX,posY,velX,velY,accX,accY,posZ,velZ,accZ),....]
 
 ALERT 02: full of V7<br/>
+
 if user want to parse full of V7 patrameters by user's prasing programming effort 
 here show out full of V7 structure inlcude three parameters of (float ec[16], float g, float confidenceLevel)
 
@@ -263,7 +264,11 @@ V9:Point Cloud Side Info<br/>
 ## define
     raw data:
     
+    Firmware verion before v0910
     lpd = lpdISK.LpdISK(port)
+    
+    Firmware v0910 and v0985 use: 
+    lpd = lpdISK.LpdISK(port,seq = "xyz")
     
     key/value:
     
