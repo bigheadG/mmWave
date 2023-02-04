@@ -128,8 +128,12 @@ port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600, timeout = 0
 #for NUC ubuntu 
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 
+#Firmware verion before v0910 use:
+#radar = lpdISK.LpdISK(port)
 
-radar = lpdISK.LpdISK(port)
+#Firmware v0910 and v0985 use: 
+radar = lpdISK.LpdISK(port,seq = "xyz")
+
 
 v6len = 0
 v7len = 0
