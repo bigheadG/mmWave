@@ -156,9 +156,9 @@ Each target data structure defind as following:
 	    float        accX;<br/>
 	    float        accY;<br/>
 	    float        accZ;<br/>
-	    float        ec[16];<br/>
-	    float        g;<br/>
-	    float        confidenceLevel;<br/>
+	    float        ec[16];
+	    float        g;
+	    float        confidenceLevel;
 
 V8: Target Index<br/>
 Each Target List consists of an array of target IDs, A targetID at index i is the target to which point i of the previous frame's point cloud was associated. Valid IDs range from 0-249.
