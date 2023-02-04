@@ -116,7 +116,8 @@ Each Point Cloud list consists of an array of points, Each point data structure 
     
         V6 =: [(range,azimuth,elevation,doppler),......]
         
-V7: Target Object<br/>
+V7: Target Object<br/> 
+# ALERT: We did not show out float ec[16], float g, float confidenceLevel here,
 Each Target List consists of an array of targets. Each target data structure defind as following:
     
     target Struct:
@@ -135,19 +136,19 @@ Each Target List consists of an array of targets. Each target data structure def
 
 # ALERT: if user want to parse V7, please using data structure as followings,
 V7: Target Object<br/>
-    uint32_t     tid;
-    float        posX;
-    float        posY;
-    float        posZ;
-    float        velX;
-    float        velY;
-    float        velZ;
-    float        accX;
-    float        accY;
-    float        accZ;
-    float        ec[16];
-    float        g;
-    float        confidenceLevel;
+    uint32_t     tid;<br/>
+    float        posX;<br/>
+    float        posY;<br/>
+    float        posZ;<br/>
+    float        velX;<br/>
+    float        velY;<br/>
+    float        velZ;<br/>
+    float        accX;<br/>
+    float        accY;<br/>
+    float        accZ;<br/>
+    float        ec[16];<br/>
+    float        g;<br/>
+    float        confidenceLevel;<br/>
 
 V8: Target Index<br/>
 Each Target List consists of an array of target IDs, A targetID at index i is the target to which point i of the previous frame's point cloud was associated. Valid IDs range from 0-249.
