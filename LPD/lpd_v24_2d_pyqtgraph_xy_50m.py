@@ -5,7 +5,7 @@
 #
 # Requirement:
 # Hardware: BM201-ISK (AWR6843)
-# Firmware: LPD
+# Firmware: LPD_0985
 # config file:(V24_JB)people_detection_and_tracking_50m_2D_advanced.cfg
 # lib: lpdISK 
 # plot tools: pyqtgraph 2D
