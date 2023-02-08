@@ -185,7 +185,7 @@ V9:Point Cloud Side Info<br/>
 
         v9 structure: [(snr,noise'),....]    
         
-    Function call: 
+Function call: 
         (dck,v6,v7,v8,v9) = lpd.tlvRead(False)
         dck : True  : data avaliable
               False : data invalid
