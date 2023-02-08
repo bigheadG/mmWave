@@ -129,7 +129,7 @@ We recommented user based on this part of V7 data structure
 ignored three parameters of (float ec[16], float g, float confidenceLevel) here, 
 due to those three parameters unused in this working task
 
-Each target data structure defind as following:(Firmware verion v0905)
+Each target data structure defind as following:(Firmware version v0905)
     
     target Struct:
         tid: uint32_t   #Track ID
@@ -150,7 +150,7 @@ ALERT 02: full of V7<br/>
 if user want to parse full of V7 patrameters by user's prasing programming effort 
 here show out full of V7 structure inlcude three parameters of (float ec[16], float g, float confidenceLevel)
 
-Each target data structure defind as following:(Firmware v0910 and v0985 use:)
+Each target data structure defind as following:(Firmware version v0910 and v0985 use:)
     	
 	target Struct:
 	    uint32_t     tid;
