@@ -187,15 +187,15 @@ V9:Point Cloud Side Info<br/>
         
 Function call: 
 
-        (dck,v6,v7,v8,v9) = lpd.tlvRead(False)<br/>
-        dck : True  : data avaliable<br/>
-              False : data invalid<br/>
-        v6: point cloud of array<br/>
-        v7: target object of array<br/>
-        v8: target id of array<br/>
-        v9: point cloud side info array<br/>
+        (dck,v6,v7,v8,v9) = lpd.tlvRead(False)
+        dck : True  : data avaliable
+              False : data invalid
+        v6: point cloud of array
+        v7: target object of array
+        v8: target id of array
+        v9: point cloud side info array
 
-        return dck,v6,v7,v8,v9<br/>
+        return dck,v6,v7,v8,v9
 		
    	 -----------------
 	 |  obj o  |+z  board
@@ -206,13 +206,13 @@ Function call:
 	 ----------- \ --
 	 	      \+y
     
-    Based on IWR6843 (r,az,el) -> (x,y,z)<br/>
-    el: elevation  <Theta bottom -> Obj<br/>  
-    az: azimuth    <Theta Obj ->Y Axis<br/> 
+    Based on IWR6843 (r,az,el) -> (x,y,z)
+    el: elevation  <Theta bottom -> Obj
+    az: azimuth    <Theta Obj ->Y Axis
     
-    z = r * sin(el)<br/>
-    x = r * cos(el) * sin(az)<br/>
-    y = r * cos(e1) * cos(az)<br/>
+    z = r * sin(el)
+    x = r * cos(el) * sin(az)
+    y = r * cos(e1) * cos(az)
  
  # Data Structure(Key/Value):
 
