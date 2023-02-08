@@ -55,6 +55,8 @@ import serial
 import sys
 from threading import Thread
 from mmWave import lpdISK
+import pandas as pd
+pd.options.display.float_format = '{:,.2f}'.format
 
 class globalV:
 	count = 0
@@ -83,7 +85,10 @@ win.setWindowTitle('Long Range People Detect 100m')
 # 1) for detected object scatterPlot
 #win.nextRow()
 w0 = win.addPlot()
-w0.setRange(xRange=[-100,100],yRange=[0,150])
+
+#w0.setRange(xRange=[-100,100],yRange=[0,150])
+w0.setRange(xRange=[-5,5],yRange=[0,10]) # test
+
 w0.setLabel('bottom', 'V6 Poin Cloud', 'Meter')
 w0.setLabel('left', 'range', 'meter')
 spots0 = []
@@ -126,7 +131,7 @@ timer.start(143) #150  80: got(20 Times)   *50ms from uart:
 #Drone Object Detect Radar initial 
 #port = serial.Serial("/dev/tty.usbmodemGY0052854",baudrate = 921600, timeout = 0.5)
 
-port = serial.Serial("/dev/tty.usbmodemGY0043864",baudrate = 921600, timeout = 0.5)
+port = serial.Serial("COM17",baudrate = 921600, timeout = 0.5)
 #for NUC ubuntu 
 #port = serial.Serial("/dev/ttyACM1",baudrate = 921600, timeout = 0.5)
 #Firmware verion before v0910 use:
@@ -167,15 +172,43 @@ def radarExec():
 		 
 		print("Sensor Data: [v6,v7,v8,v9]:[{:d},{:d},{:d},{:d}]".format(v6len,v7len,v8len,v9len))
 		
-		#v6 struct = [(r,a,e,d),(r,a,e,d),(r,a,e,d)..]
-		if v6len != 0:
-			pc = v6
-			spots0  = [{'pos': [pc[i][0] * np.cos(pc[i][2]) * np.sin(pc[i][1]),pc[i][0] * np.cos(pc[i][2]) * np.cos(pc[i][1])],'data': 1, 'brush':pg.intColor(i, v6len), 'symbol': 'o', 'size': 3 } for i in range(v6len)]
-		 
-		if v7len != 0:
-			pct = v7
-			spots1  = [{'pos': [pct[i][1],pct[i][2]],'data': 1, 'brush':pg.intColor(i, v7len), 'symbol': 's', 'size': 10 } for i in range(v7len)]
-		 
+		if 1:
+			#v6 struct = [(r,a,e,d),(r,a,e,d),(r,a,e,d)..]
+			if v6len > 0:
+				#pc = v6
+				#spots0  = [{'pos': [pc[i][0] * np.cos(pc[i][2]) * np.sin(pc[i][1]),pc[i][0] * np.cos(pc[i][2]) * np.cos(pc[i][1])],'data': 1, 'brush':pg.intColor(i, v6len), 'symbol': 'o', 'size': 3 } for i in range(v6len)]
+				
+				####################################################################################
+				# deNoise Algorithm:
+				# final columns = ['r', 'a', 'e', 'd', 'tid', 'snr', 'noise'] then sort()
+				JB_SNR_TH = 200 # set snr threshold observing by REAL case 		
+				v6_df = pd.DataFrame(v6, columns=['r', 'a', 'e', 'd'])
+				v8_df = pd.DataFrame(v8)				
+				v6_df['tid'] = v8_df 
+				v9_df = pd.DataFrame(v9, columns=['snr','noise'])
+				v6_df['snr'] = v9_df['snr'] 
+				v6_df['noise'] = v9_df['noise'] 
+				v6_df = v6_df.sort_values(by=['snr'], ascending=False)
+				v6_df_logic = v6_df['snr'] >= JB_SNR_TH # filter logic
+				v6_df =  v6_df[v6_df_logic] # filter out 
+				print('v6_df shape={}\nv6_df=\n{}\n'.format(v6_df.shape, v6_df)) # (23, 2)				
+				v6A = v6_df.to_numpy()
+				print(type(v6A))
+				print(v6A.shape) # (5, 7)
+				#print(type(v6))
+				#print(v6.shape) # (5, 4)
+				v6 = v6A[:, 0:4] # extract first 4 fields				
+				v6len = len(v6) # update new v6 len
+				####################################################################################				
+				pc = v6
+				if v6len > 0 :
+					spots0  = [{'pos': [pc[i][0] * np.cos(pc[i][2]) * np.sin(pc[i][1]),pc[i][0] * np.cos(pc[i][2]) * np.cos(pc[i][1])],'data': 1, 'brush':pg.intColor(i, v6len), 'symbol': 'o', 'size': 3 } for i in range(v6len)]
+
+		if 1: 
+			if v7len > 0:
+				pct = v7
+				spots1  = [{'pos': [pct[i][1],pct[i][2]],'data': 1, 'brush':pg.intColor(i, v7len), 'symbol': 's', 'size': 10 } for i in range(v7len)]
+				#print('v7=\n', pd.DataFrame(v7), '\n')
 			
 		flag = True
 			
