@@ -78,7 +78,7 @@ win.resize(1200,800)
 
 pg.setConfigOption('foreground', 'y')
  
-win.setWindowTitle('Long Range People Detect 100m')
+win.setWindowTitle('Long Range People Detect 50m')
 
 #**************************************
 
