@@ -206,7 +206,7 @@ Function call:
 	 ----------- \ --
 	 	      \+y
     
-    Based on IWR6843 (r,az,el) -> (x,y,z)
+    Convert based on IWR6843 (r,az,el) -> (x,y,z)
     el: elevation  <Theta bottom -> Obj
     az: azimuth    <Theta Obj ->Y Axis
     
