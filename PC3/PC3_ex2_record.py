@@ -77,9 +77,9 @@ def uartGetTLVdata(name):
 					v7i.extend(v7.iloc[i])
 					writer.writerow(v7i)
 					
-			if len(v8) > 2:
+			if len(v8) > 0:
 				print("\n-------------------- V8 -------------------------")
-				print("V8: TargetID :len({:d})".format(len(v8)-2))
+				print("V8: TargetID :len({:d})".format(len(v8)))
 				print(v8)
 				writer.writerow([ts,v8[0],'v8',v8[2:]])
 				
