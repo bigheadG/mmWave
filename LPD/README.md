@@ -301,7 +301,7 @@ V9:Point Cloud Side Info<br/>
 
 ## Snapshot raw data logged with V6 and V7 (based on F/W: V0985, S/W: lpd_v09_raw_ex0.py)    
     
-![LPD_V0985_RAW_EX0_20230204001](https://user-images.githubusercontent.com/2010446/216756459-ee198f1c-fdd3-4018-9c5b-a81ad8ebe582.png)
+![Screenshot 2023-02-08 12 06 53](https://user-images.githubusercontent.com/2010446/217431055-3db70659-1a24-4826-bc92-53ec4d6eaca4.png)
 
 ## Demo movie (based on F/W: V0910, S/W: lpd_v24_2d_pyqtgraph_xy_50m.py)
 
@@ -309,7 +309,7 @@ https://user-images.githubusercontent.com/2010446/216757691-cd267d35-de21-4b0b-b
 
 ## Demo movie (based on F/W: V0985, S/W: lpd_v24_2d_pyqtgraph_xy_50m.py)
 
-https://user-images.githubusercontent.com/2010446/216756901-6e4b1904-73c1-4d74-b751-991248ce03ec.mov
+https://user-images.githubusercontent.com/2010446/217431083-9964400b-95ea-4396-b8e3-7b4bf114e59a.mov
 
 ## Reference:
 
