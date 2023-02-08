@@ -86,8 +86,8 @@ win.setWindowTitle('Long Range People Detect 100m')
 #win.nextRow()
 w0 = win.addPlot()
 
-#w0.setRange(xRange=[-100,100],yRange=[0,150])
-w0.setRange(xRange=[-5,5],yRange=[0,10]) # test
+w0.setRange(xRange=[-100,100],yRange=[0,150])
+#w0.setRange(xRange=[-5,5],yRange=[0,10]) # test
 
 w0.setLabel('bottom', 'V6 Poin Cloud', 'Meter')
 w0.setLabel('left', 'range', 'meter')
