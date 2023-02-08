@@ -87,7 +87,7 @@ win.setWindowTitle('Long Range People Detect 100m')
 w0 = win.addPlot()
 
 w0.setRange(xRange=[-100,100],yRange=[0,150])
-#w0.setRange(xRange=[-5,5],yRange=[0,10]) # test
+#w0.setRange(xRange=[-5,5],yRange=[0,10]) # test when target distance under 10 meter
 
 w0.setLabel('bottom', 'V6 Poin Cloud', 'Meter')
 w0.setLabel('left', 'range', 'meter')
@@ -179,25 +179,23 @@ def radarExec():
 				#spots0  = [{'pos': [pc[i][0] * np.cos(pc[i][2]) * np.sin(pc[i][1]),pc[i][0] * np.cos(pc[i][2]) * np.cos(pc[i][1])],'data': 1, 'brush':pg.intColor(i, v6len), 'symbol': 'o', 'size': 3 } for i in range(v6len)]
 				
 				####################################################################################
-				# deNoise Algorithm:
-				# final columns = ['r', 'a', 'e', 'd', 'tid', 'snr', 'noise'] then sort()
-				JB_SNR_TH = 200 # set snr threshold observing by REAL case 		
+				# deNoise Algorithm: 
+				# PseudoCode: if snr >= SNR_TH then removing noise point cloud 
+				# Alert: please using numpy array for speed up if had timing demands, here using df for easy reading only 
+				# final columns = ['r', 'a', 'e', 'd', 'tid', 'snr', 'noise'] then sort() by 'snr' in descending order
+				JB_SNR_TH = 200 # for example: set snr threshold as 200, this value is recommended observing from REAL case 		
 				v6_df = pd.DataFrame(v6, columns=['r', 'a', 'e', 'd'])
 				v8_df = pd.DataFrame(v8)				
-				v6_df['tid'] = v8_df 
+				v6_df['tid'] = v8_df # added new field of 'tid'
 				v9_df = pd.DataFrame(v9, columns=['snr','noise'])
-				v6_df['snr'] = v9_df['snr'] 
-				v6_df['noise'] = v9_df['noise'] 
-				v6_df = v6_df.sort_values(by=['snr'], ascending=False)
+				v6_df['snr'] = v9_df['snr'] # added new field of 'snr'
+				v6_df['noise'] = v9_df['noise'] # added new field of 'noise'
+				v6_df = v6_df.sort_values(by=['snr'], ascending=False) # sorted by 'snr' in descending order
 				v6_df_logic = v6_df['snr'] >= JB_SNR_TH # filter logic
-				v6_df =  v6_df[v6_df_logic] # filter out 
+				v6_df = v6_df[v6_df_logic] # filter out noise and keep wanted point cloud
 				print('v6_df shape={}\nv6_df=\n{}\n'.format(v6_df.shape, v6_df)) # (23, 2)				
-				v6A = v6_df.to_numpy()
-				print(type(v6A))
-				print(v6A.shape) # (5, 7)
-				#print(type(v6))
-				#print(v6.shape) # (5, 4)
-				v6 = v6A[:, 0:4] # extract first 4 fields				
+				v6A = v6_df.to_numpy() # array
+				v6 = v6A[:, 0:4] # extract the first 4 fields, ['r','a','e','d']				
 				v6len = len(v6) # update new v6 len
 				####################################################################################				
 				pc = v6
