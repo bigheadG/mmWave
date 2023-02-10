@@ -166,3 +166,36 @@ Enable UART:
 	https://www.raspberrypi.org/documentation/configuration/uart.md
 
 
+## For pyqtgraph v0.13.1 need modified three part of the file.
+	
+	#(1) for pyqtgraph Version: 0.13.1
+	import pyqtgraph as pg
+	import pyqtgraph.opengl as gl
+	from pyqtgraph.Qt import mkQApp ,QtCore 
+
+	'''
+	# before pyqtgraph Version: 0.13.1
+	from pyqtgraph.Qt import QtCore, QtGui
+	import pyqtgraph.opengl as gl
+	import pyqtgraph as pg
+	'''
+	
+	#(2)
+	############################################
+	#app = QtGui.QApplication([]) 
+	app = mkQApp("PCT") #for pyqtgraph v0.13.1
+	
+	
+	#(3)#for pyqtgraph v0.13.1
+	if __name__ == '__main__':
+   		 pg.exec()
+  
+	'''
+	#before pyqtgraph Version: 0.13.1
+	if __name__ == '__main__':
+	    import sys
+	    if (sys.flags.interactive != 1) or not hasattr(QtCore,'PYQT_VERSION'):
+		QtGui.QApplication.instance().exec_()
+	'''
+
+	
