@@ -199,4 +199,13 @@ Enable UART:
 		QtGui.QApplication.instance().exec_()
 	'''
 
+## When run mmWave pyqtgraph 3D example may got the following error:
+	Error while drawing item <__main__.CustomTextItem object at 0x7f7950a9c4c0>.
+	Error while drawing item <__main__.CustomTextItem object at 0x7f7950a9c550>.
+		
+	To solve this error you can check the following github address:  
+	
+https://github.com/bigheadG/pyqtgraph_3d_text  
+	
+
 	
