@@ -319,7 +319,9 @@ https://user-images.githubusercontent.com/2010446/217431083-9964400b-95ea-4396-b
 2. LabGuide: https://github.com/bigheadG/mmWaveDocs/blob/master/68xx_long_range_people_det_user_guide_bf_100m.pdf
 	(Beamforming and BeamSteering has implemented on the device user guide) 
 
-3. KeyDataProtocol: https://github.com/bigheadG/mmWaveDocs/blob/master/V9_Protocol%20for%20LONG_RANGE_PEOPLE_DETECTION_KEY_data%20Project%20V0901_pdf.pdf
+3. KeyDataProtocol: 
+# ALERT: on V09.85 or later not supported
+https://github.com/bigheadG/mmWaveDocs/blob/master/V9_Protocol%20for%20LONG_RANGE_PEOPLE_DETECTION_KEY_data%20Project%20V0901_pdf.pdf
 	
     
 
