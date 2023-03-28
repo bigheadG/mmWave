@@ -172,7 +172,7 @@ Enable UART:
 	#(1) for pyqtgraph Version: 0.13.1
 	import pyqtgraph as pg
 	import pyqtgraph.opengl as gl
-	from pyqtgraph.Qt import mkQApp ,QtCore 
+	from pyqtgraph.Qt import mkQApp ,QtCore ,QtGui
 
 	''' # remove
 	# before pyqtgraph Version: 0.13.1
