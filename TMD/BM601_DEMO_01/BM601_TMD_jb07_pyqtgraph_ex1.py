@@ -13,10 +13,7 @@
 #                 2. library 'trafficTMD' should be updated to fit new data structure
 # jb04 2021.09.15 1. for real field testing 
 # jb05 2021.09.22 1. adde fN for frame number
-# jb06 2021.10.20 1. for REAL field test on V20.12, V80.36 and V80.37
-#                 2. V20.12A for NCTU  2D120M75ms, tune slope, cfar etc  
-#                 3. V80.36A for LiLin 2D120M50ms, tune stateParam  
-#                 4. V20.12A for LiLin 2D120M50ms, tune stateParam and nonMIMO   
+# jb06 2021.10.20 1. for REAL field test on V20.12, V80.36 and V80.37  
 # jb07 2021.10.20 1. for REAL field test on V80.36 (passed) but V80.37 (failed) 
 # jb07 2022.03.08 1. for REAL field test on V80.38
 #                 2. for x axis post_processing, jb_newX()   
