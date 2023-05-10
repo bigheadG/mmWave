@@ -1,8 +1,8 @@
 ###########################################################################
 # jb07_pyqtgraphy_ex1.py    2023.02.13
 # Hardware: IWR1843 ISK ES2
-# Firmware: V20.12A, V80.36 and V80.37 and V8061R testing
-# Software: jb07_pyqtgraphy_ex1.py
+# Firmware: V20.12A, V80.36 and V80.37 and V8062R testing
+# Software: BM601_TMD_jb07_pyqtgraphy_ex1.py
 # Python: V3.9.5
 ########################################################################
 # Revision History:
