@@ -32,7 +32,7 @@ JB_TARGET_SIZE		= 50	# default 20
 '''
 ###########################################################################
 # Parameters:
-JB_UART_PORT 		= 'COM30' 	# sel COM12 (TI EVM owner JB), COM5 (TI EVM owner Lilin) or COM9 (JB EVM)' # depends
+JB_UART_PORT 		= 'COM30' 	# sel COM12 (TI EVM owner JB) # depends
 JB_RANGE_NEAR		= -2 		# default 0 Meter
 JB_RANGE_FAR  		= 140		# default 100 Meter
 JB_LEFT 		= -15 		#-10	# default -1 Meter
