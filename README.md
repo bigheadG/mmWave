@@ -198,7 +198,11 @@ Enable UART:
 	    if (sys.flags.interactive != 1) or not hasattr(QtCore,'PYQT_VERSION'):
 		QtGui.QApplication.instance().exec_()
 	'''
-
+	############################################
+ 	setDaemon() is deprecated, set the daemon attribute instead
+ 	remove thread1.setDaemon(True)
+  	add    thread1.daemon = True
+  	############################################
 ## Please refer to https://github.com/bigheadG/pyqtgraph_3d_text when you find the following errors when executing the 3d program
 
 	Error while drawing item <__main__.CustomTextItem object at 0x7f7950a9c4c0>.
