@@ -166,8 +166,8 @@ Enable UART:
 	https://www.raspberrypi.org/documentation/configuration/uart.md
 
 
-## For pyqtgraph v0.13.1 users need to replace the three parts of the code in the file. 
-	
+# For pyqtgraph v0.13.1 users need to replace the three parts of the code in the file. 
+## Method 1:	
 	############################################
 	#(1) for pyqtgraph Version: 0.13.1
 	import pyqtgraph as pg
@@ -203,6 +203,53 @@ Enable UART:
  	remove thread1.setDaemon(True)
   	add    thread1.daemon = True
   	############################################
+
+## Method 2
+	############################################
+	#(1) for pyqtgraph Version: 0.13.1
+	from PyQt5 import QtGui, QtWidgets, QtCore   
+	#from PyQt5.QtGui import QPen, QColor
+	import pyqtgraph as pg
+	import pyqtgraph.opengl as gl
+	from pyqtgraph.Qt import mkQApp, QtGui
+
+	''' # remove
+	# before pyqtgraph Version: 0.13.1
+	from pyqtgraph.Qt import QtCore, QtGui
+	import pyqtgraph.opengl as gl
+	import pyqtgraph as pg
+	'''
+	
+	############################################
+	#(2)
+ 	app = QtWidgets.QApplication([])      
+	
+ 	# remove 
+	#app = QtGui.QApplication([]) #remove 
+	
+	############################################
+	#(3.0)#for pyqtgraph v0.13.1
+	if __name__ == '__main__':
+		 pg.exec()
+     	
+        #(3.1) 
+	if __name__ == '__main__':
+		import sys
+		if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'): 
+			#QtGui.QApplication.instance().exec_()     # for windows
+			QtWidgets.QApplication.instance().exec_()  # for linux
+ 
+	# remove
+ 	'''
+	#before pyqtgraph Version: 0.13.1 
+	if __name__ == '__main__':
+	    import sys
+	    if (sys.flags.interactive != 1) or not hasattr(QtCore,'PYQT_VERSION'):
+		QtGui.QApplication.instance().exec_()
+	'''
+
+
+
 ## Please refer to https://github.com/bigheadG/pyqtgraph_3d_text when you find the following errors when executing the 3d program
 
 	Error while drawing item <__main__.CustomTextItem object at 0x7f7950a9c4c0>.
