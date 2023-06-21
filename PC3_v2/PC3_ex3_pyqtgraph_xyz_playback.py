@@ -14,10 +14,15 @@
 #			 real time: 921600
 #
 #=============================================
-
+#(1) for pyqtgraph Version: 0.13.1
+import pyqtgraph as pg
+import pyqtgraph.opengl as gl
+from pyqtgraph.Qt import mkQApp ,QtCore ,QtGui
+'''
 from pyqtgraph.Qt import QtCore, QtGui
 import pyqtgraph.opengl as gl
 import pyqtgraph as pg
+'''
 import numpy as np
 from mmWave import pc3_v2
 import serial
@@ -107,7 +112,11 @@ class Custom3DAxis(gl.GLAxisItem):
 			val.setGLViewWidget(self.parent)
 			self.parent.addItem(val)
 
-app = QtGui.QApplication([])
+
+#(2)
+app = mkQApp("PCT") #for pyqtgraph v0.13.1
+#app = QtGui.QApplication([]) #remove 
+
 w = gl.GLViewWidget()
 w.show()
 
@@ -179,7 +188,7 @@ w.addItem(sp1)
 
 #for playback use
 
-(v6smu,v7smu,v8smu) = radar.readFile("pc3_2022-04-20-10-20-45.csv")
+(v6smu,v7smu,v8smu) = radar.readFile("pc3_2023-06-21-12-27-01.csv")
 
 
 print("------------------ v6smu --------start:{:}  stop:{:}--------------".format(radar.sim_startFN,sim_stopFN))
@@ -333,6 +342,9 @@ thread1.start()
 
 ## Start Qt event loop unless running in interactive mode.
 if __name__ == '__main__':
-    import sys
+	import sys
+	pg.exec()
+	'''
     if (sys.flags.interactive != 1) or not hasattr(QtCore,'PYQT_VERSION'):
         QtGui.QApplication.instance().exec_()
+    '''
