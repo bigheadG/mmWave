@@ -337,7 +337,8 @@ def uartThread(name):
 		radarExec()
 					
 thread1 = Thread(target = uartThread, args =("UART",))
-thread1.setDaemon(True)
+#thread1.setDaemon(True)
+thread1.daemon = True
 thread1.start()
 
 ## Start Qt event loop unless running in interactive mode.
