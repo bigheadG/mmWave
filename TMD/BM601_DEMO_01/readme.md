@@ -56,18 +56,6 @@ Library update:
 	
     jb04_release_pyqtgraph_TMD_ex1.py is an example output V6(point cloud) and V7(Target Objects) demo.
         
-(Demo01)
-
-https://user-images.githubusercontent.com/2010446/143519031-0d363b57-f6ec-40f8-b511-7e3ff29c5ac6.mov
-
-(Demo02)
-
-https://user-images.githubusercontent.com/2010446/143519146-e87895cc-75f4-4073-9303-e68f75b9eafe.mov
-
-(Demo03)
-
-https://user-images.githubusercontent.com/2010446/143519216-0ee8e66c-3995-41ab-8b05-b0b6061dabca.mov
-
 
 
 
