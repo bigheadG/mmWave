@@ -203,6 +203,15 @@ Enable UART:
  	remove thread1.setDaemon(True)
   	add    thread1.daemon = True
   	############################################
+        for pyqtgraph V0.13.1 
+	remove : circle = pg.QtGui.QGraphicsEllipseItem(-r, -r, r * 2, r * 2)
+ 	add new line : circle = pg.QtWidgets.QGraphicsEllipseItem(-r, -r, r * 2, r * 2)
+  	example :
+	for r in range(1, 10, 1):
+        #circle = pg.QtGui.QGraphicsEllipseItem(-r, -r, r * 2, r * 2)
+         circle = pg.QtWidgets.QGraphicsEllipseItem(-r, -r, r * 2, r * 2)
+         circle.setPen(pg.mkPen(1.0))
+         w0.addItem(circle)
 
 ## Method 2
 	############################################
@@ -247,6 +256,16 @@ Enable UART:
 	    if (sys.flags.interactive != 1) or not hasattr(QtCore,'PYQT_VERSION'):
 		QtGui.QApplication.instance().exec_()
 	'''
+ 
+ 	circle for pyqtgraph V0.13.1 
+	remove : circle = pg.QtGui.QGraphicsEllipseItem(-r, -r, r * 2, r * 2)
+ 	add new line : circle = pg.QtWidgets.QGraphicsEllipseItem(-r, -r, r * 2, r * 2)
+  	example :
+	for r in range(1, 10, 1):
+        #circle = pg.QtGui.QGraphicsEllipseItem(-r, -r, r * 2, r * 2)
+         circle = pg.QtWidgets.QGraphicsEllipseItem(-r, -r, r * 2, r * 2)
+         circle.setPen(pg.mkPen(1.0))
+         w0.addItem(circle)
 
 
 
