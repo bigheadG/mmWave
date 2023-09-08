@@ -206,7 +206,7 @@ Enable UART:
    
         for pyqtgraph V0.13.1 
 	remove circle = pg.QtGui.QGraphicsEllipseItem(-r, -r, r * 2, r * 2)
- 	add change to circle = pg.QtWidgets.QGraphicsEllipseItem(-r, -r, r * 2, r * 2)
+ 	add    circle = pg.QtWidgets.QGraphicsEllipseItem(-r, -r, r * 2, r * 2)
   	
    	example :
 	for r in range(1, 10, 1):
