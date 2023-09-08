@@ -215,6 +215,10 @@ Enable UART:
          circle.setPen(pg.mkPen(1.0))
          w0.addItem(circle)
 
+	#for pyqrgraph 0.13 verison
+  	remove win = pg.GraphicsWindow()
+   	add    win = pg.GraphicsLayoutWidget(show=True) 
+
 ## Method 2
 	############################################
 	#(1) for pyqtgraph Version: 0.13.1
