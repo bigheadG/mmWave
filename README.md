@@ -208,13 +208,6 @@ Enable UART:
 	remove circle = pg.QtGui.QGraphicsEllipseItem(-r, -r, r * 2, r * 2)
  	add    circle = pg.QtWidgets.QGraphicsEllipseItem(-r, -r, r * 2, r * 2)
   	
-   	example :
-	for r in range(1, 10, 1):
-        #circle = pg.QtGui.QGraphicsEllipseItem(-r, -r, r * 2, r * 2)
-         circle = pg.QtWidgets.QGraphicsEllipseItem(-r, -r, r * 2, r * 2)
-         circle.setPen(pg.mkPen(1.0))
-         w0.addItem(circle)
-
 	#for pyqrgraph 0.13 verison
   	remove win = pg.GraphicsWindow()
    	add    win = pg.GraphicsLayoutWidget(show=True) 
