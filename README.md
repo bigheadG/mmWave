@@ -244,8 +244,8 @@ Enable UART:
 	if __name__ == '__main__':
 		import sys
 		if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'): 
-			#QtGui.QApplication.instance().exec_()     # for windows
-			QtWidgets.QApplication.instance().exec_()  # for linux
+			#QtGui.QApplication.instance().exec_()     
+			QtWidgets.QApplication.instance().exec_()  # for Pyqtgraph_V0.13
  
 	# remove
  	'''
