@@ -35,7 +35,7 @@ VED:    Vital Energy Detection.
 
 # mmWave Data Sheet:
 BM101: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM101_F_C.pdf (deprecated) <br/> 
-BM201: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM201_I_C.pdf <br/> 
+BM201: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM201_O_C.pdf <br/> 
 BM301: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM301FDS_D_C.pdf (deprecated) <br/> 
 BM501: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM501_G_C.pdf <br/> 
 BM502: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM502_F_C.pdf <br/> 
