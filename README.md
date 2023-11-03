@@ -43,7 +43,7 @@ BM601: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM601_D_C.pd
 BM501-Module: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM501_M_A_C.pdf <br/> 
 BM502-Module: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM502_M_A_C.pdf <br/> 
 BM601-Module: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM601_M_A_C.pdf <br/> 
-BM501-EVK: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM501_D_C.pdf <br/>
+
 
 
 
