@@ -15,24 +15,24 @@ This App works with Raspberry Pi 3, Pi 2 , Pi 4, Jetson Nano ,Windows, MacOS or 
 Run this repository example needs install mmWave lib. Those examples are<br/>
 
 VSD, HAM, PMB, SRR, LPD, PC3D, TMD, ZOD, SVD, DRN, VOD, PC3, PCT, POS, PCR and VED examples:<br/><br/> 
-VSD:	Vital Signs Detection.<br/> 
-HAM:	High Accuracy Measurement.<br/>
-PMB:	People Moving Behavior.<br/>
-SRR:	Short Range Radar.<br/>
-LPD:	Long range People Detection.<br/>
-PC3D:	People Overhead Counting 3D.<br/>
-TMD:	Traffic Monitor Detection.<br/>
-ZOD:	Zone Occupancy Detection.<br/>
-SVD:	Surface Velocity Detection.<br/>
 DRN:	Drone Radar Navigation.<br/>
-VOD:	Vehicle Occupancy Detection.<br/>
+HAM:	High Accuracy Measurement.<br/>
+LPD:	Long range People Detection.<br/>
 PC3:	People Counting Detection.<br/>
 PC3_v2:	People Counting Detection 3D version:2.<br/>
-PCT:    People-Counting with Tilt Sensing.<br/>
-TRS:    Traffic_monitoring_detection Roadway Sensing.<br/>
-POS:	People counting Overhead Sensor.<br/>
+PC3D:	People Overhead Counting 3D.<br/>
 PCR:    People Counting short Range sensing.<br/>
-VED:    Vital Energy Detection.
+PCT:    People-Counting with Tilt Sensing.<br/>
+PMB:	People Moving Behavior.<br/>
+POS:	People counting Overhead Sensor.<br/>
+SRR:	Short Range Radar.<br/>
+SVD:	Surface Velocity Detection.<br/>
+TMD:	Traffic Monitor Detection.<br/>
+TRS:    Traffic_monitoring_detection Roadway Sensing.<br/>
+VED:    Vital Energy Detection.<br/>
+VOD:	Vehicle Occupancy Detection.<br/>
+VSD:	Vital Signs Detection.<br/> 
+ZOD:	Zone Occupancy Detection
 
 # mmWave Data Sheet:
 BM101: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM101_F_C.pdf (deprecated) <br/> 
