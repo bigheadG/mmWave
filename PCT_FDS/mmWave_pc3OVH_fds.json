@@ -1,0 +1,70 @@
+{
+  "mmWave": {
+    "working_mode": {
+      "select": 1,
+      "comments": "[0]:playback, [1]:real time, [2]: recording",
+      "diagramInvert": 2,
+      "clusterSize": 0.03,
+      "static_CNT": 120,
+      "version": "01"
+    },
+    "file": {
+      "recordFilePrefix": "pc3_360",
+      "config": "mmWave_PC3_fusion.json",
+      "playbackFile": "pc3_360_2022-12-28-15-55-14_rise_down.csv",
+      "staticCell": "static_cell.txt"
+    },
+    "uart": {
+      "port": "COM11",
+      "port1": "/dev/tty.SLAB_USBtoUART",
+      "port2": "/dev/tty.usbserial-0001",
+      "portpb": "/dev/tty.usbmodem14303"
+    },
+    "radar_install": {
+      "tiltAngle": 45.0,
+      "height": 2.41
+    },
+    "queueLen": {
+      "len": 15,
+      "notes_ori": 9
+    },
+    "v6": {
+      "flag": 1,
+      "range_x_lo": -10,
+      "range_x_hi": 10,
+      "range_y_lo": -10,
+      "range_y_hi": 10,
+      "tile_width": 20,
+      "tile_height": 20,
+      "unit": "meter, tile_width/tile_height: number of Grid"
+    },
+    "FDS_turningPoint": {
+      "x0": 1.0,
+      "y0": 1.0,
+      "gain1": 12.0,
+      "gain2": 6.0,
+      "notes": "turningPoint = [1.0,1.0,12.0,6.0] #[x0,y0,gain1,gain2 ]"
+    },
+    "FDS": {
+      "single_display": 1,
+      "lineNotify": 1,
+      "notifyMessage": "(Dev)Falling Detected ",
+      "dataLabel": "/tmp/mmWave_FDS",
+      "notes": "For FDS function: 1 enable, 0: disable"
+    },
+    "FDS_stateMachine": {
+      "obj_live": 60,
+      "vanishObj_live": 120,
+      "FDS_trig": -6,
+      "y_trig": 1.3,
+      "sq_rising_cnt": 20,
+      "fds_rising_cnt": 30,
+      "notes": "stateMachine use"
+    },
+    "threshold_filter": {
+      "doppler": 0.0,
+      "snr": 0.0,
+      "dbscan_enable": 0
+    }
+  }
+}
