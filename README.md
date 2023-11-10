@@ -53,25 +53,26 @@ BM601-Module: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM601
 [![Watch the video](https://github.com/bigheadG/imageDir/blob/master/YouTube-icon-full_color.png)](https://www.youtube.com/playlist?list=PL4QD4eKmMP2WvnZ4I8-AomJjiYkygw3G2 "Watch the Video")
 	
 # Hardware requirements:
+
       
-       VSD: Batman kit 101/201/501(AOP): IWR1642-VSD/IWR6843-VSD/IWR6843AOP-VSD
-       HAM: Batman kit 101/201: IWR1642-HAM/IWR6843-HAM
-       PMB: Batman kit 101/201: IWR1642-PMB/IWR6843-PMB
-       SRR: Batman kit 101: IWR1642-SRR
-       
-       LPD: Batman kit 201: IWR6843-LPD
-       PC3D: Batman kit 301: IWR6843-PC3D
-       TMD: Batman kit 201: IWR6843-TMD
-       ZOD: Batman kit 201(ISK) :IWR6843-ZOD
-       SVD: Batman Kit 201(ISK) :IWR6843-SVD
        DRN: Batman Kit 201(ISK) :IWR6843-DRN
-       VOD: Batman Kit 201(ISK) :IWR6843-VOD
+       HAM: Batman kit 101/201: IWR1642-HAM/IWR6843-HAM
+       LPD: Batman kit 201: IWR6843-LPD       
        PC3: Batman Kit 201(ISK) :IWR6843-PC3 and BM501 AOP-PC3
        PC3_v2: Batman Kit 201(ISK)/501(AOP) :IWR6843-PC3 and BM501 AOP-PC3
-       TRS: Batman Kit 201(ISK) :IWR6843-TRS
-       POS: Batman Kit 201(ISK)/501(AOP) :IWR6843-POS and BM501 AOP-POS
+       PC3D: Batman kit 301: IWR6843-PC3D
        PCR: Batman Kit 201(ISK) :IWR6843-PCR and BM501 AOP-PCR
-       VED: Batman Kit 201(ISK) :IWR6843-VED and BM501 AOP 
+       PCT_FDS: Batman Kit 502(AOP) :BM501 BM502 PCT-FDS
+       PMB: Batman kit 101/201: IWR1642-PMB/IWR6843-PMB
+       POS: Batman Kit 201(ISK)/501(AOP) :IWR6843-POS and BM501 AOP-POS
+       SRR: Batman kit 101: IWR1642-SRR
+       SVD: Batman Kit 201(ISK) :IWR6843-SVD
+       TMD: Batman kit 201: IWR6843-TMD
+       TRS: Batman Kit 201(ISK) :IWR6843-TRS
+       VED: Batman Kit 201(ISK) :IWR6843-VED and BM501 AOP
+       VOD: Batman Kit 201(ISK) :IWR6843-VOD
+       VSD: Batman kit 101/201/501(AOP): IWR1642-VSD/IWR6843-VSD/IWR6843AOP-VSD
+       ZOD: Batman kit 201(ISK) :IWR6843-ZOD
 
 
 # Install Library:
