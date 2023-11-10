@@ -63,7 +63,7 @@ BM601-Module: https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM601
        PC3_v2: Batman Kit 201(ISK)/501(AOP) :IWR6843-PC3 and BM501 AOP-PC3
        PC3D: Batman kit 301: IWR6843-PC3D
        PCR: Batman Kit 201(ISK) :IWR6843-PCR and BM501 AOP-PCR
-       PCT_FDS: Batman Kit 502(AOP) :BM501 BM502 PCT-FDS
+       PCT_FDS: Batman Kit 502(AOP) :BM502 PCT-FDS
        PMB: Batman kit 101/201: IWR1642-PMB/IWR6843-PMB
        POS: Batman Kit 201(ISK)/501(AOP) :IWR6843-POS and BM501 AOP-POS
        SRR: Batman kit 101: IWR1642-SRR
