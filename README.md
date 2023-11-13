@@ -247,7 +247,7 @@ Enable UART:
  
 	# remove
  	'''
-	#before pyqtgraph Version: 0.13.1 
+	#before pyqtgraph Version: V0.13.1 
 	if __name__ == '__main__':
 	    import sys
 	    if (sys.flags.interactive != 1) or not hasattr(QtCore,'PYQT_VERSION'):
