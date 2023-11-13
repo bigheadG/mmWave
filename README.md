@@ -176,15 +176,11 @@ Enable UART:
 ## Method 1:	
 	############################################
 	#(1) for pyqtgraph Version: 0.13.1
-	import pyqtgraph as pg
-	import pyqtgraph.opengl as gl
 	from pyqtgraph.Qt import mkQApp ,QtCore ,QtGui
 
 	''' # remove
 	# before pyqtgraph Version: 0.13.1
 	from pyqtgraph.Qt import QtCore, QtGui
-	import pyqtgraph.opengl as gl
-	import pyqtgraph as pg
 	'''
 	
 	############################################
@@ -221,17 +217,13 @@ Enable UART:
 ## Method 2
 	############################################
 	#(1) for pyqtgraph Version: 0.13.1
-	from PyQt5 import QtGui, QtWidgets, QtCore   
 	#from PyQt5.QtGui import QPen, QColor
-	import pyqtgraph as pg
-	import pyqtgraph.opengl as gl
+        from PyQt5 import QtGui, QtWidgets, QtCore   
 	from pyqtgraph.Qt import mkQApp, QtGui
 
 	''' # remove
 	# before pyqtgraph Version: 0.13.1
 	from pyqtgraph.Qt import QtCore, QtGui
-	import pyqtgraph.opengl as gl
-	import pyqtgraph as pg
 	'''
 	
 	############################################
