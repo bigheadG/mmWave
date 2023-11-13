@@ -2,7 +2,7 @@
 # File Name: PCT_ex3_pyqtgraph_v6_dataFrame.py
 #
 # Requirement:
-# Hardware: BM201-ISK or BM501-AOP
+# Hardware: BM502-AOP(V4958)
 # Firmware: 
 #
 # lib: pct
