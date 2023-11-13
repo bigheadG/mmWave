@@ -9,9 +9,9 @@
 ![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)
 
 # mmWave-PCT (People-Counting with Tilt Sensing SDK)
-\`\`\`diff
-Current PI's OS is supports python 3.7.0 - red
-\`\`\`
+
+Current PI's OS is supports python 3.7.0 
+
 
 https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
 
