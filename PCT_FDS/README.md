@@ -1,4 +1,4 @@
-<font color=#0000FF># PCT_FDS</font>
+# PCT_FDS
 
 ![Platform](https://img.shields.io/badge/Raspberry-Pi4-orange.svg)&nbsp;
 ![Platform](https://img.shields.io/badge/ubuntu-NCU-orange.svg)&nbsp;
@@ -10,7 +10,7 @@
 
 # mmWave-PCT (People-Counting with Tilt Sensing SDK)
 
-Current PI's OS is supports python 3.7.0
+<font color="red">Current PI's OS is supports python 3.7.0</font>
 
 https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
 
