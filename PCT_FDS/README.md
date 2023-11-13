@@ -51,7 +51,7 @@ Examples:
 
     PCT_ex0.py                              # show v6,v7 and v8 data
     PCT_ex2_record.py                       # record v6,v7 and v8 data. file output: pct_2023-xx-xx-xx-xx.csv
-
+    PCT_ex3_pyqtgraph_v6_dataFrame.py       # runtime/playback plot v6 point cloud, playback mode work with TK-101
 
  If Run demo program can not find any Raw data output:
       Please set UART to R/W mode: 
@@ -295,10 +295,6 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 
 ## ex3 playback demo
 https://user-images.githubusercontent.com/2010446/217719084-ee076820-0923-4d88-8284-b1d3906d6070.MOV
-
-
-## ex4 demo
-https://user-images.githubusercontent.com/2010446/218147568-6e8c1a1f-71ae-4583-bd7a-6c59da9cf0e0.mov
 
 
 
