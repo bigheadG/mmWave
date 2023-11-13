@@ -14,7 +14,7 @@ mmWave SDK examples based on Batman Kit mmWave Sensor module
 This App works with Raspberry Pi 3, Pi 2 , Pi 4, Jetson Nano ,Windows, MacOS or Intel NUC.
 Run this repository example needs install mmWave lib. Those examples are<br/>
 
-VSD, HAM, PMB, SRR, LPD, PC3D, TMD, ZOD, SVD, DRN, VOD, PC3, PCT, POS, PCR and VED examples:<br/><br/> 
+DRN, HAM, LPD, PC3, PC3D, PCR, PCT, PMB, POS, SRR, SVD, TMD, TRS, VED, VOD, VSD and ZOD examples:<br/><br/> 
 DRN:	Drone Radar Navigation.<br/>
 HAM:	High Accuracy Measurement.<br/>
 LPD:	Long range People Detection.<br/>
