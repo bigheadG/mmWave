@@ -10,7 +10,7 @@
 
 # mmWave-PCT (People-Counting with Tilt Sensing SDK)
 
-<font color="red">Current PI's OS is supports python 3.7.0</font>
+Current PI's OS is supports python 3.7.0
 
 https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
 
