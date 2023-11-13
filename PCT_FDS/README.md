@@ -10,8 +10,9 @@
 
 # mmWave-PCT (People-Counting with Tilt Sensing SDK)
 \`\`\`diff
-Current PI's OS is supports python 3.7.0
+Current PI's OS is supports python 3.7.0 - red
 \`\`\`
+
 https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
 
 This repository contains the Batman mmWave-PCT People-Counting with Tilt Sensor SDK. The sample code below consists of instruction for using the mmWave library. This mmWave-PCT Python Program will work with People-Counting Wall Mount with Tilt Sensing Batman BM502-PCT mmWave Kit solution. This Python Program works with a Raspberry Pi 4, Windows, Linux, or MAC computer with Batman BM502-PCT Kit attached via Kit’s HAT Board; and that the BM502 Kit is an easy-to-use mmWave sensor evaluation kit for People Sensing, People Counting, or People Occupancy Density Estimation in approx. 4.5m x 4.5m x 3m region without privacy invasion; and where the Python Program have multiple people detection in a 3-Dimentional Area with ID tag, posX, posY, posZ, velX, velY, velZ, accX, accY, accZ parameters, along with Point Clouds with elevation, azimuth, doppler, range, and snr parameters.
