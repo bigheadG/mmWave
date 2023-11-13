@@ -292,10 +292,6 @@ Each Target List consists of an array of target IDs, A targetID at index i is th
 
         ####################################################################
 
-## ex1 demo
-https://user-images.githubusercontent.com/2010446/218151268-ad194cf7-ad40-4350-bcd1-06f21dc14eb1.mov
-
-
 ## ex3 playback demo
 https://user-images.githubusercontent.com/2010446/217719084-ee076820-0923-4d88-8284-b1d3906d6070.MOV
 
