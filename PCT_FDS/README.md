@@ -305,24 +305,13 @@ https://user-images.githubusercontent.com/2010446/218147568-6e8c1a1f-71ae-4583-b
 # AOP Coordinate Geometry
 
 
-
-
 ![BM502-PCT_wall_H_001](https://user-images.githubusercontent.com/2010446/218928431-74adfabd-78ed-4163-b004-113db1d9bbda.jpg)
 ![BM502-PCT_wall_H_002](https://user-images.githubusercontent.com/2010446/222321945-513f67d7-9156-4ab3-8c4a-b671f7d8bbf0.jpg)
 ![BM502-PCT_wall_H_003](https://user-images.githubusercontent.com/2010446/222327980-f80a2a31-ac76-4bdd-a963-6867ee594832.jpg)
 
 
 
-## Reference
 
- 
-1. LabGuide: [People counting Overhead reference guide](https://dev.ti.com/tirex/explore/node?node=AGn5r.xojDrrAKHxSfvzFg__VLyFKFf__LATEST)
-
-2. TuningGuide_01: 
-[3D_people_counting_tracker_layer_tuning_guide.pdf](https://github.com/bigheadG/mmWave_elink/files/7465690/3D_people_counting_tracker_layer_tuning_guide.pdf)
-
-3. TuningGuide_02:
-[3D_people_counting_detection_layer_tuning_guide.pdf](https://github.com/bigheadG/mmWave_elink/files/7502420/3D_people_counting_detection_layer_tuning_guide.pdf)
 
 # Please download the following file from DROPBOX link 
 [https://www.dropbox.com/s/41nivrxk9px14gy/main.exe?dl=0](https://www.dropbox.com/scl/fi/z18ain7xgiauer827iwep/main.exe?rlkey=16fclfrau57qao4ehe27g9rby&dl=0)
@@ -448,3 +437,13 @@ picture right: process_2 output
 ## FDS falling Red
  ![fds_red](https://github.com/bigheadG/PCT_FDS/assets/2010446/b37ed25f-fdb5-4d2e-be5d-a37f63245af5)
 
+## Reference
+
+ 
+1. LabGuide: [People counting Overhead reference guide](https://dev.ti.com/tirex/explore/node?node=AGn5r.xojDrrAKHxSfvzFg__VLyFKFf__LATEST)
+
+2. TuningGuide_01: 
+[3D_people_counting_tracker_layer_tuning_guide.pdf](https://github.com/bigheadG/mmWave_elink/files/7465690/3D_people_counting_tracker_layer_tuning_guide.pdf)
+
+3. TuningGuide_02:
+[3D_people_counting_detection_layer_tuning_guide.pdf](https://github.com/bigheadG/mmWave_elink/files/7502420/3D_people_counting_detection_layer_tuning_guide.pdf)
