@@ -31,7 +31,8 @@ The BM502 Module from the EVM Kit needs to be mounted at a heigh of 2.8-3.0m top
 
  Note : Specifications subject to change without prior notice
 
-     Measure Range: 4.5m x 4.5m x 3.0m 
+    
+    Measure Range: 4.5m x 4.5m x 3.0m 
     Power supply: 5Vdc/2.1A 
 
 # Installing
