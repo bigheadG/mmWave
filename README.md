@@ -23,7 +23,7 @@ PC3_v2:	 People Counting Detection 3D version:2.<br/>
 PC3D:	 People Overhead Counting 3D.<br/>
 PCR:     People Counting short Range sensing.<br/>
 PCT:     People-Counting with Tilt Sensing.<br/>
-PCT_FDS: People Fall Detection demo application based on mmWave-PCT
+PCT_FDS: People Fall Detection demo application based on mmWave-PCT.<br/>
 PMB:	 People Moving Behavior.<br/>
 POS:	 People counting Overhead Sensor.<br/>
 SRR:	 Short Range Radar.<br/>
