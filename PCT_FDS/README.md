@@ -49,8 +49,8 @@ Library update:
 
 Examples:
 
-        PCT_ex0.py                              # show v6,v7 and v8 data
-	PCT_ex2_record.py                       # record v6,v7 and v8 data. file output: pct_2023-xx-xx-xx-xx.csv
+    PCT_ex0.py                              # show v6,v7 and v8 data
+    PCT_ex2_record.py                       # record v6,v7 and v8 data. file output: pct_2023-xx-xx-xx-xx.csv
 
 
  If Run demo program can not find any Raw data output:
@@ -80,7 +80,7 @@ Examples:
     port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
  
   ### Jetson Nano use ttyTHS1
-      port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
+    port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
     
   ### use USB-UART
     port = serial.Serial("/dev/ttyUSB0",baudrate = 921600, timeout = 0.5)
