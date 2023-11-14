@@ -437,7 +437,8 @@ picture right: process_2 output
 ## FDS falling Red
  ![fds_red](https://github.com/bigheadG/PCT_FDS/assets/2010446/b37ed25f-fdb5-4d2e-be5d-a37f63245af5)
 
-## Reference
+
+# Reference
 
  
 1. LabGuide: [People counting Overhead reference guide](https://dev.ti.com/tirex/explore/node?node=AGn5r.xojDrrAKHxSfvzFg__VLyFKFf__LATEST)
