@@ -219,7 +219,7 @@ Enable UART:
 	############################################
 	#(1) for pyqtgraph Version: 0.13.1
 	#from PyQt5.QtGui import QPen, QColor
-        from PyQt5 import QtGui, QtWidgets, QtCore   
+    from PyQt5 import QtGui, QtWidgets, QtCore   
 	from pyqtgraph.Qt import mkQApp, QtGui
 
 	''' # remove
