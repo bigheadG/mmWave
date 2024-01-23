@@ -274,7 +274,7 @@ Enable UART:
 	
 	
 
-## In MAC got the following error:
+## In MAC got setDaemon error (got the following message):
 	DeprecationWarning: setDaemon() is deprecated, set the daemon attribute instead
 	thread1.setDaemon(True)
 	2024-01-23 13:53:22.983 Python[1631:77099] WARNING: Secure coding is not enabled for restorable state! Enable secure coding by implementing 		NSApplicationDelegate.applicationSupportsSecureRestorableState: and returning YES.
