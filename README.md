@@ -274,7 +274,7 @@ Enable UART:
 	
 	
 
-## In MAC got setDaemon error (got the following message):
+## In MAC got setDaemon error (got the following message): 2014-01-23
 	DeprecationWarning: setDaemon() is deprecated, set the daemon attribute instead
 	thread1.setDaemon(True)
 	2024-01-23 13:53:22.983 Python[1631:77099] WARNING: Secure coding is not 
@@ -287,6 +287,7 @@ Enable UART:
 	#thread1.start()
 
  	added:
+  	from threading import Thread
  	thread1 = threading.Thread(target=uartWork("UART"), daemon=True)
 	thread1.start()
 	
