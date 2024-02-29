@@ -1,4 +1,5 @@
 ###########################################################################
+# show simple form 2024.02.26
 # jb07_pyqtgraphy_ex1.py    2023.02.13
 # Hardware: IWR1843 ISK ES2
 # Firmware: V20.12A, V80.36 and V8062R testing
@@ -32,7 +33,7 @@ JB_TARGET_SIZE		= 50	# default 20
 '''
 ###########################################################################
 # Parameters:
-JB_UART_PORT 		= 'COM26' 	# sel COM12 (TI EVM owner JB) # depends
+JB_UART_PORT 		= 'COM22' 	# sel COM12 (TI EVM owner JB) # depends
 JB_RANGE_NEAR		= -2 		# default 0 Meter
 JB_RANGE_FAR  		= 140		# default 100 Meter
 JB_LEFT 		= -15 		#-10	# default -1 Meter
@@ -127,6 +128,7 @@ from scipy import signal
 import pandas as pd
 pd.options.display.float_format = '{:,.2f}'.format
 
+
 # run pyqtgraph example
 #import pyqtgraph.examples
 #pyqtgraph.examples.run()
@@ -151,13 +153,14 @@ fN = 0 # frame number
 ########################################################################
 # open a WINDOW
 #win = pg.GraphicsWindow()
-win = pg.GraphicsLayoutWidget(show=True) #for pyqrgraph 0.13 verison
+#win = pg.GraphicsLayoutWidget(show=True) #for pyqrgraph 0.13 verison
+win = pg.GraphicsLayoutWidget(show=False) #for pyqrgraph 0.13 verison
 
 pg.setConfigOption('foreground', 'y') # show grid in YELLOW
  
 
 win.resize(1200, 800)
-win.setWindowTitle('Traffic Monitor Detect Radar')
+win.setWindowTitle('Traffic Monitor Detect Radar (V80.38_TMD)')
 # 1) for TARGET location scatterPlot
 # for V7 TARGET
 w3 = win.addPlot()
@@ -256,7 +259,117 @@ tmd.debug = True
 spots3= []
 
 
+##############################################################################################################
+# Alert: here just for demo on V6 only, the original keep at following as tmdExec00()
 def tmdExec():
+	global spots0,spots1,spots2,spots3,v6len,v7len,v8len,v9len
+	global testA
+	global JB_textCount, v7, JB_POINT_CLOUD_SIZE, JB_TARGET_SIZE
+	global fN, JB_SNR_TH
+	
+	(dck,v6,v7,v8,v9) = tmd.tlvRead(False)	
+	#dck = 1
+	if dck == 1:
+		v6len = len(v6)
+		v7len = len(v7)
+		v8len = len(v8)
+		v9len = len(v9)
+		fN = tmd.hdr.frameNumber
+		print('\n')
+		print('###########################')
+		print('# fN={:10d}'.format(fN))
+		print('###########################')
+		print("JB> Sensor Data: [fN, v6, v7, v8, v9] := [{:10d},{:3d},{:3d},{:3d},{:3d}]".format(fN,v6len,v7len,v8len,v9len))
+		#print("JB> Sensor Data: [fN, v6, v7]:[{:10d}, {:3d}, {:3d}]".format(fN, v6len, v7len))
+		
+		
+		#print(v6)
+		#for i in range(v6len):
+		#	print(v6[i])
+			
+		df = pd.DataFrame(v6, columns=['r', 'a', 'e', 'd', 'x', 'y', 'z'])
+		print(df)
+		
+		
+		
+		#(1) for POINT CLOUD
+		if 0 and v6len > 0:
+						
+			# changed from df to array
+			####################################################################################
+			# deNoise Algorithm: 
+			# v6 => v6A => v6A_sorted => v6A_filtered => v6
+			# PseudoCode: if tid < 253 then removing noise point cloud 
+			# PseudoCode: if snr >= SNR_TH then removing noise point cloud 
+			# Alert: please using numpy array for speed up if had timing demands, here using df for easy reading only 			
+			# V6 structure: [(range,azimuth,elevation,doppler,sx,sy,sz),......]
+			# refer01: ['r', 'a', 'e', 'd', 'sx', 'sy', 'sz']
+			# refer02: ['r', 'a', 'e', 'd', 'sx', 'sy', 'sz', 'tid', 'snr', 'noise'] # expanded 3 fields
+			#          0    1    2    3      4      5     6      7      8        9
+			v6_len = np.array(v6).shape[0] 
+			v6_width = np.array(v6).shape[1] + 3 # 3 means field number ['tid', 'snr', 'noise'] 
+			v6A = np.zeros( (v6_len, v6_width) ) # final columns = ['r', 'a', 'e', 'd', 'tid', 'snr', 'noise']
+			v6A[:, 0:7] = v6 # copy 
+			if len(v8) > 0:
+				v6A[:, 7] = v8 # insert field, 'tid' 
+			if len(v9) > 0:
+				v6A[:, 8:] = v9 # insert field, 'snr' 'noise'			
+			
+			# sorted by 8, 'snr' 
+			v6A_sorted_indices = np.lexsort((v6A[:, 7], v6A[:, 6], v6A[:, 5], v6A[:, 4], v6A[:, 3], v6A[:, 2], v6A[:, 1], v6A[:, 0], v6A[:, 8]))[::-1] # sort filed by 8 ('snr') then reverse
+			v6A_sorted = v6A[v6A_sorted_indices]
+			# filter out invalid tid, if tid < 253 
+			jb_tid_logic = v6A_sorted[:, 7] < 253 
+			v6A_sorted = v6A_sorted[jb_tid_logic]  
+			#print("# refer02: ['r', 'a', 'e', 'd', 'sx', 'sy', 'sz', 'tid', 'snr', 'noise']")
+			#print('v6A_sorted shape={}\nv6A_sorted=\n{}\n'.format(v6A_sorted.shape, v6A_sorted)) # example (13,10)				
+			jb_snr_logic = v6A_sorted[:, 8] >= JB_SNR_TH # filter logic by if snr > JB_SNT_TH
+			#print('v6A_sorted shape={}\nv6A_sorted=\n{}\n'.format(v6A_sorted.shape, v6A_sorted)) # example (13,10)				
+			#print(jb_snr_logic)
+			v6A_filtered = v6A_sorted[jb_snr_logic] # filter out noise and keep wanted point cloud
+			#print('run deNoise Algorithm, if snr >= JB_SNR_TH {}'.format(JB_SNR_TH)) 
+			#print('v6A_filtered shape={}\nv6A_filtered=\n{}\n'.format(v6A_filtered.shape, v6A_filtered)) 			
+			print("JB> refer v6: ['r', 'a', 'e', 'd', 'sx', 'sy', 'sz', 'tid', 'snr', 'noise']")
+			print('JB> v6A_filtered=\n{}\n'.format(v6A_filtered)) 				
+			v6 = v6A_filtered[:, 0:7] # extract the first 7 fields, ['r', 'a', 'e', 'd', 'sx', 'sy', 'sz']				
+			v6len = len(v6) # update new v6 len
+ 			####################################################################################
+
+			# ''' keep df syntax
+			if 1:
+				####################################################################################
+				# deNoise Algorithm: 
+				# PseudoCode: if snr >= SNR_TH then removing noise point cloud 
+				# Alert: please using numpy array for speed up if had timing demands, here using df for easy reading only 
+				# final columns = ['r', 'a', 'e', 'd', 'tid', 'snr', 'noise'] then sort() by 'snr' in descending order
+				
+				# V6 structure: [(range,azimuth,elevation,doppler,sx,sy,sz),......]
+				JB_SNR_TH = 150 # for example: set snr threshold as 200, this value is recommended observing from REAL case
+				# if v6 is list 		
+				v6_df = pd.DataFrame(np.array(v6), columns=['r', 'a', 'e', 'd', 'sx', 'sy', 'sz'])
+				v8_df = pd.DataFrame(v8)				
+				v6_df['tid'] = v8_df # added new field of 'tid'
+				v9_df = pd.DataFrame(v9, columns=['snr','noise'])
+				v6_df['snr'] = v9_df['snr'] # added new field of 'snr'
+				v6_df['noise'] = v9_df['noise'] # added new field of 'noise'
+				v6_df = v6_df.sort_values(by=['snr'], ascending=False) # sorted by 'snr' in descending order
+				v6_df_logic = v6_df['snr'] >= JB_SNR_TH # filter logic
+				v6_df = v6_df[v6_df_logic] # filter out noise and keep wanted point cloud
+				print('run deNoise Algorithm, if snr >= JB_SNR_TH {}'.format(JB_SNR_TH)) 
+				print('v6_df shape={}\nv6_df=\n{}\n'.format(v6_df.shape, v6_df)) # (23, 2)				
+				v6A = v6_df.to_numpy() # array
+				v6 = v6A[:, 0:7] # extract the first 7 fields, ['r', 'a', 'e', 'd', 'sx', 'sy', 'sz']				
+				v6len = len(v6) # update new v6 len
+				print('v6_df=\n')
+				print(v6_df)
+				####################################################################################
+
+			
+ 
+		port.flushInput()
+ 
+
+def tmdExec00():
 	global spots0,spots1,spots2,spots3,v6len,v7len,v8len,v9len
 	global testA
 	global JB_textCount, v7, JB_POINT_CLOUD_SIZE, JB_TARGET_SIZE
@@ -417,6 +530,7 @@ def tmdExec():
 		#(3) merge POINT CLOUD and TARGET
 		spots3 += spots0	
 	port.flushInput()
+
 ############################################################################################################
 				 
 ############################################################################################################
@@ -426,7 +540,7 @@ def uartThread(name):
 		tmdExec()
 					
 thread1 = Thread(target = uartThread, args =("UART",))
-thread1.setDaemon(True)
+#thread1.setDaemon(True)
 thread1.start()
 
 ## Start Qt event loop unless running in interactive mode or using pyside.
