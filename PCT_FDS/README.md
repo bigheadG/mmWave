@@ -318,7 +318,8 @@ https://user-images.githubusercontent.com/2010446/217719084-ee076820-0923-4d88-8
 
 for WINDOWS: [https://www.dropbox.com/s/41nivrxk9px14gy/main.exe?dl=0](https://www.dropbox.com/scl/fi/z18ain7xgiauer827iwep/main.exe?rlkey=16fclfrau57qao4ehe27g9rby&dl=0)
 
-for UBUNTU (about 250 MB): https://www.dropbox.com/scl/fo/i5osazown4424tkww1yud/h?rlkey=2lkarcfggy0bxe3kaddtr8rbt&dl=0
+for UBUNTU (about 250 MB):[ https://www.dropbox.com/scl/fo/i5osazown4424tkww1yud/h?rlkey=2lkarcfggy0bxe3kaddtr8rbt&dl=0
+](https://www.dropbox.com/scl/fi/yydmmdv366a7nd3xs50nt/main?rlkey=7o7bzgi2jybsfhll622ab3o6z&dl=0)
 
 ## Running procedures in brief:
 
