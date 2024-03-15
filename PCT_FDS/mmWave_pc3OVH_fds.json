@@ -15,10 +15,18 @@
       "staticCell": "static_cell.txt"
     },
     "uart": {
-      "port": "COM11",
+      "port": "/dev/ttyUSB0",
       "port1": "/dev/tty.SLAB_USBtoUART",
       "port2": "/dev/tty.usbserial-0001",
       "portpb": "/dev/tty.usbmodem14303"
+    },
+    "MQTT": {
+      "IP": "59.124.7.96",
+      "enable": 1,
+      "topic": "fds",
+      "v6_enable": 1,
+      "topic_v6" : "v6",
+      "notes": "MQTT_Server IP, 0:disable 1:enable"
     },
     "radar_install": {
       "tiltAngle": 45.0,
@@ -47,8 +55,8 @@
     },
     "FDS": {
       "single_display": 1,
-      "lineNotify": 1,
-      "notifyMessage": "(Dev)Falling Detected ",
+      "lineNotify": 0,
+      "notifyMessage": "(Dev)JB_Falling Detected_test ",
       "dataLabel": "/tmp/mmWave_FDS",
       "notes": "For FDS function: 1 enable, 0: disable"
     },
