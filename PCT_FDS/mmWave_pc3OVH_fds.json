@@ -21,7 +21,7 @@
       "portpb": "/dev/tty.usbmodem14303"
     },
     "MQTT": {
-      "IP": "59.124.7.96",
+      "IP": "xx.xx.xx.xx",
       "enable": 1,
       "topic": "fds",
       "v6_enable": 1,
