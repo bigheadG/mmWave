@@ -22,7 +22,7 @@
     },
     "MQTT": {
       "IP": "xx.xx.xx.xx",
-      "enable": 1,
+      "enable": 0,
       "topic": "fds",
       "v6_enable": 1,
       "topic_v6" : "v6",
