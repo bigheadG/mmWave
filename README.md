@@ -290,4 +290,13 @@ Enable UART:
   	from threading import Thread
  	thread1 = threading.Thread(target=uartWork("UART"), daemon=True)
 	thread1.start()
-	
+
+ ## When MQTT got error:
+		 client = mqtt.Client()
+		             ^^^^^^^^^^^^^
+		TypeError: Client.__init__() missing 1 required positional argument: 'callback_api_version'
+
+        sol:
+          #client = mqtt.Client()
+   	  client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
+	 
