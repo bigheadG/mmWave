@@ -12,7 +12,9 @@ Various methods of drawing scrolling plots.
 #import initExample ## Add path to library (just for examples; you do not need this)
 
 import pyqtgraph as pg
-from pyqtgraph.Qt import QtCore, QtGui
+#from pyqtgraph.Qt import QtCore, QtGui
+from PyQt5 import QtGui, QtWidgets, QtCore   
+from pyqtgraph.Qt import mkQApp, QtGui
 
 import numpy as np
 import numpy.matlib 
@@ -72,7 +74,8 @@ class globalV:
 	def __init__(self, count):
 		self.count = count
 
-win = pg.GraphicsWindow()
+#win = pg.GraphicsWindow()
+win = pg.GraphicsLayoutWidget(show=True) 
 
 pg.setConfigOption('foreground', 'y')
 win.setWindowTitle('High Accuracy Measurement')
@@ -120,7 +123,7 @@ timer.start(250) # 80: got(20 Times)   *50ms from uart:
 #for jetson nano
 #port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5)
 #for MAC os
-port = serial.Serial("/dev/tty.usbmodemGY0043864",baudrate = 921600, timeout = 0.5)
+port = serial.Serial("COM14",baudrate = 921600, timeout = 0.5)
 #for windows
 #port = serial.Serial("COM20", baudrate = 921600, timeout = 0.5)
 
@@ -167,4 +170,5 @@ if __name__ == '__main__':
 	if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
 		mainwindow=MainWindow()
 		mainwindow.show()
-		QtGui.QApplication.instance().exec_()
+		#QtGui.QApplication.instance().exec_()
+		QtWidgets.QApplication.instance().exec_()  # for Pyqtgraph_V0.13
