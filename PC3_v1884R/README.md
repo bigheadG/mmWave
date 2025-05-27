@@ -163,7 +163,3 @@ Report as following,
 ## Reference:
 
 1. Data Structure: [jb_V1884R_PC3_10m_55ms_V03.pdf](https://github.com/bigheadG/mmWave_zyyx/files/10292192/jb_V1884R_PC3_10m_55ms_V03.pdf)
-
-2. Block Diagram 1: [Block Diagram1-20221229001.pdf](https://github.com/bigheadG/mmWave_zyyx/files/10317558/Block.Diagram1-20221229001.pdf)
-
-3. Block Diagram 2: [Block Diagram2-20221229001.pdf](https://github.com/bigheadG/mmWave_zyyx/files/10317560/Block.Diagram2-20221229001.pdf)
