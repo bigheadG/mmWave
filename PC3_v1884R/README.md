@@ -145,10 +145,6 @@ Based on IWR6843 3D(r,az,el) -> (x,y,z)
     This python program is the same as above which dataFrame format is more easier for reading 
     run on mmWave_pc3_1884r_ex1.py      #display radar information by pandas (dataFrame type)
 
-    (Step 3) Running Algorithm
-    Please change the folder to /mmap_run/linux 
-    then reading README first for Getting Started 
-
 # (1) mmWave_pc3_1884r_ex0.py
     
 Report as following, 
