@@ -1,5 +1,5 @@
 # mmWave_zyyx
-This repository contains the mmWave-PC3 People Counting & Detection mmWave Sensor SDK for Zyyx Japan using Batman BM201-PC3 mmWave Kit solution. The sample codes in this GitHub Folder consist of instruction for using the mmWave lib. The Python Programs in this Folder work with a Raspberry Pi 4 & NVIDIA Jetson Nano attached via Kit’s HAT Board, or work with Windows/Linux computer or MAC computer via EM110 Emulator attached to the Kit; for People Sensing, People Counting, or People Occupancy Density Estimation in approx. 10m x 10m area (Azimuth FOV with radius of 10m) without privacy invasion; and where the Python Programs would have multiple people detection in a 3-Dimentional Area with ID tag, posX, posY, posZ, velx, vely, velz, accX, accY, accZ parameters, along with Point Clouds with Elevation, Azimuth, Doppler, Range, and SNR parameters.
+This repository contains the mmWave-PC3 People Counting & Detection mmWave Sensor SDK for using Batman BM201-PC3 mmWave Kit solution. The sample codes in this GitHub Folder consist of instruction for using the mmWave lib. The Python Programs in this Folder work with a Raspberry Pi 4 & NVIDIA Jetson Nano attached via Kit’s HAT Board, or work with Windows/Linux computer or MAC computer via EM110 Emulator attached to the Kit; for People Sensing, People Counting, or People Occupancy Density Estimation in approx. 10m x 10m area (Azimuth FOV with radius of 10m) without privacy invasion; and where the Python Programs would have multiple people detection in a 3-Dimentional Area with ID tag, posX, posY, posZ, velx, vely, velz, accX, accY, accZ parameters, along with Point Clouds with Elevation, Azimuth, Doppler, Range, and SNR parameters.
 
 # Hardware:
     Batman kit-201 (ISK)
@@ -14,8 +14,7 @@ https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM201_K_C.pdf
     $sudo pip3 install pandas
    
 # import 
-    import pc3_zyyx             
-    import osRadar as osRadar
+    from mmWave import pc3_v1884R     
     
 # UART Setting:
 
@@ -40,7 +39,7 @@ https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM201_K_C.pdf
 
 # define
     
-    radar = pc3_zyyx.pc3_zyyx(port)  
+    radar =  pc3_v1884R.pc3_v1884R(port) 
     
     (dck,v1010,v1011,v1012,v1020,v1021) = radar.tlvRead(False)
     fn = radar.frameNumber
@@ -140,27 +139,22 @@ Based on IWR6843 3D(r,az,el) -> (x,y,z)
     
     (Step 1) Verifying system integration 
     The first python program can be used as Hardware (Batman kit-201) Veirification purpose
-    run on mmWave_pc3_zyyx_ex0.py      #display radar information (raw data)
+    run on mmWave_pc3_1884r_ex0.py      #display radar information (raw data)
     
     (Step 2) Easy reading format
     This python program is the same as above which dataFrame format is more easier for reading 
-    run on mmWave_pc3_zyyx_ex1.py      #display radar information by pandas (dataFrame type)
+    run on mmWave_pc3_1884r_ex1.py      #display radar information by pandas (dataFrame type)
 
     (Step 3) Running Algorithm
     Please change the folder to /mmap_run/linux 
     then reading README first for Getting Started 
 
-# (1) mmWave_pc3_zyyx_ex0.py
+# (1) mmWave_pc3_1884r_ex0.py
     
 Report as following, 
     
 ![image](https://user-images.githubusercontent.com/2010446/209753686-8374914a-0e82-4ef9-a967-c266cf8222e1.png)
 
-# (2) mmWave_pc3_zyyx_ex1.py
-
-Report as following, 
-
-![image](https://user-images.githubusercontent.com/2010446/209753819-41ebeb32-b961-41f0-8426-65c2917dec62.png)
 
 
 # recording data (type:v1020):
