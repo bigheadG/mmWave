@@ -5,7 +5,7 @@ This repository contains the mmWave-PC3 People Counting & Detection mmWave Senso
     Batman kit-201 (ISK)
 data sheet:
 
-
+[Datasheet_BM201.pdf](https://github.com/user-attachments/files/20649796/Datasheet_BM201.pdf)
 
 # installing:
     pySerial Library
