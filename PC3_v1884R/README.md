@@ -1,10 +1,11 @@
-# mmWave_zyyx
+# mmWave_PC3-1884R
 This repository contains the mmWave-PC3 People Counting & Detection mmWave Sensor SDK for using Batman BM201-PC3 mmWave Kit solution. The sample codes in this GitHub Folder consist of instruction for using the mmWave lib. The Python Programs in this Folder work with a Raspberry Pi 4 & NVIDIA Jetson Nano attached via Kit’s HAT Board, or work with Windows/Linux computer or MAC computer via EM110 Emulator attached to the Kit; for People Sensing, People Counting, or People Occupancy Density Estimation in approx. 10m x 10m area (Azimuth FOV with radius of 10m) without privacy invasion; and where the Python Programs would have multiple people detection in a 3-Dimentional Area with ID tag, posX, posY, posZ, velx, vely, velz, accX, accY, accZ parameters, along with Point Clouds with Elevation, Azimuth, Doppler, Range, and SNR parameters.
 
 # Hardware:
     Batman kit-201 (ISK)
 data sheet:
-https://github.com/bigheadG/mmWaveDocs/blob/master/Datasheet_BM201_K_C.pdf
+
+
 
 # installing:
     pySerial Library
