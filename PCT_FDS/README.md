@@ -316,9 +316,9 @@ https://user-images.githubusercontent.com/2010446/217719084-ee076820-0923-4d88-8
 ## Please download the following file from DROPBOX link 
 ## Download FDS 'main' file: Please download by Dropbox linking as following,
 
-for WINDOWS (about 130 MB with MQTT support): https://www.dropbox.com/scl/fi/7mn791j12js3qvldsi3pr/main_mqtt.exe?rlkey=x6a47h1319sy05ibksojgarvy&dl=0
+## for UBUNTU (about 250 MB with MQTT support): 
 
-for UBUNTU (about 250 MB with MQTT support): https://www.dropbox.com/s/547iesk5mj79jyo/main?dl=0
+## https://www.dropbox.com/scl/fi/6dwncfsrip31870oij44h/main_FDS_V1_3.zip?e=2&file_subpath=%2Fmain_FDS_V1_3&rlkey=gq7ljcq3u20vqz2x8scvc2pq8&dl=0
 
 # Reference for MQTT Server Creation
 https://github.com/bigheadG/Create-MQTT-Server
