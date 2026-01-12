@@ -20,7 +20,7 @@ import numpy as np
 from mmWave import roadwayTMD_kv
 
 #port = serial.Serial("COM189",baudrate = 921600, timeout = 0.5)
-port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600 , timeout = 0.5) 
+port = serial.Serial("COM21",baudrate = 921600 , timeout = 0.5) 
 
 trs = roadwayTMD_kv.roadwayTmdISK_kv(port)
 

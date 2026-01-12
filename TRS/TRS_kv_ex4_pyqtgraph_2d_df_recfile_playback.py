@@ -55,8 +55,8 @@ import numpy as np
 import serial
 #import Jetson.GPIO as GPIO
 
-#from mmWave import roadwayTMD_kv
-import roadwayTMD_kv as roadwayTMD_kv
+from mmWave import roadwayTMD_kv
+#import roadwayTMD_kv as roadwayTMD_kv
 
 import time
 import struct
@@ -74,8 +74,6 @@ import pandas as pd
 
 import csv
 
-
-			
 colorSet = [[255,255, 0,255], [0, 255, 0, 255], [0, 100, 255, 255], [248, 89, 253, 255], [89, 253, 242, 255],[89, 253, 253, 255],
 		  [253, 89, 226, 255],[253, 229, 204, 255],[51, 255, 255, 255],[229, 204, 255, 255], [89, 253, 100, 255], 
 		  [127, 255, 212, 255], [253, 165, 89, 255],[255, 140, 0, 255],[255, 215, 0, 255],[0, 0, 255, 255]]
@@ -87,7 +85,8 @@ locBuf = []
 objBuf = pd.DataFrame([], columns=['fn','x','y'])
 
 
-win = pg.GraphicsWindow()
+#win = pg.GraphicsWindow()
+win = pg.GraphicsLayoutWidget(show=True) 
 win.resize(1200,800)
 
 pg.setConfigOption('foreground', 'y')
@@ -213,9 +212,8 @@ toolkitBaudRate = 115200
 #port = serial.Serial("/dev/ttyTHS1",baudrate = 921600, timeout = 0.5) 
 #port = serial.Serial("/dev/ttyACM1",baudrate = 115200 , timeout = 0.5) # set 115200 for Algorithm develelop 
 #port = serial.Serial("/dev/ttyACM3",baudrate = 921600 , timeout = 0.5) # set 921600 for REAL case
-
-
-port = serial.Serial("/dev/tty.usbmodem14103",baudrate = toolkitBaudRate , timeout = 0.5)
+#port = serial.Serial("/dev/tty.usbmodem14103",baudrate = toolkitBaudRate , timeout = 0.5)
+port = serial.Serial("COM21",baudrate = toolkitBaudRate , timeout = 0.5)
 
 #for pi 4 UART port
 #port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
@@ -228,10 +226,12 @@ tt = datetime.now()
 dt = tt.strftime("%Y-%m-%d-%H-%M-%S")  # 格式化日期
 fileName = "tmd{:}.csv".format(dt)
 
-v21Read = trs.readFile("RoadwayTMD_2021-05-04-09-50-43.csv")
+#v21Read = trs.readFile("RoadwayTMD_2021-05-04-09-50-43.csv")
+#pd.read_csv(file, on_bad_lines='skip')
+
+v21Read = trs.readFile("Roadwaytmd_2026-01-12-14-07-33.csv")
 print("--------------v21Read----------------")
 print(v21Read)
-
 
 fn = 0
 prev_fn = 0

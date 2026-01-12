@@ -61,7 +61,7 @@ def objectReport(distance,doppler,area,nop):
 	return (obj,distance,speed)
 
 #port = serial.Serial("COM189",baudrate = 921600, timeout = 0.5)
-port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = 921600 , timeout = 0.5) 
+port = serial.Serial("COM21",baudrate = 921600 , timeout = 0.5) 
 
 tmd = roadwayTMD_kv.roadwayTmdISK_kv(port)
 

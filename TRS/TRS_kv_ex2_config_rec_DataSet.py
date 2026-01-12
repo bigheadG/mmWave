@@ -228,9 +228,11 @@ configBaudRate = 115200
 
 #port = serial.Serial("COM189",baudrate = 921600, timeout = 0.5)
 
-port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = dataBaudRate , timeout = 0.5)   # Data port
-portCFG = serial.Serial("/dev/tty.usbmodemGY0052531",baudrate = configBaudRate , timeout = 0.5) # config port
+#port = serial.Serial("/dev/tty.usbmodemGY0052534",baudrate = dataBaudRate , timeout = 0.5)   # Data port
+#portCFG = serial.Serial("/dev/tty.usbmodemGY0052531",baudrate = configBaudRate , timeout = 0.5) # config port
 
+port = serial.Serial("COM21",baudrate = dataBaudRate , timeout = 0.5)   # Data port
+portCFG = serial.Serial("COM20",baudrate = configBaudRate , timeout = 0.5) # config port
 
 callbackFunc()
 

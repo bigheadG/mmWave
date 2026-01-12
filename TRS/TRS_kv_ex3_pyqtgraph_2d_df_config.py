@@ -208,7 +208,8 @@ locBuf = []
 objBuf = pd.DataFrame([], columns=['fn','x','y'])
 
 
-win = pg.GraphicsWindow()
+#win = pg.GraphicsWindow()
+win = pg.GraphicsLayoutWidget(show=True) 
 win.resize(1200,800)
 
 pg.setConfigOption('foreground', 'y')
@@ -357,8 +358,8 @@ else:
 #port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
 
 #for Windows
-portCFG = serial.Serial("COM37",baudrate = 115200 , timeout = 0.5) # set 115200 for Algorithm develelop 
-port = serial.Serial("COM36",baudrate = 921600 , timeout = 0.5) # set 921600 for REAL case
+portCFG = serial.Serial("COM20",baudrate = 115200 , timeout = 0.5) # set 115200 for Algorithm develelop 
+port = serial.Serial("COM21",baudrate = 921600 , timeout = 0.5) # set 921600 for REAL case
 
 trs = roadwayTMD_kv.roadwayTmdISK_kv(port)
 
@@ -456,7 +457,8 @@ def trsExec(writer):
 						print(csvData)
 					
 			#(1.3)Target trace(push)
-			objBuf = objBuf.append(fxyA, ignore_index=True)
+			#objBuf = objBuf.append(fxyA, ignore_index=True)
+			objBuf = pd.concat([objBuf, fxyA], ignore_index=True)
 			locBuf.insert(0,fn)
 			
 			#(1.4) remove data from objBuf(pop)
@@ -498,7 +500,8 @@ def uartThread(name):
 
 
 thread1 = Thread(target = uartThread, args =("UART",))
-thread1.setDaemon(True)
+#thread1.setDaemon(True)
+thread1.daemon = True
 thread1.start()
 
 ## Start Qt event loop unless running in interactive mode or using pyside.
