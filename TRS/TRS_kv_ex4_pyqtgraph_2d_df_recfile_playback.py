@@ -49,7 +49,7 @@ Lib: roadwayTMD_kv
 #import initExample ## Add path to library (just for examples; you do not need this)
 
 import pyqtgraph as pg
-from pyqtgraph.Qt import QtCore, QtGui
+from pyqtgraph.Qt import QtCore, QtGui, QtWidgets
 
 import numpy as np
 import serial
@@ -213,7 +213,7 @@ toolkitBaudRate = 115200
 #port = serial.Serial("/dev/ttyACM1",baudrate = 115200 , timeout = 0.5) # set 115200 for Algorithm develelop 
 #port = serial.Serial("/dev/ttyACM3",baudrate = 921600 , timeout = 0.5) # set 921600 for REAL case
 #port = serial.Serial("/dev/tty.usbmodem14103",baudrate = toolkitBaudRate , timeout = 0.5)
-port = serial.Serial("COM21",baudrate = toolkitBaudRate , timeout = 0.5)
+port = serial.Serial("COM38",baudrate = toolkitBaudRate , timeout = 0.5)
 
 #for pi 4 UART port
 #port = serial.Serial("/dev/ttyS0",baudrate = 921600, timeout = 0.5)
@@ -229,7 +229,7 @@ fileName = "tmd{:}.csv".format(dt)
 #v21Read = trs.readFile("RoadwayTMD_2021-05-04-09-50-43.csv")
 #pd.read_csv(file, on_bad_lines='skip')
 
-v21Read = trs.readFile("Roadwaytmd_2026-01-12-14-07-33.csv")
+v21Read = trs.readFile("RoadwayTMD_2026-01-15-14-13-26.csv")
 print("--------------v21Read----------------")
 print(v21Read)
 
@@ -325,7 +325,8 @@ def uartThread(name):
 
 
 thread1 = Thread(target = uartThread, args =("UART",))
-thread1.setDaemon(True)
+#thread1.setDaemon(True)
+thread1.daemon = True
 thread1.start()
 
 ## Start Qt event loop unless running in interactive mode or using pyside.
@@ -333,5 +334,5 @@ if __name__ == '__main__':
 	import sys
 	#window.mainloop()
 	if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
-		QtGui.QApplication.instance().exec_()
-		
+		#QtGui.QApplication.instance().exec_()
+		QtWidgets.QApplication.instance().exec()
